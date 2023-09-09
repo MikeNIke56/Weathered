@@ -17,9 +17,7 @@ public class InputHandler : MonoBehaviour
     public void OnClick(InputAction.CallbackContext context)
     {
         if (!context.started) return;
-
         var rayHit = Physics2D.GetRayIntersection(_camera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-
         if(!rayHit.collider) return;
 
         IsCloseEnough(rayHit);
