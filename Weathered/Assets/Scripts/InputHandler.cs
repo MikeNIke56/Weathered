@@ -6,11 +6,11 @@ using UnityEngine.InputSystem;
 public class InputHandler : MonoBehaviour
 {
     private Camera _camera;
-    CharacterCont player;
+    PlayerController player;
     private void Awake()
     {
         _camera = Camera.main;
-        player = FindAnyObjectByType<CharacterCont>();
+        player = FindAnyObjectByType<PlayerController>();
     }
 
     // Update is called once per frame

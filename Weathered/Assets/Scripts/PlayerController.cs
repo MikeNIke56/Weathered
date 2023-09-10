@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterCont : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     //Feel free to delete this for a more optimized controller, just wanted to test the clicking
 
     public float moveSpeed = 5f;
     Vector2 movement;
     public Rigidbody2D rb;
+    public bool rightBlocked = false; //Obstructors toggle these when colliding begins
+    public bool leftBlocked = false;
 
     private Camera cam;
     private Vector2 mousePos;
@@ -38,7 +40,15 @@ public class CharacterCont : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if (movement.x > 0 && !rightBlocked)
+        {
+            rb.position += new Vector2(movement.x * moveSpeed * Time.fixedDeltaTime, 0f);
+        }
+        else if (movement.x < 0 && !leftBlocked)
+        {
+            rb.position += new Vector2(movement.x * moveSpeed * Time.fixedDeltaTime, 0f);
+        }
+        //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     void CursorShow()
