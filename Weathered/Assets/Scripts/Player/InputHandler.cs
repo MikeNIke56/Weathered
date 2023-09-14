@@ -30,7 +30,16 @@ public class InputHandler : MonoBehaviour
 
 
         if (Mathf.Abs(xVal) <= player.interactRng && Mathf.Abs(yVal) <= player.interactRng)
-            Debug.Log(obj.collider.gameObject.name);
-
+        {
+            switch (obj.collider.gameObject.tag)
+            {
+                case "Save":
+                    SavingSystem.i.Save("SaveSlot");
+                    break;
+                default:
+                    Debug.Log(obj.collider.gameObject.name);
+                    break;
+            }
+        }
     }
 }
