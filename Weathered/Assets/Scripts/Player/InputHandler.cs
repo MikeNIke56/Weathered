@@ -17,6 +17,10 @@ public class InputHandler : MonoBehaviour
     public void OnClick(InputAction.CallbackContext context)
     {
         if (!context.started) return;
+        if (_camera == null || !_camera.isActiveAndEnabled)
+        {
+            _camera = GameObject.FindFirstObjectByType<Camera>();
+        }
         var rayHit = Physics2D.GetRayIntersection(_camera.ScreenPointToRay(Mouse.current.position.ReadValue()));
         if(!rayHit.collider) return;
 

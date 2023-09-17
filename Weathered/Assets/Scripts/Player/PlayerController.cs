@@ -21,11 +21,11 @@ public class PlayerController : MonoBehaviour, ISavable
     [SerializeField] GameObject outOfRngIcon;
 
     [SerializeField] public float interactRng;
+    [SerializeField] PlayerCameraController playerCamera;
+    [SerializeField] Vector2 playerCameraPos = Vector2.zero;
 
     void Start()
     {
-        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
         withinRngIcon.SetActive(false);
         outOfRngIcon.SetActive(false);
     }
@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour, ISavable
     // Update is called once per frame
     void Update()
     {
+        if (cam == null || !cam.isActiveAndEnabled)
+        {
+            cam = GameObject.FindFirstObjectByType<Camera>();
+        }
         movement.x = Input.GetAxisRaw("Horizontal");
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
@@ -46,10 +50,18 @@ public class PlayerController : MonoBehaviour, ISavable
         if (movement.x > 0 && !rightBlocked)
         {
             rb.position += new Vector2(movement.x * moveSpeed * Time.fixedDeltaTime, 0f);
+            if (playerCamera.isActiveAndEnabled)
+            {
+                playerCamera.SetFollowPosLocal(playerCameraPos);
+            }
         }
         else if (movement.x < 0 && !leftBlocked)
         {
             rb.position += new Vector2(movement.x * moveSpeed * Time.fixedDeltaTime, 0f);
+            if (playerCamera.isActiveAndEnabled)
+            {
+                playerCamera.SetFollowPosLocal(new Vector2(-playerCameraPos.x, playerCameraPos.y));
+            }
         }
         //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
