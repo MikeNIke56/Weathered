@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour, ISavable
     [SerializeField] PlayerCameraController playerCamera;
     [SerializeField] Vector2 playerCameraPos = Vector2.zero;
 
+    [SerializeField] GameObject pauseMenu;
+    bool isPaused = false;
+
     void Start()
     {
         withinRngIcon.SetActive(false);
@@ -43,6 +46,8 @@ public class PlayerController : MonoBehaviour, ISavable
         CursorShow();
 
         if (Input.GetKeyDown(KeyCode.Space)) { SavingSystem.i.Load("SaveSlot"); }
+
+        HandlePauseMenu();
     }
 
     void FixedUpdate()
@@ -86,6 +91,22 @@ public class PlayerController : MonoBehaviour, ISavable
             outOfRngIcon.SetActive(true);
         }
     }
+
+    void HandlePauseMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && isPaused == false) 
+        { 
+            pauseMenu.SetActive(true); 
+            isPaused = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && isPaused == true)
+        {
+            pauseMenu.SetActive(false);
+            isPaused = false;
+        }
+    }
+
+
 
     public object CaptureState()
     {
