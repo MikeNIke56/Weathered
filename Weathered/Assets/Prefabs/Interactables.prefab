@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3793664138543127273}
   - component: {fileID: 7445806191577177868}
   - component: {fileID: 1885539085682999251}
+  - component: {fileID: 3838114356536928320}
   m_Layer: 0
   m_Name: Interactables
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,3 +122,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &3838114356536928320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750223308617479832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a1d9eea66a47e4382c3a031b853c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: 7e5f60c585795324193eb39f3742f3b4, type: 2}
+  - {fileID: 11400000, guid: 27b235e90af916f4792299259c4b29f5, type: 2}
+  chosenItem: {fileID: 0}

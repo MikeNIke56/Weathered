@@ -5,28 +5,28 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour
+public class DialogManager : MonoBehaviour
 {
-    [SerializeField] GameObject dialogueBox;
-    [SerializeField] Text dialogueText;
+    [SerializeField] GameObject dialogBox;
+    [SerializeField] Text dialogText;
     [SerializeField] int lettersPerSecond;
 
-    public event Action OnShowDialogue;
-    public event Action OnCloseDialogue;
+    public event Action OnShowDialog;
+    public event Action OnCloseDialog;
     public bool IsShowing { get; private set; }
    
-    public static DialogueManager Instance { get; private set; }
+    public static DialogManager Instance { get; private set; }
     private void Awake()
     {
         Instance = this;
     }
 
-    public IEnumerator ShowDialogueText(string text, bool waitForInput=true, bool autoClose=true, List<string> choices = null, Action<int> onSelected = null)
+    public IEnumerator ShowDialogText(string text, bool waitForInput=true, bool autoClose=true, List<string> choices = null, Action<int> onSelected = null)
     {
         IsShowing = true;
 
-        dialogueBox.SetActive(true);
-        OnShowDialogue?.Invoke();
+        dialogBox.SetActive(true);
+        OnShowDialog?.Invoke();
 
         yield return TypeDialogue(text);
 
@@ -39,34 +39,34 @@ public class DialogueManager : MonoBehaviour
         {
             CloseDialog();
         }
-        OnCloseDialogue?.Invoke();
+        OnCloseDialog?.Invoke();
     }
 
     public void CloseDialog()
     {
-        dialogueBox.SetActive(false);
+        dialogBox.SetActive(false);
         IsShowing = false;
     }
 
-    public IEnumerator ShowDialogue(Dialogue dialogue, Action onFinished=null, List<string> choices = null, Action<int> onSelected=null)
+    public IEnumerator ShowDialog(Dialog dialog, Action onFinished=null, List<string> choices = null, Action<int> onSelected=null)
     {
         yield return new WaitForEndOfFrame();
 
-        OnShowDialogue?.Invoke();
+        OnShowDialog?.Invoke();
 
         IsShowing = true;
 
-        dialogueBox.SetActive(true);
+        dialogBox.SetActive(true);
 
-        foreach(var line in dialogue.Lines)
+        foreach(var line in dialog.Lines)
         {
             yield return TypeDialogue(line);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
         }
 
-        dialogueBox.SetActive(false);
+        dialogBox.SetActive(false);
         IsShowing = false;
-        OnCloseDialogue?.Invoke();
+        OnCloseDialog?.Invoke();
     }
 
     public void HandleUpdate()
@@ -76,10 +76,10 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator TypeDialogue(string line)
     {
-        dialogueText.text = "";
+        dialogText.text = "";
         foreach (var letter in line.ToCharArray())
         {
-            dialogueText.text += letter;
+            dialogText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
     }

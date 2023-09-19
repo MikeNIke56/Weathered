@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +8,9 @@ public class InputHandler : MonoBehaviour
 {
     private Camera _camera;
     PlayerController player;
+
+    [SerializeField] Dialog dialog;
+
     private void Awake()
     {
         _camera = Camera.main;
@@ -39,6 +43,9 @@ public class InputHandler : MonoBehaviour
             {
                 case "Save":
                     SavingSystem.i.Save("SaveSlot");
+                    break;
+                case "Item":
+                    ItemController.i.DisplayItem(obj.collider.gameObject.GetComponent<ItemDetermine>().ChosenItem);
                     break;
                 default:
                     Debug.Log(obj.collider.gameObject.name);
