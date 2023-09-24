@@ -18,19 +18,18 @@ public class PlayerController : MonoBehaviour, ISavable
     private Vector2 mousePos;
 
     [SerializeField] GameObject withinRngIcon;
-    [SerializeField] GameObject outOfRngIcon;
 
     [SerializeField] public float interactRng;
     [SerializeField] PlayerCameraController playerCamera;
     [SerializeField] Vector2 playerCameraPos = Vector2.zero;
 
     [SerializeField] GameObject pauseMenu;
-    bool isPaused = false;
+    [SerializeField] PauseMenuManager pauseMan;
+    public bool isPaused = false;
 
     void Start()
     {
         withinRngIcon.SetActive(false);
-        outOfRngIcon.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,11 +42,10 @@ public class PlayerController : MonoBehaviour, ISavable
         movement.x = Input.GetAxisRaw("Horizontal");
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        CursorShow();
-
         if (Input.GetKeyDown(KeyCode.Space)) { SavingSystem.i.Load("SaveSlot"); }
 
-        HandlePauseMenu();
+        CursorShow(isPaused);
+        OpenPauseMenu();
     }
 
     void FixedUpdate()
@@ -71,38 +69,35 @@ public class PlayerController : MonoBehaviour, ISavable
         //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    void CursorShow()
+    void CursorShow(bool isPaused=false)
     {
         withinRngIcon.transform.position = mousePos;
-        outOfRngIcon.transform.position = mousePos;
 
         float xVal = mousePos.x - transform.position.x;
         float yVal = mousePos.y - transform.position.y;
 
-
-        if (Mathf.Abs(xVal) <= interactRng && Mathf.Abs(yVal) <= interactRng)
+        if(isPaused == false)
         {
-            outOfRngIcon.SetActive(false);
-            withinRngIcon.SetActive(true);
+            if (Mathf.Abs(xVal) <= interactRng && Mathf.Abs(yVal) <= interactRng)
+            {
+                withinRngIcon.SetActive(true);
+            }
+            else
+            {
+                withinRngIcon.SetActive(false);
+            }
         }
         else
-        {
             withinRngIcon.SetActive(false);
-            outOfRngIcon.SetActive(true);
-        }
     }
 
-    void HandlePauseMenu()
+    void OpenPauseMenu()
     {
         if (Input.GetKeyDown(KeyCode.E) && isPaused == false) 
         { 
             pauseMenu.SetActive(true); 
+            Time.timeScale = 0f;
             isPaused = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && isPaused == true)
-        {
-            pauseMenu.SetActive(false);
-            isPaused = false;
         }
     }
 
