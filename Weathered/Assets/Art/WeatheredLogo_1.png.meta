@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 2d01abfff2080ce468dd667009f09501
+guid: 8616c1a1381aa0c4aa10d9c26421138e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3894797870444364080
-    second: sample-blur_0
+      213: 2606714095964612993
+    second: WeatheredLogo_1_0
+  - first:
+      213: -443199086331960358
+    second: WeatheredLogo_1_1
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sample-blur_0
+      name: WeatheredLogo_1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1156
-        height: 675
+        x: 125
+        y: 33
+        width: 2268
+        height: 894
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +115,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0de373ce8f5e2f9c0800000000000000
-      internalID: -3894797870444364080
+      spriteID: 18969f8c8a8ec2420800000000000000
+      internalID: 2606714095964612993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredLogo_1_1
+      rect:
+        serializedVersion: 2
+        x: 2391
+        y: 113
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3e76677c079d9f0800000000000000
+      internalID: -443199086331960358
       vertices: []
       indices: 
       edges: []
@@ -121,7 +145,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -129,7 +153,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sample-blur_0: -3894797870444364080
+      WeatheredLogo_1_0: 2606714095964612993
+      WeatheredLogo_1_1: -443199086331960358
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 2d01abfff2080ce468dd667009f09501
+guid: 35e286bc771f97a45b2a9c2c2556eb8b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3894797870444364080
-    second: sample-blur_0
+      213: 8961583483630220212
+    second: MMOptions_0
+  - first:
+      213: 8805489391587217379
+    second: MMOptions_1
+  - first:
+      213: -5072950929198593237
+    second: MMOptions_2
+  - first:
+      213: -6897917149155235484
+    second: MMOptions_3
+  - first:
+      213: 9117203911796607232
+    second: MMOptions_4
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -98,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sample-blur_0
+      name: MMOptions_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1156
-        height: 675
+        x: 16
+        y: 10
+        width: 64
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +124,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0de373ce8f5e2f9c0800000000000000
-      internalID: -3894797870444364080
+      spriteID: 4b379c6a2b0fd5c70800000000000000
+      internalID: 8961583483630220212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MMOptions_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 10
+        width: 159
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3efc60bb2f1633a70800000000000000
+      internalID: 8805489391587217379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MMOptions_2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 10
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b412ee1024999b0800000000000000
+      internalID: -5072950929198593237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MMOptions_3
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 10
+        width: 67
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 469e68a46eca540a0800000000000000
+      internalID: -6897917149155235484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MMOptions_4
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 9
+        width: 62
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009407b17a0d68e70800000000000000
+      internalID: 9117203911796607232
       vertices: []
       indices: 
       edges: []
@@ -121,7 +217,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -129,7 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sample-blur_0: -3894797870444364080
+      MMOptions_0: 8961583483630220212
+      MMOptions_1: 8805489391587217379
+      MMOptions_2: -5072950929198593237
+      MMOptions_3: -6897917149155235484
+      MMOptions_4: 9117203911796607232
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
