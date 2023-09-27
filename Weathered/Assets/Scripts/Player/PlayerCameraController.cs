@@ -10,8 +10,19 @@ public class PlayerCameraController : MonoBehaviour
     float accelerationModifier = 1f;
     [SerializeField]
     Rigidbody2D rbody;
+    PlayerController playerController;
+
+    void Start()
+    {
+        playerController = FindFirstObjectByType<PlayerController>();
+    }
     void Update()
     {
+        if (playerController.isPaused)
+        {
+            return;
+        }
+
         if (Mathf.Abs((followPosLocal - transform.localPosition).magnitude) < 0.02f)
         {
             transform.localPosition = followPosLocal;
