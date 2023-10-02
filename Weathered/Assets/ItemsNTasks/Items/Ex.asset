@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Ex
   m_EditorClassIdentifier: 
   name: Ex Mark
-  description: This is a checkmark
+  description: This is an ex
   overWorldIcon: {fileID: 3521154278846819190, guid: e83a126f5cfd7f148ad81bb5d72d130c, type: 3}
   inspectIcon: {fileID: 3521154278846819190, guid: e83a126f5cfd7f148ad81bb5d72d130c, type: 3}
+  task: {fileID: 11400000, guid: b1b56770bd0f55c4eb19b1823d793669, type: 2}

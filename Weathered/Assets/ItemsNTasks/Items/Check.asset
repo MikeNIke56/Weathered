@@ -16,3 +16,4 @@ MonoBehaviour:
   description: This is a checkmark
   overWorldIcon: {fileID: 6051955444447126620, guid: d2e5c8c078f0c2144989ddfcd9bd6bd2, type: 3}
   inspectIcon: {fileID: 6051955444447126620, guid: d2e5c8c078f0c2144989ddfcd9bd6bd2, type: 3}
+  task: {fileID: 11400000, guid: b1b56770bd0f55c4eb19b1823d793669, type: 2}

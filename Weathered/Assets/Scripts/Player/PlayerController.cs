@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour, ISavable
 {
+    public enum GameState {FreeRoam, Menu, ObservationMenu, Death}; //states that the player can be in
+
     //Feel free to delete this for a more optimized controller, just wanted to test the clicking
 
     public float moveSpeed = 5f;

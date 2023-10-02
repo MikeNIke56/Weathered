@@ -11,6 +11,9 @@ public class InputHandler : MonoBehaviour
 
     [SerializeField] Dialog dialog;
 
+    [SerializeField] GameObject tasksScreen;
+    bool taskIsOn = false;
+
     private void Awake()
     {
         _camera = Camera.main;
@@ -51,6 +54,20 @@ public class InputHandler : MonoBehaviour
                     Debug.Log(obj.collider.gameObject.name);
                     break;
             }
+        }
+    }
+
+    public void ToggleTaskList()
+    {
+        if(taskIsOn==false)
+        {
+            tasksScreen.SetActive(true);
+            taskIsOn = true;
+        }
+        else
+        {
+            tasksScreen.SetActive(false);
+            taskIsOn = false;
         }
     }
 }
