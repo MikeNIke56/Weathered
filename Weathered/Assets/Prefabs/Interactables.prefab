@@ -135,7 +135,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 11400000, guid: 7e5f60c585795324193eb39f3742f3b4, type: 2}
-  - {fileID: 11400000, guid: 27b235e90af916f4792299259c4b29f5, type: 2}
   - {fileID: 11400000, guid: f4e3a32819572db49a6271ca4d9b3e8c, type: 2}
   chosenItem: {fileID: 0}

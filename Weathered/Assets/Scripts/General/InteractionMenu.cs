@@ -9,12 +9,12 @@ public class InteractionMenu : MonoBehaviour
     public Text descriptionText;
     public Text nameText;
 
-    [SerializeField] PickupItem pickUpItem;
+    [SerializeField] StartTask acceptTask;
     public float maxTime;
     public float time;
     public bool acceptIsShowing = false;
 
-    ItemBase item;
+    TaskBase task;
     ItemHUD itemHUD;
 
     private void Awake()
@@ -32,14 +32,14 @@ public class InteractionMenu : MonoBehaviour
         ShowAcceptUI();
     }
 
-    public void DisplayInfo(ItemBase item)
+    public void DisplayInfo(TaskBase task)
     {
         gameObject.SetActive(true);
-        itemImg.sprite = item.InspectIcon;
-        descriptionText.text = item.Description;
-        nameText.text = item.Name;
+        itemImg.sprite = task.InspectIcon;
+        descriptionText.text = task.Description;
+        nameText.text = task.Name;
 
-        this.item = item;
+        this.task = task;
         itemHUD.gameObject.SetActive(false);
     }
 
@@ -53,13 +53,13 @@ public class InteractionMenu : MonoBehaviour
             }
             else
             {
-                pickUpItem.gameObject.SetActive(true);
+                acceptTask.gameObject.SetActive(true);
                 time = maxTime;
                 acceptIsShowing = true;
             }
         }       
     }
 
-    public ItemBase Item => item;
+    public TaskBase Task => task;
 
 }

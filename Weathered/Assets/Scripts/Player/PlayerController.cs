@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour, ISavable
     [SerializeField] PlayerCameraController playerCamera;
     [SerializeField] Vector2 playerCameraPos = Vector2.zero;
 
-    [SerializeField] GameObject pauseMenu;
     [SerializeField] PauseMenuManager pauseMan;
     public bool isPaused = false;
 
@@ -97,7 +96,7 @@ public class PlayerController : MonoBehaviour, ISavable
     {
         if (Input.GetKeyDown(KeyCode.E) && isPaused == false) 
         { 
-            pauseMenu.SetActive(true); 
+            pauseMan.gameObject.SetActive(true); 
             Time.timeScale = 0f;
             isPaused = true;
         }

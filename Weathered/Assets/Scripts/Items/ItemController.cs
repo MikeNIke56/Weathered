@@ -19,7 +19,7 @@ public class ItemController : MonoBehaviour
         interactionMenu = FindAnyObjectByType<InteractionMenu>(FindObjectsInactive.Include);
     }
 
-    public void DisplayItem(ItemBase item)
+    public void DisplayItem(TaskBase item)
     {
         bool itemClicked = item.Display();
 

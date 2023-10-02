@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Save
   - Item
+  - Task
   layers:
   - Default
   - TransparentFX

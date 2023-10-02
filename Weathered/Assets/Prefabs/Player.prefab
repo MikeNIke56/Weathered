@@ -143,7 +143,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6279567741532687501}
   - component: {fileID: 1977111424406797425}
-  - component: {fileID: 7874118731616982789}
   m_Layer: 0
   m_Name: TaskList
   m_TagString: Untagged
@@ -201,19 +200,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
---- !u!114 &7874118731616982789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470512228780574637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97439e4620cf2fa43b4f7a9a1f780ed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionMenu: {fileID: 5781901183856233007}
 --- !u!1 &932134253079787751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2519,7 +2505,7 @@ MonoBehaviour:
   playerCamera: {fileID: 4734354534026583338}
   playerCameraPos: {x: 1, y: 1}
   pauseMenu: {fileID: 1367354413295427174}
-  pauseMan: {fileID: 0}
+  pauseMan: {fileID: 1241005101768603301}
   isPaused: 0
 --- !u!114 &1494374794305515752
 MonoBehaviour:
@@ -2861,7 +2847,7 @@ MonoBehaviour:
   itemImg: {fileID: 3247353861058319065}
   descriptionText: {fileID: 2249008688445111572}
   nameText: {fileID: 57648729013788684}
-  pickUpItem: {fileID: 7874118731616982789}
+  pickUpItem: {fileID: 8942029689979719303}
   maxTime: 3
   time: 0
   acceptIsShowing: 0
@@ -3305,6 +3291,14 @@ PrefabInstance:
       propertyPath: taskList
       value: 
       objectReference: {fileID: 470512228780574637}
+    - target: {fileID: 495391750242529519, guid: b5293596b99662848af223d7eebfbc6b, type: 3}
+      propertyPath: tasks.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 495391750242529519, guid: b5293596b99662848af223d7eebfbc6b, type: 3}
+      propertyPath: tasksBaseList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1567708657802121601, guid: b5293596b99662848af223d7eebfbc6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.281117

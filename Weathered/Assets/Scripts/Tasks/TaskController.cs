@@ -9,16 +9,21 @@ public class TaskController : MonoBehaviour
     [SerializeField] GameObject taskList;
 
     [SerializeField] TaskBase[] tasksBaseList;
+    InteractionMenu interactionMenu;
 
     bool started = false;
+    public static TaskController i { get; private set; }
 
     private void Awake()
     {
         EmptyList();
+        i = this;
     }
 
     void Start()
     {
+        interactionMenu = FindAnyObjectByType<InteractionMenu>(FindObjectsInactive.Include);
+
         if (started == false)
         {
             GiveTasks();
@@ -67,13 +72,24 @@ public class TaskController : MonoBehaviour
 
     void GiveTasks()
     {
-        var items = FindObjectsByType<ItemDetermine>(FindObjectsSortMode.None);
+        var tasks = FindObjectsByType<TaskDetermine>(FindObjectsSortMode.None);
 
-        for (int i = 0; i < items.Length; i++)
+        for (int i = 0; i < tasks.Length; i++)
         {
-            AddTask(items[i].ChosenItem.Task, i);
+            AddTask(tasks[i].ChosenTask, i);
         }
         started = true;
+    }
+
+    public void DisplayTask(TaskBase task)
+    {
+        bool taskClicked = task.Display();
+
+        if (taskClicked)
+        {
+            interactionMenu.gameObject.SetActive(true);
+            interactionMenu.DisplayInfo(task);
+        }
     }
 
     public TaskBase[] TasksBaseList => tasksBaseList;

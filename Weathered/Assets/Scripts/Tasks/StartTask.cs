@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.VersionControl;
 using UnityEngine;
 
-public class PickupItem : MonoBehaviour
+public class StartTask : MonoBehaviour
 {
     [SerializeField] InteractionMenu interactionMenu;
     TaskController taskController;
@@ -25,11 +25,11 @@ public class PickupItem : MonoBehaviour
         //adds task to task list
         ResetElements();
 
-        itemHUD.SetImage(interactionMenu.Item.ItemIcon);
+        itemHUD.SetImage(interactionMenu.Task.StartItemIcon);
 
         foreach(TestTask task in taskController.TasksBaseList)
         {
-            if(task == interactionMenu.Item.Task)
+            if(task == interactionMenu.Task)
                 task.StartTask();
         }
     }

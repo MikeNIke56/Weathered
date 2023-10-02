@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567708657802121601}
-  - component: {fileID: 5026088431738092883}
   - component: {fileID: 495391750242529519}
   m_Layer: 0
   m_Name: TaskController
@@ -33,18 +32,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5026088431738092883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7669231265526517242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c4e491ce5030e843835d835bc65596c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &495391750242529519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,3 +47,4 @@ MonoBehaviour:
   tasks: []
   taskObj: {fileID: 692145328724887300, guid: 4d0697e576fe8714e902728e90be8fc3, type: 3}
   taskList: {fileID: 0}
+  tasksBaseList: []

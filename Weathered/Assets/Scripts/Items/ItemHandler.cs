@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Item/Create new Item")]
-public class TestItem : ItemBase
+public class ItemHandler : MonoBehaviour
 {
     
+
 }
