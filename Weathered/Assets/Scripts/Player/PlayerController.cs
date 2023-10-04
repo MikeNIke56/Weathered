@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour, ISavable
     [SerializeField] PauseMenuManager pauseMan;
     public bool isPaused = false;
 
+    public Item curItem;
+
     void Start()
     {
         withinRngIcon.SetActive(false);

@@ -868,8 +868,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8942029689979719303}
-        m_TargetAssemblyTypeName: AcceptTask, Assembly-CSharp
+      - m_Target: {fileID: 7570915083001525886}
+        m_TargetAssemblyTypeName: StartTask, Assembly-CSharp
         m_MethodName: No
         m_Mode: 1
         m_Arguments:
@@ -1001,8 +1001,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8942029689979719303}
-        m_TargetAssemblyTypeName: AcceptTask, Assembly-CSharp
+      - m_Target: {fileID: 7570915083001525886}
+        m_TargetAssemblyTypeName: StartTask, Assembly-CSharp
         m_MethodName: Yes
         m_Mode: 1
         m_Arguments:
@@ -2202,6 +2202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9038056272847441769}
   - component: {fileID: 8942029689979719303}
+  - component: {fileID: 7570915083001525886}
   m_Layer: 0
   m_Name: AcceptTaskUI
   m_TagString: Untagged
@@ -2236,6 +2237,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97439e4620cf2fa43b4f7a9a1f780ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7570915083001525886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5887722594073065122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd4039ff8691994ea2ee3e2e5bbf846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMenu: {fileID: 5781901183856233007}
@@ -2504,7 +2517,6 @@ MonoBehaviour:
   interactRng: 6
   playerCamera: {fileID: 4734354534026583338}
   playerCameraPos: {x: 1, y: 1}
-  pauseMenu: {fileID: 1367354413295427174}
   pauseMan: {fileID: 1241005101768603301}
   isPaused: 0
 --- !u!114 &1494374794305515752
@@ -2847,7 +2859,7 @@ MonoBehaviour:
   itemImg: {fileID: 3247353861058319065}
   descriptionText: {fileID: 2249008688445111572}
   nameText: {fileID: 57648729013788684}
-  pickUpItem: {fileID: 8942029689979719303}
+  acceptTask: {fileID: 7570915083001525886}
   maxTime: 3
   time: 0
   acceptIsShowing: 0

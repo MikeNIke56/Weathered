@@ -48,7 +48,7 @@ public class InputHandler : MonoBehaviour
                     SavingSystem.i.Save("SaveSlot");
                     break;
                 case "Task":
-                    TaskController.i.DisplayTask(obj.collider.gameObject.GetComponent<TaskDetermine>().ChosenTask);
+                    TaskController.i.DisplayTask((Task)obj.collider.gameObject.GetComponent<TaskDetermine>().ChosenTask);
                     break;
                 case "Item":
                     //ItemController.i.DisplayItem(obj.collider.gameObject.GetComponent<TaskDetermine>().ChosenItem);

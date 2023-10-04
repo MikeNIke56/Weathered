@@ -9,8 +9,11 @@ public class StartTask : MonoBehaviour
     TaskController taskController;
     ItemHUD itemHUD;
 
+    PlayerController player;
+
     private void Awake()
     {
+        player = FindAnyObjectByType<PlayerController>(FindObjectsInactive.Include);
         taskController = FindAnyObjectByType<TaskController>(FindObjectsInactive.Include);
         itemHUD = FindAnyObjectByType<ItemHUD>(FindObjectsInactive.Include);
     }
@@ -27,10 +30,13 @@ public class StartTask : MonoBehaviour
 
         itemHUD.SetImage(interactionMenu.Task.StartItemIcon);
 
-        foreach(TestTask task in taskController.TasksBaseList)
+        foreach(TaskBase task in taskController.TasksBaseList)
         {
             if(task == interactionMenu.Task)
+            {
                 task.StartTask();
+                player.curItem = task.StartItem;
+            }
         }
     }
 

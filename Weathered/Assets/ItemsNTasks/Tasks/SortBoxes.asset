@@ -17,5 +17,11 @@ MonoBehaviour:
     areas
   overWorldIcon: {fileID: 6197928473673509263, guid: 1676e3d03c3677c44a939748a21e80fe, type: 3}
   inspectIcon: {fileID: 6197928473673509263, guid: 1676e3d03c3677c44a939748a21e80fe, type: 3}
-  itemIcon: {fileID: 7901622571200134146, guid: 7cbb1e448e36cb948ab27af4cf8e7b07, type: 3}
-  isActive: 0
+  startItemList:
+  - {fileID: 11400000, guid: 6d1356476c7d6e346a4b7788e3838e4b, type: 2}
+  - {fileID: 11400000, guid: c4c6d47d546ce684294b626d629682d3, type: 2}
+  - {fileID: 11400000, guid: d1fb844b381834147a7e68244df20aea, type: 2}
+  - {fileID: 11400000, guid: 74795b6ed47507f428e6445c747060bb, type: 2}
+  - {fileID: 11400000, guid: 6a5fabd2b1212ab40b393fa9c6654089, type: 2}
+  - {fileID: 11400000, guid: 3493dbe5aae846d4d8091ce2b0a24386, type: 2}
+  isActive: 1

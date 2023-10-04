@@ -14,7 +14,7 @@ public class InteractionMenu : MonoBehaviour
     public float time;
     public bool acceptIsShowing = false;
 
-    TaskBase task;
+    Task task;
     ItemHUD itemHUD;
 
     private void Awake()
@@ -32,7 +32,7 @@ public class InteractionMenu : MonoBehaviour
         ShowAcceptUI();
     }
 
-    public void DisplayInfo(TaskBase task)
+    public void DisplayInfo(Task task)
     {
         gameObject.SetActive(true);
         itemImg.sprite = task.InspectIcon;
@@ -60,6 +60,6 @@ public class InteractionMenu : MonoBehaviour
         }       
     }
 
-    public TaskBase Task => task;
+    public Task Task => task;
 
 }

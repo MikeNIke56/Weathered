@@ -81,7 +81,7 @@ public class TaskController : MonoBehaviour
         started = true;
     }
 
-    public void DisplayTask(TaskBase task)
+    public void DisplayTask(Task task)
     {
         bool taskClicked = task.Display();
 

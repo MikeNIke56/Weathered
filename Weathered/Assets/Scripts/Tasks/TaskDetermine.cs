@@ -12,12 +12,14 @@ public class TaskDetermine : MonoBehaviour
         ChooseTask();
     }
 
-    TaskBase ChooseTask()
+    Task ChooseTask()
     {
         chosenTask = tasks[Random.Range(0, tasks.Length)];
         gameObject.GetComponent<SpriteRenderer>().sprite = chosenTask.OverWorldIcon;
-        return chosenTask;
+        chosenTask.ChooseStartItem();
+        return (Task)chosenTask;
     }
+
 
     public TaskBase ChosenTask => chosenTask;
 }
