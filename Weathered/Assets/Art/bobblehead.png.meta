@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bobblehead_0: -3649521478834281589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

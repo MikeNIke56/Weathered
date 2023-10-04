@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      toycar_0: 6872660602229340564
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
