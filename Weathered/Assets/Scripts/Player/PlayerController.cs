@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour, ISavable
 
     public Item curItem;
 
+    [SerializeField] Animator playerAnimator;
+    [SerializeField] GameObject MazarineSpriteObject;
+    public bool isFacingRight = true;
+
     void Start()
     {
         withinRngIcon.SetActive(false);
@@ -53,8 +57,19 @@ public class PlayerController : MonoBehaviour, ISavable
 
     void FixedUpdate()
     {
+        if (movement.x > 0)
+        {
+            isFacingRight = true;
+            MazarineSpriteObject.transform.localScale = new Vector3(MathF.Abs(MazarineSpriteObject.transform.localScale.x), MazarineSpriteObject.transform.localScale.y, MazarineSpriteObject.transform.localScale.z);
+        }
+        else if (movement.x < 0)
+        {
+            isFacingRight = false;
+            MazarineSpriteObject.transform.localScale = new Vector3(-MathF.Abs(MazarineSpriteObject.transform.localScale.x), MazarineSpriteObject.transform.localScale.y, MazarineSpriteObject.transform.localScale.z);
+        }
         if (movement.x > 0 && !rightBlocked)
         {
+            playerAnimator.SetBool("isWalking", true);
             rb.position += new Vector2(movement.x * moveSpeed * Time.fixedDeltaTime, 0f);
             if (playerCamera.isActiveAndEnabled)
             {
@@ -63,11 +78,16 @@ public class PlayerController : MonoBehaviour, ISavable
         }
         else if (movement.x < 0 && !leftBlocked)
         {
+            playerAnimator.SetBool("isWalking", true);
             rb.position += new Vector2(movement.x * moveSpeed * Time.fixedDeltaTime, 0f);
             if (playerCamera.isActiveAndEnabled)
             {
                 playerCamera.SetFollowPosLocal(new Vector2(-playerCameraPos.x, playerCameraPos.y));
             }
+        }
+        else
+        {
+            playerAnimator.SetBool("isWalking", false);
         }
         //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }

@@ -11,6 +11,7 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField]
     Rigidbody2D rbody;
     PlayerController playerController;
+    bool hasReachedPoint = false;
 
     void Start()
     {
@@ -23,12 +24,26 @@ public class PlayerCameraController : MonoBehaviour
             return;
         }
 
-        if (Mathf.Abs((followPosLocal - transform.localPosition).magnitude) < 0.02f)
+        if (playerController.isFacingRight && transform.localPosition.x > followPosLocal.x)
         {
+            transform.localPosition = followPosLocal;
+        }
+        else if (!playerController.isFacingRight && transform.localPosition.x < followPosLocal.x)
+        {
+            transform.localPosition = followPosLocal;
+        }
+        if (hasReachedPoint && Mathf.Abs((followPosLocal - transform.localPosition).magnitude) < 1f)
+        {
+            transform.localPosition = followPosLocal;
+        }
+        else if (Mathf.Abs((followPosLocal - transform.localPosition).magnitude) < 0.02f)
+        {
+            hasReachedPoint = true;
             transform.localPosition = followPosLocal;
         }
         else
         {
+            hasReachedPoint = false;
             rbody.AddForce((followPosLocal - transform.localPosition) * accelerationModifier);
         }
     }
