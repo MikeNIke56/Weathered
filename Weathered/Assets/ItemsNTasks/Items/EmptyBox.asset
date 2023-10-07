@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6495a2f5d6fe50f4a839796d40ea7d01, type: 3}
+  m_Name: EmptyBox
+  m_EditorClassIdentifier: 
+  name: Empty Box
+  description: A box to sort items into
+  overWorldIcon: {fileID: 6229730641916762398, guid: fe6f5c3f06be6ce4692a65bb069faea4, type: 3}
+  isPartOfTask: 1

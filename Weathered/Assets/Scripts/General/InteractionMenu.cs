@@ -10,15 +10,19 @@ public class InteractionMenu : MonoBehaviour
     public Text nameText;
 
     [SerializeField] StartTask acceptTask;
+    [SerializeField] GameObject pickupItem;
     public float maxTime;
     public float time;
     public bool acceptIsShowing = false;
 
-    Task task;
+    public Item item;
     ItemHUD itemHUD;
+
+    PlayerController player;
 
     private void Awake()
     {
+        player = FindAnyObjectByType<PlayerController>(FindObjectsInactive.Include);
         itemHUD = FindAnyObjectByType<ItemHUD>(FindObjectsInactive.Include);
     }
 
@@ -39,7 +43,17 @@ public class InteractionMenu : MonoBehaviour
         descriptionText.text = task.Description;
         nameText.text = task.Name;
 
-        this.task = task;
+        //this.task = task;
+        itemHUD.gameObject.SetActive(false);
+    }
+
+    public void DisplayInfo(Item item)
+    {
+        gameObject.SetActive(true);
+        itemImg.sprite = item.OverWorldIcon;
+        descriptionText.text = item.Description;
+        nameText.text = item.Name;
+
         itemHUD.gameObject.SetActive(false);
     }
 
@@ -53,13 +67,41 @@ public class InteractionMenu : MonoBehaviour
             }
             else
             {
-                acceptTask.gameObject.SetActive(true);
+                //acceptTask.gameObject.SetActive(true);
+                pickupItem.SetActive(true);
                 time = maxTime;
                 acceptIsShowing = true;
             }
         }       
     }
 
-    public Task Task => task;
+    public void Yes()
+    {
+        //picks up item
+        ResetElements();
+
+        itemHUD.SetImage(item.OverWorldIcon);
+
+        player.curItem = item;
+
+        //deletes item or removes from scene afterwards
+    }
+
+    public void No()
+    {
+        //exits interaction menu       
+        ResetElements();
+    }
+
+    void ResetElements()
+    {
+        gameObject.SetActive(false);
+        gameObject.SetActive(false);
+        acceptIsShowing = false;
+        time = maxTime;
+        itemHUD.gameObject.SetActive(true);
+    }
+
+    //public Task Task => task;
 
 }

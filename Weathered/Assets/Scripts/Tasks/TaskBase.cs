@@ -15,6 +15,9 @@ public class TaskBase : ScriptableObject
 
     public bool isActive = false;
 
+    Item[] itemsToSpawn;
+    public GameObject itemObj;
+
     public virtual string Name => name;
 
     public virtual string Description => description;
@@ -25,6 +28,8 @@ public class TaskBase : ScriptableObject
 
     public Item[] StartItemList => startItemList;
     public Item StartItem => startItem;
+
+    public Item[] ItemsToSpawn => itemsToSpawn;
 
     public virtual bool Display() {return true;}
     public virtual void StartTask()

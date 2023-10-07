@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3793664138543127273}
   - component: {fileID: 7445806191577177868}
   - component: {fileID: 1885539085682999251}
-  - component: {fileID: 3838114356536928320}
+  - component: {fileID: -1996766947174312162}
   m_Layer: 0
-  m_Name: Interactables
+  m_Name: ItemInteractables 1
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &3838114356536928320
+--- !u!114 &-1996766947174312162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,9 +131,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750223308617479832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1a1d9eea66a47e4382c3a031b853c71, type: 3}
+  m_Script: {fileID: 11500000, guid: ad5e6f85ba8fb2a4b8bc41a24536c7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 11400000, guid: f4e3a32819572db49a6271ca4d9b3e8c, type: 2}
+  - {fileID: 11400000, guid: 6d1356476c7d6e346a4b7788e3838e4b, type: 2}
+  - {fileID: 11400000, guid: c4c6d47d546ce684294b626d629682d3, type: 2}
+  - {fileID: 11400000, guid: d1fb844b381834147a7e68244df20aea, type: 2}
+  - {fileID: 11400000, guid: 74795b6ed47507f428e6445c747060bb, type: 2}
+  - {fileID: 11400000, guid: 6a5fabd2b1212ab40b393fa9c6654089, type: 2}
+  - {fileID: 11400000, guid: 3493dbe5aae846d4d8091ce2b0a24386, type: 2}
   chosenItem: {fileID: 0}

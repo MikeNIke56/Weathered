@@ -51,7 +51,7 @@ public class InputHandler : MonoBehaviour
                     TaskController.i.DisplayTask((Task)obj.collider.gameObject.GetComponent<TaskDetermine>().ChosenTask);
                     break;
                 case "Item":
-                    //ItemController.i.DisplayItem(obj.collider.gameObject.GetComponent<TaskDetermine>().ChosenItem);
+                    ItemController.i.DisplayItem((Item)obj.collider.gameObject.GetComponent<ItemDetermine>().ChosenItem);
                     break;
                 default:
                     Debug.Log(obj.collider.gameObject.name);
