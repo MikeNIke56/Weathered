@@ -10,13 +10,8 @@ public class StartTask : MonoBehaviour
 
     PlayerController player;
 
-    Vector2 spawnPosition;
-
-    public static StartTask i { get; private set; }
-
     private void Awake()
     {
-        i = this;
         player = FindAnyObjectByType<PlayerController>(FindObjectsInactive.Include);
         taskController = FindAnyObjectByType<TaskController>(FindObjectsInactive.Include);
         itemHUD = FindAnyObjectByType<ItemHUD>(FindObjectsInactive.Include);
@@ -27,33 +22,36 @@ public class StartTask : MonoBehaviour
 
     }
 
-    public void BeginTask(TaskBase task)
+    public void Yes()
     {
-        itemHUD.SetImage(task.StartItemIcon);
+        //adds task to task list
+        ResetElements();
 
-        foreach (TaskBase taskB in taskController.TasksBaseList)
+        itemHUD.SetImage(interactionMenu.Task.StartItemIcon);
+
+        foreach(TaskBase task in taskController.TasksBaseList)
         {
-            if (taskB == task)
+            if(task == interactionMenu.Task)
             {
                 task.StartTask();
-
-                for (int i = 0; i < task.ItemsToSpawn.Length; i++)
-                {
-                    var itemCopy = Instantiate(task.itemObj);
-                    itemCopy.GetComponent<ItemDetermine>().ChooseItem(task.ItemsToSpawn[i]);
-                }
-
                 player.curItem = task.StartItem;
             }
         }
     }
 
-    void PickRandSpawnPos()
+    public void No()
     {
-
-        //float xVal = .transform.position.x - player.transform.position.x;
-        //float yVal = obj.collider.gameObject.transform.position.y - player.transform.position.y;
-
-
+        //exits interaction menu       
+        ResetElements();
     }
+
+    void ResetElements()
+    {
+        gameObject.SetActive(false);
+        interactionMenu.gameObject.SetActive(false);
+        interactionMenu.acceptIsShowing = false;
+        interactionMenu.time = interactionMenu.maxTime;
+        itemHUD.gameObject.SetActive(true);
+    }
+
 }

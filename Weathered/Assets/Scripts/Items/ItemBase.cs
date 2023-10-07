@@ -10,8 +10,6 @@ public class ItemBase : ScriptableObject
 
     public bool isPartOfTask = false;
 
-    public virtual bool Display() { return false; }
-
     public virtual string Name => name;
 
     public virtual string Description => description;

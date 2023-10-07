@@ -48,10 +48,10 @@ public class InputHandler : MonoBehaviour
                     SavingSystem.i.Save("SaveSlot");
                     break;
                 case "Task":
-                    StartTask.i.BeginTask(obj.collider.gameObject.GetComponent<TaskDetermine>().ChosenTask);
+                    TaskController.i.DisplayTask((Task)obj.collider.gameObject.GetComponent<TaskDetermine>().ChosenTask);
                     break;
                 case "Item":
-                    ItemController.i.DisplayItem(obj.collider.gameObject.GetComponent<ItemDetermine>().ChosenItem);
+                    //ItemController.i.DisplayItem(obj.collider.gameObject.GetComponent<TaskDetermine>().ChosenItem);
                     break;
                 default:
                     Debug.Log(obj.collider.gameObject.name);
