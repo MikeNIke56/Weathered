@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Shoes
   description: An old pair of shoes
   overWorldIcon: {fileID: -4609764937589784581, guid: d04fbb06019e9894a9d0727c22f424b8, type: 3}
-  isPartOfTask: 1
+  isPartOfTask: 0

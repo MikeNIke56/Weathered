@@ -5,9 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Task/Create new Task")]
 public class Task : TaskBase
 {
-    public override void StartTask()
+    public void StartTask()
     {
-        isActive = true;
         Debug.Log("task started");
     }
 }

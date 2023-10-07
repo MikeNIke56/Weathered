@@ -6,6 +6,7 @@ public class TaskDetermine : MonoBehaviour
 {
     [SerializeField] TaskBase[] tasks;
     [SerializeField] TaskBase chosenTask;
+    public bool isActive = false;
 
     private void Awake()
     {

@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Book
   description: A dusty book
   overWorldIcon: {fileID: 3843231544584785974, guid: 45480de33ff846e48a24d1930ef89d9d, type: 3}
-  isPartOfTask: 1
+  isPartOfTask: 0

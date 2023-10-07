@@ -1223,7 +1223,6 @@ GameObject:
   - component: {fileID: 4817637535172658007}
   - component: {fileID: 1319372762324692789}
   - component: {fileID: 7461033966046992833}
-  - component: {fileID: 8460525984571833285}
   m_Layer: 0
   m_Name: InputHandler
   m_TagString: Untagged
@@ -1307,19 +1306,6 @@ MonoBehaviour:
   dialog:
     lines: []
   tasksScreen: {fileID: 2271103231821692671}
---- !u!114 &8460525984571833285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2801240030461762135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd4039ff8691994ea2ee3e2e5bbf846, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionMenu: {fileID: 5781901183856233007}
 --- !u!1 &2936684527982214925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,7 +2277,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9038056272847441769}
-  - component: {fileID: 7570915083001525886}
   m_Layer: 0
   m_Name: PickUpItemUI
   m_TagString: Untagged
@@ -2316,19 +2301,6 @@ Transform:
   - {fileID: 6014911692873896508}
   m_Father: {fileID: 2304838060636130632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7570915083001525886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5887722594073065122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd4039ff8691994ea2ee3e2e5bbf846, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionMenu: {fileID: 5781901183856233007}
 --- !u!1 &6602004312107758375
 GameObject:
   m_ObjectHideFlags: 0
@@ -2534,12 +2506,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2741a4867e24bd9438b7e8c69d50c9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 5
   rb: {fileID: 3327759460287485382}
   rightBlocked: 0
   leftBlocked: 0
   withinRngIcon: {fileID: 4902171653332230599}
-  interactRng: 6
+  interactRng: 3.5
   playerCamera: {fileID: 4734354534026583338}
   playerCameraPos: {x: 2, y: 3}
   pauseMan: {fileID: 1241005101768603301}
@@ -2888,9 +2860,8 @@ MonoBehaviour:
   itemImg: {fileID: 3247353861058319065}
   descriptionText: {fileID: 2249008688445111572}
   nameText: {fileID: 57648729013788684}
-  acceptTask: {fileID: 8460525984571833285}
   pickupItem: {fileID: 5887722594073065122}
-  maxTime: 3
+  maxTime: 1.5
   time: 0
   acceptIsShowing: 0
   item: {fileID: 0}

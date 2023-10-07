@@ -9,7 +9,6 @@ public class InteractionMenu : MonoBehaviour
     public Text descriptionText;
     public Text nameText;
 
-    [SerializeField] StartTask acceptTask;
     [SerializeField] GameObject pickupItem;
     public float maxTime;
     public float time;
@@ -43,7 +42,6 @@ public class InteractionMenu : MonoBehaviour
         descriptionText.text = task.Description;
         nameText.text = task.Name;
 
-        //this.task = task;
         itemHUD.gameObject.SetActive(false);
     }
 
@@ -67,7 +65,6 @@ public class InteractionMenu : MonoBehaviour
             }
             else
             {
-                //acceptTask.gameObject.SetActive(true);
                 pickupItem.SetActive(true);
                 time = maxTime;
                 acceptIsShowing = true;
@@ -96,12 +93,10 @@ public class InteractionMenu : MonoBehaviour
     void ResetElements()
     {
         gameObject.SetActive(false);
-        gameObject.SetActive(false);
+        pickupItem.gameObject.SetActive(false);
         acceptIsShowing = false;
         time = maxTime;
         itemHUD.gameObject.SetActive(true);
     }
-
-    //public Task Task => task;
 
 }

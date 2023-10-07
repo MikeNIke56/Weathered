@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour, ISavable
 
     [SerializeField] GameObject withinRngIcon;
 
-    [SerializeField] public float interactRng;
+    public float interactRng;
+    public float spawnRng;
+
     [SerializeField] PlayerCameraController playerCamera;
     [SerializeField] Vector2 playerCameraPos = Vector2.zero;
 

@@ -13,9 +13,7 @@ public class TaskBase : ScriptableObject
     [SerializeField] Item[] startItemList;
     Item startItem;
 
-    public bool isActive = false;
-
-    Item[] itemsToSpawn;
+    public Item[] itemsToSpawn;
     public GameObject itemObj;
 
     public virtual string Name => name;
@@ -29,13 +27,8 @@ public class TaskBase : ScriptableObject
     public Item[] StartItemList => startItemList;
     public Item StartItem => startItem;
 
-    public Item[] ItemsToSpawn => itemsToSpawn;
-
     public virtual bool Display() {return true;}
-    public virtual void StartTask()
-    {
-        isActive = true;
-    }
+
     public virtual void ChooseStartItem()
     {
         startItem = startItemList[Random.Range(0, startItemList.Length)];

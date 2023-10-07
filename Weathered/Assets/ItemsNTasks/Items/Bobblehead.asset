@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Bobblehead
   description: An old bobblehead
   overWorldIcon: {fileID: -3649521478834281589, guid: e69973b99a150da48b92bac3607fe7b5, type: 3}
-  isPartOfTask: 1
+  isPartOfTask: 0

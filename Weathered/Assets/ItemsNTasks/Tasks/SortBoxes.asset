@@ -24,4 +24,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 74795b6ed47507f428e6445c747060bb, type: 2}
   - {fileID: 11400000, guid: 6a5fabd2b1212ab40b393fa9c6654089, type: 2}
   - {fileID: 11400000, guid: 3493dbe5aae846d4d8091ce2b0a24386, type: 2}
-  isActive: 1
+  itemsToSpawn:
+  - {fileID: 11400000, guid: 2bbaee29451e29d49af0c68164c48b98, type: 2}
+  itemObj: {fileID: 1750223308617479832, guid: ffb0c6020293a5745bab88e787cc9ad2, type: 3}

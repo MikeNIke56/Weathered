@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Broom
   description: A broom
   overWorldIcon: {fileID: 7901622571200134146, guid: 7cbb1e448e36cb948ab27af4cf8e7b07, type: 3}
-  isPartOfTask: 1
+  isPartOfTask: 0
