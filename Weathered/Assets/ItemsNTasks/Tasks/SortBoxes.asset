@@ -25,3 +25,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6a5fabd2b1212ab40b393fa9c6654089, type: 2}
   - {fileID: 11400000, guid: 3493dbe5aae846d4d8091ce2b0a24386, type: 2}
   isActive: 1
+  itemObj: {fileID: 1750223308617479832, guid: 14b31e1dc31101947b10a4c8f079fbe4, type: 3}
