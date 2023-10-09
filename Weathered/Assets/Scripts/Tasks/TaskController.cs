@@ -16,7 +16,8 @@ public class TaskController : MonoBehaviour
 
     PlayerController player;
 
-    Vector2 spawnPosition;
+    [SerializeField] float minSpawnDist;
+    [SerializeField] float spawnRng;
 
     bool started = false;
     public static TaskController i { get; private set; }
@@ -27,9 +28,7 @@ public class TaskController : MonoBehaviour
         i = this;
         player = FindAnyObjectByType<PlayerController>(FindObjectsInactive.Include);
         taskController = FindAnyObjectByType<TaskController>(FindObjectsInactive.Include);
-        itemHUD = FindAnyObjectByType<ItemHUD>(FindObjectsInactive.Include);
-
-         
+        itemHUD = FindAnyObjectByType<ItemHUD>(FindObjectsInactive.Include); 
     }
 
     void Start()
@@ -98,9 +97,15 @@ public class TaskController : MonoBehaviour
         //start task
         var tasks = FindObjectsByType<TaskDetermine>(FindObjectsSortMode.None);
 
+
         foreach (TaskDetermine taskD in tasks)
         {
-            if (taskD.isActive == true)
+            if (taskD.isActive == true && taskD.ChosenTask == task)
+            {
+                Debug.Log("You've already started this task");
+                return;
+            }
+            else if (taskD.isActive == true)
             {
                 Debug.Log("A task is already active");
                 return;
@@ -110,27 +115,19 @@ public class TaskController : MonoBehaviour
             {
                 if (taskD.ChosenTask == taskB)
                 {
-                    if (taskD.isActive == true)
+                    if (taskB == task)
                     {
-                        Debug.Log("A task is already active");
-                        return;
-                    }
-                    else
-                    {
-                        if (taskB == task)
+                        task.StartTask();
+                        player.curItem = task.StartItem;
+                        itemHUD.SetImage(task.StartItemIcon);
+
+                        for (int i = 0; i < task.itemsToSpawn.Length; i++)
                         {
-                            task.StartTask();
-                            player.curItem = task.StartItem;
-                            itemHUD.SetImage(task.StartItemIcon);
-
-                            for (int i = 0; i < task.itemsToSpawn.Length; i++)
-                            {
-                                var itemCopy = Instantiate(task.itemObj);
-                                //itemCopy.GetComponent<ItemDetermine>().ChooseItem(task.ItemsToSpawn[i]);
-                            }
-
-                            taskD.isActive = true;
+                            var itemCopy = Instantiate(task.itemObj, PickRandSpawnPos(task.itemObj));
+                            itemCopy.GetComponent<ItemDetermine>().SetItem(task.itemsToSpawn[i]);
                         }
+
+                        taskD.isActive = true;
                     }
                 }
             }
@@ -160,16 +157,18 @@ public class TaskController : MonoBehaviour
         }
     }*/
 
-    Vector2 PickRandSpawnPos()
+    Transform PickRandSpawnPos(GameObject obj)
     {
-        var playerPos = player.transform.position;
+        float randomRange = Random.Range(-spawnRng, spawnRng);
+        Vector3 randomPosition = new Vector3(randomRange, transform.position.y, transform.position.z);
 
-        while(spawnPosition.x > player.spawnRng)
+        if(Mathf.Abs(randomRange) <= minSpawnDist)
         {
-
+            PickRandSpawnPos(obj);
         }
 
-        return spawnPosition;
+        obj.transform.position = randomPosition;
+        return obj.transform;
     }
 
     public TaskBase[] TasksBaseList => tasksBaseList;

@@ -19,6 +19,12 @@ public class ItemDetermine : MonoBehaviour
         return (Item)chosenItem;
     }
 
+    public void SetItem(Item item)
+    {
+        chosenItem = item;
+        gameObject.GetComponent<SpriteRenderer>().sprite = chosenItem.OverWorldIcon;
+    }
+
 
     public ItemBase ChosenItem => chosenItem;
 }
