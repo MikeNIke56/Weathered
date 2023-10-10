@@ -7,6 +7,7 @@ TagManager:
   - Save
   - Item
   - Task
+  - BoxesSpawner
   layers:
   - Default
   - TransparentFX

@@ -11,13 +11,13 @@ public class TaskController : MonoBehaviour
     [SerializeField] TaskBase[] tasksBaseList;
     InteractionMenu interactionMenu;
 
-    TaskController taskController;
     ItemHUD itemHUD;
 
     PlayerController player;
 
-    [SerializeField] float minSpawnDist;
-    [SerializeField] float spawnRng;
+    //[SerializeField] float minSpawnDist;
+    //[SerializeField] float spawnRng;
+    GameObject[] boxPositions = new GameObject[3];
 
     bool started = false;
     public static TaskController i { get; private set; }
@@ -27,8 +27,7 @@ public class TaskController : MonoBehaviour
         EmptyList();
         i = this;
         player = FindAnyObjectByType<PlayerController>(FindObjectsInactive.Include);
-        taskController = FindAnyObjectByType<TaskController>(FindObjectsInactive.Include);
-        itemHUD = FindAnyObjectByType<ItemHUD>(FindObjectsInactive.Include); 
+        itemHUD = FindAnyObjectByType<ItemHUD>(FindObjectsInactive.Include);     
     }
 
     void Start()
@@ -38,6 +37,11 @@ public class TaskController : MonoBehaviour
         if (started == false)
         {
             GiveTasks();
+        }
+
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("BoxesSpawner").Length; i++)
+        {
+            boxPositions[i] = GameObject.FindGameObjectsWithTag("BoxesSpawner")[i];
         }
 
     }
@@ -123,7 +127,8 @@ public class TaskController : MonoBehaviour
 
                         for (int i = 0; i < task.itemsToSpawn.Length; i++)
                         {
-                            var itemCopy = Instantiate(task.itemObj, PickRandSpawnPos(task.itemObj));
+                            //only for box sorting, will change to fit all tasks after midterm
+                            var itemCopy = Instantiate(task.itemObj, boxPositions[i].transform);
                             itemCopy.GetComponent<ItemDetermine>().SetItem(task.itemsToSpawn[i]);
                         }
 
@@ -157,9 +162,14 @@ public class TaskController : MonoBehaviour
         }
     }*/
 
-    Transform PickRandSpawnPos(GameObject obj)
+    Transform SpawnBoxes(GameObject spawnObj, GameObject parentObj, int i)
     {
-        float randomRange = Random.Range(-spawnRng, spawnRng);
+        var listofSpawns = parentObj.GetComponentsInChildren<Transform>();
+
+        spawnObj.transform.position = listofSpawns[i].position;
+        return spawnObj.transform;
+
+        /*float randomRange = Random.Range(-spawnRng, spawnRng);
         Vector3 randomPosition = new Vector3(randomRange, transform.position.y, transform.position.z);
 
         if(Mathf.Abs(randomRange) <= minSpawnDist)
@@ -168,7 +178,7 @@ public class TaskController : MonoBehaviour
         }
 
         obj.transform.position = randomPosition;
-        return obj.transform;
+        return obj.transform;*/
     }
 
     public TaskBase[] TasksBaseList => tasksBaseList;

@@ -5,12 +5,14 @@ using UnityEngine;
 public class ItemController : MonoBehaviour
 {
     InteractionMenu interactionMenu;
+    PlayerController player;
 
     public static ItemController i { get; private set; }
 
     private void Awake()
     {
         i = this;
+        player = FindAnyObjectByType<PlayerController>();
     }
 
     private void Start()
@@ -18,7 +20,7 @@ public class ItemController : MonoBehaviour
         interactionMenu = FindAnyObjectByType<InteractionMenu>(FindObjectsInactive.Include);
     }
 
-    public void DisplayItem(Item item)
+    public void HandleItem(Item item)
     {
         bool itemClicked = item.Display();
 
@@ -27,6 +29,11 @@ public class ItemController : MonoBehaviour
             interactionMenu.item = item;
             interactionMenu.gameObject.SetActive(true);
             interactionMenu.DisplayInfo(item);
+        }
+        else if(itemClicked && item.isPartOfTask == true)
+        {
+            if (player.curItem == item.BoxSortItem)
+                Debug.Log("correct");
         }
     }
 }
