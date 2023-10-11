@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Empty Box
   description: A box to sort items into
-  overWorldIcon: {fileID: 6229730641916762398, guid: fe6f5c3f06be6ce4692a65bb069faea4, type: 3}
+  overWorldIcon: {fileID: 8640912973422910312, guid: 09837f066e31ebf4383994d0ac32d671, type: 3}
   isPartOfTask: 1

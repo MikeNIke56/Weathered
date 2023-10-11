@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Guitar
   description: A guitar with missing strings
-  overWorldIcon: {fileID: -4876614519491423539, guid: 303b4a5b39014c64a9a68ca918419c98, type: 3}
+  overWorldIcon: {fileID: -9174121540242986323, guid: 61ef4d8db5411294db842435e4ba226d, type: 3}
   isPartOfTask: 0

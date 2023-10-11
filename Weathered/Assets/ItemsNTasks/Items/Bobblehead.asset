@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Bobblehead
   description: An old bobblehead
-  overWorldIcon: {fileID: -3649521478834281589, guid: e69973b99a150da48b92bac3607fe7b5, type: 3}
+  overWorldIcon: {fileID: -9174121540242986323, guid: 61ef4d8db5411294db842435e4ba226d, type: 3}
   isPartOfTask: 0

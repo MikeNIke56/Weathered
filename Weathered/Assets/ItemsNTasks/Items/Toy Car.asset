@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Toy Car
   description: An old toy car
-  overWorldIcon: {fileID: 6872660602229340564, guid: d802f7fc7289d9945a929354d5a49ee7, type: 3}
+  overWorldIcon: {fileID: -1075866562347285718, guid: 8f724baf2dbdb1c4d9a06002dc48eb96, type: 3}
   isPartOfTask: 0

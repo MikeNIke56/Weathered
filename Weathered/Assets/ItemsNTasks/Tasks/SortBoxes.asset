@@ -15,8 +15,8 @@ MonoBehaviour:
   name: Sort Boxes
   description: Go through the items in the stack of boxes and put them in the correct
     areas
-  overWorldIcon: {fileID: 6197928473673509263, guid: 1676e3d03c3677c44a939748a21e80fe, type: 3}
-  inspectIcon: {fileID: 6197928473673509263, guid: 1676e3d03c3677c44a939748a21e80fe, type: 3}
+  overWorldIcon: {fileID: -509930419361788552, guid: 3f026e5faaed6f747923f70c902f6bd4, type: 3}
+  inspectIcon: {fileID: -509930419361788552, guid: 3f026e5faaed6f747923f70c902f6bd4, type: 3}
   possibleBoxItemsList:
   - {fileID: 11400000, guid: 6d1356476c7d6e346a4b7788e3838e4b, type: 2}
   - {fileID: 11400000, guid: c4c6d47d546ce684294b626d629682d3, type: 2}
