@@ -10,11 +10,14 @@ public class TaskBase : ScriptableObject
     [SerializeField] Sprite inspectIcon;
     Sprite startItemIcon;
 
-    [SerializeField] Item[] startItemList;
+    [SerializeField] Item[] possibleBoxItemsList;
     Item startItem;
 
     public Item[] itemsToSpawn;
     public GameObject itemObj;
+
+    public bool returnable = false;
+
 
     public virtual string Name => name;
 
@@ -24,14 +27,14 @@ public class TaskBase : ScriptableObject
     public Sprite InspectIcon => inspectIcon;
     public Sprite StartItemIcon => startItemIcon;
 
-    public Item[] StartItemList => startItemList;
+    public Item[] PossibleBoxItemsList => possibleBoxItemsList;
     public Item StartItem => startItem;
 
     public virtual bool Display() {return true;}
 
     public virtual void ChooseStartItem()
     {
-        startItem = startItemList[Random.Range(0, startItemList.Length)];
+        startItem = possibleBoxItemsList[Random.Range(0, possibleBoxItemsList.Length)];
         startItemIcon = startItem.OverWorldIcon;
 
     }

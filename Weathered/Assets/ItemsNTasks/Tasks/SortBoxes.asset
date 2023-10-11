@@ -17,7 +17,7 @@ MonoBehaviour:
     areas
   overWorldIcon: {fileID: 6197928473673509263, guid: 1676e3d03c3677c44a939748a21e80fe, type: 3}
   inspectIcon: {fileID: 6197928473673509263, guid: 1676e3d03c3677c44a939748a21e80fe, type: 3}
-  startItemList:
+  possibleBoxItemsList:
   - {fileID: 11400000, guid: 6d1356476c7d6e346a4b7788e3838e4b, type: 2}
   - {fileID: 11400000, guid: c4c6d47d546ce684294b626d629682d3, type: 2}
   - {fileID: 11400000, guid: d1fb844b381834147a7e68244df20aea, type: 2}
@@ -29,3 +29,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2bbaee29451e29d49af0c68164c48b98, type: 2}
   - {fileID: 11400000, guid: 2bbaee29451e29d49af0c68164c48b98, type: 2}
   itemObj: {fileID: 1750223308617479832, guid: ffb0c6020293a5745bab88e787cc9ad2, type: 3}
+  returnable: 1

@@ -7,6 +7,8 @@ public class ItemDetermine : MonoBehaviour
     [SerializeField] ItemBase[] items;
     [SerializeField] ItemBase chosenItem;
 
+    Item boxSortItem;
+
     private void Awake()
     {
         ChooseItem();
@@ -24,7 +26,14 @@ public class ItemDetermine : MonoBehaviour
         chosenItem = item;
         gameObject.GetComponent<SpriteRenderer>().sprite = chosenItem.OverWorldIcon;
     }
+    public void SetBoxReactItem(Item[] items)
+    {
+        boxSortItem = items[Random.Range(0, items.Length)];
+
+    }
+
 
 
     public ItemBase ChosenItem => chosenItem;
+    public Item BoxSortItem => boxSortItem;
 }

@@ -260,7 +260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3793664138543127273, guid: 308357199c377354283a8a7d30e3bb4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.586607
+      value: -8.01
       objectReference: {fileID: 0}
     - target: {fileID: 3793664138543127273, guid: 308357199c377354283a8a7d30e3bb4a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1155,6 +1155,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5801595181418484522, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: boxPositions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801595181418484522, guid: 7909fe1eca7120648814590718c27c71, type: 3}
+      propertyPath: emptyBoxItems.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6726939028777187097, guid: 7909fe1eca7120648814590718c27c71, type: 3}

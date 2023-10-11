@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
     InteractionMenu interactionMenu;
     PlayerController player;
+
+    TaskController taskController;
+    ItemHUD itemHUD;
 
     public static ItemController i { get; private set; }
 
@@ -18,22 +22,53 @@ public class ItemController : MonoBehaviour
     private void Start()
     {
         interactionMenu = FindAnyObjectByType<InteractionMenu>(FindObjectsInactive.Include);
+        taskController = FindAnyObjectByType<TaskController>(FindObjectsInactive.Include);
+        itemHUD = FindAnyObjectByType<ItemHUD>(FindObjectsInactive.Include);
     }
 
-    public void HandleItem(Item item)
+    public void HandleItem(ItemDetermine itemObj)
     {
-        bool itemClicked = item.Display();
+        bool itemClicked = itemObj.ChosenItem.Display();
 
-        if (itemClicked && item.isPartOfTask == false)
+        if (itemClicked && itemObj.ChosenItem.isPartOfTask == false)
         {
-            interactionMenu.item = item;
+            interactionMenu.item = (Item)itemObj.ChosenItem;
             interactionMenu.gameObject.SetActive(true);
-            interactionMenu.DisplayInfo(item);
+            interactionMenu.DisplayInfo((Item)itemObj.ChosenItem);
         }
-        else if(itemClicked && item.isPartOfTask == true)
+        else if(itemClicked && itemObj.ChosenItem.isPartOfTask == true)
         {
-            if (player.curItem == item.BoxSortItem)
-                Debug.Log("correct");
+            switch (itemObj.ChosenItem.Name)
+            {
+                case "Empty Box":
+
+                    if(itemObj.BoxSortItem == player.curItem)
+                    {
+                        for (int i = 0; i < taskController.emptyBoxItems.Length; i++)
+                        {
+                            if (taskController.emptyBoxItems[i] == itemObj.BoxSortItem)
+                            {
+                                taskController.emptyBoxItems[i] = null;
+                                break;
+                            }
+                        }
+
+                        player.curItem = null;
+                        itemHUD.SetImage(null);
+                        Destroy(itemObj.gameObject);
+                    }
+
+                    break;
+                case "Task":
+                    //TaskController.i.BeginTask((Task)obj.collider.gameObject.GetComponent<TaskDetermine>().ChosenTask);
+                    break;
+                case "Item":
+                    //ItemController.i.HandleItem((Item)obj.collider.gameObject.GetComponent<ItemDetermine>().ChosenItem);
+                    break;
+                default:
+                    Debug.Log("test");
+                    break;
+            }  
         }
     }
 }
