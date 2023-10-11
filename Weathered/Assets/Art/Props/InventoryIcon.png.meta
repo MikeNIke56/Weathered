@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e42c98a7e2c341a42b8395ea86633ead
+guid: 3c6972b8ad4cf084da306e1411847c04
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -101,10 +101,10 @@ TextureImporter:
       name: InventoryIcon_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 56
-        width: 365
-        height: 346
+        x: 82
+        y: 87
+        width: 560
+        height: 532
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      InventoryIcon_0: 5407064693081834009
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6495a2f5d6fe50f4a839796d40ea7d01, type: 3}
   m_Name: Shoes
   m_EditorClassIdentifier: 
-  name: Shoes
-  description: An old pair of shoes
+  name: Toy Car
+  description: An old toy car
   overWorldIcon: {fileID: -1075866562347285718, guid: 8f724baf2dbdb1c4d9a06002dc48eb96, type: 3}
   isPartOfTask: 0
