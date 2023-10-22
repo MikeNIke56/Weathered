@@ -7,7 +7,7 @@ TagManager:
   - Save
   - Item
   - Task
-  - BoxesSpawner
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -47,4 +47,13 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3360532797
+    locked: 0
+  - name: Behind
+    uniqueID: 598431347
+    locked: 0
+  - name: Player
+    uniqueID: 2249927163
+    locked: 0
+  - name: InFront
+    uniqueID: 115465769
     locked: 0

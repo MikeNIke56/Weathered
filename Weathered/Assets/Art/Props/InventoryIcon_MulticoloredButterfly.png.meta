@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      InventoryIcon_MulticoloredButterfly_0: -9174121540242986323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

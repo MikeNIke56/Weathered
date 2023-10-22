@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      JournalIcon_0: 68298332884354513
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

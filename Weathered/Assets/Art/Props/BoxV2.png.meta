@@ -101,12 +101,12 @@ TextureImporter:
       name: BoxV2_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 99
-        width: 585
-        height: 434
+        x: 22
+        y: 22
+        width: 653
+        height: 653
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,14 +121,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9092183c7ed45124592ad59a4afca528
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BoxV2_0: -4237533124349863443
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

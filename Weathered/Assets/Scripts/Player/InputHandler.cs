@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class InputHandler : MonoBehaviour
 {
@@ -36,25 +37,36 @@ public class InputHandler : MonoBehaviour
 
     void IsCloseEnough(RaycastHit2D obj)
     {
-        float xVal = obj.collider.gameObject.transform.position.x - player.transform.position.x;
-        float yVal = obj.collider.gameObject.transform.position.y - player.transform.position.y;
+        GameObject collidedObject = obj.collider.gameObject;
+
+        float xVal = collidedObject.transform.position.x - player.transform.position.x;
+        float yVal = collidedObject.transform.position.y - player.transform.position.y;
 
 
-        if (Mathf.Abs(xVal) <= player.interactRng && Mathf.Abs(yVal) <= player.interactRng)
+        if (Mathf.Abs(xVal) <= player.interactRange && Mathf.Abs(yVal) <= player.interactRange)
         {
-            switch (obj.collider.gameObject.tag)
+            switch (collidedObject.tag)
             {
                 case "Save":
                     SavingSystem.i.Save("SaveSlot");
                     break;
                 case "Task":
-                    TaskController.i.BeginTask((Task)obj.collider.gameObject.GetComponent<TaskDetermine>().ChosenTask);
-                    break;
                 case "Item":
-                    ItemController.i.HandleItem(obj.collider.gameObject.GetComponent<ItemDetermine>());
+                case "Interactable":
+                    //Debug.Log("Trying " + collidedObject.name);
+                    try
+                    {
+                        collidedObject.GetComponent<Interactable>().onClick();
+                    }
+                    catch (Exception e)
+                    {
+                        
+                        Debug.Log("Failed to interact with " + collidedObject.name);
+                        Debug.Log(e);
+                    }
                     break;
                 default:
-                    Debug.Log(obj.collider.gameObject.name);
+                    //Debug.Log(collidedObject.name);
                     break;
             }
         }

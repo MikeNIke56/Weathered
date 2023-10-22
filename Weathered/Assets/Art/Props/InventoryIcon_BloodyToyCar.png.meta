@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      InventoryIcon_BloodyToyCar_0: -1075866562347285718
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -2,11 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Task/Create new Task")]
-public class Task : TaskBase
+public class Task : Interaction
 {
-    public void StartTask()
+    public string taskName;
+    public string description;
+    public string shortName;
+    public string shortDescription;
+    public string voicemailDescription;
+    public string voicemailShortQuote;
+    public enum taskState { None, Available, InProgress, Completed }
+    public taskState currentState;
+    public bool isFailed = false;
+    public bool isAlwaysChosen = false;
+    public GameObject taskToggleRoot; // Gameobject child to activate/deactivate task.
+    public GameObject taskIconPrefab; // For task journal, Not Started / default. Prefabs to allow scripting and animation
+    public GameObject taskInProgressIconPrefab; // In progress icon
+    public GameObject taskCompletedIconPrefab; // Completed icon
+    public virtual void InstanceTask()
     {
-        Debug.Log("task started");   
+        if (taskToggleRoot != null)
+        {
+            taskToggleRoot.SetActive(true);
+        }
+        OnAvailable();
+    }
+    public virtual void OnAvailable()
+    {
+        currentState = taskState.Available;
+    }
+    public virtual void OnInProgress()
+    {
+        currentState = taskState.InProgress;
+    }
+    public virtual void OnCompleted()
+    {
+        currentState = taskState.Completed;
     }
 }

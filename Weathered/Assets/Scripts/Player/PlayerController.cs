@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
     [SerializeField] GameObject withinRngIcon;
 
-    public float interactRng;
+    public float interactRange;
 
     [SerializeField] PlayerCameraController playerCamera;
     [SerializeField] Vector2 playerCameraPos = Vector2.zero;
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
         if(isPaused == false)
         {
-            if (Mathf.Abs(xVal) <= interactRng && Mathf.Abs(yVal) <= interactRng)
+            if (Mathf.Abs(xVal) <= interactRange && Mathf.Abs(yVal) <= interactRange)
             {
                 withinRngIcon.SetActive(true);
             }

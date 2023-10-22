@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EntranceWallpaper_0: 5270383303324533581
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
