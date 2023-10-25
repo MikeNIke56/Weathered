@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 2f2d9bc24db0fe84da205c1ac7b332a4
+guid: 4dcee302ed9d735438392c003c53b2fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3059208715771935404
-    second: CeilingLightVer2_0
+      213: -7378482193661843728
+    second: OminousBoardGame_0
+  - first:
+      213: -1533453117060234383
+    second: OminousBoardGame_1
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CeilingLightVer2_0
+      name: OminousBoardGame_0
       rect:
         serializedVersion: 2
-        x: 190
-        y: 17
-        width: 336
-        height: 703
+        x: 116
+        y: 155
+        width: 503
+        height: 404
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +115,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45582a2a1e18b85d0800000000000000
-      internalID: -3059208715771935404
+      spriteID: 0f6ad39a98d5a9990800000000000000
+      internalID: -7378482193661843728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OminousBoardGame_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 547
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173c8edb38418bae0800000000000000
+      internalID: -1533453117060234383
       vertices: []
       indices: 
       edges: []
@@ -128,8 +152,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      CeilingLightVer2_0: -3059208715771935404
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

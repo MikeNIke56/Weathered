@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CeilingLightVer3_0: 2440502853911092066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

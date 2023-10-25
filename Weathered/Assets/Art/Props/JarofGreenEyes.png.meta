@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2f2d9bc24db0fe84da205c1ac7b332a4
+guid: 489ba7abf5c192c43927b8cc0da6863d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3059208715771935404
-    second: CeilingLightVer2_0
+      213: 6335221721148175183
+    second: JarofGreenEyes_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CeilingLightVer2_0
+      name: JarofGreenEyes_0
       rect:
         serializedVersion: 2
-        x: 190
-        y: 17
-        width: 336
-        height: 703
+        x: 229
+        y: 176
+        width: 248
+        height: 355
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45582a2a1e18b85d0800000000000000
-      internalID: -3059208715771935404
+      spriteID: f433066079a3be750800000000000000
+      internalID: 6335221721148175183
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      CeilingLightVer2_0: -3059208715771935404
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
