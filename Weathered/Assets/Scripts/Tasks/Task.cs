@@ -37,5 +37,6 @@ public class Task : Interaction
     public virtual void OnCompleted()
     {
         currentState = taskState.Completed;
+        TaskController.taskControl.taskCompleteAudio.Play();
     }
 }

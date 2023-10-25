@@ -31,6 +31,7 @@ public class Item : Interaction
         }
         currentUIObject = Instantiate(itemUIObjectPrefab, ItemController.itemControl.HandIconRoot.transform);
         currentState = itemState.Held;
+        ItemController.itemControl.itemPickupAudio.Play();
     }
     public virtual void OnReplaced()
     {

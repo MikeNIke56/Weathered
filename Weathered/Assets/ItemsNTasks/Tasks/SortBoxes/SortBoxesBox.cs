@@ -8,6 +8,7 @@ public class SortBoxesBox : Interaction
     [SerializeField] Sprite boxOpenSprite;
     public bool isOpened = false;
     public bool isDone = false;
+    public AudioSource boxSound;
     public override void onClick()
     {
         if (SBTask == null)
@@ -21,10 +22,12 @@ public class SortBoxesBox : Interaction
     {
         isOpened = true;
         GetComponent<SpriteRenderer>().sprite = boxOpenSprite;
+        boxSound.Play();
     }
     public void RemoveBox()
     {
         isDone = true;
+        boxSound.Play();
         gameObject.SetActive(false);
     }
 }

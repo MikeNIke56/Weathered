@@ -7,6 +7,7 @@ public class ItemController : MonoBehaviour
     static public ItemController itemControl;
     static public Item itemInHand;
     public GameObject HandIconRoot;
+    public AudioSource itemPickupAudio;
 
     void Start()
     {
