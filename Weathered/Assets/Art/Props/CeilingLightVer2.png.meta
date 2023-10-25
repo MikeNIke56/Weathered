@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 478ffc626be38324fa9456c200cc7930
+guid: 2f2d9bc24db0fe84da205c1ac7b332a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4691096506232746518
-    second: TemporaryImage_0
+      213: -3059208715771935404
+    second: CeilingLightVer2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TemporaryImage_0
+      name: CeilingLightVer2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 720
-        height: 720
+        x: 190
+        y: 17
+        width: 336
+        height: 703
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 612341dfa6f1a1140800000000000000
-      internalID: 4691096506232746518
+      spriteID: 45582a2a1e18b85d0800000000000000
+      internalID: -3059208715771935404
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      TemporaryImage_0: 4691096506232746518
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
