@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 489ba7abf5c192c43927b8cc0da6863d
+guid: 9fc8858d663aad6428479f518b0771dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6335221721148175183
-    second: JarofGreenEyes_0
+      213: -2029808419322991859
+    second: StartButtonWeatheredUI_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JarofGreenEyes_0
+      name: StartButtonWeatheredUI_0
       rect:
         serializedVersion: 2
-        x: 229
-        y: 176
-        width: 248
-        height: 355
+        x: 330
+        y: 283
+        width: 606
+        height: 189
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f433066079a3be750800000000000000
-      internalID: 6335221721148175183
+      spriteID: d0be72c3ffba4d3e0800000000000000
+      internalID: -2029808419322991859
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      JarofGreenEyes_0: 6335221721148175183
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

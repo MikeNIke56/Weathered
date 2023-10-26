@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CollectibleToyCar_0: 4864234961123711424
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

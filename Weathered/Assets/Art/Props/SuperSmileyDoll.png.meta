@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SuperSmileyDoll_0: -7275167993858626409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

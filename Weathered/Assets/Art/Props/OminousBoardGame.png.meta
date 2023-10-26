@@ -152,7 +152,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      OminousBoardGame_0: -7378482193661843728
+      OminousBoardGame_1: -1533453117060234383
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

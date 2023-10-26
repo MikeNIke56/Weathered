@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StsinedGlassDoor_0: 8435406864375723202
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

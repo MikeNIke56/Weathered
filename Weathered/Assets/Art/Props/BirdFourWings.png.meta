@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BirdFourWings_0: -6370270622907762723
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
