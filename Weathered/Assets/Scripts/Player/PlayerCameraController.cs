@@ -50,7 +50,7 @@ public class PlayerCameraController : MonoBehaviour
 
     public void SetFollowPosLocal(Vector2 inputVector)
     {
-        followPosLocal = new Vector3(inputVector.x, inputVector.y, transform.position.z);
+        followPosLocal = new Vector3(inputVector.x, inputVector.y, transform.localPosition.z);
     }
     public void SetFollowPosLocal(Vector3 inputVector)
     {

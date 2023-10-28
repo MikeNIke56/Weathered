@@ -12,6 +12,8 @@ public class SortBoxes : Task
     [SerializeField] List<Item> ToySortItems = new List<Item>();
     [SerializeField] List<Item> ColSortItems = new List<Item>();
     [SerializeField] List<Item> TaxSortItems = new List<Item>();
+
+    [SerializeField] AccessStairs stairs; //refernce to stairs object in scene
     public void BoxClicked(SortBoxesBox clickedBox)
     {
         if (currentState == taskState.Available)
@@ -86,6 +88,7 @@ public class SortBoxes : Task
                 else if (!clickedBox.isDone)
                 {
                     clickedBox.RemoveBox();
+                    stairs.isPassable = true;
                     OnCompleted();
                 }
             }

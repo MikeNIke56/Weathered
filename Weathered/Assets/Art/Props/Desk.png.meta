@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d04fbb06019e9894a9d0727c22f424b8
+guid: 6b1a0c35ea37d7e48a9450fd223e49b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4609764937589784581
-    second: shoes_0
+      213: 7872722273471896646
+    second: Desk_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shoes_0
+      name: Desk_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 9
-        width: 570
-        height: 347
+        x: 26
+        y: 14
+        width: 1386
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bfff8ec7633d600c0800000000000000
-      internalID: -4609764937589784581
+      spriteID: 64c199d3237814d60800000000000000
+      internalID: 7872722273471896646
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      shoes_0: -4609764937589784581
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

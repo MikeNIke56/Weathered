@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      QuitButtonWeatheredUI_0: -2353507155184453114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

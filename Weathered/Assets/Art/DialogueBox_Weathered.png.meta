@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DialogueBox_Weathered_0: -5403412973014146209
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

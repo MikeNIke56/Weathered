@@ -10,12 +10,6 @@ public class SortBoxesBox : Interaction
     public bool isDone = false;
     public AudioSource boxSound;
 
-    AccessStairs stairs; //refernce to stairs object in scene
-
-    private void Awake()
-    {
-        stairs = FindAnyObjectByType<AccessStairs>();
-    }
     public override void onClick()
     {
         if (SBTask == null)
@@ -36,7 +30,5 @@ public class SortBoxesBox : Interaction
         isDone = true;
         boxSound.Play();
         gameObject.SetActive(false);
-
-        stairs.isPassable = true;
     }
 }
