@@ -8,6 +8,7 @@ public class TaskController : MonoBehaviour
     public List<Task> taskList = new List<Task>(); //Full list of every task possible
     public List<Task> taskChosenList = new List<Task>(); //Task list for chosen tasks this game. Referenced commonly. Auto-populated with curation.
     public AudioSource taskCompleteAudio;
+    public AudioSource taskBadActionAudio;
 
     void Start()
     {

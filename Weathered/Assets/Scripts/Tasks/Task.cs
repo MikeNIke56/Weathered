@@ -18,6 +18,7 @@ public class Task : Interaction
     public GameObject taskIconPrefab; // For task journal, Not Started / default. Prefabs to allow scripting and animation
     public GameObject taskInProgressIconPrefab; // In progress icon
     public GameObject taskCompletedIconPrefab; // Completed icon
+    public int timesFailed = 0;
     public virtual void InstanceTask()
     {
         if (taskToggleRoot != null)
@@ -38,5 +39,18 @@ public class Task : Interaction
     {
         currentState = taskState.Completed;
         TaskController.taskControl.taskCompleteAudio.Play();
+    }
+    public virtual void OnBadAction()
+    {
+        timesFailed++;
+        if (timesFailed >= 3)
+        {
+            OnFailed();
+        }
+        TaskController.taskControl.taskBadActionAudio.Play();
+    }
+    public virtual void OnFailed()
+    {
+
     }
 }

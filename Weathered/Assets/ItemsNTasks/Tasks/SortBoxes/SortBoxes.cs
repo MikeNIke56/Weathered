@@ -131,6 +131,28 @@ public class SortBoxes : Task
                 RemoveItemFromList(heldItem);
                 ItemController.ClearItemInHand();
             }
+            else
+            {
+                WrongItem();
+                ItemController.ClearItemInHand();
+            }
+        }
+    }
+
+    void WrongItem()
+    {
+        OnBadAction();
+        if (timesFailed == 1)
+        {
+            ShortTextController.STControl.AddShortText("No. That wasn't right...");
+        } 
+        else if (timesFailed == 2)
+        {
+            ShortTextController.STControl.AddShortText("I made another mistake...");
+        } 
+        else if (timesFailed >= 3)
+        {
+            ShortTextController.STControl.AddShortText("STOP. That's the wrong sorting box.", true);
         }
     }
 }
