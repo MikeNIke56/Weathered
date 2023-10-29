@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9c125e7ad4a9ea340a0f9ee6405fdc03
+guid: b4b2f86c6ee1aa84eafb61b86e194c23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2377692628591109145
-    second: EntranceTiles_0
+      213: 7299490963244898793
+    second: ScreenVignette_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EntranceTiles_0
+      name: ScreenVignette_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 720
-        height: 720
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7eb13cfd62db00fd0800000000000000
-      internalID: -2377692628591109145
+      spriteID: 9e9d2615b500d4560800000000000000
+      internalID: 7299490963244898793
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EntranceTiles_0: -2377692628591109145
+      ScreenVignette_0: 7299490963244898793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

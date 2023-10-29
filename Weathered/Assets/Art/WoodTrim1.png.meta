@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2dc5345cae0ef3543b62b3527f489456
+guid: 97daee19f019fc74a8eb867bba040e25
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2377692628591109145
-    second: EntranceTiles_0
+      213: 7890799425797145807
+    second: WoodTrim1_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EntranceTiles_0
+      name: WoodTrim1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 720
-        height: 720
+        width: 1352
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7eb13cfd62db00fd0800000000000000
-      internalID: -2377692628591109145
+      spriteID: fc4ce704540c18d60800000000000000
+      internalID: 7890799425797145807
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EntranceTiles_0: -2377692628591109145
+      WoodTrim1_0: 7890799425797145807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

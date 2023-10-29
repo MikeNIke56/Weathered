@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2dc5345cae0ef3543b62b3527f489456
+guid: ff0b7b176228f7d4da8693f9810f2309
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2377692628591109145
-    second: EntranceTiles_0
+      213: 6041110418257849961
+    second: EntranceTilesSpirit_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,7 +98,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EntranceTiles_0
+      name: EntranceTilesSpirit_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7eb13cfd62db00fd0800000000000000
-      internalID: -2377692628591109145
+      spriteID: 96eab211be556d350800000000000000
+      internalID: 6041110418257849961
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EntranceTiles_0: -2377692628591109145
+      EntranceTilesSpirit_0: 6041110418257849961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

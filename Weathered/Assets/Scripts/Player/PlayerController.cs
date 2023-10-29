@@ -11,10 +11,12 @@ public class PlayerController : MonoBehaviour, ISavable
     //Feel free to delete this for a more optimized controller, just wanted to test the clicking
 
     public float moveSpeed = 5f;
-    Vector2 movement;
+    Vector2 movement = Vector2.zero;
+    Vector2 currentMovement = Vector2.zero;
     public Rigidbody2D rb;
     public bool rightBlocked = false; //Obstructors toggle these when colliding begins
     public bool leftBlocked = false;
+    public bool forcedMovement = false;
 
     private Camera cam;
     private Vector2 mousePos;
@@ -24,7 +26,9 @@ public class PlayerController : MonoBehaviour, ISavable
     public float interactRange;
 
     [SerializeField] PlayerCameraController playerCamera;
-    [SerializeField] Vector2 playerCameraPos = Vector2.zero;
+    [SerializeField] Vector2 playerCameraPos = new Vector2(2f, 3f);
+    [SerializeField] float playerCameraUpY = 5f;
+    [SerializeField] float playerCameraDownY = 1f;
 
     [SerializeField] PauseMenuManager pauseMan;
     public bool isPaused = false;
@@ -34,10 +38,12 @@ public class PlayerController : MonoBehaviour, ISavable
     [SerializeField] Animator playerAnimator;
     [SerializeField] GameObject MazarineSpriteObject;
     public bool isFacingRight = true;
+    public bool lockMovement = false;
 
     void Start()
     {
         withinRngIcon.SetActive(false);
+        playerCamera.SetFollowPosLocal(playerCameraPos);
     }
 
     // Update is called once per frame
@@ -47,50 +53,131 @@ public class PlayerController : MonoBehaviour, ISavable
         {
             cam = GameObject.FindFirstObjectByType<Camera>();
         }
-        movement.x = Input.GetAxisRaw("Horizontal");
+        if (lockMovement)
+        {
+            movement = Vector2.zero;
+        }
+        else
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
         if (Input.GetKeyDown(KeyCode.Space)) { SavingSystem.i.Load("SaveSlot"); }
 
         CursorShow(isPaused);
         OpenPauseMenu();
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SpiritWorldJump.Jump();
+        }
     }
 
     void FixedUpdate()
     {
-        if (movement.x > 0)
+        if (movement.x > 0 && currentMovement.x != 1f)
         {
-            isFacingRight = true;
-            MazarineSpriteObject.transform.localScale = new Vector3(MathF.Abs(MazarineSpriteObject.transform.localScale.x), MazarineSpriteObject.transform.localScale.y, MazarineSpriteObject.transform.localScale.z);
+            currentMovement.x = 1f;
+            OnMoveXPos();
         }
-        else if (movement.x < 0)
+        else if (movement.x < 0 && currentMovement.x != -1f)
         {
-            isFacingRight = false;
-            MazarineSpriteObject.transform.localScale = new Vector3(-MathF.Abs(MazarineSpriteObject.transform.localScale.x), MazarineSpriteObject.transform.localScale.y, MazarineSpriteObject.transform.localScale.z);
+            currentMovement.x = -1f;
+            OnMoveXNeg();
         }
-        if (movement.x > 0 && !rightBlocked)
+        else if (movement.x == 0 && currentMovement.x != 0f)
         {
-            playerAnimator.SetBool("isWalking", true);
-            rb.position += new Vector2(movement.x * moveSpeed * Time.fixedDeltaTime, 0f);
-            if (playerCamera.isActiveAndEnabled)
-            {
-                playerCamera.SetFollowPosLocal(playerCameraPos);
-            }
+            currentMovement.x = 0f;
+            OnMoveXZero();
         }
-        else if (movement.x < 0 && !leftBlocked)
+        if (movement.y > 0 && currentMovement.y != 1f)
         {
-            playerAnimator.SetBool("isWalking", true);
-            rb.position += new Vector2(movement.x * moveSpeed * Time.fixedDeltaTime, 0f);
-            if (playerCamera.isActiveAndEnabled)
-            {
-                playerCamera.SetFollowPosLocal(new Vector2(-playerCameraPos.x, playerCameraPos.y));
-            }
+            currentMovement.y = 1f;
+            OnMoveYPos();
         }
-        else
+        else if (movement.y < 0 && currentMovement.y != -1f)
+        {
+            currentMovement.y = -1f;
+            OnMoveYNeg();
+        }
+        else if (movement.y == 0 && currentMovement.y != 0f)
+        {
+            currentMovement.y = 0f;
+            OnMoveYZero();
+        }
+
+        if (!forcedMovement && rightBlocked && rb.velocity.x > 0)
         {
             playerAnimator.SetBool("isWalking", false);
+            rb.velocity = new Vector2(0f, rb.velocity.y);
         }
-        //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        else if (!forcedMovement && leftBlocked && rb.velocity.x < 0)
+        {
+            playerAnimator.SetBool("isWalking", false);
+            rb.velocity = new Vector2(0f, rb.velocity.y);
+        }
+
+    }
+    void OnMoveXPos()
+    {
+        isFacingRight = true;
+        MazarineSpriteObject.transform.localScale = new Vector3(MathF.Abs(MazarineSpriteObject.transform.localScale.x), MazarineSpriteObject.transform.localScale.y, MazarineSpriteObject.transform.localScale.z);
+        if (!rightBlocked && !forcedMovement)
+        {
+            playerAnimator.SetBool("isWalking", true);
+            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+        }
+
+        if (playerCamera.isActiveAndEnabled)
+        {
+            playerCamera.SetFollowXLocal(playerCameraPos.x);
+        }
+    }
+    void OnMoveXZero()
+    {
+        if (!forcedMovement)
+        {
+            playerAnimator.SetBool("isWalking", false);
+            rb.velocity = new Vector2(0f, rb.velocity.y);
+        }
+    }
+    void OnMoveXNeg()
+    {
+        isFacingRight = false;
+        MazarineSpriteObject.transform.localScale = new Vector3(-MathF.Abs(MazarineSpriteObject.transform.localScale.x), MazarineSpriteObject.transform.localScale.y, MazarineSpriteObject.transform.localScale.z);
+        if (!leftBlocked && !forcedMovement)
+        {
+            playerAnimator.SetBool("isWalking", true);
+            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+        }
+
+        if (playerCamera.isActiveAndEnabled)
+        {
+            playerCamera.SetFollowXLocal(-playerCameraPos.x);
+        }
+    }
+    void OnMoveYPos()
+    {
+        if (playerCamera.isActiveAndEnabled)
+        {
+            playerCamera.SetFollowYLocal(playerCameraUpY);
+        }
+    }
+    void OnMoveYZero()
+    {
+        if (playerCamera.isActiveAndEnabled)
+        {
+            playerCamera.SetFollowYLocal(playerCameraPos.y);
+        }
+    }
+    void OnMoveYNeg()
+    {
+        if (playerCamera.isActiveAndEnabled)
+        {
+            playerCamera.SetFollowYLocal(playerCameraDownY);
+        }
     }
 
     void CursorShow(bool isPaused=false)
