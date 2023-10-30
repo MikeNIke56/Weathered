@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InvestigateMenu : MonoBehaviour
+public class ObservationMenu : MonoBehaviour
 {
-    static public InvestigateMenu investMenu;
+    static public ObservationMenu observeMenu;
     public GameObject visualRoot;
     public Image descBox;
     public Text descText;
     public Text nameText;
-    InvestigateMenu()
+    ObservationMenu()
     {
-        if (investMenu == null)
+        if (observeMenu == null)
         {
-            investMenu = this;
+            observeMenu = this;
         }
     }
     public void SetDescText(string textToSet)
@@ -32,9 +32,9 @@ public class InvestigateMenu : MonoBehaviour
 
     public void ClearVisualRoot()
     {
-        while (visualRoot.transform.childCount > 0)
+        foreach (Transform childTransform in  visualRoot.transform)
         {
-            Destroy(visualRoot.transform.GetChild(0).gameObject);
+            Destroy(childTransform.gameObject);
         }
     }
 }

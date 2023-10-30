@@ -54,14 +54,17 @@ public class Item : Interaction
 
     public virtual void InvestigateItem()
     {
-        if (canInvestigate && investigateObjectPrefab != null)
+        if (canInvestigate)
         {
-            InvestigateMenu.investMenu.ClearVisualRoot();
-            Instantiate(investigateObjectPrefab, InvestigateMenu.investMenu.visualRoot.transform);
-            InvestigateMenu.investMenu.SetDescText(description);
-            InvestigateMenu.investMenu.nameText.text = itemName;
+            if (investigateObjectPrefab == null)
+            {
+                investigateObjectPrefab = defaultObjectPrefab;
+            }
+            ObservationMenu.observeMenu.ClearVisualRoot();
+            Instantiate(investigateObjectPrefab, ObservationMenu.observeMenu.visualRoot.transform);
+            ObservationMenu.observeMenu.SetDescText(description);
+            ObservationMenu.observeMenu.nameText.text = itemName;
             UIController.UIControl.OpenInteractionMenu();
         }
-        Debug.Log("Tried to investigate " + itemName + ".");
     }
 }

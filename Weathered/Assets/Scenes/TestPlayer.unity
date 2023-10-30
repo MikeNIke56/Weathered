@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Jar of Green Eyes
-  description: 
+  description: Ewww! Oh, the label says they are made of glass. They look so real...
   shortName: Eye Jar
   shortDescription: 
   currentState: 0
@@ -815,7 +815,7 @@ MonoBehaviour:
   playerObjectPrefab: {fileID: 0}
   droppedObjectPrefab: {fileID: 0}
   investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
+  canInvestigate: 1
 --- !u!1001 &490535579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1288,7 +1288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Collectible Toy Car
-  description: 
+  description: It looks like a toy car but no kids I've seen wanted to play with
+    it... Some people buy it just because it looks cool, I guess.
   shortName: Toy Car
   shortDescription: 
   currentState: 0
@@ -1297,7 +1298,7 @@ MonoBehaviour:
   playerObjectPrefab: {fileID: 0}
   droppedObjectPrefab: {fileID: 0}
   investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
+  canInvestigate: 1
 --- !u!1 &639653726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,6 +1349,8 @@ MonoBehaviour:
   taskChosenList: []
   taskCompleteAudio: {fileID: 2018158160}
   taskBadActionAudio: {fileID: 16228670}
+  taskScreenList: {fileID: 0}
+  taskObj: {fileID: 0}
 --- !u!1 &642380866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,7 +1396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Super Smiley Doll
-  description: 
+  description: A doll kids might play with. The smile feels ominous...
   shortName: Smile Doll
   shortDescription: 
   currentState: 0
@@ -1402,7 +1405,7 @@ MonoBehaviour:
   playerObjectPrefab: {fileID: 0}
   droppedObjectPrefab: {fileID: 0}
   investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
+  canInvestigate: 1
 --- !u!1001 &646348208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2916,7 +2919,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Ominous Board Game
-  description: 
+  description: It's a family board game. It is fun, but this set has something wierd
+    about it...
   shortName: Board Game
   shortDescription: 
   currentState: 0
@@ -2925,7 +2929,7 @@ MonoBehaviour:
   playerObjectPrefab: {fileID: 0}
   droppedObjectPrefab: {fileID: 0}
   investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
+  canInvestigate: 1
 --- !u!1 &1132572313
 GameObject:
   m_ObjectHideFlags: 0
@@ -3925,7 +3929,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Bird with Four Wings
-  description: It's a bird, but with four wings instead of two.
+  description: It's a bird, but with four wings instead of two. It sometimes moves
+    likes it is still alive...
   shortName: Bird 4
   shortDescription: 
   currentState: 0
@@ -4069,7 +4074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Blood Stained Toy Train
-  description: 
+  description: It's the engine car of a train set. The paint has come off to reveal
+    a bit of red. It is too generic to be collectible.
   shortName: Toy Train
   shortDescription: 
   currentState: 0
@@ -4078,7 +4084,7 @@ MonoBehaviour:
   playerObjectPrefab: {fileID: 0}
   droppedObjectPrefab: {fileID: 0}
   investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
+  canInvestigate: 1
 --- !u!1 &1639656521
 GameObject:
   m_ObjectHideFlags: 0
@@ -4291,8 +4297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028a9cc0ffcf93144b156faa3bad044e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Entrance Key
-  description: 
+  itemName: Entrance Key 1
+  description: I think this key unlocks the door to the right in the entrance.
   shortName: Key 1
   shortDescription: 
   currentState: 0
@@ -4301,7 +4307,7 @@ MonoBehaviour:
   playerObjectPrefab: {fileID: 0}
   droppedObjectPrefab: {fileID: 0}
   investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
+  canInvestigate: 1
   key1Object: {fileID: 500614998}
   taskToComplete: {fileID: 5413006520213761604}
 --- !u!1 &1734847300
@@ -4349,7 +4355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Glowing Claw
-  description: 
+  description: The claw sometimes gives off a strange glow effect. What kind of animal
+    did it come from?
   shortName: Glow Claw
   shortDescription: 
   currentState: 0
@@ -4358,7 +4365,7 @@ MonoBehaviour:
   playerObjectPrefab: {fileID: 0}
   droppedObjectPrefab: {fileID: 0}
   investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
+  canInvestigate: 1
 --- !u!1 &1736860441
 GameObject:
   m_ObjectHideFlags: 0
@@ -5020,7 +5027,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Butterfly with Multicolored Wings
-  description: 
+  description: A pretty butterfly with different colored wings. It feels wierd seeing
+    it kept in a glass case.
   shortName: MButterfly
   shortDescription: 
   currentState: 0
@@ -5029,7 +5037,7 @@ MonoBehaviour:
   playerObjectPrefab: {fileID: 0}
   droppedObjectPrefab: {fileID: 0}
   investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
+  canInvestigate: 1
 --- !u!1 &1992361281
 GameObject:
   m_ObjectHideFlags: 0
@@ -5168,7 +5176,7 @@ MonoBehaviour:
   playerObjectPrefab: {fileID: 0}
   droppedObjectPrefab: {fileID: 0}
   investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
+  canInvestigate: 1
   originalDusterObject: {fileID: 1925274970}
 --- !u!1 &2013646546
 GameObject:
@@ -5637,8 +5645,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8878e212fe3604584b540ae0e4ee3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Playing Cards with Moving Eyes
-  description: 
+  itemName: Playing Cards
+  description: A set of playing cards. Some people like collecting the cards with
+    certain people on them... Their eyes sometimes look like they are staring right
+    at me.
   shortName: Eye Cards
   shortDescription: 
   currentState: 0
@@ -5647,7 +5657,7 @@ MonoBehaviour:
   playerObjectPrefab: {fileID: 0}
   droppedObjectPrefab: {fileID: 0}
   investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
+  canInvestigate: 1
 --- !u!114 &66378255253544543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5840,7 +5850,7 @@ GameObject:
   - component: {fileID: 4315363290506010616}
   - component: {fileID: 4315363290506010617}
   m_Layer: 0
-  m_Name: InvestigateMenu
+  m_Name: ObservationMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7307,27 +7317,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5613964166232089876
-MonoBehaviour:
+--- !u!95 &5613964166232089876
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5613964166232089875}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c2a7ac4c68c28b4ea9f5c77cb7afbeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imageComponent: {fileID: 2053464576011187036}
-  frames:
-  - {fileID: -505200698, guid: 283b55ae9e5714147a314e071ec9ba0b, type: 3}
-  - {fileID: -1611713459, guid: 283b55ae9e5714147a314e071ec9ba0b, type: 3}
-  - {fileID: 1590068285, guid: 283b55ae9e5714147a314e071ec9ba0b, type: 3}
-  - {fileID: 1525281086, guid: 283b55ae9e5714147a314e071ec9ba0b, type: 3}
-  - {fileID: -1188104791, guid: 283b55ae9e5714147a314e071ec9ba0b, type: 3}
-  secondsPerFrame: 0.15
-  stopAnimating: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa226342e23c872408be035e80861a67, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &5622482751352900556
 MonoBehaviour:
   m_ObjectHideFlags: 0
