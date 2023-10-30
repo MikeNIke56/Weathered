@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TaskController : MonoBehaviour
 {
@@ -10,15 +11,27 @@ public class TaskController : MonoBehaviour
     public AudioSource taskCompleteAudio;
     public AudioSource taskBadActionAudio;
 
+    [SerializeField] GameObject taskScreenList;
+    [SerializeField] GameObject taskObj;
+
     void Start()
     {
         if (taskControl == null)
         {
             taskControl = FindFirstObjectByType<TaskController>();
         }
+        //deletes placeholder objects in the parent
+        foreach(Transform obj in taskScreenList.transform)
+        {
+            Destroy(obj.gameObject);
+        }
         foreach (Task singleTask in taskList)
         {
             singleTask.InstanceTask();
+
+            //adds all tasks to the task screen
+            Instantiate(taskObj, taskScreenList.transform);
+            taskObj.GetComponentInChildren<Text>().text = singleTask.name + ": " + singleTask.description;
         }
     }
 }

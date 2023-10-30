@@ -20,7 +20,7 @@ public class AccessStairs : Interaction
 
     public override void onClick()
     {
-        Debug.Log("Clecked Stares");
+        Debug.Log("Clicked Stairs");
         if (isPassable == true)
         {
             if(isDown == true)
