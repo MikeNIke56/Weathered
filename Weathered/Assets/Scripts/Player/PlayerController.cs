@@ -73,6 +73,11 @@ public class PlayerController : MonoBehaviour, ISavable
         {
             SpiritWorldJump.Jump();
         }
+        
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            UIController.UIControl.CloseInteractionMenu();
+        }
     }
 
     void FixedUpdate()

@@ -15,6 +15,8 @@ public class Item : Interaction
     public GameObject itemUIObjectPrefab; // UI 'image' on screen while held.
     public GameObject playerObjectPrefab; // Mazarine holds this on her player model.
     public GameObject droppedObjectPrefab; // Item dropped in-world onto ground. Possibly has falling and settled state.
+    public GameObject investigateObjectPrefab; // What appears in the investigation menu.
+    public bool canInvestigate = false;
     GameObject currentUIObject;
     GameObject currentPlayerObject;
     GameObject currentDroppedObject;
@@ -48,5 +50,18 @@ public class Item : Interaction
     {
         Destroy(currentUIObject);
         currentState = itemState.None;
+    }
+
+    public virtual void InvestigateItem()
+    {
+        if (canInvestigate && investigateObjectPrefab != null)
+        {
+            InvestigateMenu.investMenu.ClearVisualRoot();
+            Instantiate(investigateObjectPrefab, InvestigateMenu.investMenu.visualRoot.transform);
+            InvestigateMenu.investMenu.SetDescText(description);
+            InvestigateMenu.investMenu.nameText.text = itemName;
+            UIController.UIControl.OpenInteractionMenu();
+        }
+        Debug.Log("Tried to investigate " + itemName + ".");
     }
 }
