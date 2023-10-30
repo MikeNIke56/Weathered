@@ -15,10 +15,13 @@ public class InputHandler : MonoBehaviour
     [SerializeField] GameObject tasksScreen;
     bool taskIsOn = false;
 
+    TaskController taskController;
+
     private void Awake()
     {
         _camera = Camera.main;
         player = FindAnyObjectByType<PlayerController>();
+        taskController = FindAnyObjectByType<TaskController>();
     }
 
     // Update is called once per frame
@@ -59,8 +62,7 @@ public class InputHandler : MonoBehaviour
                         collidedObject.GetComponent<Interactable>().onClick();
                     }
                     catch (Exception e)
-                    {
-                        
+                    {                    
                         Debug.Log("Failed to interact with " + collidedObject.name);
                         Debug.Log(e);
                     }
@@ -75,7 +77,7 @@ public class InputHandler : MonoBehaviour
     public void ToggleTaskList()
     {
         if(taskIsOn==false)
-        {
+        {          
             tasksScreen.SetActive(true);
             taskIsOn = true;
         }
