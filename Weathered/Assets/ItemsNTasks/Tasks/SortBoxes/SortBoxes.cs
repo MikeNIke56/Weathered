@@ -14,6 +14,11 @@ public class SortBoxes : Task
     [SerializeField] List<Item> TaxSortItems = new List<Item>();
 
     [SerializeField] AccessStairs stairs; //refernce to stairs object in scene
+
+    public bool startBox = false;
+    public bool tookToy = false;
+    public bool correctBox = false;
+    public bool isDoneBox = false;
     public void BoxClicked(SortBoxesBox clickedBox)
     {
         if (currentState == taskState.Available)
@@ -49,10 +54,17 @@ public class SortBoxes : Task
             {
                 if (!clickedBox.isOpened)
                 {
+                    startBox = true;
+
+                    if (TutorialDialog.i.cobWebsFirst == false)
+                        TutorialDialog.i.boxesFirst = true;
+
                     clickedBox.OpenBox();
                 }
                 else if (box1ItemList.Count > 0)
                 {
+                    if(tookToy == false)
+                        tookToy = true;
                     ItemController.AddItemToHand(box1ItemList[Random.Range(0, box1ItemList.Count)]);
                 }
                 else if (!clickedBox.isDone)
@@ -87,6 +99,7 @@ public class SortBoxes : Task
                 }
                 else if (!clickedBox.isDone)
                 {
+                    isDoneBox = true;
                     clickedBox.RemoveBox();
                     stairs.isPassable = true;
                     OnCompleted();
@@ -118,16 +131,25 @@ public class SortBoxes : Task
         {
             if (sortClicked.sortCategory == SortBoxesOutput.sortCategories.ChildrensToys && ToySortItems.Contains(heldItem))
             {
+                if (correctBox == false)
+                    correctBox = true;
+
                 RemoveItemFromList(heldItem);
                 ItemController.ClearItemInHand();
             }
             else if (sortClicked.sortCategory == SortBoxesOutput.sortCategories.Collectibles && ColSortItems.Contains(heldItem))
             {
+                if (correctBox == false)
+                    correctBox = true;
+
                 RemoveItemFromList(heldItem);
                 ItemController.ClearItemInHand();
             }
             else if (sortClicked.sortCategory == SortBoxesOutput.sortCategories.Taxidermy && TaxSortItems.Contains(heldItem))
             {
+                if (correctBox == false)
+                    correctBox = true;
+
                 RemoveItemFromList(heldItem);
                 ItemController.ClearItemInHand();
             }

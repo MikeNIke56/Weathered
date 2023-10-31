@@ -20,18 +20,9 @@ public class TaskController : MonoBehaviour
         {
             taskControl = FindFirstObjectByType<TaskController>();
         }
-        //deletes placeholder objects in the parent
-        //foreach(Transform obj in taskScreenList.transform)
-        //{
-        //    Destroy(obj.gameObject);
-        //}
         foreach (Task singleTask in taskList)
         {
             singleTask.InstanceTask();
-
-            //adds all tasks to the task screen
-            //Instantiate(taskObj, taskScreenList.transform);
-            //taskObj.GetComponentInChildren<Text>().text = singleTask.name + ": " + singleTask.description;
         }
     }
 }

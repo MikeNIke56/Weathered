@@ -6,9 +6,14 @@ public class DustCobwebs : Task
 {
     [SerializeField] List<DustWebsWeb> allCobwebs = new List<DustWebsWeb>();
     [SerializeField] Duster dusterItem;
+
+    public bool clearedCobweb = false;
+    public bool cobwebsDone = false;
+
     public override void InstanceTask()
     {
         base.InstanceTask();
+
         foreach (DustWebsWeb singleWeb in allCobwebs)
         {
             singleWeb.gameObject.SetActive(true);
@@ -24,6 +29,7 @@ public class DustCobwebs : Task
         if (ItemController.itemInHand == dusterItem)
         {
             webClicked.gameObject.SetActive(false);
+            clearedCobweb = true;
         }
 
         bool isWebsCleaned = true;
@@ -39,6 +45,7 @@ public class DustCobwebs : Task
         if (isWebsCleaned)
         {
             OnCompleted();
+            cobwebsDone = true;
         }
     }
 }

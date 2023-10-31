@@ -5,6 +5,7 @@ using UnityEngine;
 public class DusterObject : Interaction
 {
     [SerializeField] Duster dusterItem;
+    public bool pickedUpBroom = false;
 
     public override void onClick()
     {
@@ -13,5 +14,10 @@ public class DusterObject : Interaction
             dusterItem = FindFirstObjectByType<Duster>();
         }
         dusterItem.ClickedDusterObject(this);
+
+        pickedUpBroom = true;
+
+        if(TutorialDialog.i.boxesFirst == false)
+            TutorialDialog.i.cobWebsFirst = true;
     }
 }
