@@ -16,6 +16,8 @@ public class DusterObject : Interaction
         dusterItem.ClickedDusterObject(this);
 
         pickedUpBroom = true;
+        TutorialDialog.i.cobwebsArrow.SetActive(false);
+        TutorialDialog.i.boxesArrow.SetActive(false);
 
         if(TutorialDialog.i.boxesFirst == false)
             TutorialDialog.i.cobWebsFirst = true;

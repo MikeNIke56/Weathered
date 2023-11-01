@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Device;
 using UnityEngine.TextCore.Text;
+using UnityEngine.UI;
 
 public class TutorialDialog : MonoBehaviour
 {
@@ -34,6 +35,12 @@ public class TutorialDialog : MonoBehaviour
     public bool cobWebsFirst = false;
     public bool boxesFirst = false;
 
+    public GameObject dialogBox;
+    public GameObject cobwebsArrow;
+    public GameObject boxesArrow;
+
+    PlayerController player;
+    float speedB4Pause;
 
     public static TutorialDialog i { get; private set; }
 
@@ -43,6 +50,9 @@ public class TutorialDialog : MonoBehaviour
         i = this;
         sortBoxes = FindFirstObjectByType<SortBoxes>();
         dustCobwebs = FindFirstObjectByType<DustCobwebs>();
+        player = FindFirstObjectByType<PlayerController>();
+
+        speedB4Pause = player.moveSpeed;
     }
     // Start is called before the first frame update
     void Start()
@@ -58,10 +68,22 @@ public class TutorialDialog : MonoBehaviour
     public IEnumerator StartDialog()
     {
         //entrance animation 
+        yield return new WaitForSeconds(.5f);
+        dialogBox.SetActive(true);
+        player.lockMovement = true;
 
         //starting dialog
         yield return new WaitForSeconds(.5f);
         yield return TutorialManager.Instance.ShowDialog(introDialog);
+        yield return new WaitForSeconds(.75f);
+
+        cobwebsArrow.SetActive(true);
+        boxesArrow.SetActive(true);
+
+        yield return new WaitForSeconds(.35f);
+
+        //unfreezes player
+        player.lockMovement = false;
     }
 
     public IEnumerator HandleUpdate()
@@ -84,9 +106,14 @@ public class TutorialDialog : MonoBehaviour
             isDoneBoxLockout = true;
 
             if(boxesFirst == true)
+            {
+                player.lockMovement = true;
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterBoxFirst);
+                cobwebsArrow.SetActive(true);
+                player.lockMovement = false;
+            } 
             else
-                yield return TutorialManager.Instance.ShowDialog(dialogAfterBoxSecond);
+                yield return TutorialManager.Instance.ShowDialog(dialogAfterBoxSecond);         
         }
 
 
@@ -115,7 +142,12 @@ public class TutorialDialog : MonoBehaviour
             cobwebIsDoneLockout = true;
 
             if(cobWebsFirst == true)
+            {
+                player.lockMovement = true;
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterCobwebsFirst);
+                boxesArrow.SetActive(true);
+                player.lockMovement = false;
+            }
             else
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterCobwebsSecond);
         }

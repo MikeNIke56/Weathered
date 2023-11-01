@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour, ISavable
         }
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
+        //temporary method of loading save file
         if (Input.GetKeyDown(KeyCode.Space)) { SavingSystem.i.Load("SaveSlot"); }
 
         CursorShow(isPaused);
