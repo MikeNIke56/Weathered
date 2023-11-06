@@ -19,7 +19,7 @@ public class Item : Interaction
     public bool canInvestigate = false;
     GameObject currentUIObject;
     GameObject currentPlayerObject;
-    GameObject currentDroppedObject;
+    public GameObject currentDroppedObject;
     public virtual bool CheckIfHoldable()
     {
         return true;
@@ -43,6 +43,12 @@ public class Item : Interaction
     {
         Destroy(currentUIObject);
         currentState = itemState.Dropped;
+        if (droppedObjectPrefab != null)
+        {
+            Vector3 droppedPos = FindFirstObjectByType<PlayerController>().transform.position;
+            currentDroppedObject = Instantiate(droppedObjectPrefab);
+            currentDroppedObject.transform.position = droppedPos;
+        }
     }
     public virtual void OnHitFloor() { }
 

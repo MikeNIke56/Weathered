@@ -46,6 +46,15 @@ public class ItemController : MonoBehaviour
         }
     }
 
+    public static void DropItemInHand()
+    {
+        if (itemInHand != null)
+        {
+            itemInHand.OnDropped();
+        }
+
+        itemInHand = null;
+    }
     public static void ClearItemInHand()
     {
         if (itemInHand != null)

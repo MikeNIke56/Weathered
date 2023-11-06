@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 69d60f48e8806f1448cbeda9072ade6c
+guid: 4bac1147db5992a4c91e62c46ccaf3a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -765150924802650856
-    second: arrow_0
+      213: 8167391272134822621
+    second: ChairToy_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arrow_0
+      name: ChairToy_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 5
-        width: 627
-        height: 349
+        x: 39
+        y: 3
+        width: 322
+        height: 372
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81d839fa943a165f0800000000000000
-      internalID: -765150924802650856
+      spriteID: ddac83dd617685170800000000000000
+      internalID: 8167391272134822621
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      arrow_0: -765150924802650856
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

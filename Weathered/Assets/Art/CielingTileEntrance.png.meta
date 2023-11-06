@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 69d60f48e8806f1448cbeda9072ade6c
+guid: 006ce9df4fba95548856ff3dfa8e5e74
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -765150924802650856
-    second: arrow_0
+      213: -5790012861415476574
+    second: CielingTileEntrance_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arrow_0
+      name: CielingTileEntrance_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 5
-        width: 627
-        height: 349
+        x: 0
+        y: 0
+        width: 720
+        height: 720
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81d839fa943a165f0800000000000000
-      internalID: -765150924802650856
+      spriteID: 2a23366bafdb5afa0800000000000000
+      internalID: -5790012861415476574
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      arrow_0: -765150924802650856
+      CielingTileEntrance_0: -5790012861415476574
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
