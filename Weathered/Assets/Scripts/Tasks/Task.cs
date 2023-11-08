@@ -57,6 +57,6 @@ public class Task : Interaction
     }
     public virtual void OnFailed()
     {
-
+        //trigger death condition
     }
 }
