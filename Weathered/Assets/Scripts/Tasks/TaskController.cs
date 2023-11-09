@@ -11,8 +11,8 @@ public class TaskController : MonoBehaviour
     public AudioSource taskCompleteAudio;
     public AudioSource taskBadActionAudio;
 
-    [SerializeField] GameObject taskScreenList;
-    [SerializeField] GameObject taskObj;
+    public GameObject taskScreenList;
+    public GameObject taskObj;
 
     void Start()
     {

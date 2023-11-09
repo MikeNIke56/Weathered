@@ -20,9 +20,6 @@ public class Task : Interaction
     public GameObject taskInProgressIconPrefab; // In progress icon
     public GameObject taskCompletedIconPrefab; // Completed icon
     public int timesFailed = 0;
-
-    [SerializeField] GameObject taskScreenList;
-    [SerializeField] GameObject taskObj;
     public virtual void InstanceTask()
     {
         if (taskToggleRoot != null)
@@ -34,8 +31,9 @@ public class Task : Interaction
     public virtual void OnAvailable()
     {
         currentState = taskState.Available;
-        Instantiate(taskObj, taskScreenList.transform);
-        taskObj.GetComponentInChildren<Text>().text = name + ": " + description;
+
+        Instantiate(TaskController.taskControl.taskObj, TaskController.taskControl.taskScreenList.transform);
+        TaskController.taskControl.taskObj.GetComponentInChildren<Text>().text = name + ": " + description;
     }
     public virtual void OnInProgress()
     {

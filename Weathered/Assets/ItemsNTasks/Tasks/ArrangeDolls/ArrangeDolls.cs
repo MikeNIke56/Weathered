@@ -11,6 +11,7 @@ public class ArrangeDolls : Task
     [SerializeField] GameObject sittingClemmy;
     [SerializeField] GameObject sittingSaint;
     [SerializeField] GameObject sittingSally;
+    FixDolls fixTask;
     public void DollClicked(ArrangeDollsDoll dollClicked)
     {
         if (currentState == taskState.Available)
@@ -25,7 +26,12 @@ public class ArrangeDolls : Task
     {
         if (currentState == taskState.Completed)
         {
+            if (fixTask == null)
+            {
+                fixTask = FindFirstObjectByType<FixDolls>();
+            }
 
+            fixTask.ClickedDoll(placeClicked.currentDoll, placeClicked);
         }
         else
         {
@@ -62,6 +68,10 @@ public class ArrangeDolls : Task
                 }
                 SitDoll(tempObject, placeClicked.isInFront);
                 CheckProgress();
+                if (!placeClicked.isCorrect)
+                {
+                    OnBadAction();
+                }
             }
         }
     }
@@ -87,6 +97,7 @@ public class ArrangeDolls : Task
             if (!place.isCorrect)
             {
                 isComplete = false;
+                break;
             }
         }
         if (isComplete)
