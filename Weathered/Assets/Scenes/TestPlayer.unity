@@ -488,8 +488,8 @@ SpriteRenderer:
   m_SortingLayerID: 598431347
   m_SortingLayer: 1
   m_SortingOrder: -1
-  m_Sprite: {fileID: 6041110418257849961, guid: ff0b7b176228f7d4da8693f9810f2309, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 7243927629270438269, guid: 51d2cdc6d1f8a3d49b4ee54dcdf32a40, type: 3}
+  m_Color: {r: 0.8490566, g: 0.56470275, b: 0.56470275, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -885,6 +885,10 @@ Transform:
   - {fileID: 1840405345}
   - {fileID: 2136559714}
   - {fileID: 1017946810}
+  - {fileID: 1044658729}
+  - {fileID: 808826868}
+  - {fileID: 2046715802}
+  - {fileID: 1669504530}
   m_Father: {fileID: 2089686627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &277963868
@@ -1263,6 +1267,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &397906479 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4892088421748823361, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+  m_PrefabInstance: {fileID: 1641783182}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &407124108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,6 +1308,7 @@ Transform:
   - {fileID: 2004989432}
   - {fileID: 115103789}
   - {fileID: 331385920}
+  - {fileID: 548478336}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &418625301
@@ -1870,6 +1880,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+--- !u!4 &548478336 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+  m_PrefabInstance: {fileID: 1451727812}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &551335323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +2010,72 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b80a6fbed2083e04986a6aa9b9247c4b, type: 3}
+--- !u!1 &569233653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569233654}
+  - component: {fileID: 569233655}
+  m_Layer: 0
+  m_Name: MusicBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &569233654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569233653}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 929831711}
+  - {fileID: 397906479}
+  - {fileID: 646869099}
+  m_Father: {fileID: 736888471}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &569233655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569233653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79df71ad0173dce448290df878cd1b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskName: Music Box and Cassettes
+  description: Play the correct music tape on the music box.
+  shortName: 
+  shortDescription: 
+  voicemailDescription: 
+  voicemailShortQuote: 
+  currentState: 0
+  isFailed: 0
+  isAlwaysChosen: 0
+  taskToggleRoot: {fileID: 0}
+  taskIconPrefab: {fileID: 0}
+  taskInProgressIconPrefab: {fileID: 0}
+  taskCompletedIconPrefab: {fileID: 0}
+  timesFailed: 0
+  validTapes:
+  - {fileID: 1044658730}
+  - {fileID: 808826869}
+  - {fileID: 2046715803}
+  - {fileID: 1669504531}
 --- !u!1 &573248991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2677,6 +2758,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 88430473743249344, guid: 7909fe1eca7120648814590718c27c71, type: 3}
   m_PrefabInstance: {fileID: 2080871554}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &646869099 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5456672361766165531, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+  m_PrefabInstance: {fileID: 1651414336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &667034129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2991,6 +3077,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728967620}
   m_CullTransparentMesh: 1
+--- !u!4 &733497555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+  m_PrefabInstance: {fileID: 208640906810172134}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &736888470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,6 +3114,7 @@ Transform:
   - {fileID: 1779561367}
   - {fileID: 502309517}
   - {fileID: 1498175644}
+  - {fileID: 569233654}
   m_Father: {fileID: 753922322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &753922321
@@ -3061,6 +3153,7 @@ Transform:
   - {fileID: 2079349652}
   - {fileID: 1448219172}
   - {fileID: 307694330}
+  - {fileID: 733497555}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &757932454
@@ -3383,6 +3476,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807682864}
   m_CullTransparentMesh: 1
+--- !u!1 &808826867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 808826868}
+  - component: {fileID: 808826869}
+  m_Layer: 0
+  m_Name: Cassette2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &808826868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808826867}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 258041637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &808826869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808826867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681bfb24a016b784fbb0bd6d3a99fb1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Cassette Tape 2
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 4704286811837873552, guid: bc217da7f4e5abb4d91cf5445d972e34, type: 3}
+  itemUIObjectPrefab: {fileID: 4704286811837873552, guid: bc217da7f4e5abb4d91cf5445d972e34, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 8298132681218112868, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 1
+  currentDroppedObject: {fileID: 0}
 --- !u!1 &848894328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3570,6 +3719,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8341877225037432059, guid: f0cc6497797635f4d9835e2163d5608b, type: 3}
   m_PrefabInstance: {fileID: 667034129}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &909091830
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 569233654}
+    m_Modifications:
+    - target: {fileID: 6524418001022320631, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.593548
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524418001022320631, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.658726
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524418001022320631, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524418001022320631, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524418001022320631, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524418001022320631, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524418001022320631, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524418001022320631, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524418001022320631, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524418001022320631, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475691689515394433, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+      propertyPath: m_Name
+      value: TapeObject1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
 --- !u!1 &927393490
 GameObject:
   m_ObjectHideFlags: 0
@@ -3663,6 +3869,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 1
   interactionScript: {fileID: 8088562327271421922}
+--- !u!4 &929831711 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6524418001022320631, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
+  m_PrefabInstance: {fileID: 909091830}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &937479747
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,6 +4362,62 @@ MonoBehaviour:
   itemUIObjectPrefab: {fileID: 6701734939469764860, guid: d39ea3f7ade971d4b803e56bcad4c8f9, type: 3}
   playerObjectPrefab: {fileID: 0}
   droppedObjectPrefab: {fileID: 1989822431936451471, guid: 148102e67679072428f87cb631342339, type: 3}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 1
+  currentDroppedObject: {fileID: 0}
+--- !u!1 &1044658728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1044658729}
+  - component: {fileID: 1044658730}
+  m_Layer: 0
+  m_Name: Cassette1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044658729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044658728}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 258041637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1044658730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044658728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895a57b4892a1574db24f76137328a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Cassette Tape 1
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 9095145633477452282, guid: b5aa4bd7d14f7f349b9828be0232b832, type: 3}
+  itemUIObjectPrefab: {fileID: 9095145633477452282, guid: b5aa4bd7d14f7f349b9828be0232b832, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 8475691689515394433, guid: 3a6e47fa7e50a524092e0d5e780deb24, type: 3}
   investigateObjectPrefab: {fileID: 0}
   canInvestigate: 1
   currentDroppedObject: {fileID: 0}
@@ -5838,6 +6105,103 @@ MonoBehaviour:
   investigateObjectPrefab: {fileID: 0}
   canInvestigate: 1
   currentDroppedObject: {fileID: 0}
+--- !u!1001 &1451727812
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 407124109}
+    m_Modifications:
+    - target: {fileID: 2532860176343301525, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: Priority
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599416588801814664, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_Name
+      value: CassettePlayerSpirits
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419869406000819, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7980598
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419869406000819, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7980598
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419869406000819, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317190447267833365, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: isSpiritBox
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317190447267833365, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: currentCassette
+      value: 
+      objectReference: {fileID: 1669504531}
+    - target: {fileID: 8317190447267833365, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: 'cassetteTapes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1044658730}
+    - target: {fileID: 8317190447267833365, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: 'cassetteTapes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 808826869}
+    - target: {fileID: 8317190447267833365, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: 'cassetteTapes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2046715803}
+    - target: {fileID: 8317190447267833365, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: 'cassetteTapes.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1669504531}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d1b220a993975443967f503af4f3436, type: 3}
 --- !u!1 &1452561279
 GameObject:
   m_ObjectHideFlags: 0
@@ -6739,11 +7103,182 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1641783182
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 569233654}
+    m_Modifications:
+    - target: {fileID: 4892088421748823361, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.168873
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892088421748823361, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.57202506
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892088421748823361, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892088421748823361, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892088421748823361, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892088421748823361, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892088421748823361, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892088421748823361, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892088421748823361, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892088421748823361, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298132681218112868, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+      propertyPath: m_Name
+      value: TapeObject2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
+--- !u!1001 &1651414336
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 569233654}
+    m_Modifications:
+    - target: {fileID: 5456672361766165531, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.22105
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456672361766165531, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7020762
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456672361766165531, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456672361766165531, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456672361766165531, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456672361766165531, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456672361766165531, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456672361766165531, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456672361766165531, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456672361766165531, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112744879442133044, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+      propertyPath: m_Name
+      value: TapeObject3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
 --- !u!4 &1667106106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8869165360530595677, guid: 51b21d1237277a240905948ee80f9185, type: 3}
   m_PrefabInstance: {fileID: 1938229902}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1669504529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1669504530}
+  - component: {fileID: 1669504531}
+  m_Layer: 0
+  m_Name: CassetteSpirits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1669504530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669504529}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 258041637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1669504531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669504529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52754de423b439144b336bff794d85ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Spirits' Cassette Tape
+  description: This old tape is all worn out, but the case looks just like another
+    one...
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 1938928502656849545, guid: 4eaf2a4de02177241ab05dc8a212508d, type: 3}
+  itemUIObjectPrefab: {fileID: 1938928502656849545, guid: 4eaf2a4de02177241ab05dc8a212508d, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 908079064074164019, guid: 8ab93a513bed20d4f90e4bc30cba0fce, type: 3}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 1
+  currentDroppedObject: {fileID: 0}
 --- !u!1 &1671019357
 GameObject:
   m_ObjectHideFlags: 0
@@ -8406,8 +8941,8 @@ SpriteRenderer:
   m_SortingLayerID: -1222581643
   m_SortingLayer: -1
   m_SortingOrder: -5
-  m_Sprite: {fileID: 5270383303324533581, guid: 02a62a54772a35e4fb34c64740e62903, type: 3}
-  m_Color: {r: 0.9433962, g: 0.78764683, b: 0.78764683, a: 1}
+  m_Sprite: {fileID: 1835633746911278105, guid: cef2d6d2ab6280d4f948569a87ee95e1, type: 3}
+  m_Color: {r: 1, g: 0.6179246, b: 0.6415574, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -8949,6 +9484,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 101354581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2046715801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2046715802}
+  - component: {fileID: 2046715803}
+  m_Layer: 0
+  m_Name: Cassette3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2046715802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046715801}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 258041637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2046715803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046715801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04fc34316fde1ef4dbe64177b86bc440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Cassette Tape 3
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 6073660414227184224, guid: de03778f4da78cd48b0876b3c28894f7, type: 3}
+  itemUIObjectPrefab: {fileID: 6073660414227184224, guid: de03778f4da78cd48b0876b3c28894f7, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 6112744879442133044, guid: 3ba9b723e5688604e889756fa26700a2, type: 3}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 1
+  currentDroppedObject: {fileID: 0}
 --- !u!1 &2050867405
 GameObject:
   m_ObjectHideFlags: 0
@@ -9701,6 +10292,79 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &208640906810172134
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 753922322}
+    m_Modifications:
+    - target: {fileID: 5599416588801814664, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_Name
+      value: CassettePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317190447267833365, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: 'cassetteTapes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1044658730}
+    - target: {fileID: 8317190447267833365, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: 'cassetteTapes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 808826869}
+    - target: {fileID: 8317190447267833365, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: 'cassetteTapes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2046715803}
+    - target: {fileID: 8317190447267833365, guid: 5d1b220a993975443967f503af4f3436, type: 3}
+      propertyPath: 'cassetteTapes.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1669504531}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d1b220a993975443967f503af4f3436, type: 3}
 --- !u!114 &343028498037227068
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class SpiritWorldJump : MonoBehaviour
     [SerializeField] Image vignetteImage;
     [SerializeField] float fadeInSeconds = 2f;
     static bool isJumping = false;
+    static public Dictionary<string, bool> jumpBlockers = new Dictionary<string, bool>();
     void Start()
     {
         if (SWJ == null)
@@ -22,9 +23,22 @@ public class SpiritWorldJump : MonoBehaviour
         {
             playerControl = FindFirstObjectByType<PlayerController>();
         }
+        jumpBlockers.Add("CassetteSpirit", false);
+
     }
     static public void Jump()
     {
+        bool blockJump = false;
+        if (jumpBlockers["CassetteSpirit"])
+        {
+            FindFirstObjectByType<MusicBox>().JumpFailed();
+            blockJump = true;
+        }
+
+        if (blockJump)
+        {
+            return;
+        }
         if (isInSpiritWorld)
         {
             SWJ.JumpFromSpiritWorld();

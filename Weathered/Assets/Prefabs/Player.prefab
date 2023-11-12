@@ -78,10 +78,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3975566280620532789}
   - {fileID: 7186975873088496281}
   - {fileID: 622502324553861406}
   - {fileID: 423174767137599780}
-  - {fileID: 3975566280620532789}
   m_Father: {fileID: 7088273783905473267}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &2527080574588193083
@@ -102,8 +102,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3975566280620532789}
   - component: {fileID: 6071050093684607794}
+  - component: {fileID: 6460134874730597390}
   m_Layer: 0
-  m_Name: BackgroundMusicDefault
+  m_Name: BGMManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,6 +221,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6460134874730597390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3291878812091983331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95367cf7cd1f8064481906a4169fba79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxVolume: 1
+  fadeStep: 0.025
+  normalBGMs:
+  - {fileID: 8300000, guid: c60f3b276b0e1b744952863cf20da66a, type: 3}
+  - {fileID: 8300000, guid: f86207c08598853459018c9e01ca481a, type: 3}
+  - {fileID: 8300000, guid: 650cd818db7a69a42bc231d0a92ed297, type: 3}
+  - {fileID: 8300000, guid: c1f7c1732a4daae4a927782a902c6acc, type: 3}
+  - {fileID: 8300000, guid: e808027bce18dd24cae6e03238672a54, type: 3}
+  - {fileID: 8300000, guid: 4e4ffb29897f6f9449e2de777acefb99, type: 3}
+  - {fileID: 8300000, guid: aedc0b2777f061e4f8cc49e89d2eb196, type: 3}
+  - {fileID: 8300000, guid: 3f31c41aba6c53349b6f375144a25c55, type: 3}
+  - {fileID: 8300000, guid: e13dff7bd9bc07144b1ec1ed765c12d1, type: 3}
+  spiritBGMs:
+  - {fileID: 8300000, guid: c98380d42e9f71e4ba4d7eb299428f84, type: 3}
+  - {fileID: 8300000, guid: 724dad921451f7045b35c6ba51302be7, type: 3}
+  - {fileID: 8300000, guid: 252b9f895ae25ee4d930c8a60a5b5025, type: 3}
+  - {fileID: 8300000, guid: b02f55eab70af014e9262f7f821ca7de, type: 3}
+  - {fileID: 8300000, guid: 1dc87de72d2e9f242bcbf90e449a4c0d, type: 3}
+  - {fileID: 8300000, guid: fbf42dcc9d430d44185536366d5513ce, type: 3}
+  - {fileID: 8300000, guid: 75c0bf37a51754a469787445fb994c88, type: 3}
+  - {fileID: 8300000, guid: 2c6c2a1debfa8b149ada01ba62c3611a, type: 3}
+  - {fileID: 8300000, guid: d088c6872c6ac524e90338b34fd87a57, type: 3}
+  voidPosition: []
+  voidArea: []
 --- !u!1 &4411105305874342759
 GameObject:
   m_ObjectHideFlags: 0
