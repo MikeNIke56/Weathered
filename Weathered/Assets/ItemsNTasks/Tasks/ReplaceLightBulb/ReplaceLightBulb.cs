@@ -53,6 +53,9 @@ public class ReplaceLightBulb : Task
 
     public void LightClicked()
     {
+        if (currentState == taskState.Available)
+            currentState = taskState.InProgress;
+
         if (currentState == taskState.InProgress)
         {
             if (ItemController.itemInHand == stepStool)
