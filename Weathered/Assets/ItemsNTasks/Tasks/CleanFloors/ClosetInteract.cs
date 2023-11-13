@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClosetInteract : Interaction
 {
     [SerializeField] Item itemToOpen;
+    [SerializeField] GameObject itemToGive;
 
     public override void onClick()
     {
@@ -12,6 +13,9 @@ public class ClosetInteract : Interaction
         {
             gameObject.SetActive(false);
             ItemController.ClearItemInHand();
+            itemToGive.SetActive(true);
         }
+        else
+            ShortTextController.STControl.AddShortText("It's locked...");
     }
 }

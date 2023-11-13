@@ -7,11 +7,11 @@ public class CleanFloor : Task
     [SerializeField] List<BrokenGlass> brokenGlass = new List<BrokenGlass>();
     [SerializeField] List<BloodSplatter> bloodSplatters = new List<BloodSplatter>();
 
-    [SerializeField] Duster dusterItem;
+    [SerializeField] GlassDuster dusterItem;
     [SerializeField] Mop mopItem;
 
-    bool clearedGlass = true;
-    bool clearedSplatters = true;
+    bool clearedGlass = false;
+    bool clearedSplatters = false;
 
     public override void InstanceTask()
     {
@@ -40,6 +40,7 @@ public class CleanFloor : Task
                 interaction.gameObject.SetActive(false);
             }
 
+            clearedGlass = true;
             foreach (BrokenGlass glass in brokenGlass)
             {
                 if (glass.gameObject.activeInHierarchy)
@@ -55,6 +56,7 @@ public class CleanFloor : Task
                 interaction.gameObject.SetActive(false);
             }
 
+            clearedSplatters = true;
             foreach (BloodSplatter splatters in bloodSplatters)
             {
                 if (splatters.gameObject.activeInHierarchy)
@@ -69,5 +71,10 @@ public class CleanFloor : Task
             OnCompleted();
         }
 
+    }
+    public override void OnFailed()
+    {
+        //trigger death condition
+        Debug.Log("player has died");
     }
 }
