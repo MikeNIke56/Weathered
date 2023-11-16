@@ -18,6 +18,6 @@ public class BoxOfLightbulbs : Interaction
             lightbulbTask = FindFirstObjectByType<ReplaceLightBulb>();
         }
 
-        lightbulb.ClickedLightbulbObject(this);
+        lightbulb.ClickedLightbulbObject(lightbulb);
     } 
 }

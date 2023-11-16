@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StepStoolObj : Interaction
 {
-    [SerializeField] StepStool stepStool;
+    StepStool stepStool;
     public Transform stepUpPos;
     public Transform stepDownPos;
     public bool onStool = false;
@@ -16,6 +16,7 @@ public class StepStoolObj : Interaction
     {
         player = FindAnyObjectByType<PlayerController>();
         replaceLightTask = FindAnyObjectByType<ReplaceLightBulb>();
+        stepStool = FindAnyObjectByType<StepStool>();
     }
     public override void onClick()
     {

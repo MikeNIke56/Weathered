@@ -764,6 +764,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf85c6e5fba0bd4ca7d5e21b96c5cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &188556105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1060104193434341897, guid: 4c8dfaf1917aaa64181bb328c70b2fe5, type: 3}
+  m_PrefabInstance: {fileID: 1339096632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &217419953
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +968,9 @@ Transform:
   - {fileID: 642380867}
   - {fileID: 2000565018}
   - {fileID: 1674460903}
+  - {fileID: 1327985281}
+  - {fileID: 1080854762}
+  - {fileID: 2016974508}
   - {fileID: 1594760036}
   - {fileID: 1693261125}
   - {fileID: 396178751}
@@ -1207,17 +1215,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5743277611565387016, guid: 4c8dfaf1917aaa64181bb328c70b2fe5, type: 3}
   m_PrefabInstance: {fileID: 1339096632}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &331385921 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3243259961298938315, guid: 4c8dfaf1917aaa64181bb328c70b2fe5, type: 3}
-  m_PrefabInstance: {fileID: 1339096632}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bd786041d7ea2b4d828fce31edc5b9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &341425104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2111,7 +2108,7 @@ MonoBehaviour:
   normalLight: {fileID: 102384238}
   spiritLight: {fileID: 1584294952}
   lightbulb: {fileID: 4678308795066410364, guid: 2128631269d1b684880178cdc8962a86, type: 3}
-  stepStool: {fileID: 331385921}
+  stepStool: {fileID: 2016974509}
   minTime: 0.2
   maxTime: 0.8
   stoolPlaced: 0
@@ -3853,6 +3850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HandIconRoot: {fileID: 2013646546}
   itemPickupAudio: {fileID: 646637647}
+  copy: {fileID: 0}
 --- !u!1 &799899555
 GameObject:
   m_ObjectHideFlags: 0
@@ -4988,6 +4986,63 @@ MonoBehaviour:
   investigateObjectPrefab: {fileID: 0}
   canInvestigate: 1
   currentDroppedObject: {fileID: 0}
+--- !u!1 &1080854761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080854762}
+  - component: {fileID: 1080854763}
+  m_Layer: 0
+  m_Name: Lightbulb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080854762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080854761}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 258041637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1080854763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080854761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3feb9814f15f34b9b1e352968db009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Lightbulb
+  description: Used to illuminate the unknown
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 7015736663481842557, guid: 675effe139ef3c141821e18bdc6901dd, type: 3}
+  itemUIObjectPrefab: {fileID: 7015736663481842557, guid: 675effe139ef3c141821e18bdc6901dd, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 1
+  currentDroppedObject: {fileID: 0}
+  lightbulbObj: {fileID: 1327985282}
 --- !u!4 &1087198250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4951662314818986514, guid: b80a6fbed2083e04986a6aa9b9247c4b, type: 3}
@@ -5952,6 +6007,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6801c5c38200044a2f482a14efe10b, type: 3}
+--- !u!1 &1327985280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1327985281}
+  - component: {fileID: 1327985282}
+  m_Layer: 0
+  m_Name: BoxofLightbulbs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1327985281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327985280}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 258041637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1327985282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327985280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9587e3ee1e67b94297829b7cc7ccf0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightbulb: {fileID: 1080854763}
+  lightbulbTask: {fileID: 502309518}
 --- !u!4 &1333015576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5949475813836545297, guid: 63d4d3b89407b6745b689b4d23a0603e, type: 3}
@@ -6134,13 +6235,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 407124109}
     m_Modifications:
     - target: {fileID: -8399068113364706259, guid: 4c8dfaf1917aaa64181bb328c70b2fe5, type: 3}
-      propertyPath: stepUpPos
+      propertyPath: stepStool
       value: 
-      objectReference: {fileID: 1763362453}
-    - target: {fileID: -8399068113364706259, guid: 4c8dfaf1917aaa64181bb328c70b2fe5, type: 3}
-      propertyPath: stepDownPos
-      value: 
-      objectReference: {fileID: 1529584946}
+      objectReference: {fileID: 2016974509}
     - target: {fileID: -8399068113364706259, guid: 4c8dfaf1917aaa64181bb328c70b2fe5, type: 3}
       propertyPath: replaceLightTask
       value: 
@@ -7267,11 +7364,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81f02167d7674ec4fa64344ecea9d620, type: 3}
---- !u!4 &1529584946 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4432697247847413989, guid: 4c8dfaf1917aaa64181bb328c70b2fe5, type: 3}
-  m_PrefabInstance: {fileID: 1339096632}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1536844940
 GameObject:
   m_ObjectHideFlags: 0
@@ -8400,11 +8492,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 101354581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1763362453 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2235410174757845720, guid: 4c8dfaf1917aaa64181bb328c70b2fe5, type: 3}
-  m_PrefabInstance: {fileID: 1339096632}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1765524306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5933989619612108974, guid: db6801c5c38200044a2f482a14efe10b, type: 3}
@@ -10109,6 +10196,62 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2016974507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2016974508}
+  - component: {fileID: 2016974509}
+  m_Layer: 0
+  m_Name: Stepstool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2016974508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016974507}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 258041637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2016974509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016974507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd786041d7ea2b4d828fce31edc5b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Step Stool
+  description: used for getting to harder to reach places
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 188556105}
+  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: f2756d1506e3b274aa64df99f67ad2fd, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 188556105}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 0
+  currentDroppedObject: {fileID: 0}
 --- !u!82 &2018158160 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 4109720965152548043, guid: 7909fe1eca7120648814590718c27c71, type: 3}
@@ -10816,7 +10959,7 @@ PrefabInstance:
       objectReference: {fileID: 1099646017}
     - target: {fileID: 4806094309516806123, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.37
+      value: -22.89
       objectReference: {fileID: 0}
     - target: {fileID: 4806094309516806123, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14134,6 +14277,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 598431347
       objectReference: {fileID: 0}
+    - target: {fileID: 2097853314795965745, guid: aedae4b098278e44993ee3b0d3cc4529, type: 3}
+      propertyPath: lightbulb
+      value: 
+      objectReference: {fileID: 1080854763}
     - target: {fileID: 2097853314795965745, guid: aedae4b098278e44993ee3b0d3cc4529, type: 3}
       propertyPath: lightbulbTask
       value: 

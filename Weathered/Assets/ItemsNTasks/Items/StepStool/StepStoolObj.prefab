@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4953759766827587271}
   - component: {fileID: 7673973845847148935}
   - component: {fileID: -8399068113364706259}
-  - component: {fileID: 3243259961298938315}
   m_Layer: 0
   m_Name: StepStoolObj
   m_TagString: Interactable
@@ -110,35 +109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95ffb66e857763e49af7340552e0cf82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepStool: {fileID: 3243259961298938315}
+  stepStool: {fileID: 0}
   stepUpPos: {fileID: 2235410174757845720}
   stepDownPos: {fileID: 4432697247847413989}
   onStool: 0
   replaceLightTask: {fileID: 0}
---- !u!114 &3243259961298938315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060104193434341897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bd786041d7ea2b4d828fce31edc5b9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Step Stool
-  description: 
-  shortName: 
-  shortDescription: 
-  currentState: 0
-  defaultObjectPrefab: {fileID: 0}
-  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: f2756d1506e3b274aa64df99f67ad2fd, type: 3}
-  playerObjectPrefab: {fileID: 0}
-  droppedObjectPrefab: {fileID: 0}
-  investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
-  currentDroppedObject: {fileID: 0}
 --- !u!1 &2566410386643795635
 GameObject:
   m_ObjectHideFlags: 0
