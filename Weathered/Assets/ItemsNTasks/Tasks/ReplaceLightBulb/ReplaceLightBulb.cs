@@ -65,7 +65,7 @@ public class ReplaceLightBulb : Task
                 stoolPlaced = true;
                 ItemController.ClearItemInHand();
             }
-            if (ItemController.itemInHand == lightbulb && stoolObj.onStool == true)
+            if (ItemController.itemInHand is Lightbulb && stoolObj.onStool == true)
             {
                 OnCompleted();
                 ItemController.ClearItemInHand();

@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7540933876744233186
 Transform:
   m_ObjectHideFlags: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   description: its a lightbulb
   shortName: 
   shortDescription: 
-  currentState: 0
+  currentState: 1
   defaultObjectPrefab: {fileID: 0}
   itemUIObjectPrefab: {fileID: 7015736663481842557, guid: 675effe139ef3c141821e18bdc6901dd, type: 3}
   playerObjectPrefab: {fileID: 0}

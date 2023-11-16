@@ -5,10 +5,9 @@ using UnityEngine;
 public class Lightbulb : Item
 {
     [SerializeField] BoxOfLightbulbs lightbulbObj;
-    public void ClickedLightbulbObject(BoxOfLightbulbs lightbulb)
+    public void ClickedLightbulbObject(Lightbulb lightbulb)
     {
-        ItemController.AddItemToHand(this);
-        //Destroy(dusterClicked.gameObject);
+        ItemController.AddItemToHand(lightbulb);
         lightbulb.gameObject.SetActive(false);
     }
 
