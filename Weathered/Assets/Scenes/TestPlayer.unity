@@ -490,6 +490,7 @@ Transform:
   - {fileID: 2110151741}
   - {fileID: 1943915871}
   - {fileID: 1467448851}
+  - {fileID: 6416917630121425658}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &102384238 stripped
@@ -769,6 +770,66 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1060104193434341897, guid: 4c8dfaf1917aaa64181bb328c70b2fe5, type: 3}
   m_PrefabInstance: {fileID: 1339096632}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &206286497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 206286498}
+  - component: {fileID: 206286499}
+  m_Layer: 0
+  m_Name: sg (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &206286498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206286497}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 379421163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &206286499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206286497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd4d7af5893f67409177fa10634d812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Snowglobe
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 0
+  currentDroppedObject: {fileID: 0}
+  sgObject: {fileID: 0}
+  snowglobes: {fileID: 543056631}
+  chosen: 0
+  currentSGType: 6
 --- !u!1 &217419953
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,6 +989,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234315647}
   m_CullTransparentMesh: 1
+--- !u!1 &234456458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 234456459}
+  - component: {fileID: 234456460}
+  m_Layer: 0
+  m_Name: sg (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &234456459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234456458}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 379421163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &234456460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234456458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd4d7af5893f67409177fa10634d812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Snowglobe
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 0
+  currentDroppedObject: {fileID: 0}
+  sgObject: {fileID: 0}
+  snowglobes: {fileID: 543056631}
+  chosen: 0
+  currentSGType: 3
 --- !u!1 &258041636
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +1089,7 @@ Transform:
   - {fileID: 642380867}
   - {fileID: 2000565018}
   - {fileID: 1674460903}
+  - {fileID: 344552301}
   - {fileID: 1327985281}
   - {fileID: 1080854762}
   - {fileID: 2016974508}
@@ -988,6 +1110,7 @@ Transform:
   - {fileID: 808826868}
   - {fileID: 2046715802}
   - {fileID: 1669504530}
+  - {fileID: 379421163}
   m_Father: {fileID: 2089686627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &277963868
@@ -1308,6 +1431,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c6ec2da0abf472499224303ddc3acf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &344552300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 344552301}
+  - component: {fileID: 344552302}
+  m_Layer: 0
+  m_Name: Snowglobe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &344552301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344552300}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 258041637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &344552302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344552300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd4d7af5893f67409177fa10634d812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Snowglobe
+  description: a little snowglobe
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 0
+  currentDroppedObject: {fileID: 0}
+  sgObject: {fileID: 2685758649256705675, guid: 1a5124e8b887ad94e981a81f89abdc56, type: 3}
+  snowglobes: {fileID: 543056631}
+  chosen: 0
+  currentSGType: 0
 --- !u!1001 &360999504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1529,6 +1712,120 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &379421162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379421163}
+  m_Layer: 0
+  m_Name: Snowglobes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &379421163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379421162}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -41, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1468635973}
+  - {fileID: 870484524}
+  - {fileID: 1544952883}
+  - {fileID: 234456459}
+  - {fileID: 982237324}
+  - {fileID: 820772366}
+  - {fileID: 206286498}
+  - {fileID: 1790685128}
+  m_Father: {fileID: 258041637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &387987693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 387987694}
+  - component: {fileID: 387987696}
+  - component: {fileID: 387987695}
+  m_Layer: 0
+  m_Name: background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &387987694
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387987693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 981936125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &387987695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387987693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &387987696
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387987693}
+  m_CullTransparentMesh: 1
 --- !u!1 &396178749
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,7 +2394,7 @@ MonoBehaviour:
   shortDescription: 
   voicemailDescription: 
   voicemailShortQuote: 
-  currentState: 1
+  currentState: 0
   isFailed: 0
   isAlwaysChosen: 0
   taskToggleRoot: {fileID: 0}
@@ -2200,6 +2497,87 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+--- !u!1 &543056629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543056630}
+  - component: {fileID: 543056631}
+  m_Layer: 0
+  m_Name: ArrangeSnowglobes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &543056630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543056629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1941769607}
+  m_Father: {fileID: 736888471}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &543056631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543056629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57624ca6cc0456c49a3e7e53b3c13225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskName: Arrange Snowglobes
+  description: organize the snowglobes into chronological order
+  shortName: 
+  shortDescription: 
+  voicemailDescription: 
+  voicemailShortQuote: 
+  currentState: 0
+  isFailed: 0
+  isAlwaysChosen: 0
+  taskToggleRoot: {fileID: 0}
+  taskIconPrefab: {fileID: 0}
+  taskInProgressIconPrefab: {fileID: 0}
+  taskCompletedIconPrefab: {fileID: 0}
+  timesFailed: 0
+  snowGlobes:
+  - {fileID: 1468635974}
+  - {fileID: 870484525}
+  - {fileID: 1544952884}
+  - {fileID: 234456460}
+  - {fileID: 982237325}
+  - {fileID: 820772367}
+  - {fileID: 206286499}
+  - {fileID: 1790685129}
+  snowGlobeObjs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  shelfObj: {fileID: 981936124}
+  slotOriginal: {fileID: 2685758649256705675, guid: 1a5124e8b887ad94e981a81f89abdc56, type: 3}
+  slotParent: {fileID: 811835308}
+  currentSGState: 0
 --- !u!4 &548478336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
@@ -3150,6 +3528,8 @@ MonoBehaviour:
   - {fileID: 1779561368}
   - {fileID: 1498175645}
   - {fileID: 502309518}
+  - {fileID: 2066987686}
+  - {fileID: 543056631}
   taskChosenList: []
   taskCompleteAudio: {fileID: 2018158160}
   taskBadActionAudio: {fileID: 16228670}
@@ -3679,6 +4059,7 @@ Transform:
   - {fileID: 1498175644}
   - {fileID: 569233654}
   - {fileID: 2066987685}
+  - {fileID: 543056630}
   m_Father: {fileID: 753922322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &753922321
@@ -3850,7 +4231,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HandIconRoot: {fileID: 2013646546}
   itemPickupAudio: {fileID: 646637647}
-  copy: {fileID: 0}
 --- !u!1 &799899555
 GameObject:
   m_ObjectHideFlags: 0
@@ -4097,6 +4477,126 @@ MonoBehaviour:
   investigateObjectPrefab: {fileID: 0}
   canInvestigate: 1
   currentDroppedObject: {fileID: 0}
+--- !u!1 &811835308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 811835309}
+  - component: {fileID: 811835310}
+  m_Layer: 0
+  m_Name: snowglobeslots
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &811835309
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811835308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 981936125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 83, y: -71}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &811835310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811835308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 140, y: 140}
+  m_Spacing: {x: 30, y: 30}
+  m_Constraint: 1
+  m_ConstraintCount: 4
+--- !u!1 &820772365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820772366}
+  - component: {fileID: 820772367}
+  m_Layer: 0
+  m_Name: sg (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &820772366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820772365}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 379421163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &820772367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820772365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd4d7af5893f67409177fa10634d812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Snowglobe
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 0
+  currentDroppedObject: {fileID: 0}
+  sgObject: {fileID: 0}
+  snowglobes: {fileID: 543056631}
+  chosen: 0
+  currentSGType: 5
 --- !u!1 &848894328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,6 +4695,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1760372395897401371, guid: 407ce5b236cbb284d9d765e4bf7ea8b4, type: 3}
   m_PrefabInstance: {fileID: 2080103930}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &870484523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 870484524}
+  - component: {fileID: 870484525}
+  m_Layer: 0
+  m_Name: sg (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &870484524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870484523}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 379421163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &870484525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870484523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd4d7af5893f67409177fa10634d812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Snowglobe
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 0
+  currentDroppedObject: {fileID: 0}
+  sgObject: {fileID: 0}
+  snowglobes: {fileID: 543056631}
+  chosen: 0
+  currentSGType: 1
 --- !u!1 &895674244
 GameObject:
   m_ObjectHideFlags: 0
@@ -4709,6 +5269,103 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &981936124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981936125}
+  m_Layer: 0
+  m_Name: SnowglobesUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &981936125
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981936124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 387987694}
+  - {fileID: 811835309}
+  m_Father: {fileID: 8985853629986941621}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &982237323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 982237324}
+  - component: {fileID: 982237325}
+  m_Layer: 0
+  m_Name: sg (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &982237324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982237323}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 379421163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &982237325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982237323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd4d7af5893f67409177fa10634d812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Snowglobe
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 0
+  currentDroppedObject: {fileID: 0}
+  sgObject: {fileID: 0}
+  snowglobes: {fileID: 543056631}
+  chosen: 0
+  currentSGType: 4
 --- !u!1 &988125148
 GameObject:
   m_ObjectHideFlags: 0
@@ -7091,6 +7748,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72215a8382f05e74d928252b7c2a23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1468635972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468635973}
+  - component: {fileID: 1468635974}
+  m_Layer: 0
+  m_Name: sg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468635973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468635972}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 379421163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1468635974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468635972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd4d7af5893f67409177fa10634d812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Snowglobe
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 0
+  currentDroppedObject: {fileID: 0}
+  sgObject: {fileID: 0}
+  snowglobes: {fileID: 543056631}
+  chosen: 0
+  currentSGType: 0
 --- !u!1 &1484353199
 GameObject:
   m_ObjectHideFlags: 0
@@ -7521,6 +8238,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f287d4ac0c86a4c9d8907c8d32b93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1544952882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1544952883}
+  - component: {fileID: 1544952884}
+  m_Layer: 0
+  m_Name: sg (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1544952883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544952882}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 379421163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1544952884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544952882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd4d7af5893f67409177fa10634d812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Snowglobe
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 0
+  currentDroppedObject: {fileID: 0}
+  sgObject: {fileID: 0}
+  snowglobes: {fileID: 543056631}
+  chosen: 0
+  currentSGType: 2
 --- !u!4 &1549008597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8341877225037432059, guid: f0cc6497797635f4d9835e2163d5608b, type: 3}
@@ -8677,6 +9454,66 @@ MonoBehaviour:
   sittingClemmy: {fileID: 1681099570815017602, guid: ab734e466413e4d4e95285d3f08a2825, type: 3}
   sittingSaint: {fileID: 424155336683713476, guid: 1a6cf2ad49a75ca40af2ce373ab1bf00, type: 3}
   sittingSally: {fileID: 765075475918291149, guid: 34fa323989b45484ebd1c3bbfd54b4a6, type: 3}
+--- !u!1 &1790685127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790685128}
+  - component: {fileID: 1790685129}
+  m_Layer: 0
+  m_Name: sg (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1790685128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790685127}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 379421163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1790685129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790685127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd4d7af5893f67409177fa10634d812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Snowglobe
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 0
+  currentDroppedObject: {fileID: 0}
+  sgObject: {fileID: 0}
+  snowglobes: {fileID: 543056631}
+  chosen: 0
+  currentSGType: 7
 --- !u!1 &1793989007
 GameObject:
   m_ObjectHideFlags: 0
@@ -8755,6 +9592,79 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1001 &1804152081
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 543056630}
+    m_Modifications:
+    - target: {fileID: 788676812043048792, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: shelfObj
+      value: 
+      objectReference: {fileID: 981936124}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.146317
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649458102175052890, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: interactionScript
+      value: 
+      objectReference: {fileID: 1941769608}
+    - target: {fileID: 8392644964215073528, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+      propertyPath: m_Name
+      value: Shelf
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
 --- !u!1 &1819727801
 GameObject:
   m_ObjectHideFlags: 0
@@ -9596,6 +10506,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51b21d1237277a240905948ee80f9185, type: 3}
+--- !u!4 &1941769607 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5097352264317335614, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+  m_PrefabInstance: {fileID: 1804152081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1941769608 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 788676812043048792, guid: df6fbb3e635aaed4d9b956e1a8da332b, type: 3}
+  m_PrefabInstance: {fileID: 1804152081}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750b0f4f8e47f9c4c8862db334ef449e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1943123263
 GameObject:
   m_ObjectHideFlags: 0
@@ -10639,7 +11565,7 @@ MonoBehaviour:
   shortDescription: 
   voicemailDescription: 
   voicemailShortQuote: 
-  currentState: 1
+  currentState: 0
   isFailed: 0
   isAlwaysChosen: 0
   taskToggleRoot: {fileID: 0}
@@ -10959,7 +11885,7 @@ PrefabInstance:
       objectReference: {fileID: 1099646017}
     - target: {fileID: 4806094309516806123, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.89
+      value: -51.29
       objectReference: {fileID: 0}
     - target: {fileID: 4806094309516806123, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13365,11 +14291,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 101354581}
     m_Modifications:
     - target: {fileID: 5097352264317335614, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.63
+      value: -5.630001
       objectReference: {fileID: 0}
     - target: {fileID: 5097352264317335614, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13385,15 +14311,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5097352264317335614, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5097352264317335614, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5097352264317335614, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5097352264317335614, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13424,6 +14350,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
+--- !u!4 &6416917630121425658 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5097352264317335614, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
+  m_PrefabInstance: {fileID: 6416917630121425657}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6425184854408850955
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14181,6 +15112,7 @@ RectTransform:
   - {fileID: 4315363290506010616}
   - {fileID: 6425184854408850955}
   - {fileID: 8090693049201523271}
+  - {fileID: 981936125}
   - {fileID: 937479748}
   - {fileID: 1351485015}
   - {fileID: 1216369789}
@@ -14351,4 +15283,3 @@ SceneRoots:
   - {fileID: 1918608819}
   - {fileID: 1867014002}
   - {fileID: 590049462}
-  - {fileID: 6416917630121425657}
