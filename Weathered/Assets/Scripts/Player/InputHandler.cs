@@ -10,18 +10,13 @@ public class InputHandler : MonoBehaviour
     private Camera _camera;
     PlayerController player;
 
-    [SerializeField] Dialog dialog;
-
     [SerializeField] GameObject tasksScreen;
     bool taskIsOn = false;
-
-    TaskController taskController;
 
     private void Awake()
     {
         _camera = Camera.main;
         player = FindAnyObjectByType<PlayerController>();
-        taskController = FindAnyObjectByType<TaskController>();
     }
 
     // Update is called once per frame

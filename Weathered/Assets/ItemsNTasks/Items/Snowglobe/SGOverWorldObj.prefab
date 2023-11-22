@@ -79,7 +79,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.4, y: 1.4}
+  m_Size: {x: 140, y: 140}
   m_EdgeRadius: 0
 --- !u!114 &7673973845847148935
 MonoBehaviour:
@@ -121,6 +121,7 @@ MonoBehaviour:
   currentDroppedObject: {fileID: 0}
   sgObject: {fileID: 0}
   snowglobes: {fileID: 0}
+  chosen: 0
   currentSGType: 0
 --- !u!1 &5245460208010473835
 GameObject:
