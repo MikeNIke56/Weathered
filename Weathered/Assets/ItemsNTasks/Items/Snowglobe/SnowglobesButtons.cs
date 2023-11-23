@@ -34,6 +34,8 @@ public class SnowglobesButtons : MonoBehaviour
             inspectUI.SetActive(false);
             chosenSG = curSG;
             chosenSGObj = curSGObj;
+            arrangeSnowglobes.tempSG = chosenSG;
+            arrangeSnowglobes.tempImg = chosenSGObj.sgItem.sgImg;
             ItemController.AddItemToHand(chosenSG);
             arrangeSnowglobes.currentSGState = ArrangeSnowglobes.SGState.InShelf;
             arrangeSnowglobes.isSwitching = true;

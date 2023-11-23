@@ -19,6 +19,10 @@ public class ArrangeSnowglobes : Task
 
     public bool isSwitching = false;
 
+    public Snowglobe tempSG;
+    public Image tempImg;
+
+
     public override void InstanceTask()
     {
         base.InstanceTask();

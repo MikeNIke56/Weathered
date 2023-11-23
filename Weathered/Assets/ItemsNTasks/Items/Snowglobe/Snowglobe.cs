@@ -36,27 +36,17 @@ public class Snowglobe : Item
 
             if(snowglobes.isSwitching == true)
             {
-                Snowglobe tempSnowglobe = new Snowglobe();
-                Image tempImg = null;
-
-                //sets the temp's values to the first choice's values
-                tempImg = sgButtons.chosenSGObj.sgItem.sgImg;
-                tempImg.sprite = sgButtons.chosenSGObj.sgItem.sgImg.sprite;
-                tempSnowglobe = sgButtons.chosenSGObj.sgItem;
-
-                //sets the first choice's values to the second's values
                 foreach (Transform sgObj in snowGlobesObj.transform)
                 {
                     if(sgObj.GetComponent<SnowglobeObj>() != null && sgObj.GetComponent<SnowglobeObj>() == sgButtons.chosenSGObj)
                     {
-                        var objImg1 = sgButtons.chosenSGObj.sgItem.sgImg;
-                        objImg1.sprite = clickedSG.sgItem.sgImg.sprite;
-                        sgButtons.chosenSGObj.sgItem = clickedSG.sgItem;
+                        //sets the first choice's values to the second's values
+                        sgObj.GetComponent<SnowglobeObj>().sgItem = clickedSG.sgItem;
+                        sgObj.GetComponent<SnowglobeObj>().sgItem.sgImg.sprite = clickedSG.sgItem.sgImg.sprite;
 
-                        //sets the second's choice's values to the first's values
-                        var objImg2 = clickedSG.sgItem.sgImg;
-                        objImg2.sprite = tempImg.sprite;
-                        clickedSG.sgItem = tempSnowglobe;
+                        //sets the second's choice's values to the temp's values
+                        clickedSG.sgItem = snowglobes.tempSG;
+                        clickedSG.sgItem.sgImg.sprite = snowglobes.tempImg.sprite;
 
                         snowglobes.isSwitching = false;
                         ItemController.ClearItemInHand();
@@ -88,8 +78,11 @@ public class Snowglobe : Item
     {
         foreach (Transform obj in snowGlobesObj.transform)
         {
-            var objImg = obj.GetComponent<Image>();
-            objImg.sprite = obj.GetComponent<SnowglobeObj>().sgItem.sgImg.sprite;
+            var objImg = obj.gameObject.GetComponent<Image>();
+            if(objImg.sprite != null )
+                objImg.sprite = obj.gameObject.GetComponent<SnowglobeObj>().sgItem.sgImg.sprite;
+            else
+                objImg.sprite = null;
         }
     }
 }
