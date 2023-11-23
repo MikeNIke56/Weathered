@@ -8,8 +8,11 @@ public class SnowglobesButtons : MonoBehaviour
     public GameObject snowGlobesObj;
     ArrangeSnowglobes arrangeSnowglobes;
 
-    public Snowglobe clickedSG;
-    Snowglobe chosenSG;
+    public Snowglobe curSG;
+    public Snowglobe chosenSG;
+
+    public SnowglobeObj curSGObj;
+    public SnowglobeObj chosenSGObj;
 
     private void Start()
     {
@@ -25,10 +28,16 @@ public class SnowglobesButtons : MonoBehaviour
 
     public void ChooseSnowGlobe()
     {
-        snowGlobesObj.SetActive(true);
-        inspectUI.SetActive(false);
-        chosenSG = clickedSG;
-        ItemController.AddItemToHand(chosenSG);
-        arrangeSnowglobes.currentSGState = ArrangeSnowglobes.SGState.InShelf;
+        if (curSG.included == true)
+        {
+            snowGlobesObj.SetActive(true);
+            inspectUI.SetActive(false);
+            chosenSG = curSG;
+            chosenSGObj = curSGObj;
+            ItemController.AddItemToHand(chosenSG);
+            arrangeSnowglobes.currentSGState = ArrangeSnowglobes.SGState.InShelf;
+            arrangeSnowglobes.isSwitching = true;
+            Debug.Log("chosen");
+        }
     }
 }

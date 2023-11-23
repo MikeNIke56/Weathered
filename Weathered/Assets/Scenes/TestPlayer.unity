@@ -859,6 +859,8 @@ GameObject:
   m_Component:
   - component: {fileID: 206286498}
   - component: {fileID: 206286499}
+  - component: {fileID: 206286501}
+  - component: {fileID: 206286500}
   m_Layer: 0
   m_Name: sg (6)
   m_TagString: Untagged
@@ -866,14 +868,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &206286498
-Transform:
+--- !u!224 &206286498
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206286497}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -881,6 +882,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 379421163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206286499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,9 +913,49 @@ MonoBehaviour:
   currentDroppedObject: {fileID: 0}
   snowglobes: {fileID: 543056631}
   chosen: 0
+  included: 0
   inspectUI: {fileID: 1149959690}
   snowGlobesObj: {fileID: 811835308}
   currentSGType: 6
+  sgImg: {fileID: 206286500}
+--- !u!114 &206286500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206286497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &206286501
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206286497}
+  m_CullTransparentMesh: 1
 --- !u!1 &217419953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1125,8 @@ GameObject:
   m_Component:
   - component: {fileID: 234456459}
   - component: {fileID: 234456460}
+  - component: {fileID: 234456462}
+  - component: {fileID: 234456461}
   m_Layer: 0
   m_Name: sg (3)
   m_TagString: Untagged
@@ -1086,14 +1134,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &234456459
-Transform:
+--- !u!224 &234456459
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234456458}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1101,6 +1148,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 379421163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234456460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,9 +1179,49 @@ MonoBehaviour:
   currentDroppedObject: {fileID: 0}
   snowglobes: {fileID: 543056631}
   chosen: 0
+  included: 0
   inspectUI: {fileID: 1149959690}
   snowGlobesObj: {fileID: 811835308}
   currentSGType: 3
+  sgImg: {fileID: 234456461}
+--- !u!114 &234456461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234456458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c9a40ab6299d9b14cb164919425ea05c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &234456462
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234456458}
+  m_CullTransparentMesh: 1
 --- !u!1 &258041636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,9 +1662,11 @@ MonoBehaviour:
   currentDroppedObject: {fileID: 0}
   snowglobes: {fileID: 543056631}
   chosen: 0
+  included: 0
   inspectUI: {fileID: 0}
   snowGlobesObj: {fileID: 0}
   currentSGType: 0
+  sgImg: {fileID: 0}
 --- !u!1001 &360999504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2660,6 +2754,7 @@ MonoBehaviour:
   slotOriginal: {fileID: 2685758649256705675, guid: 1a5124e8b887ad94e981a81f89abdc56, type: 3}
   slotParent: {fileID: 811835308}
   currentSGState: 0
+  isSwitching: 0
 --- !u!4 &548478336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
@@ -4279,7 +4374,6 @@ GameObject:
   - component: {fileID: 766965222}
   - component: {fileID: 766965221}
   - component: {fileID: 766965220}
-  - component: {fileID: 766965223}
   m_Layer: 0
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -4351,8 +4445,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 766965223}
-        m_TargetAssemblyTypeName: BackButtonSGs, Assembly-CSharp
+      - m_Target: {fileID: 1149959694}
+        m_TargetAssemblyTypeName: SnowglobesButtons, Assembly-CSharp
         m_MethodName: BackToSGs
         m_Mode: 1
         m_Arguments:
@@ -4401,21 +4495,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766965218}
   m_CullTransparentMesh: 1
---- !u!114 &766965223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766965218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab33a66326cafe2448b87aafe1adb6ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inspectUI: {fileID: 1149959690}
-  snowGlobesObj: {fileID: 811835308}
-  clickedSG: {fileID: 0}
 --- !u!1 &781085987
 GameObject:
   m_ObjectHideFlags: 0
@@ -4778,6 +4857,8 @@ GameObject:
   m_Component:
   - component: {fileID: 820772366}
   - component: {fileID: 820772367}
+  - component: {fileID: 820772369}
+  - component: {fileID: 820772368}
   m_Layer: 0
   m_Name: sg (5)
   m_TagString: Untagged
@@ -4785,14 +4866,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &820772366
-Transform:
+--- !u!224 &820772366
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820772365}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -4800,6 +4880,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 379421163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820772367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4826,9 +4911,49 @@ MonoBehaviour:
   currentDroppedObject: {fileID: 0}
   snowglobes: {fileID: 543056631}
   chosen: 0
+  included: 0
   inspectUI: {fileID: 1149959690}
   snowGlobesObj: {fileID: 811835308}
   currentSGType: 5
+  sgImg: {fileID: 820772368}
+--- !u!114 &820772368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820772365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 8191490373284362680, guid: 2ff19263e35a43243a6cb7e3dcc07fa8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &820772369
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820772365}
+  m_CullTransparentMesh: 1
 --- !u!1 &848894328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4937,6 +5062,8 @@ GameObject:
   m_Component:
   - component: {fileID: 870484524}
   - component: {fileID: 870484525}
+  - component: {fileID: 870484527}
+  - component: {fileID: 870484526}
   m_Layer: 0
   m_Name: sg (1)
   m_TagString: Untagged
@@ -4944,14 +5071,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &870484524
-Transform:
+--- !u!224 &870484524
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870484523}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -4959,6 +5085,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 379421163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &870484525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4985,9 +5116,49 @@ MonoBehaviour:
   currentDroppedObject: {fileID: 0}
   snowglobes: {fileID: 543056631}
   chosen: 0
+  included: 0
   inspectUI: {fileID: 1149959690}
   snowGlobesObj: {fileID: 811835308}
   currentSGType: 1
+  sgImg: {fileID: 870484526}
+--- !u!114 &870484526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870484523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7901622571200134146, guid: 7cbb1e448e36cb948ab27af4cf8e7b07, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &870484527
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870484523}
+  m_CullTransparentMesh: 1
 --- !u!1 &895674244
 GameObject:
   m_ObjectHideFlags: 0
@@ -5517,7 +5688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &981936125
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5550,6 +5721,8 @@ GameObject:
   m_Component:
   - component: {fileID: 982237324}
   - component: {fileID: 982237325}
+  - component: {fileID: 982237327}
+  - component: {fileID: 982237326}
   m_Layer: 0
   m_Name: sg (4)
   m_TagString: Untagged
@@ -5557,14 +5730,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &982237324
-Transform:
+--- !u!224 &982237324
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982237323}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -5572,6 +5744,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 379421163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &982237325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5598,9 +5775,49 @@ MonoBehaviour:
   currentDroppedObject: {fileID: 0}
   snowglobes: {fileID: 543056631}
   chosen: 0
+  included: 0
   inspectUI: {fileID: 1149959690}
   snowGlobesObj: {fileID: 811835308}
   currentSGType: 4
+  sgImg: {fileID: 982237326}
+--- !u!114 &982237326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982237323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 4864234961123711424, guid: c48227fd2ba81d743823190b7883c120, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &982237327
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982237323}
+  m_CullTransparentMesh: 1
 --- !u!1 &983605030
 GameObject:
   m_ObjectHideFlags: 0
@@ -6476,13 +6693,14 @@ GameObject:
   - component: {fileID: 1149959691}
   - component: {fileID: 1149959693}
   - component: {fileID: 1149959692}
+  - component: {fileID: 1149959694}
   m_Layer: 0
   m_Name: UndersideOfSG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1149959691
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6543,6 +6761,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149959690}
   m_CullTransparentMesh: 1
+--- !u!114 &1149959694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149959690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab33a66326cafe2448b87aafe1adb6ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inspectUI: {fileID: 1149959690}
+  snowGlobesObj: {fileID: 811835308}
+  curSG: {fileID: 0}
+  chosenSG: {fileID: 0}
+  curSGObj: {fileID: 0}
+  chosenSGObj: {fileID: 0}
 --- !u!1001 &1159475088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8150,6 +8386,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1468635973}
   - component: {fileID: 1468635974}
+  - component: {fileID: 1468635976}
+  - component: {fileID: 1468635975}
   m_Layer: 0
   m_Name: sg
   m_TagString: Untagged
@@ -8157,14 +8395,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1468635973
-Transform:
+--- !u!224 &1468635973
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468635972}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -8172,6 +8409,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 379421163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468635974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8198,9 +8440,49 @@ MonoBehaviour:
   currentDroppedObject: {fileID: 0}
   snowglobes: {fileID: 543056631}
   chosen: 0
+  included: 0
   inspectUI: {fileID: 1149959690}
   snowGlobesObj: {fileID: 811835308}
   currentSGType: 0
+  sgImg: {fileID: 1468635975}
+--- !u!114 &1468635975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468635972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 8167391272134822621, guid: 4bac1147db5992a4c91e62c46ccaf3a3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1468635976
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468635972}
+  m_CullTransparentMesh: 1
 --- !u!1 &1484353199
 GameObject:
   m_ObjectHideFlags: 0
@@ -8641,6 +8923,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1544952883}
   - component: {fileID: 1544952884}
+  - component: {fileID: 1544952886}
+  - component: {fileID: 1544952885}
   m_Layer: 0
   m_Name: sg (2)
   m_TagString: Untagged
@@ -8648,14 +8932,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1544952883
-Transform:
+--- !u!224 &1544952883
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544952882}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -8663,6 +8946,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 379421163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1544952884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8689,9 +8977,49 @@ MonoBehaviour:
   currentDroppedObject: {fileID: 0}
   snowglobes: {fileID: 543056631}
   chosen: 0
+  included: 0
   inspectUI: {fileID: 1149959690}
   snowGlobesObj: {fileID: 811835308}
   currentSGType: 2
+  sgImg: {fileID: 1544952885}
+--- !u!114 &1544952885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544952882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6051955444447126620, guid: d2e5c8c078f0c2144989ddfcd9bd6bd2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1544952886
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544952882}
+  m_CullTransparentMesh: 1
 --- !u!4 &1549008597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8341877225037432059, guid: f0cc6497797635f4d9835e2163d5608b, type: 3}
@@ -8897,7 +9225,6 @@ GameObject:
   - component: {fileID: 1613641495}
   - component: {fileID: 1613641494}
   - component: {fileID: 1613641493}
-  - component: {fileID: 1613641492}
   m_Layer: 0
   m_Name: Button (Legacy) (1)
   m_TagString: Untagged
@@ -8925,21 +9252,6 @@ RectTransform:
   m_AnchoredPosition: {x: 42, y: 0}
   m_SizeDelta: {x: 70.83528, y: 16.77642}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &1613641492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613641490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab33a66326cafe2448b87aafe1adb6ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inspectUI: {fileID: 1149959690}
-  snowGlobesObj: {fileID: 811835308}
-  clickedSG: {fileID: 0}
 --- !u!114 &1613641493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8984,9 +9296,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1613641492}
-        m_TargetAssemblyTypeName: BackButtonSGs, Assembly-CSharp
-        m_MethodName: BackToSGs
+      - m_Target: {fileID: 1149959694}
+        m_TargetAssemblyTypeName: SnowglobesButtons, Assembly-CSharp
+        m_MethodName: ChooseSnowGlobe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10007,6 +10319,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1790685128}
   - component: {fileID: 1790685129}
+  - component: {fileID: 1790685131}
+  - component: {fileID: 1790685130}
   m_Layer: 0
   m_Name: sg (7)
   m_TagString: Untagged
@@ -10014,14 +10328,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1790685128
-Transform:
+--- !u!224 &1790685128
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790685127}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -10029,6 +10342,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 379421163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1790685129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10055,9 +10373,49 @@ MonoBehaviour:
   currentDroppedObject: {fileID: 0}
   snowglobes: {fileID: 543056631}
   chosen: 0
+  included: 0
   inspectUI: {fileID: 1149959690}
   snowGlobesObj: {fileID: 811835308}
   currentSGType: 7
+  sgImg: {fileID: 1790685130}
+--- !u!114 &1790685130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790685127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1790685131
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790685127}
+  m_CullTransparentMesh: 1
 --- !u!1 &1793989007
 GameObject:
   m_ObjectHideFlags: 0

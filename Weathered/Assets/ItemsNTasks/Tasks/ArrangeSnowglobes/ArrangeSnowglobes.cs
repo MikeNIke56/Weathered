@@ -17,6 +17,7 @@ public class ArrangeSnowglobes : Task
     public enum SGState { OutOfShelf, InShelf, InspectingSG }
     public SGState currentSGState;
 
+    public bool isSwitching = false;
 
     public override void InstanceTask()
     {
@@ -32,12 +33,12 @@ public class ArrangeSnowglobes : Task
         shelfObj.SetActive(true);
         currentSGState = SGState.InShelf;
 
-        for(int i = 0; i < snowGlobeObjs.Count; i++)
+        foreach(Transform obj in slotParent.transform)
         {
-            if(snowGlobeObjs[i].sgItem.currentSGType != Snowglobe.sgType.Dehydration && snowGlobeObjs[i].sgItem.currentSGType != Snowglobe.sgType.Glory)
+            if(obj.GetComponent<SnowglobeObj>().sgItem.currentSGType != Snowglobe.sgType.Dehydration && obj.GetComponent<SnowglobeObj>().sgItem.currentSGType != Snowglobe.sgType.Glory)
             {
-                var objImg = snowGlobeObjs[i].gameObject.GetComponent<Image>();
-                objImg.sprite = snowGlobeObjs[i].sgItem.itemUIObjectPrefab.GetComponent<Image>().sprite;
+                var objImg = obj.GetComponent<SnowglobeObj>().gameObject.GetComponent<Image>();
+                objImg.sprite = obj.GetComponent<SnowglobeObj>().sgItem.sgImg.sprite;
             }
         }
     }
@@ -72,7 +73,10 @@ public class ArrangeSnowglobes : Task
             snowGlobes[chosenNum].chosen = true;
 
             if (slotObj.sgItem != null)
-                objImg.sprite = slotObj.sgItem.itemUIObjectPrefab.GetComponent<Image>().sprite;
+            {
+                objImg.sprite = slotObj.sgItem.sgImg.sprite;
+                slotObj.sgItem.included = true;
+            }
             else
                 objImg.sprite = null;
         }
