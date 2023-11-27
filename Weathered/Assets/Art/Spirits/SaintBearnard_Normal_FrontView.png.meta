@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SaintBearnard_Normal_FrontView_0: -8055213517150809915
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

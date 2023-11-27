@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bennie_Wing_0: 7634962418311719952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

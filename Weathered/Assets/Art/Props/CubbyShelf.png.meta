@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CubbyShelf_0: -2170470060293032738
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

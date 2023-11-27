@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SallyMae_Eye_0: -9058898149845981753
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mr.BearNormal_SideView_2_0: 7422313559499829035
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

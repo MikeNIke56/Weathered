@@ -176,7 +176,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SallyMae_Normal_FrontView_0: 6897842371733129535
+      SallyMae_Normal_FrontView_1: 2482052894111936455
+      SallyMae_Normal_FrontView_2: -807869896944977168
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

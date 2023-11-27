@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SallyMae_Angry_SideView_2_0: 6068265330956565886
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SaintBearnardIcon_0: -6895212137895208777
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

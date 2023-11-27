@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bennie_Icon_0: 3763954047368952911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

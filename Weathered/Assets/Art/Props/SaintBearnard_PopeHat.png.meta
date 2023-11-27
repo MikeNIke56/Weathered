@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SaintBearnard_PopeHat_0: 4358520502058114299
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

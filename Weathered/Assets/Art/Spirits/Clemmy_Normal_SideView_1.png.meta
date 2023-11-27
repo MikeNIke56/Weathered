@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Clemmy_Normal_SideView_1_0: -365218754761606247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

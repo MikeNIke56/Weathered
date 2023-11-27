@@ -9,6 +9,7 @@ public class SpiritWorldJump : MonoBehaviour
     static public bool isInSpiritWorld = false;
     [SerializeField] PlayerController playerControl;
     [SerializeField] Image blackoutImage;
+    [SerializeField] Image deathEffectImage;
     [SerializeField] Image vignetteImage;
     [SerializeField] float fadeInSeconds = 2f;
     static bool isJumping = false;
@@ -92,6 +93,7 @@ public class SpiritWorldJump : MonoBehaviour
         playerControl.lockMovement = false;
         yield return new WaitForSeconds(1);
         isJumping = false;
+        StartCoroutine(DeathCountDown());
     }
     IEnumerator JumpFromEffect()
     {
@@ -108,6 +110,7 @@ public class SpiritWorldJump : MonoBehaviour
         playerControl.transform.position += new Vector3(0, 5000, 0);
         isInSpiritWorld = false;
         //EnableVignette
+        deathEffectImage.color = new Color32(0, 0, 0, 0);
         vignetteImage.color = new Color(0, 0, 0, 0);
         yield return new WaitForSeconds(1f);
         //FadeOutBlackout
@@ -120,5 +123,31 @@ public class SpiritWorldJump : MonoBehaviour
         playerControl.lockMovement = false;
         yield return new WaitForSeconds(1);
         isJumping = false;
+    }
+
+    IEnumerator DeathCountDown()
+    {
+        bool isEscaped = false;
+        deathEffectImage.color = new Color32(0, 0, 0, 0);
+        float fadeStep = 10f / 255f;
+        while (deathEffectImage.color.a < 1)
+        {
+            if (!isInSpiritWorld || isInSpiritWorld && isJumping)
+            {
+                isEscaped = true;
+                break;
+            }
+            deathEffectImage.color += new Color32(0, 0, 0, 1);
+            yield return new WaitForSeconds(fadeStep);
+        }
+        if (isEscaped)
+        {
+
+        }
+        else
+        {
+            //Kill player
+            Debug.Log("Player has failed to escape the spirit world.");
+        }
     }
 }

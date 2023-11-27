@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SaintBearnard_Angry_SideView_1_0: -3117419014794040619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

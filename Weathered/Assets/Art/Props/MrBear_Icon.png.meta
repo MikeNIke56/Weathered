@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MrBear_Icon_0: -7989688134669110372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

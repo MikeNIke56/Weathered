@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bennie_Complete_Sideview_1_0: 3133645831025438770
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

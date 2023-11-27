@@ -51,13 +51,13 @@ public class ArrangeDolls : Task
                 switch (validDolls.IndexOf(tempDoll))
                 {
                     case 0:
-                        tempObject = Instantiate(sittingBear, placeClicked.dollSitPosition);
-                        break;
-                    case 1:
                         tempObject = Instantiate(sittingBenni, placeClicked.dollSitPosition);
                         break;
-                    case 2:
+                    case 1:
                         tempObject = Instantiate(sittingClemmy, placeClicked.dollSitPosition);
+                        break;
+                    case 2:
+                        tempObject = Instantiate(sittingBear, placeClicked.dollSitPosition);
                         break;
                     case 3:
                         tempObject = Instantiate(sittingSaint, placeClicked.dollSitPosition);

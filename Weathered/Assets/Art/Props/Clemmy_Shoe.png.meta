@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Clemmy_Shoe_0: 3835812039267468763
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
