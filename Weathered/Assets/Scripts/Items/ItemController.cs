@@ -9,9 +9,15 @@ public class ItemController : MonoBehaviour
     public GameObject HandIconRoot;
     public AudioSource itemPickupAudio;
 
+    public Item tempItem;
+
     void Start()
     {
         itemControl = FindFirstObjectByType<ItemController>();
+    }
+    private void Update()
+    {
+        tempItem = itemInHand;
     }
     public static bool AddItemToHand(Item itemToAdd)
     {

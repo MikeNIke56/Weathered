@@ -7,10 +7,12 @@ using static UnityEditor.PlayerSettings;
 
 public class ArrangeSnowglobes : Task
 {
-    [SerializeField] List<Snowglobe> snowGlobes = new List<Snowglobe>();
+    public List<Snowglobe> snowGlobes = new List<Snowglobe>();
     [SerializeField] List<SnowglobeObj> snowGlobeObjs = new List<SnowglobeObj>();
 
     [SerializeField] GameObject shelfObj;
+    [SerializeField] GameObject snowglobesUI;
+    [SerializeField] GameObject snowglobesUnder;
     public SnowglobeObj slotOriginal;
     public GameObject slotParent;
 
@@ -35,6 +37,9 @@ public class ArrangeSnowglobes : Task
     public void ShelfClicked()
     {
         shelfObj.SetActive(true);
+        snowglobesUI.SetActive(true);
+        snowglobesUnder.SetActive(false);
+        UIController.UIControl.inputHandler.SetActive(false);
         currentSGState = SGState.InShelf;
 
         foreach(Transform obj in slotParent.transform)
@@ -83,6 +88,22 @@ public class ArrangeSnowglobes : Task
             }
             else
                 objImg.sprite = null;
+        }
+    }
+
+    public void CheckForFinished()
+    {
+        bool inOrder = true;
+        for(int i = 0; i < slotParent.GetComponentsInChildren<SnowglobeObj>().Length;  i++)
+        {
+            if (slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem != snowGlobes[i])
+                inOrder = false;
+        }
+
+        if (inOrder == true)
+        {
+            OnCompleted();
+            Debug.Log("done");
         }
     }
 }

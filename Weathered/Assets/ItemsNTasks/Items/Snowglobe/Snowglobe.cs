@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class Snowglobe : Item
     public ArrangeSnowglobes snowglobes;
     public bool chosen = false;
     public bool included = false;
+    public bool isShowing;
+    public int year;
 
     public GameObject inspectUI;
     public GameObject snowGlobesObj;
@@ -33,12 +36,11 @@ public class Snowglobe : Item
         else if (snowglobes.currentSGState == ArrangeSnowglobes.SGState.InShelf)
         {           
             //handle switching or inspecting a snowglobe
-
             if(snowglobes.isSwitching == true)
             {
                 foreach (Transform sgObj in snowGlobesObj.transform)
                 {
-                    if(sgObj.GetComponent<SnowglobeObj>() != null && sgObj.GetComponent<SnowglobeObj>() == sgButtons.chosenSGObj)
+                    if(sgObj.GetComponent<SnowglobeObj>().sgItem != null && sgObj.GetComponent<SnowglobeObj>() == sgButtons.chosenSGObj)
                     {
                         //sets the first choice's values to the second's values
                         sgObj.GetComponent<SnowglobeObj>().sgItem = clickedSG.sgItem;
@@ -52,25 +54,71 @@ public class Snowglobe : Item
                         ItemController.ClearItemInHand();
 
                         UpdateSnowGlobes();
+                        
+                        snowglobes.CheckForFinished();
                     }
                 }
             }
             else
             {
-                inspectUI.SetActive(true);
-                snowGlobesObj.SetActive(false);
-                sgButtons.curSG = this;
-                sgButtons.curSGObj = clickedSG;
-                snowglobes.currentSGState = ArrangeSnowglobes.SGState.InspectingSG;
+                try
+                {
+                    if (clickedSG.sgItem.included == true)
+                    {
+                        inspectUI.SetActive(true);
+                        snowGlobesObj.SetActive(false);
+                        sgButtons.curSG = this;
+                        sgButtons.curSGObj = clickedSG;
+                        if (clickedSG.sgItem.isShowing == true)
+                            sgButtons.yearText.text = clickedSG.sgItem.year.ToString();
+                        else
+                            sgButtons.yearText.text = "";
+                        snowglobes.currentSGState = ArrangeSnowglobes.SGState.InspectingSG;
+                    }
+                    else
+                    {
+                        Snowglobe snowglobeInHand = (Snowglobe)ItemController.itemInHand;
+
+                        for (int i = 0; i < snowglobes.snowGlobes.Count; i++)
+                        {
+                            if (snowglobeInHand.currentSGType == sgType.Dehydration && snowglobes.snowGlobes[i].currentSGType == sgType.Dehydration)
+                            {
+                                clickedSG.sgItem = snowglobes.snowGlobes[i];
+                                clickedSG.sgItem.sgImg.sprite = snowglobes.snowGlobes[i].sgImg.sprite;
+                                clickedSG.sgItem.included = true;
+                                var objImg = clickedSG.gameObject.GetComponent<Image>();
+                                objImg.sprite = objImg.gameObject.GetComponent<SnowglobeObj>().sgItem.sgImg.sprite;
+
+                                ItemController.ClearItemInHand();
+                                ItemController.itemInHand = null;
+                            }
+                            else if (snowglobeInHand.currentSGType == sgType.Glory && snowglobes.snowGlobes[i].currentSGType == sgType.Glory)
+                            {
+                                clickedSG.sgItem = snowglobes.snowGlobes[i];
+                                clickedSG.sgItem.sgImg.sprite = snowglobes.snowGlobes[i].sgImg.sprite;
+                                clickedSG.sgItem.included = true;
+                                var objImg = clickedSG.gameObject.GetComponent<Image>();
+                                objImg.sprite = objImg.gameObject.GetComponent<SnowglobeObj>().sgItem.sgImg.sprite;
+
+                                ItemController.ClearItemInHand();
+                                ItemController.itemInHand = null;
+                            }
+                        } 
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.Log("Snowglobe doesn't exist");
+                    Debug.Log(e);
+                }
+
             }         
         }
         else if (snowglobes.currentSGState == ArrangeSnowglobes.SGState.InspectingSG)
         {
             //handle choose and inspect snowglobe
-            ItemController.AddItemToHand(this);
             snowGlobesObj.SetActive(true);
             inspectUI.SetActive(false);
-            Debug.Log("chose this snowlobe");
         }
     }
 

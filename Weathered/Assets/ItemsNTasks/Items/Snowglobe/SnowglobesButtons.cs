@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SnowglobesButtons : MonoBehaviour
 {
     public GameObject inspectUI;
     public GameObject snowGlobesObj;
     ArrangeSnowglobes arrangeSnowglobes;
+
+    public Text yearText;
 
     public Snowglobe curSG;
     public Snowglobe chosenSG;

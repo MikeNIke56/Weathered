@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5743277611565387016}
   - component: {fileID: 4953759766827587271}
   - component: {fileID: 7673973845847148935}
-  - component: {fileID: -4844961266235509467}
+  - component: {fileID: 42738099675054206}
   m_Layer: 0
   m_Name: SGOverWorldObj
   m_TagString: Interactable
@@ -29,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.15, y: -1.19, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7758058013321692056}
   m_Father: {fileID: 0}
@@ -69,7 +69,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.62}
+  m_Offset: {x: -0.010930777, y: 0.68336797}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -79,7 +79,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 140, y: 140}
+  m_Size: {x: 7.601414, y: 7.692122}
   m_EdgeRadius: 0
 --- !u!114 &7673973845847148935
 MonoBehaviour:
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteractable: 1
-  interactionScript: {fileID: -4844961266235509467}
---- !u!114 &-4844961266235509467
+  interactionScript: {fileID: 42738099675054206}
+--- !u!114 &42738099675054206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,25 +104,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1060104193434341897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd4d7af5893f67409177fa10634d812, type: 3}
+  m_Script: {fileID: 11500000, guid: ae28deae58891d34eac9d8b929a6823d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Snowglobe
-  description: a little snowglobe
-  shortName: 
-  shortDescription: 
-  currentState: 0
-  defaultObjectPrefab: {fileID: 0}
-  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
-  playerObjectPrefab: {fileID: 0}
-  droppedObjectPrefab: {fileID: 0}
-  investigateObjectPrefab: {fileID: 0}
-  canInvestigate: 0
-  currentDroppedObject: {fileID: 0}
-  sgObject: {fileID: 0}
-  snowglobes: {fileID: 0}
-  chosen: 0
-  currentSGType: 0
+  sgItem: {fileID: 0}
 --- !u!1 &5245460208010473835
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +135,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.63, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5743277611565387016}
