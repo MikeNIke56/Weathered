@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 741ef62b6aacce040835ef3ca7945a67
+guid: aaff1b483b93057428505ea15baed848
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5403412973014146209
-    second: DialogueBox_Weathered_0
+      213: -3507367595710138354
+    second: ThankYouForPlayingDemoScreen_Weathered_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DialogueBox_Weathered_0
+      name: ThankYouForPlayingDemoScreen_Weathered_0
       rect:
         serializedVersion: 2
-        x: 130
-        y: 232
-        width: 1022
-        height: 271
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5321c097883305b0800000000000000
-      internalID: -5403412973014146209
+      spriteID: e083bf821c3535fc0800000000000000
+      internalID: -3507367595710138354
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      DialogueBox_Weathered_0: -5403412973014146209
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

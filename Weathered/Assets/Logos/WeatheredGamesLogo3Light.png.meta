@@ -1,0 +1,472 @@
+fileFormatVersion: 2
+guid: 73637ec4fdb43464784f64a833928865
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1183492985501836850
+    second: WeatheredGamesLogo3Light_0
+  - first:
+      213: -7044813658097779122
+    second: WeatheredGamesLogo3Light_1
+  - first:
+      213: -1745632046861596507
+    second: WeatheredGamesLogo3Light_2
+  - first:
+      213: -3809505566695945976
+    second: WeatheredGamesLogo3Light_3
+  - first:
+      213: 5901450138370384210
+    second: WeatheredGamesLogo3Light_4
+  - first:
+      213: -5769405688229109161
+    second: WeatheredGamesLogo3Light_5
+  - first:
+      213: -3234406876936039294
+    second: WeatheredGamesLogo3Light_6
+  - first:
+      213: 1227571409779184181
+    second: WeatheredGamesLogo3Light_7
+  - first:
+      213: 6461414973125969479
+    second: WeatheredGamesLogo3Light_8
+  - first:
+      213: 8494669740705256080
+    second: WeatheredGamesLogo3Light_9
+  - first:
+      213: -4065237496832034931
+    second: WeatheredGamesLogo3Light_10
+  - first:
+      213: 5266338244868513767
+    second: WeatheredGamesLogo3Light_11
+  - first:
+      213: -7852376877293301421
+    second: WeatheredGamesLogo3Light_12
+  - first:
+      213: 6763698338877726163
+    second: WeatheredGamesLogo3Light_13
+  - first:
+      213: -8962168488160966213
+    second: WeatheredGamesLogo3Light_14
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_0
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 489
+        width: 227
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec91ffc6663639fe0800000000000000
+      internalID: -1183492985501836850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_1
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 490
+        width: 10
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ef2409d4bcb3e90800000000000000
+      internalID: -7044813658097779122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_2
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 567
+        width: 69
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a8c642f6e446c7e0800000000000000
+      internalID: -1745632046861596507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_3
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 567
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8090737eedae12bc0800000000000000
+      internalID: -3809505566695945976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_4
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 566
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2512f3532a926e150800000000000000
+      internalID: 5901450138370384210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_5
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 567
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7526cfb1814feefa0800000000000000
+      internalID: -5769405688229109161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_6
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 567
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284952105141d13d0800000000000000
+      internalID: -3234406876936039294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_7
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 567
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 532505871b5390110800000000000000
+      internalID: 1227571409779184181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_8
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 563
+        width: 46
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746409b1fae8ba950800000000000000
+      internalID: 6461414973125969479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_9
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 567
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0921ffa5f1123e570800000000000000
+      internalID: 8494669740705256080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_10
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 566
+        width: 46
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d877ab109006597c0800000000000000
+      internalID: -4065237496832034931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_11
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 565
+        width: 86
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef11704bbac51940800000000000000
+      internalID: 5266338244868513767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_12
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 565
+        width: 54
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351117275d0c60390800000000000000
+      internalID: -7852376877293301421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_13
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 567
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ddd4b8bdcb7ddd50800000000000000
+      internalID: 6763698338877726163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeatheredGamesLogo3Light_14
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 566
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb947fd5e3bff9380800000000000000
+      internalID: -8962168488160966213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
