@@ -464,7 +464,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WeatheredGamesLogo1_0: -152427621163349561
+      WeatheredGamesLogo1_1: 2439781562635578561
+      WeatheredGamesLogo1_10: 4979637143072434982
+      WeatheredGamesLogo1_11: -6504841099018602733
+      WeatheredGamesLogo1_12: 6730617492550305277
+      WeatheredGamesLogo1_13: 4422610405830281664
+      WeatheredGamesLogo1_14: -7077428049828649234
+      WeatheredGamesLogo1_2: 1034375875196960466
+      WeatheredGamesLogo1_3: -8501463104146797504
+      WeatheredGamesLogo1_4: -44752498070527134
+      WeatheredGamesLogo1_5: -3610976990188778882
+      WeatheredGamesLogo1_6: 3777263339132582764
+      WeatheredGamesLogo1_7: -3570564088603271005
+      WeatheredGamesLogo1_8: 5780954323238925328
+      WeatheredGamesLogo1_9: -1560547407429669615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

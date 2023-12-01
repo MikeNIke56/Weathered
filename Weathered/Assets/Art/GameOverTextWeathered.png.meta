@@ -200,7 +200,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GameOverTextWeathered_0: 7034535947411046899
+      GameOverTextWeathered_1: -3234723659899546637
+      GameOverTextWeathered_2: 7843420520168787086
+      GameOverTextWeathered_3: -1740193529437966061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aaff1b483b93057428505ea15baed848
+guid: 67471567435eca747bd170d22df314d2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3507367595710138354
-    second: ThankYouForPlayingDemoScreen_Weathered_0
+      213: 8215903286314635811
+    second: CasseteTape1_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ThankYouForPlayingDemoScreen_Weathered_0
+      name: CasseteTape1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 24
+        y: 100
+        width: 675
+        height: 469
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e083bf821c3535fc0800000000000000
-      internalID: -3507367595710138354
+      spriteID: 3229fb95280c40270800000000000000
+      internalID: 8215903286314635811
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      ThankYouForPlayingDemoScreen_Weathered_0: -3507367595710138354
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

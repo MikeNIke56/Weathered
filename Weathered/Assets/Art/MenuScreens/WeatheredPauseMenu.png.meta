@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WeatheredPauseMenu_0: 2683360914092956870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
