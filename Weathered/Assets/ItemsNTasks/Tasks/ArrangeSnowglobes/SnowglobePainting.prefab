@@ -159,4 +159,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845f79b650b3f6e4b859c89f415aa11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  investigateObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 6073660414227184224, guid: 7cd8bde2c48a377449e0a1ed6e340a15, type: 3}
+  paintingName: 

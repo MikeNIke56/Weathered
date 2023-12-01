@@ -10,7 +10,6 @@ public class InputHandler : MonoBehaviour
     private Camera _camera;
     PlayerController player;
 
-    [SerializeField] GameObject tasksScreen;
     bool taskIsOn = false;
 
     private void Awake()
@@ -73,13 +72,13 @@ public class InputHandler : MonoBehaviour
     {
         if(taskIsOn==false)
         {          
-            tasksScreen.SetActive(true);
             taskIsOn = true;
+            UIController.UIControl.OpenTasksMenu();
         }
         else
         {
-            tasksScreen.SetActive(false);
             taskIsOn = false;
+            UIController.UIControl.CloseTasksMenu();
         }
     }
 }

@@ -13,6 +13,8 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject snowglobesUI;
     ArrangeSnowglobes snowglobes;
     public GameObject inputHandler;
+
+    PlayerController player;
     
     public bool isTasksMenuOpen = false;
     void Start()
@@ -21,6 +23,7 @@ public class UIController : MonoBehaviour
         {
             UIControl = FindFirstObjectByType<UIController>();
             snowglobes = FindAnyObjectByType<ArrangeSnowglobes>();
+            player = FindFirstObjectByType<PlayerController>();
         }
     }
 
@@ -30,6 +33,7 @@ public class UIController : MonoBehaviour
         tasksMenu.SetActive(false);
         investigateMenu.SetActive(true);
         inputHandler.SetActive(false);
+        player.lockMovement = true;
     }
 
     public void CloseInteractionMenu()
@@ -43,16 +47,21 @@ public class UIController : MonoBehaviour
             tasksMenu.SetActive(true);
         }
         baseGameUI.SetActive(true);
+        player.lockMovement = false;
     }
 
     public void OpenTasksMenu()
     {
         isTasksMenuOpen = true;
         tasksMenu.SetActive(true);
+        inputHandler.SetActive(false);
+        player.lockMovement = true;
     }
     public void CloseTasksMenu()
     {
         isTasksMenuOpen = false;
         tasksMenu.SetActive(false);
+        inputHandler.SetActive(true);
+        player.lockMovement = false;
     }
 }

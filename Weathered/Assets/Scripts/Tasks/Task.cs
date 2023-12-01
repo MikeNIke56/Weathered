@@ -20,6 +20,9 @@ public class Task : Interaction
     public GameObject taskInProgressIconPrefab; // In progress icon
     public GameObject taskCompletedIconPrefab; // Completed icon
     public int timesFailed = 0;
+
+    public enum taskRoom { Entrance, ChildrensToy, DVDNBook, ChinaNFurniture, Doll, CollectiblesNMemoirs, Taxidermy, CelebrityMerch, Clock }
+    public taskRoom room;
     public virtual void InstanceTask()
     {
         if (taskToggleRoot != null)

@@ -24,10 +24,12 @@ public class ArrangeSnowglobes : Task
     public Snowglobe tempSG;
     public Image tempImg;
 
+    PlayerController player;
 
     public override void InstanceTask()
     {
         base.InstanceTask();
+        player = FindAnyObjectByType<PlayerController>();
         currentSGState = SGState.OutOfShelf;
 
         //randomize snowglobe postition
@@ -41,6 +43,7 @@ public class ArrangeSnowglobes : Task
         snowglobesUnder.SetActive(false);
         UIController.UIControl.inputHandler.SetActive(false);
         currentSGState = SGState.InShelf;
+        player.lockMovement = true;
 
         foreach(Transform obj in slotParent.transform)
         {

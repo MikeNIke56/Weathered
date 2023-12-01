@@ -828,6 +828,115 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f287d4ac0c86a4c9d8907c8d32b93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &151212933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 151212934}
+  - component: {fileID: 151212937}
+  - component: {fileID: 151212936}
+  - component: {fileID: 151212935}
+  m_Layer: 0
+  m_Name: sg (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &151212934
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151212933}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 379421163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &151212935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151212933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 8191490373284362680, guid: 2ff19263e35a43243a6cb7e3dcc07fa8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &151212936
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151212933}
+  m_CullTransparentMesh: 1
+--- !u!114 &151212937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151212933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd4d7af5893f67409177fa10634d812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Snowglobe
+  description: 
+  shortName: 
+  shortDescription: 
+  currentState: 0
+  defaultObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  itemUIObjectPrefab: {fileID: 4385312344557793526, guid: 9a53826fb01374c4cb71ae9e3f4a518f, type: 3}
+  playerObjectPrefab: {fileID: 0}
+  droppedObjectPrefab: {fileID: 0}
+  investigateObjectPrefab: {fileID: 0}
+  canInvestigate: 0
+  currentDroppedObject: {fileID: 0}
+  snowglobes: {fileID: 543056631}
+  chosen: 0
+  included: 0
+  isShowing: 0
+  year: 1786
+  inspectUI: {fileID: 1149959690}
+  snowGlobesObj: {fileID: 811835308}
+  currentSGType: 8
+  sgImg: {fileID: 0}
 --- !u!4 &158145644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2114710253523732254, guid: 9d05b32f763263d45a01c29fa54870ed, type: 3}
@@ -2063,6 +2172,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 543056630}
     m_Modifications:
+    - target: {fileID: 3185967601311294125, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
+      propertyPath: paintingName
+      value: P3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185967601311294125, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
+      propertyPath: investigateObjectPrefab
+      value: 
+      objectReference: {fileID: 6073660414227184224, guid: 7cd8bde2c48a377449e0a1ed6e340a15, type: 3}
     - target: {fileID: 5097352264317335614, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.380054
@@ -2238,6 +2355,7 @@ Transform:
   - {fileID: 206286498}
   - {fileID: 982237324}
   - {fileID: 820772366}
+  - {fileID: 151212934}
   m_Father: {fileID: 258041637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &387987693
@@ -2891,6 +3009,7 @@ MonoBehaviour:
   taskInProgressIconPrefab: {fileID: 0}
   taskCompletedIconPrefab: {fileID: 0}
   timesFailed: 0
+  room: 1
   normalLight: {fileID: 102384238}
   spiritLight: {fileID: 1584294952}
   lightbulb: {fileID: 4678308795066410364, guid: 2128631269d1b684880178cdc8962a86, type: 3}
@@ -3051,6 +3170,7 @@ MonoBehaviour:
   taskInProgressIconPrefab: {fileID: 0}
   taskCompletedIconPrefab: {fileID: 0}
   timesFailed: 0
+  room: 1
   snowGlobes:
   - {fileID: 1468635974}
   - {fileID: 1790685129}
@@ -3269,6 +3389,7 @@ MonoBehaviour:
   taskInProgressIconPrefab: {fileID: 0}
   taskCompletedIconPrefab: {fileID: 0}
   timesFailed: 0
+  room: 1
   validTapes:
   - {fileID: 1044658730}
   - {fileID: 808826869}
@@ -3759,6 +3880,7 @@ MonoBehaviour:
   taskInProgressIconPrefab: {fileID: 0}
   taskCompletedIconPrefab: {fileID: 0}
   timesFailed: 0
+  room: 0
   allCobwebs:
   - {fileID: 1087198252}
   - {fileID: 941555177}
@@ -7389,6 +7511,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 543056630}
     m_Modifications:
+    - target: {fileID: 3185967601311294125, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
+      propertyPath: paintingName
+      value: P4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185967601311294125, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
+      propertyPath: investigateObjectPrefab
+      value: 
+      objectReference: {fileID: 6073660414227184224, guid: 7cd8bde2c48a377449e0a1ed6e340a15, type: 3}
     - target: {fileID: 5097352264317335614, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.6746826
@@ -8383,6 +8513,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 543056630}
     m_Modifications:
+    - target: {fileID: 3185967601311294125, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
+      propertyPath: paintingName
+      value: P1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185967601311294125, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
+      propertyPath: investigateObjectPrefab
+      value: 
+      objectReference: {fileID: 6073660414227184224, guid: 7cd8bde2c48a377449e0a1ed6e340a15, type: 3}
     - target: {fileID: 5097352264317335614, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.952072
@@ -9186,6 +9324,7 @@ MonoBehaviour:
   taskInProgressIconPrefab: {fileID: 0}
   taskCompletedIconPrefab: {fileID: 0}
   timesFailed: 0
+  room: 1
   validParts:
   - {fileID: 2136559715}
   - {fileID: 1553355655}
@@ -10850,6 +10989,7 @@ MonoBehaviour:
   taskInProgressIconPrefab: {fileID: 0}
   taskCompletedIconPrefab: {fileID: 0}
   timesFailed: 0
+  room: 1
   validDolls:
   - {fileID: 1671019359}
   - {fileID: 551335325}
@@ -13035,6 +13175,7 @@ MonoBehaviour:
   taskInProgressIconPrefab: {fileID: 0}
   taskCompletedIconPrefab: {fileID: 0}
   timesFailed: 0
+  room: 1
   brokenGlass:
   - {fileID: 341425106}
   - {fileID: 574198575}
@@ -13540,6 +13681,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 543056630}
     m_Modifications:
+    - target: {fileID: 3185967601311294125, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
+      propertyPath: paintingName
+      value: P2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185967601311294125, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
+      propertyPath: investigateObjectPrefab
+      value: 
+      objectReference: {fileID: 6073660414227184224, guid: 7cd8bde2c48a377449e0a1ed6e340a15, type: 3}
     - target: {fileID: 5097352264317335614, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.371534
@@ -13990,7 +14139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4800a2d48d3bf4848b750cc37ab7e683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tasksScreen: {fileID: 8992791383672346882}
 --- !u!1 &511937115085406984
 GameObject:
   m_ObjectHideFlags: 0
@@ -15668,6 +15816,7 @@ MonoBehaviour:
   taskInProgressIconPrefab: {fileID: 0}
   taskCompletedIconPrefab: {fileID: 0}
   timesFailed: 0
+  room: 0
   possibleItemsInBoxes:
   - {fileID: 1536844942}
   - {fileID: 1625184025}

@@ -15,7 +15,7 @@ public class Snowglobe : Item
     public GameObject inspectUI;
     public GameObject snowGlobesObj;
 
-    public enum sgType { Starvation, Ambush, Murder, Punishment, Revenge, Drowning, Glory, Dehydration }
+    public enum sgType { Starvation, Ambush, Murder, Punishment, Revenge, Drowning, Glory, Dehydration, Placeholder }
     public sgType currentSGType;
     public Image sgImg;
 
@@ -63,7 +63,7 @@ public class Snowglobe : Item
             {
                 try
                 {
-                    if (clickedSG.sgItem.included == true)
+                    if (clickedSG.sgItem != null && clickedSG.sgItem.included == true)
                     {
                         inspectUI.SetActive(true);
                         snowGlobesObj.SetActive(false);
@@ -75,7 +75,7 @@ public class Snowglobe : Item
                             sgButtons.yearText.text = "";
                         snowglobes.currentSGState = ArrangeSnowglobes.SGState.InspectingSG;
                     }
-                    else
+                    else if (clickedSG.sgItem.currentSGType == sgType.Placeholder)
                     {
                         Snowglobe snowglobeInHand = (Snowglobe)ItemController.itemInHand;
 

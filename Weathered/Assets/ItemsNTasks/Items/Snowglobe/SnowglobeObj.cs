@@ -10,9 +10,18 @@ public class SnowglobeObj : Interaction
     {
         if (sgItem == null)
         {
-            sgItem = FindFirstObjectByType<Snowglobe>();
+            Snowglobe[] allSgs = FindObjectsByType<Snowglobe>(FindObjectsSortMode.None);
+            foreach(Snowglobe sg in allSgs)
+            {
+                if(sg.currentSGType == Snowglobe.sgType.Placeholder)
+                {
+                    sgItem = sg;
+                    break;
+                }
+            }    
+            sgItem.OnClickedSGObject(this);
         }
-
-        sgItem.OnClickedSGObject(this);
+        else
+            sgItem.OnClickedSGObject(this);
     }
 }
