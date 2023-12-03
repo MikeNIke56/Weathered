@@ -29,15 +29,16 @@ public class StepStoolObj : Interaction
         {
             if(onStool == false)
             {
+                stepDownPos.position = player.transform.position;
                 player.transform.position = stepUpPos.position;
                 onStool = true;
-                player.lockMovement = true;
+                player.moveBlockers["StepStool"] = true;
             }
             else
             {
                 player.transform.position = stepDownPos.position;
                 onStool = false;
-                player.lockMovement = false;
+                player.moveBlockers["StepStool"] = false;
             }               
         }
     }

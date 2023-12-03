@@ -70,7 +70,7 @@ public class TutorialDialog : MonoBehaviour
         //entrance animation 
         yield return new WaitForSeconds(.5f);
         dialogBox.SetActive(true);
-        player.lockMovement = true;
+        player.moveBlockers["TutorialDialog"] = true;
 
         //starting dialog
         yield return new WaitForSeconds(.5f);
@@ -83,7 +83,7 @@ public class TutorialDialog : MonoBehaviour
         yield return new WaitForSeconds(.35f);
 
         //unfreezes player
-        player.lockMovement = false;
+        player.moveBlockers["TutorialDialog"] = false;
     }
 
     public IEnumerator HandleUpdate()
@@ -107,10 +107,10 @@ public class TutorialDialog : MonoBehaviour
 
             if(boxesFirst == true)
             {
-                player.lockMovement = true;
+                player.moveBlockers["TutorialDialog"] = true;
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterBoxFirst);
                 cobwebsArrow.SetActive(true);
-                player.lockMovement = false;
+                player.moveBlockers["TutorialDialog"] = false;
             } 
             else
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterBoxSecond);         
@@ -143,10 +143,10 @@ public class TutorialDialog : MonoBehaviour
 
             if(cobWebsFirst == true)
             {
-                player.lockMovement = true;
+                player.moveBlockers["TutorialDialog"] = true;
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterCobwebsFirst);
                 boxesArrow.SetActive(true);
-                player.lockMovement = false;
+                player.moveBlockers["TutorialDialog"] = false;
             }
             else
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterCobwebsSecond);

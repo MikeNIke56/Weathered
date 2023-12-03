@@ -39,13 +39,18 @@ public class PlayerController : MonoBehaviour, ISavable
     [SerializeField] Animator playerAnimator;
     [SerializeField] GameObject MazarineSpriteObject;
     public bool isFacingRight = true;
-    public bool lockMovement = false;
+    bool lockMovement = false;
+    public Dictionary<string, bool> moveBlockers = new Dictionary<string, bool>();
 
     void Start()
     {
         withinRngIcon.SetActive(false);
         playerCamera.SetFollowPosLocal(playerCameraPos);
         state = GameState.FreeRoam;
+        moveBlockers.Add("StepStool", false);
+        moveBlockers.Add("TutorialDialog", false);
+        moveBlockers.Add("SpiritWorldTransition", false);
+        moveBlockers.Add("Menu", false);
     }
 
     // Update is called once per frame
@@ -54,6 +59,14 @@ public class PlayerController : MonoBehaviour, ISavable
         if (cam == null || !cam.isActiveAndEnabled)
         {
             cam = GameObject.FindFirstObjectByType<Camera>();
+        }
+        lockMovement = false;
+        foreach (KeyValuePair<string, bool> isLockedMovement in moveBlockers)
+        {
+            if (isLockedMovement.Value)
+            {
+                lockMovement = true;
+            }
         }
         if (lockMovement)
         {
@@ -67,12 +80,12 @@ public class PlayerController : MonoBehaviour, ISavable
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
         //temporary method of loading save file
-        if (Input.GetKeyDown(KeyCode.Space)) { SavingSystem.i.Load("SaveSlot"); }
+        //if (Input.GetKeyDown(KeyCode.Space)) { SavingSystem.i.Load("SaveSlot"); }
 
         CursorShow(isPaused);
         OpenPauseMenu();
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (!lockMovement && Input.GetKeyDown(KeyCode.P))
         {
             SpiritWorldJump.Jump();
         }
@@ -82,15 +95,16 @@ public class PlayerController : MonoBehaviour, ISavable
             UIController.UIControl.CloseInteractionMenu();
             UIController.UIControl.CloseTasksMenu();
             state = GameState.FreeRoam;
+            moveBlockers["Menu"] = false;
         }
 
         if (state == GameState.FreeRoam)
         {
-            lockMovement = false;
+            //moveBlockers["Menu"] = false;
         }
         if (state == GameState.Menu)
         {
-            lockMovement = true;
+            moveBlockers["Menu"] = true;
         }
     }
 

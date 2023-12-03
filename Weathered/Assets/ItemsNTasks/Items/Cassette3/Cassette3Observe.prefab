@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3576606705135916245
+--- !u!1 &5929847421996671532
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3832107413487024194}
-  - component: {fileID: 488755709899868682}
-  - component: {fileID: 4676362316664208502}
+  - component: {fileID: 1979739535130024403}
+  - component: {fileID: 3575717266733652533}
+  - component: {fileID: 7844886501645424828}
   m_Layer: 0
-  m_Name: BenniIcon
+  m_Name: Cassette3Observe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3832107413487024194
+--- !u!224 &1979739535130024403
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3576606705135916245}
+  m_GameObject: {fileID: 5929847421996671532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.75, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &488755709899868682
+--- !u!222 &3575717266733652533
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3576606705135916245}
+  m_GameObject: {fileID: 5929847421996671532}
   m_CullTransparentMesh: 1
---- !u!114 &4676362316664208502
+--- !u!114 &7844886501645424828
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3576606705135916245}
+  m_GameObject: {fileID: 5929847421996671532}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3763954047368952911, guid: a5d12432ce9a8734686bc50ed3672ae2, type: 3}
+  m_Sprite: {fileID: -5872738424358787017, guid: 2ace50a9676bdc6459b5d647213b22e9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

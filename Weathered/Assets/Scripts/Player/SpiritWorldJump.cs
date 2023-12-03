@@ -69,7 +69,7 @@ public class SpiritWorldJump : MonoBehaviour
     IEnumerator JumpToEffect()
     {
         //Remove player control
-        playerControl.lockMovement = true;
+        playerControl.moveBlockers["SpiritWorldTransition"] = true;
         //FadeinBlackout
         float fadeStep = fadeInSeconds / 51;
         while (blackoutImage.color.a < 1)
@@ -90,7 +90,7 @@ public class SpiritWorldJump : MonoBehaviour
             yield return new WaitForSeconds(fadeStep);
         }
         //Regain player control
-        playerControl.lockMovement = false;
+        playerControl.moveBlockers["SpiritWorldTransition"] = false;
         yield return new WaitForSeconds(1);
         isJumping = false;
         StartCoroutine(DeathCountDown());
@@ -98,7 +98,7 @@ public class SpiritWorldJump : MonoBehaviour
     IEnumerator JumpFromEffect()
     {
         //Remove player control
-        playerControl.lockMovement = true;
+        playerControl.moveBlockers["SpiritWorldTransition"] = true;
         //FadeinBlackout
         float fadeStep = fadeInSeconds / 51;
         while (blackoutImage.color.a < 1)
@@ -120,7 +120,7 @@ public class SpiritWorldJump : MonoBehaviour
             yield return new WaitForSeconds(fadeStep);
         }
         //Regain player control
-        playerControl.lockMovement = false;
+        playerControl.moveBlockers["SpiritWorldTransition"] = false;
         yield return new WaitForSeconds(1);
         isJumping = false;
     }
@@ -129,7 +129,7 @@ public class SpiritWorldJump : MonoBehaviour
     {
         bool isEscaped = false;
         deathEffectImage.color = new Color32(0, 0, 0, 0);
-        float fadeStep = 10f / 255f;
+        float fadeStep = 20f / 255f;
         while (deathEffectImage.color.a < 1)
         {
             if (!isInSpiritWorld || isInSpiritWorld && isJumping)

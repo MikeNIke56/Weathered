@@ -43,7 +43,7 @@ public class ArrangeSnowglobes : Task
         snowglobesUnder.SetActive(false);
         UIController.UIControl.inputHandler.SetActive(false);
         currentSGState = SGState.InShelf;
-        player.lockMovement = true;
+        player.moveBlockers["Menu"] = true;
 
         foreach(Transform obj in slotParent.transform)
         {

@@ -33,7 +33,7 @@ public class UIController : MonoBehaviour
         tasksMenu.SetActive(false);
         investigateMenu.SetActive(true);
         inputHandler.SetActive(false);
-        player.lockMovement = true;
+        player.moveBlockers["Menu"] = true;
     }
 
     public void CloseInteractionMenu()
@@ -47,7 +47,7 @@ public class UIController : MonoBehaviour
             tasksMenu.SetActive(true);
         }
         baseGameUI.SetActive(true);
-        player.lockMovement = false;
+        player.moveBlockers["Menu"] = false;
     }
 
     public void OpenTasksMenu()
@@ -56,6 +56,7 @@ public class UIController : MonoBehaviour
         tasksMenu.SetActive(true);
         inputHandler.SetActive(false);
         player.state = PlayerController.GameState.Menu;
+        player.moveBlockers["Menu"] = true;
     }
     public void CloseTasksMenu()
     {
@@ -63,5 +64,6 @@ public class UIController : MonoBehaviour
         tasksMenu.SetActive(false);
         inputHandler.SetActive(true);
         player.state = PlayerController.GameState.FreeRoam;
+        player.moveBlockers["Menu"] = false;
     }
 }
