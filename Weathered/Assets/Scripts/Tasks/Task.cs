@@ -34,9 +34,6 @@ public class Task : Interaction
     public virtual void OnAvailable()
     {
         currentState = taskState.Available;
-
-        Instantiate(TaskController.taskControl.taskObj, TaskController.taskControl.taskScreenList.transform);
-        TaskController.taskControl.taskObj.GetComponentInChildren<Text>().text = name + ": " + description;
     }
     public virtual void OnInProgress()
     {
@@ -59,5 +56,11 @@ public class Task : Interaction
     public virtual void OnFailed()
     {
         //trigger death condition
+    }
+
+    public virtual void AddToList()
+    {
+        Instantiate(TaskController.taskControl.taskObj, TaskController.taskControl.taskScreenList.transform);
+        TaskController.taskControl.taskObj.GetComponentInChildren<Text>().text = taskName + ": " + description;
     }
 }

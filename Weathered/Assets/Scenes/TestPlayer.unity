@@ -4442,8 +4442,9 @@ MonoBehaviour:
   - {fileID: 5413006520213761604}
   - {fileID: 606218918}
   - {fileID: 1779561368}
-  - {fileID: 1498175645}
   - {fileID: 502309518}
+  - {fileID: 1498175645}
+  - {fileID: 569233655}
   - {fileID: 2066987686}
   - {fileID: 543056631}
   taskChosenList: []
@@ -4451,6 +4452,16 @@ MonoBehaviour:
   taskBadActionAudio: {fileID: 16228670}
   taskScreenList: {fileID: 7336324366477779024}
   taskObj: {fileID: 4093280023790433528, guid: 4d0697e576fe8714e902728e90be8fc3, type: 3}
+  roomnames:
+  - Entrance
+  - ChildrensToy
+  - DVDNBook
+  - ChinaNFurniture
+  - Doll
+  - CollectiblesNMemoirs
+  - Taxidermy
+  - CelebrityMerch
+  - 'Clock '
 --- !u!1 &642380866
 GameObject:
   m_ObjectHideFlags: 0
@@ -9849,8 +9860,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6aebf904fcb7343bf135372395a8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskName: Match the Body Parts to the Bears and Dolls
-  description: 
+  taskName: Fix Dolls
+  description: Match the Body Parts to the Bears and Dolls
   shortName: 
   shortDescription: 
   voicemailDescription: 
@@ -16791,7 +16802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskName: Sort Boxes
-  description: put the itens in their appropriate bins
+  description: put the items in their appropriate bins
   shortName: 
   shortDescription: 
   voicemailDescription: 
@@ -17725,7 +17736,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 26
+    m_Top: 9
     m_Bottom: 0
   m_ChildAlignment: 1
   m_Spacing: 0

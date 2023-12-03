@@ -55,13 +55,13 @@ public class UIController : MonoBehaviour
         isTasksMenuOpen = true;
         tasksMenu.SetActive(true);
         inputHandler.SetActive(false);
-        player.lockMovement = true;
+        player.state = PlayerController.GameState.Menu;
     }
     public void CloseTasksMenu()
     {
         isTasksMenuOpen = false;
         tasksMenu.SetActive(false);
         inputHandler.SetActive(true);
-        player.lockMovement = false;
+        player.state = PlayerController.GameState.FreeRoam;
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour, ISavable
 {
     public enum GameState {FreeRoam, Menu, ObservationMenu, Death}; //states that the player can be in
+    public GameState state;
 
     //Feel free to delete this for a more optimized controller, just wanted to test the clicking
 
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour, ISavable
     {
         withinRngIcon.SetActive(false);
         playerCamera.SetFollowPosLocal(playerCameraPos);
+        state = GameState.FreeRoam;
     }
 
     // Update is called once per frame
@@ -78,6 +80,17 @@ public class PlayerController : MonoBehaviour, ISavable
         if (Input.GetKeyDown(KeyCode.Q))
         {
             UIController.UIControl.CloseInteractionMenu();
+            UIController.UIControl.CloseTasksMenu();
+            state = GameState.FreeRoam;
+        }
+
+        if (state == GameState.FreeRoam)
+        {
+            lockMovement = false;
+        }
+        if (state == GameState.Menu)
+        {
+            lockMovement = true;
         }
     }
 
