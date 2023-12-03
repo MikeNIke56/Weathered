@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MusicBox_0: 5284187908804125226
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

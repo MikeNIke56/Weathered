@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.63, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6026571559375954805}
@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: -1222581643
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1124562215718004369, guid: 4d1988084bf83114cb9979f9aa7a5f55, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d1988084bf83114cb9979f9aa7a5f55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 7.2, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6026571559375954805}
+  - component: {fileID: 6430661556228920975}
   m_Layer: 0
   m_Name: SittingClemmy
   m_TagString: Untagged
@@ -116,3 +117,28 @@ Transform:
   - {fileID: 3729896853242811563}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6430661556228920975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681099570815017602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb6188ffcb007d4cbd15b4fd07b01ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLook:
+  - {fileID: 21300000, guid: 4d1988084bf83114cb9979f9aa7a5f55, type: 3}
+  - {fileID: 21300000, guid: 96f22be5ec12f234da08bdc7ac4702ae, type: 3}
+  - {fileID: 21300000, guid: 4f61028a6641446479f7712892ef9638, type: 3}
+  evilStartLook: []
+  fixedLook:
+  - {fileID: 21300000, guid: 3ffdddf6ae02ae047b37c12b19e4725a, type: 3}
+  - {fileID: 21300000, guid: f79963e5276e05c4ab6a38fd1aee40c9, type: 3}
+  - {fileID: 21300000, guid: c75af03969c09ee4a8fdd213c1e0a7c5, type: 3}
+  hasEvil: 0
+  sourceSR: {fileID: 5386965442189478085}
+  isEvil: 0
+  isFixed: 0

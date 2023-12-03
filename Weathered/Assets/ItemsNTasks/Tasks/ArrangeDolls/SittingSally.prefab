@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 961544765112433031}
+  - component: {fileID: -7512499794402018011}
   m_Layer: 0
   m_Name: SittingSally
   m_TagString: Untagged
@@ -32,6 +33,34 @@ Transform:
   - {fileID: 8039288926162727771}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7512499794402018011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765075475918291149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb6188ffcb007d4cbd15b4fd07b01ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLook:
+  - {fileID: 21300000, guid: 79f2e23618df7ef4795baf90881c2588, type: 3}
+  - {fileID: 21300000, guid: 9e7f7cad47b6e044ba199d71542cb971, type: 3}
+  - {fileID: 21300000, guid: ebb79485bb3df774f8ff3927555d4632, type: 3}
+  evilStartLook:
+  - {fileID: 21300000, guid: c50c991d1bddd3643b92ffe4036aa515, type: 3}
+  - {fileID: 21300000, guid: de7b1d4eaf12ef846ba6f407b1ebb6ab, type: 3}
+  - {fileID: 21300000, guid: af4122db9ca306346b67f5b2913eb430, type: 3}
+  fixedLook:
+  - {fileID: 21300000, guid: ce87e3cc7d36efe40b4b9218fae4cdc4, type: 3}
+  - {fileID: 21300000, guid: ca76de54c91a4e041a52b5b34a3e7a8d, type: 3}
+  - {fileID: 21300000, guid: 3406b6105780a754b89fece3c0a06c0f, type: 3}
+  hasEvil: 1
+  sourceSR: {fileID: 3642687274530466193}
+  isEvil: 0
+  isFixed: 0
 --- !u!1 &7641857831560962001
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +88,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.63, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 961544765112433031}
@@ -105,12 +134,12 @@ SpriteRenderer:
   m_SortingLayerID: -1222581643
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6897842371733129535, guid: 79f2e23618df7ef4795baf90881c2588, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 79f2e23618df7ef4795baf90881c2588, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 7.2, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

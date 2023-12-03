@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4580988008573241254}
+  - component: {fileID: 6194254940846587882}
   m_Layer: 0
   m_Name: SittingBenni
   m_TagString: Untagged
@@ -32,6 +33,31 @@ Transform:
   - {fileID: 205740672534233629}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6194254940846587882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3661470573388434296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb6188ffcb007d4cbd15b4fd07b01ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLook:
+  - {fileID: 21300000, guid: bf03db9de0fe3be4eb6f142491cc6cbf, type: 3}
+  - {fileID: 21300000, guid: 74207caab9e86734eb4e5276cde398ec, type: 3}
+  - {fileID: 21300000, guid: f91219c5ea4eb5541be73a9f00ec7ff3, type: 3}
+  evilStartLook: []
+  fixedLook:
+  - {fileID: 21300000, guid: 6b5eda00e75763b4f82c5d4cee0ddd05, type: 3}
+  - {fileID: 21300000, guid: e0f104c169e1e99469fa8d71f6125ee4, type: 3}
+  - {fileID: 21300000, guid: 0fd6764399877b84fb016478b149fb60, type: 3}
+  hasEvil: 0
+  sourceSR: {fileID: 7459945047830642286}
+  isEvil: 0
+  isFixed: 0
 --- !u!1 &8855623279989759061
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +85,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.63, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4580988008573241254}
@@ -105,12 +131,12 @@ SpriteRenderer:
   m_SortingLayerID: -1222581643
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5378754733707983150, guid: bf03db9de0fe3be4eb6f142491cc6cbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf03db9de0fe3be4eb6f142491cc6cbf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 7.2, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

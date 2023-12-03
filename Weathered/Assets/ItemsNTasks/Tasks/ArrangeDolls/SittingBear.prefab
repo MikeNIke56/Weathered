@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.63, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7486957671728196597}
@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: -1222581643
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8530084734339913619, guid: c6bd31722000f144cad625c12de7c6a7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c6bd31722000f144cad625c12de7c6a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 7.2, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7486957671728196597}
+  - component: {fileID: -2657985101770346059}
   m_Layer: 0
   m_Name: SittingBear
   m_TagString: Untagged
@@ -116,3 +117,31 @@ Transform:
   - {fileID: 6850393878939473380}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2657985101770346059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261233588129559701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb6188ffcb007d4cbd15b4fd07b01ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLook:
+  - {fileID: 21300000, guid: c6bd31722000f144cad625c12de7c6a7, type: 3}
+  - {fileID: 21300000, guid: 4dfbacd5a511f994fbf12cb781afff77, type: 3}
+  - {fileID: 21300000, guid: 0783507282ac51242af5266d661490b2, type: 3}
+  evilStartLook:
+  - {fileID: 21300000, guid: 45c9c2cac4960b24bbb2e2861566c5d7, type: 3}
+  - {fileID: 21300000, guid: 607b49f2f8363844c93fda451e1e12d9, type: 3}
+  - {fileID: 21300000, guid: c7a8d997c2fe15c40bfd8263f2c94862, type: 3}
+  fixedLook:
+  - {fileID: 21300000, guid: a6028d622e3994a4791d0ff11359cdcd, type: 3}
+  - {fileID: 21300000, guid: b255418eb1291f541a3f8b475fc8c1c7, type: 3}
+  - {fileID: 21300000, guid: 0370adeb2ab5432498a70adedbca1d8a, type: 3}
+  hasEvil: 1
+  sourceSR: {fileID: 1757057416636737320}
+  isEvil: 0
+  isFixed: 0

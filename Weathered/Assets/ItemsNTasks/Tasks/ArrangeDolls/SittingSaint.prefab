@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8025150392021647659}
+  - component: {fileID: -7010224481925534037}
   m_Layer: 0
   m_Name: SittingSaint
   m_TagString: Untagged
@@ -32,6 +33,34 @@ Transform:
   - {fileID: 5406712129723420826}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7010224481925534037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424155336683713476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb6188ffcb007d4cbd15b4fd07b01ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLook:
+  - {fileID: 21300000, guid: 467362720b0fe6a4c83b2fb55bc4b2c1, type: 3}
+  - {fileID: 21300000, guid: 8a740e70018d449479f17e9f72676dbb, type: 3}
+  - {fileID: 21300000, guid: b0d8116f5f2af414684e28915c85f32a, type: 3}
+  evilStartLook:
+  - {fileID: 21300000, guid: f673e930dfba40f41bb22d512305682e, type: 3}
+  - {fileID: 21300000, guid: 57547635d5fb26945b859c30742af9a9, type: 3}
+  - {fileID: 21300000, guid: 698d151274629234781e3eddcbe0e7a1, type: 3}
+  fixedLook:
+  - {fileID: 21300000, guid: 4608e138e5169c440ba2589391965915, type: 3}
+  - {fileID: 21300000, guid: cd86ca7fac965284b871fc05caeb6cb4, type: 3}
+  - {fileID: 21300000, guid: 541b0a3401555004ab7ef342d885005a, type: 3}
+  hasEvil: 1
+  sourceSR: {fileID: 1895189311325747805}
+  isEvil: 0
+  isFixed: 0
 --- !u!1 &2540587323813178698
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +88,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.63, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8025150392021647659}
@@ -105,12 +134,12 @@ SpriteRenderer:
   m_SortingLayerID: -1222581643
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8055213517150809915, guid: 467362720b0fe6a4c83b2fb55bc4b2c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 467362720b0fe6a4c83b2fb55bc4b2c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 7.2, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

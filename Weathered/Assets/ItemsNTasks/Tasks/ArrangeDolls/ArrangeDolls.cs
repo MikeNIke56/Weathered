@@ -35,7 +35,7 @@ public class ArrangeDolls : Task
         }
         else
         {
-            if (ItemController.itemInHand == null && placeClicked.currentDoll != null)
+            if (placeClicked.currentDoll != null)
             {
                 placeClicked.RetrieveDoll();
             }
@@ -66,16 +66,18 @@ public class ArrangeDolls : Task
                         tempObject = Instantiate(sittingSally, placeClicked.dollSitPosition);
                         break;
                 }
-                SitDoll(tempObject, placeClicked.isInFront);
+                placeClicked.satDoll = tempObject.GetComponent<SittingDoll>();
+                SitDoll(tempObject, placeClicked.isInFront, placeClicked.facingNum);
                 CheckProgress();
                 if (!placeClicked.isCorrect)
                 {
                     OnBadAction();
                 }
+                UpdateDolls();
             }
         }
     }
-    void SitDoll(GameObject sitDollObject, bool isInFront)
+    void SitDoll(GameObject sitDollObject, bool isInFront, int facingNum)
     {
         foreach (SpriteRenderer childSR in sitDollObject.GetComponentsInChildren<SpriteRenderer>())
         {
@@ -104,5 +106,26 @@ public class ArrangeDolls : Task
         {
             OnCompleted();
         }
+    }
+
+    void UpdateDolls()
+    {
+        foreach (ArrangeDollPlaces place in allPlaces)
+        {
+            if (place.satDoll != null)
+            {
+                if (timesFailed >= 2)
+                {
+                    place.satDoll.isEvil = true;
+                }
+                place.satDoll.PoseDoll(place.facingNum);
+            }
+        }
+    }
+
+    public override void OnFailed()
+    {
+        base.OnFailed();
+        Debug.Log("Mazarine lost her head trying to put the dolls in their rightful places.");
     }
 }

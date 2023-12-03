@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CasseteTape2_0: -1683567698309675679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

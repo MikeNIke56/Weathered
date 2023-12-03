@@ -49,9 +49,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -101,27 +101,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mr.BearComplete_SideView_2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 287
-        width: 72
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 855baa07592ea1590800000000000000
-      internalID: -7702595081195571880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mr.BearComplete_SideView_2_1
       rect:
         serializedVersion: 2
@@ -130,7 +109,7 @@ TextureImporter:
         width: 632
         height: 600
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,7 +124,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 164cc8cf9b85dc841857e14edb19e63a
     internalID: 0
     vertices: []
     indices: 

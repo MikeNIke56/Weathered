@@ -10,6 +10,8 @@ public class ArrangeDollPlaces : Interaction
     public bool isCorrect;
     public Transform dollSitPosition;
     public bool isInFront = false;
+    public int facingNum = 0; //num < 0 is left facing chair, 0 is center, num > 0 is right facing chair
+    public SittingDoll satDoll;
 
     public override void onClick()
     {
@@ -34,6 +36,7 @@ public class ArrangeDollPlaces : Interaction
         }
         isCorrect = false;
         currentDoll = null;
+        satDoll = null;
     }
     public void SetDoll(Item dollInHand)
     {

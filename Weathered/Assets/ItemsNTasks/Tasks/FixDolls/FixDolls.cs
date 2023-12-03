@@ -62,6 +62,8 @@ public class FixDolls : Task
     }
     public void AttachPart(ArrangeDollPlaces placeClicked)
     {
+        placeClicked.satDoll.isFixed = true;
+        placeClicked.satDoll.PoseDoll(placeClicked.facingNum);
         fixedDolls++;
         if (fixedDolls >= 5)
         {
