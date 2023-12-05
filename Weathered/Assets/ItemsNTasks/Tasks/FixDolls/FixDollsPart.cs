@@ -8,6 +8,8 @@ public class FixDollsPart : Interaction
     enum PartItems { ClemmyShoe, SaintHat, SallyEye, BenniWing, MrBearArm}
     [SerializeField] PartItems partItem;
     [SerializeField] Item armRemoverItem;
+    [SerializeField] GameObject raccoonObject;
+    [SerializeField] GameObject raccoonReplacement;
 
     public override void onClick()
     {
@@ -31,7 +33,7 @@ public class FixDollsPart : Interaction
             case PartItems.BenniWing:
                 return FindFirstObjectByType<BenniWing>();
             default:
-                if (ItemController.itemInHand == armRemoverItem)
+                if (ItemController.itemInHand == armRemoverItem || armRemoverItem == null)
                 {
                     //RemovalSFX
                     return FindFirstObjectByType<MrBearArm>();
@@ -40,6 +42,15 @@ public class FixDollsPart : Interaction
                 {
                     return null;
                 }
+        }
+    }
+
+    public void CheckForArm()
+    {
+        if (raccoonObject != null && raccoonReplacement != null)
+        {
+            raccoonObject.SetActive(false);
+            raccoonReplacement.SetActive(true);
         }
     }
 }

@@ -19,7 +19,11 @@ public class FixDolls : Task
             OnInProgress();
         }
         ItemController.AddItemToHand(tempPart);
-        Destroy(partClicked.gameObject);
+        partClicked.CheckForArm();
+        if (partClicked)
+        {
+            Destroy(partClicked.gameObject);
+        }
     }
 
     public void ClickedDoll(Item dollClicked, ArrangeDollPlaces placeClicked)
