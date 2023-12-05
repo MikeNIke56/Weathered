@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 916a556373419294a95619c7e350034e
+guid: 01c0c9adca6263248aa10a0ff36c1db8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4181542462864095606
-    second: SnowglobeShelf_0
+      213: 6344112966110755781
+    second: RaccoonWave17_0
+  - first:
+      213: 7980964348130965857
+    second: RaccoonWave17_1
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SnowglobeShelf_0
+      name: RaccoonWave17_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1680
+        x: 54
+        y: 516
+        width: 6
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +115,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8606c7e84d28f5c0800000000000000
-      internalID: -4181542462864095606
+      spriteID: 5cb3bff4121da0850800000000000000
+      internalID: 6344112966110755781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaccoonWave17_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 60
+        width: 618
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16937672ac412ce60800000000000000
+      internalID: 7980964348130965857
       vertices: []
       indices: 
       edges: []
@@ -128,8 +152,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      SnowglobeShelf_0: -4181542462864095606
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
