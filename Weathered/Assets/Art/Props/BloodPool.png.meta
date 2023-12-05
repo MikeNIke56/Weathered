@@ -416,7 +416,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BloodPool_0: -4709593645280473270
+      BloodPool_1: -8327417970205118774
+      BloodPool_10: -3969190340740551085
+      BloodPool_11: 8409018929865524144
+      BloodPool_12: 4266216381996623003
+      BloodPool_2: 5787133986822867843
+      BloodPool_3: 3399066922117977687
+      BloodPool_4: 3058119092662224215
+      BloodPool_5: -4994271271060651547
+      BloodPool_6: -31249786980715750
+      BloodPool_7: 641789177026944521
+      BloodPool_8: 6475321577085491177
+      BloodPool_9: -7716982486247639082
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

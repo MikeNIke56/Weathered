@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BoardGame_0: -4277904636652643227
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
