@@ -9,12 +9,14 @@ public class ArrangeSnowglobes : Task
 {
     public List<Snowglobe> snowGlobes = new List<Snowglobe>();
     [SerializeField] List<SnowglobeObj> snowGlobeObjs = new List<SnowglobeObj>();
+    public Snowglobe placeHolderSG;
 
     [SerializeField] GameObject shelfObj;
     [SerializeField] GameObject snowglobesUI;
     [SerializeField] GameObject snowglobesUnder;
     public SnowglobeObj slotOriginal;
     public GameObject slotParent;
+    public GameObject snowGlobesObjUnder;
 
     public enum SGState { OutOfShelf, InShelf, InspectingSG }
     public SGState currentSGState;
@@ -90,7 +92,11 @@ public class ArrangeSnowglobes : Task
                 slotObj.sgItem.included = true;
             }
             else
-                objImg.sprite = null;
+            {
+                slotObj.sgItem = placeHolderSG;
+                objImg.sprite = placeHolderSG.sgImg.sprite;
+                slotObj.GetComponent<Image>().color = Color.black;
+            }  
         }
     }
 

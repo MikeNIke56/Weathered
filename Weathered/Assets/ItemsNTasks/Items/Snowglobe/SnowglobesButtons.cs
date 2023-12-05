@@ -9,8 +9,6 @@ public class SnowglobesButtons : MonoBehaviour
     public GameObject snowGlobesObj;
     ArrangeSnowglobes arrangeSnowglobes;
 
-    public Text yearText;
-
     public Snowglobe curSG;
     public Snowglobe chosenSG;
 

@@ -18,6 +18,7 @@ public class Snowglobe : Item
     public enum sgType { Starvation, Ambush, Murder, Punishment, Revenge, Drowning, Glory, Dehydration, Placeholder }
     public sgType currentSGType;
     public Image sgImg;
+    public Image underSgImg;
 
     SnowglobesButtons sgButtons;
 
@@ -65,14 +66,8 @@ public class Snowglobe : Item
                 {
                     if (clickedSG.sgItem != null && clickedSG.sgItem.included == true)
                     {
-                        inspectUI.SetActive(true);
-                        snowGlobesObj.SetActive(false);
                         sgButtons.curSG = this;
                         sgButtons.curSGObj = clickedSG;
-                        if (clickedSG.sgItem.isShowing == true)
-                            sgButtons.yearText.text = clickedSG.sgItem.year.ToString();
-                        else
-                            sgButtons.yearText.text = "";
                         snowglobes.currentSGState = ArrangeSnowglobes.SGState.InspectingSG;
                     }
                     else if (clickedSG.sgItem.currentSGType == sgType.Placeholder)
@@ -88,6 +83,7 @@ public class Snowglobe : Item
                                 clickedSG.sgItem.included = true;
                                 var objImg = clickedSG.gameObject.GetComponent<Image>();
                                 objImg.sprite = objImg.gameObject.GetComponent<SnowglobeObj>().sgItem.sgImg.sprite;
+                                clickedSG.gameObject.GetComponent<Image>().color = Color.white;
 
                                 ItemController.ClearItemInHand();
                                 ItemController.itemInHand = null;
@@ -99,6 +95,7 @@ public class Snowglobe : Item
                                 clickedSG.sgItem.included = true;
                                 var objImg = clickedSG.gameObject.GetComponent<Image>();
                                 objImg.sprite = objImg.gameObject.GetComponent<SnowglobeObj>().sgItem.sgImg.sprite;
+                                clickedSG.gameObject.GetComponent<Image>().color = Color.white;
 
                                 ItemController.ClearItemInHand();
                                 ItemController.itemInHand = null;
@@ -114,11 +111,12 @@ public class Snowglobe : Item
 
             }         
         }
-        else if (snowglobes.currentSGState == ArrangeSnowglobes.SGState.InspectingSG)
+        if (snowglobes.currentSGState == ArrangeSnowglobes.SGState.InspectingSG)
         {
             //handle choose and inspect snowglobe
-            snowGlobesObj.SetActive(true);
-            inspectUI.SetActive(false);
+            inspectUI.SetActive(true);
+            snowGlobesObj.SetActive(false);
+            snowglobes.snowGlobesObjUnder.GetComponent<Image>().sprite = clickedSG.sgItem.underSgImg.sprite;
         }
     }
 

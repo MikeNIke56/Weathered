@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: caa5b8b31a97a3d459072e632ff53905
+guid: 79f291b8d965d7d4bb4f95bb0f007d0b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4964869317685371108
-    second: Mop_0
+      213: -223150870150477376
+    second: SnowGlobe_Revenge_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mop_0
+      name: SnowGlobe_Revenge_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 37
-        width: 609
-        height: 1374
+        x: 104
+        y: 95
+        width: 515
+        height: 578
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e06fd4e652c6e440800000000000000
-      internalID: 4964869317685371108
+      spriteID: 0c98c55477537ecf0800000000000000
+      internalID: -223150870150477376
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Mop_0: 4964869317685371108
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

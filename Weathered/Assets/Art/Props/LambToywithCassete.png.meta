@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LambToywithCassete_0: 6224199201852980854
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

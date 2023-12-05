@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: caa5b8b31a97a3d459072e632ff53905
+guid: c2da3d2ab66b4c4449175f9d7c7da07d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4964869317685371108
-    second: Mop_0
+      213: 2482934730565997059
+    second: SnowGlobe_Bottom_Starvation_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mop_0
+      name: SnowGlobe_Bottom_Starvation_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 37
-        width: 609
-        height: 1374
+        x: 72
+        y: 74
+        width: 572
+        height: 536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e06fd4e652c6e440800000000000000
-      internalID: 4964869317685371108
+      spriteID: 302ddd77bf7257220800000000000000
+      internalID: 2482934730565997059
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Mop_0: 4964869317685371108
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
