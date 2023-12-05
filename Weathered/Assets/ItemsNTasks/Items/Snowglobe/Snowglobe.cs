@@ -52,14 +52,13 @@ public class Snowglobe : Item
                         {
                             clickedSG.sgItem = snowglobes.tempSG;
                             clickedSG.sgItem.sgImg.sprite = snowglobes.tempImg.sprite;
+                            snowglobes.isSwitching = false;
+                            ItemController.ClearItemInHand();
+
+                            UpdateSnowGlobes();
+                            snowglobes.UpdateShelf();
+                            snowglobes.CheckForFinished();
                         }
-
-                        snowglobes.isSwitching = false;
-                        ItemController.ClearItemInHand();
-
-                        UpdateSnowGlobes();
-                        
-                        snowglobes.CheckForFinished();
                     }
                 }
             }
@@ -90,6 +89,7 @@ public class Snowglobe : Item
 
                                 ItemController.ClearItemInHand();
                                 ItemController.itemInHand = null;
+                                snowglobes.UpdateShelf();
                             }
                             else if (snowglobeInHand.currentSGType == sgType.Glory && snowglobes.snowGlobes[i].currentSGType == sgType.Glory)
                             {
@@ -102,6 +102,7 @@ public class Snowglobe : Item
 
                                 ItemController.ClearItemInHand();
                                 ItemController.itemInHand = null;
+                                snowglobes.UpdateShelf();
                             }
                         } 
                     }
@@ -121,7 +122,6 @@ public class Snowglobe : Item
             snowGlobesObj.SetActive(false);
             snowglobes.snowGlobesObjUnder.GetComponent<Image>().sprite = clickedSG.sgItem.underSgImg.sprite;
         }
-        snowglobes.UpdateShelf();
     }
 
     private void UpdateSnowGlobes()

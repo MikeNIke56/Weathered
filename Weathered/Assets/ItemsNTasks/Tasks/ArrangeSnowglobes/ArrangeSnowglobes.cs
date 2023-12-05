@@ -101,14 +101,20 @@ public class ArrangeSnowglobes : Task
         }
         UpdateShelf();
     }
+
     public void UpdateShelf()
     {
         for (int i = 0; i < slotParent.GetComponentsInChildren<SnowglobeObj>().Length; i++)
         {
             if (slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem.currentSGType != Snowglobe.sgType.Placeholder)
                 shelfSnowGlobes[i].GetComponentInChildren<SpriteRenderer>().sprite = slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem.sgImg.sprite;
-            else if (slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem.currentSGType == Snowglobe.sgType.Placeholder)
-                shelfSnowGlobes[i].GetComponentInChildren<SpriteRenderer>().sprite = null;
+            else
+            {
+                if(slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem.chosen != true)
+                    shelfSnowGlobes[i].GetComponentInChildren<SpriteRenderer>().sprite = null;
+                else
+                    shelfSnowGlobes[i].GetComponentInChildren<SpriteRenderer>().sprite = slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem.sgImg.sprite;
+            }
         }
     }
 
