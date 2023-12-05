@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      KeyDvdBookRoom_0: 7902306096651152533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

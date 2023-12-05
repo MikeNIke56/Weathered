@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnowGlobe_Bottom_Dehydration_0: -491326051444376186
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

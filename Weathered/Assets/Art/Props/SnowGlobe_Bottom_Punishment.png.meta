@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnowGlobe_Bottom_Punishment_0: -7427444434908555645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

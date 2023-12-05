@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MurderPainting_ObservationMenu_0: -4621385465949695290
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

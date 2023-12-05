@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      KeyChildren'sToyRoom_0: 5894765701276829052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

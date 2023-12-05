@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wired Phone_BeepOn_0: 6977295560721500440
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

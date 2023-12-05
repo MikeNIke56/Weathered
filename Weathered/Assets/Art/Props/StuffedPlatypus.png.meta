@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StuffedPlatypus_0: 7546889163720136993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

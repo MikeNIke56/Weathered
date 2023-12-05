@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StuffedBunny_0: 7458254751693677445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

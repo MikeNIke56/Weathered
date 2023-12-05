@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnowGlobe_Glory_0: 6781779058527901134
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

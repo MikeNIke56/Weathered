@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnowGlobe_Starvation_0: -4557737019451559478
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

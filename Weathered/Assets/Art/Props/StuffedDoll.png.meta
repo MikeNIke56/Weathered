@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StuffedDoll_0: 1994675263653989844
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

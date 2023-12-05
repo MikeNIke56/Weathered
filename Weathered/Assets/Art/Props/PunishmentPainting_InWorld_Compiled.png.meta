@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PunishmentPainting_InWorld_Compiled_0: -7575717472928023347
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

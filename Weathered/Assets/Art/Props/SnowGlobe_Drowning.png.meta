@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnowGlobe_Drowning_0: 7573263899780763379
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

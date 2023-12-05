@@ -152,7 +152,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PunishmentPainting_ObservationMenu_0: -8271733347454311406
+      PunishmentPainting_ObservationMenu_1: 8665940802026658651
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ClosetDoor_Open_0: -8733770954772300039
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnowGlobe_Ambush_0: -1369899569920116950
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
