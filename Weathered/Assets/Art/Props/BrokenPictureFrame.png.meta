@@ -368,18 +368,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      BrokenPictureFrame_0: 2950367899567467180
-      BrokenPictureFrame_1: 8792170007865158101
-      BrokenPictureFrame_10: 7092885953167723351
-      BrokenPictureFrame_2: 4948400030134587681
-      BrokenPictureFrame_3: -8126272335223354539
-      BrokenPictureFrame_4: 1769800153644561303
-      BrokenPictureFrame_5: 1865513375106485575
-      BrokenPictureFrame_6: 4292017925616035684
-      BrokenPictureFrame_7: 3075293234402747140
-      BrokenPictureFrame_8: 7708702150388570676
-      BrokenPictureFrame_9: -3150438050932438710
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -48,11 +48,8 @@ public class Snowglobe : Item
                         sgObj.GetComponent<SnowglobeObj>().sgItem.sgImg.sprite = clickedSG.sgItem.sgImg.sprite;
 
                         //sets the second's choice's values to the temp's values
-                        if(clickedSG.sgItem.chosen == true)
-                        {
-                            clickedSG.sgItem = snowglobes.tempSG;
-                            clickedSG.sgItem.sgImg.sprite = snowglobes.tempImg.sprite;
-                        }
+                        clickedSG.sgItem = snowglobes.tempSG;
+                        clickedSG.sgItem.sgImg.sprite = snowglobes.tempImg.sprite;
 
                         snowglobes.isSwitching = false;
                         ItemController.ClearItemInHand();
@@ -121,7 +118,6 @@ public class Snowglobe : Item
             snowGlobesObj.SetActive(false);
             snowglobes.snowGlobesObjUnder.GetComponent<Image>().sprite = clickedSG.sgItem.underSgImg.sprite;
         }
-        snowglobes.UpdateShelf();
     }
 
     private void UpdateSnowGlobes()

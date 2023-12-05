@@ -536,25 +536,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Broken Porcelinn Doll_0: 5610775946070996703
-      Broken Porcelinn Doll_1: -713153719740296252
-      Broken Porcelinn Doll_10: 1919407083576441758
-      Broken Porcelinn Doll_11: 7369282613794895850
-      Broken Porcelinn Doll_12: 7573287775040960172
-      Broken Porcelinn Doll_13: -9104170105488651521
-      Broken Porcelinn Doll_14: 4371551210274460045
-      Broken Porcelinn Doll_15: 6789456109104330365
-      Broken Porcelinn Doll_16: -5875399164259664539
-      Broken Porcelinn Doll_17: 4678160958142258493
-      Broken Porcelinn Doll_2: 2900604980795627045
-      Broken Porcelinn Doll_3: 4461016768536187960
-      Broken Porcelinn Doll_4: 6511877297480877706
-      Broken Porcelinn Doll_5: -4432301156189099729
-      Broken Porcelinn Doll_6: 6011272382268711312
-      Broken Porcelinn Doll_7: -7004491701773626067
-      Broken Porcelinn Doll_8: 4286259315702487894
-      Broken Porcelinn Doll_9: 658047852854340287
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -248,13 +248,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      BloodDrawing_1_0: 8444671496390014045
-      BloodDrawing_1_1: 7601488009716066871
-      BloodDrawing_1_2: -5453619998830378885
-      BloodDrawing_1_3: 460293946051523904
-      BloodDrawing_1_4: 5573952391948101907
-      BloodDrawing_1_5: 7742545066867356326
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
