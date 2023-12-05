@@ -9,6 +9,7 @@ public class ArrangeSnowglobes : Task
 {
     public List<Snowglobe> snowGlobes = new List<Snowglobe>();
     [SerializeField] List<SnowglobeObj> snowGlobeObjs = new List<SnowglobeObj>();
+    public List<GameObject> shelfSnowGlobes = new List<GameObject>();
     public Snowglobe placeHolderSG;
 
     [SerializeField] GameObject shelfObj;
