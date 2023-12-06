@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        //Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
-        Cursor.visible = false;
+        Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
+        //Cursor.visible = false;
         GM = FindFirstObjectByType<GameManager>();
         flashPrefab = pointFlashPrefab;
     }
