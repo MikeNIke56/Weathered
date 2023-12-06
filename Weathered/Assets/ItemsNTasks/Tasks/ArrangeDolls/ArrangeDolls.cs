@@ -11,6 +11,7 @@ public class ArrangeDolls : Task
     [SerializeField] GameObject sittingClemmy;
     [SerializeField] GameObject sittingSaint;
     [SerializeField] GameObject sittingSally;
+    [SerializeField] GameObject headPopDeath;
     FixDolls fixTask;
     public void DollClicked(ArrangeDollsDoll dollClicked)
     {
@@ -127,5 +128,6 @@ public class ArrangeDolls : Task
     {
         base.OnFailed();
         Debug.Log("Mazarine lost her head trying to put the dolls in their rightful places.");
+        GameManager.StartDeath(headPopDeath,5f,true);
     }
 }

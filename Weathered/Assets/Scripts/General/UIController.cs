@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject investigateMenu;
     [SerializeField] GameObject tasksMenu;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject deathScreen;
 
     [SerializeField] GameObject snowglobesUI;
     ArrangeSnowglobes snowglobes;
@@ -68,5 +69,19 @@ public class UIController : MonoBehaviour
         inputHandler.SetActive(true);
         player.state = PlayerController.GameState.FreeRoam;
         player.moveBlockers["Menu"] = false;
+    }
+    public void DeathEventScreen()
+    {
+        isTasksMenuOpen = false;
+        tasksMenu.SetActive(false);
+        inputHandler.SetActive(false);
+        snowglobesUI.SetActive(false);
+        baseGameUI.SetActive(false);
+        investigateMenu.SetActive(false);
+        pauseMenu.SetActive(false);
+    }
+    public void ShowDeathScreen()
+    {
+        deathScreen.SetActive(true);
     }
 }

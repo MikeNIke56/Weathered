@@ -12,7 +12,7 @@ public class PlayerCameraController : MonoBehaviour
     Rigidbody2D rbody;
     PlayerController playerController;
     bool hasReachedPoint = false;
-
+    //FIX IT BY SEPERATING AXIS THEN JUST HAVE THEM CHECK
     void Start()
     {
         playerController = FindFirstObjectByType<PlayerController>();

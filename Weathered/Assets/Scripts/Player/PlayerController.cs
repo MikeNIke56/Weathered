@@ -56,6 +56,11 @@ public class PlayerController : MonoBehaviour, ISavable
     // Update is called once per frame
     void Update()
     {
+        if (state == GameState.Death)
+        {
+            return;
+        }
+
         if (cam == null || !cam.isActiveAndEnabled)
         {
             cam = GameObject.FindFirstObjectByType<Camera>();
@@ -90,7 +95,7 @@ public class PlayerController : MonoBehaviour, ISavable
             SpiritWorldJump.Jump();
         }
         
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && state != GameState.Death)
         {
             UIController.UIControl.CloseInteractionMenu();
             UIController.UIControl.CloseTasksMenu();
@@ -245,7 +250,11 @@ public class PlayerController : MonoBehaviour, ISavable
         }
     }
 
-
+    public void StartDeath()
+    {
+        state = GameState.Death;
+        MazarineSpriteObject.SetActive(false);
+    }
 
     public object CaptureState()
     {
@@ -268,6 +277,5 @@ public class PlayerController : MonoBehaviour, ISavable
     {
         public float[] position;
     }
-
 
 }
