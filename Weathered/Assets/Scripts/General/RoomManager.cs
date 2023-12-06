@@ -8,45 +8,22 @@ public class RoomManager : MonoBehaviour
     SpriteRenderer SR;
     [SerializeField]
     float fadeSpeed = 1f;
-    bool isFadingIn = false;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            if (!isFadingIn)
-            {
-                StartCoroutine("FadeOut");
-            }
-        }
-    }
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            if (!isFadingIn)
-            {
-                isFadingIn = true;
-                StartCoroutine("FadeIn");
-            }
+            StartCoroutine("FadeOut");
         }
     }
 
     IEnumerator FadeOut()
     {
-        while (SR.color.a > 0 && !isFadingIn)
+        while (SR.color.a > 0)
         {
             SR.color -= new Color(0f, 0f, 0f, 0.01f * fadeSpeed);
             yield return new WaitForSeconds(0.02f);
         }
-    }
-    IEnumerator FadeIn()
-    {
-        while (SR.color.a < 1)
-        {
-            SR.color += new Color(0f, 0f, 0f, 0.01f * fadeSpeed);
-            yield return new WaitForSeconds(0.02f);
-        }
-        isFadingIn = false;
+        Destroy(gameObject);
     }
 }

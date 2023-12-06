@@ -461,6 +461,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &69493876 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9015549676813992897, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
+  m_PrefabInstance: {fileID: 1017535035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &71210953
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Dice Game
-  description: 
+  description: "I loved playing this with father\u2026  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -2422,6 +2427,7 @@ Transform:
   - {fileID: 2016974508}
   - {fileID: 1594760036}
   - {fileID: 1693261125}
+  - {fileID: 564233924}
   - {fileID: 396178751}
   - {fileID: 551335324}
   - {fileID: 364524882}
@@ -3320,7 +3326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Building Blocks
-  description: 
+  description: 'What are these supposed to build?  '
   shortName: 
   shortDescription: 
   currentState: 0
@@ -3747,7 +3753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Saint Bearnard
-  description: A toy bear.
+  description: 'Ah, Saint Bearnard. Something about him feels so corrupted despite
+    his appearance.  '
   shortName: 
   shortDescription: 
   currentState: 0
@@ -4205,7 +4212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Closet Key
-  description: This might be able to open that closet
+  description: 'It looks like I can finally open that closet door!  '
   shortName: 
   shortDescription: 
   currentState: 0
@@ -4381,6 +4388,7 @@ Transform:
   - {fileID: 748499570}
   - {fileID: 1164309008}
   - {fileID: 1368007449}
+  - {fileID: 69493876}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &418625301
@@ -4704,7 +4712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Jar of Green Eyes
-  description: Ewww! Oh, the label says they are made of glass. They look so real...
+  description: "Why do I feel like I\u2019m being watched\u2026?  "
   shortName: Eye Jar
   shortDescription: 
   currentState: 0
@@ -5063,13 +5071,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500614995}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.51357114, y: -0, z: -0, w: 0.85804707}
-  m_LocalPosition: {x: -10.39, y: -2.1530743, z: 0.9383058}
+  m_LocalRotation: {x: 0, y: 0, z: -0.5045275, w: 0.86339563}
+  m_LocalPosition: {x: 10.194, y: -4.345, z: 0.9383058}
   m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 101354581}
-  m_LocalEulerAnglesHint: {x: 61.804, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60.6}
 --- !u!212 &500614997
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5110,7 +5118,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 598431347
   m_SortingLayer: 1
-  m_SortingOrder: 3
+  m_SortingOrder: -2
   m_Sprite: {fileID: 5894765701276829052, guid: b3356fde99605244dbf5a119b35f5e23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5269,45 +5277,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 101354581}
     m_Modifications:
-    - target: {fileID: 1709322802098939896, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: itemToOpen
-      value: 
-      objectReference: {fileID: 1693261126}
-    - target: {fileID: 3861636296889498128, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_Size.x
-      value: 4.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 3861636296889498128, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_Size.y
-      value: 44.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3861636296889498128, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 3861636296889498128, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 4.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.21
-      objectReference: {fileID: 0}
     - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.5
       objectReference: {fileID: 0}
     - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.27
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5341,46 +5317,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8392644964215073528, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
       propertyPath: m_Name
       value: DoorGeneral
       objectReference: {fileID: 0}
-    - target: {fileID: 8392644964215073528, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_TagString
-      value: Interactable
-      objectReference: {fileID: 0}
-    - target: {fileID: 9176050123943850326, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 9051259509262156573, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: altDoor
       value: 
-      objectReference: {fileID: 5573105204812501097, guid: e2fa76ba62fa74d43b568c496a55ac31, type: 3}
-    - target: {fileID: 9176050123943850326, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9176050123943850326, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9176050123943850326, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9176050123943850326, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9176050123943850326, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9176050123943850326, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1294665595
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 729875203}
+    - target: {fileID: 9051259509262156573, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: itemToOpen
+      value: 
+      objectReference: {fileID: 1693261126}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5623,7 +5571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Clemmy
-  description: A toy doll.
+  description: "Clemmy\u2019s dress is so beautiful.  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -5787,6 +5735,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b80a6fbed2083e04986a6aa9b9247c4b, type: 3}
+--- !u!1 &564233923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 564233924}
+  m_Layer: 0
+  m_Name: KeyDVD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &564233924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564233923}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 258041637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &569233653
 GameObject:
   m_ObjectHideFlags: 0
@@ -6632,13 +6611,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611281618}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4780652, y: -0.1876406, z: 0.31350008, w: 0.79872555}
-  m_LocalPosition: {x: -9.26, y: -2.12, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.44181898, w: 0.89710426}
+  m_LocalPosition: {x: -10.338, y: -0.56, z: 1}
   m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 101354581}
-  m_LocalEulerAnglesHint: {x: 61.804, y: 0, z: 42.86}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 52.44}
 --- !u!114 &611281620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6743,7 +6722,7 @@ SpriteRenderer:
   m_SortingLayerID: 598431347
   m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7902306096651152533, guid: 6bd316f95aa1e684a9f74534da4c6145, type: 3}
+  m_Sprite: {fileID: 8517117805342786488, guid: 0cf717cb160023b4aa5a434329a89cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7019,8 +6998,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Collectible Toy Car
-  description: It looks like a toy car but no kids I've seen wanted to play with
-    it... Some people buy it just because it looks cool, I guess.
+  description: "This car looks so special and detailed. I don\u2019t think a child
+    would have played with this\u2026  "
   shortName: Toy Car
   shortDescription: 
   currentState: 0
@@ -7146,7 +7125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Super Smiley Doll
-  description: A doll kids might play with. The smile feels ominous...
+  description: "Oh, how happy she looks! \u2026 Maybe a little too happy?  "
   shortName: Smile Doll
   shortDescription: 
   currentState: 0
@@ -12977,6 +12956,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728967620}
   m_CullTransparentMesh: 1
+--- !u!114 &729875203 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9051259509262156573, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+  m_PrefabInstance: {fileID: 1669562831}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ca615f31dfb1345bc9b028de89a816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &729875204 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+  m_PrefabInstance: {fileID: 1669562831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &733497555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6869793211546697625, guid: 5d1b220a993975443967f503af4f3436, type: 3}
@@ -13199,6 +13194,7 @@ Transform:
   - {fileID: 1045004937}
   - {fileID: 951686243}
   - {fileID: 733497555}
+  - {fileID: 1689352953}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &757932454
@@ -13500,7 +13496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Alphabet Blocks
-  description: 
+  description: "Now I know my ABC\u2019s\u2026  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -13854,7 +13850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Cassette Tape 2
-  description: 
+  description: "\u201CCourtroom\u2026\u201D Am I about to go on trial?  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -15751,7 +15747,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 407124109}
     m_Modifications:
     - target: {fileID: 1059398604540971705, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_Name
@@ -15759,7 +15755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1059398604540971705, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3902776903070537428, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_SortingLayer
@@ -15783,7 +15779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9015549676813992897, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9015549676813992897, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15932,7 +15928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Cassette Tape 1
-  description: 
+  description: "\u201CCornerstone\u2026\u201D Seems important.  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -16147,7 +16143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Board Game
-  description: 
+  description: 'This seems like a scary board game.  '
   shortName: 
   shortDescription: 
   currentState: 0
@@ -17167,8 +17163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Ominous Board Game
-  description: It's a family board game. It is fun, but this set has something wierd
-    about it...
+  description: "This game feels tense. Perfect for a game night with ghosts or something\u2026  "
   shortName: Board Game
   shortDescription: 
   currentState: 0
@@ -18286,7 +18281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Sally Mae
-  description: A cute doll.
+  description: "I love Sally Mae\u2019s long copper curls. She has a bow just like
+    me!  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -18353,7 +18349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introDialog:
     lines:
-    - Ok, my first day on the job. Gotta focus...
+    - Another night of work. Gotta focus...
     - 'According my list of chores in my notebook... '
     - I can start with either the stacks of boxes or dusting cobwebs.
   dialogStartBox:
@@ -19684,7 +19680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Stuffed Doll
-  description: 
+  description: "What a gorgeous doll. I wish I could play with her\u2026  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -20643,7 +20639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Mr. Bear
-  description: A t0y bear.
+  description: "What \xC6 handsome fell0w Mr. Bear \xCDs.  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -21067,6 +21063,7 @@ Transform:
   - {fileID: 1484353200}
   - {fileID: 642691154}
   - {fileID: 403842658}
+  - {fileID: 729875204}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1463818357 stripped
@@ -21492,7 +21489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Colorful Blocks
-  description: 
+  description: "Ooo shapes and colors\u2026  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -22372,8 +22369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Bird with Four Wings
-  description: It's a bird, but with four wings instead of two. It sometimes moves
-    likes it is still alive...
+  description: "I bet this bird used to be such a good flier\u2026  "
   shortName: Bird 4
   shortDescription: 
   currentState: 0
@@ -23332,8 +23328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Blood Stained Toy Train
-  description: It's the engine car of a train set. The paint has come off to reveal
-    a bit of red. It is too generic to be collectible.
+  description: "Choo choo! I hope a child drove this through some paint or something\u2026  "
   shortName: Toy Train
   shortDescription: 
   currentState: 0
@@ -23652,8 +23647,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Spirits' Cassette Tape
-  description: This old tape is all worn out, but the case looks just like another
-    one...
+  description: "It was already playing by itself\u2026 Maybe someone was enjoying
+    it.  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -23664,6 +23659,71 @@ MonoBehaviour:
   investigateObjectPrefab: {fileID: 6934911189131736248, guid: 930867e10e13d5f489ed42e84c0c0cb3, type: 3}
   canInvestigate: 1
   currentDroppedObject: {fileID: 0}
+--- !u!1001 &1669562831
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1459219198}
+    m_Modifications:
+    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097352264317335614, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392644964215073528, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: m_Name
+      value: DoorGeneral (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051259509262156573, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: altDoor
+      value: 
+      objectReference: {fileID: 2013794587}
+    - target: {fileID: 9051259509262156573, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+      propertyPath: itemToOpen
+      value: 
+      objectReference: {fileID: 1693261126}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
 --- !u!1 &1671019357
 GameObject:
   m_ObjectHideFlags: 0
@@ -23708,8 +23768,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa5d099abaa4a34e97c48cbf3a06ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Bennie
-  description: A toy doll dragon.
+  itemName: Benni
+  description: 'Ferocious and cuddly Benni! The charming terror of the town!  '
   shortName: 
   shortDescription: 
   currentState: 0
@@ -24491,6 +24551,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &1689352953 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9015549676813992897, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
+  m_PrefabInstance: {fileID: 3433204599197997337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1693261124
 GameObject:
   m_ObjectHideFlags: 0
@@ -24536,7 +24601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Entrance Key 1
-  description: I think this key unlocks the door to the right in the entrance.
+  description: "This must be the key to the children\u2019s toy room!  "
   shortName: Key 1
   shortDescription: 
   currentState: 0
@@ -24599,7 +24664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Stuffed Platypus
-  description: 
+  description: "A silly and flat little reptile! \u2026mammal? \u2026amphibian? \u2026fish\u2026  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -24655,8 +24720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Glowing Claw
-  description: The claw sometimes gives off a strange glow effect. What kind of animal
-    did it come from?
+  description: "Why is it glowing\u2026 Is this from a monster?  "
   shortName: Glow Claw
   shortDescription: 
   currentState: 0
@@ -24724,7 +24788,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 598431347
   m_SortingLayer: 1
-  m_SortingOrder: -2
+  m_SortingOrder: -5
   m_Sprite: {fileID: -2377692628591109145, guid: 2dc5345cae0ef3543b62b3527f489456, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -26993,8 +27057,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Butterfly with Multicolored Wings
-  description: A pretty butterfly with different colored wings. It feels wierd seeing
-    it kept in a glass case.
+  description: "How beautiful and delicate. I wonder if this butterfly had an impact
+    on something huge\u2026  "
   shortName: MButterfly
   shortDescription: 
   currentState: 0
@@ -27134,7 +27198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Stuffed Bunny
-  description: 
+  description: 'What a sweet little bunny.  '
   shortName: 
   shortDescription: 
   currentState: 0
@@ -28141,6 +28205,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2013794587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9051259509262156573, guid: 0af8400f082dd60408f6e473de23350c, type: 3}
+  m_PrefabInstance: {fileID: 532463712}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ca615f31dfb1345bc9b028de89a816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2016974507
 GameObject:
   m_ObjectHideFlags: 0
@@ -28557,7 +28632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Cassette Tape 3
-  description: 
+  description: "\u201CLonely Kind\u2026\u201D What a sad song title.  "
   shortName: 
   shortDescription: 
   currentState: 0
@@ -28980,6 +29055,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 226107117}
     m_Modifications:
     - target: {fileID: 1853682848243039400, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 353103234339233724, guid: 08d74e55b01dd764a8452dae772d05f3, type: 3}
+    - target: {fileID: 1853682848243039400, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
@@ -28987,13 +29066,21 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 598431347
       objectReference: {fileID: 0}
+    - target: {fileID: 5122151969749294426, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122151969749294426, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5601980982487521064, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.12
+      value: 7.933
       objectReference: {fileID: 0}
     - target: {fileID: 5601980982487521064, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.02
+      value: -2.431
       objectReference: {fileID: 0}
     - target: {fileID: 5601980982487521064, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29061,6 +29148,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 226107117}
     m_Modifications:
     - target: {fileID: 1853682848243039400, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -9191407429432685034, guid: f15efbada1d16de4f8de3dd851d1a3b8, type: 3}
+    - target: {fileID: 1853682848243039400, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
@@ -29068,13 +29159,21 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 598431347
       objectReference: {fileID: 0}
+    - target: {fileID: 5122151969749294426, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122151969749294426, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5601980982487521064, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.37
+      value: 6.211
       objectReference: {fileID: 0}
     - target: {fileID: 5601980982487521064, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.02
+      value: -2.45
       objectReference: {fileID: 0}
     - target: {fileID: 5601980982487521064, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29798,9 +29897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Playing Cards
-  description: A set of playing cards. Some people like collecting the cards with
-    certain people on them... Their eyes sometimes look like they are staring right
-    at me.
+  description: "Did the queen just wink at me\u2026?  "
   shortName: Eye Cards
   shortDescription: 
   currentState: 0
@@ -29856,7 +29953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Card Game
-  description: 
+  description: 'What a silly looking card game.  '
   shortName: 
   shortDescription: 
   currentState: 0
@@ -31568,7 +31665,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 753922322}
     m_Modifications:
     - target: {fileID: 1059398604540971705, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_Name
@@ -31576,11 +31673,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1059398604540971705, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3902776903070537428, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_SortingLayer
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902776903070537428, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9015549676813992897, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -31592,7 +31693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9015549676813992897, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9015549676813992897, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -32613,6 +32714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CursedPainting
       objectReference: {fileID: 0}
+    - target: {fileID: 8392644964215073528, guid: ef093ea74cdbc3e4fa03a4105c1909c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32854,7 +32959,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 85d1d4f282fb24247b6b4c7765c12559, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -32919,6 +33024,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 226107117}
     m_Modifications:
     - target: {fileID: 1853682848243039400, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5138065699032878691, guid: aac658575391b0342ae3762294e95b94, type: 3}
+    - target: {fileID: 1853682848243039400, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
@@ -32926,13 +33035,21 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 598431347
       objectReference: {fileID: 0}
+    - target: {fileID: 5122151969749294426, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122151969749294426, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5601980982487521064, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.69
+      value: 4.494
       objectReference: {fileID: 0}
     - target: {fileID: 5601980982487521064, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.02
+      value: -2.452
       objectReference: {fileID: 0}
     - target: {fileID: 5601980982487521064, guid: 2d8961a9c9571ee408cc56a4daae96ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33342,7 +33459,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 598431347
   m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingOrder: -3
   m_Sprite: {fileID: 8057652296799459248, guid: 1d337ac3355143c46986217103ae1526, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -33727,8 +33844,6 @@ SceneRoots:
   - {fileID: 1793989010}
   - {fileID: 2089686627}
   - {fileID: 2080871554}
-  - {fileID: 3433204599197997337}
-  - {fileID: 1017535035}
   - {fileID: 101354581}
   - {fileID: 1459219198}
   - {fileID: 753922322}
