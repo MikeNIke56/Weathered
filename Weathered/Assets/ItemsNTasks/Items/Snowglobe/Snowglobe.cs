@@ -48,15 +48,17 @@ public class Snowglobe : Item
                         sgObj.GetComponent<SnowglobeObj>().sgItem.sgImg.sprite = clickedSG.sgItem.sgImg.sprite;
 
                         //sets the second's choice's values to the temp's values
-                        clickedSG.sgItem = snowglobes.tempSG;
-                        clickedSG.sgItem.sgImg.sprite = snowglobes.tempImg.sprite;
+                        if (clickedSG.sgItem.chosen == true)
+                        {
+                            clickedSG.sgItem = snowglobes.tempSG;
+                            clickedSG.sgItem.sgImg.sprite = snowglobes.tempImg.sprite;
+                            snowglobes.isSwitching = false;
+                            ItemController.ClearItemInHand();
 
-                        snowglobes.isSwitching = false;
-                        ItemController.ClearItemInHand();
-
-                        UpdateSnowGlobes();
-                        
-                        snowglobes.CheckForFinished();
+                            UpdateSnowGlobes();
+                            snowglobes.UpdateShelf();
+                            snowglobes.CheckForFinished();
+                        }
                     }
                 }
             }
@@ -87,6 +89,7 @@ public class Snowglobe : Item
 
                                 ItemController.ClearItemInHand();
                                 ItemController.itemInHand = null;
+                                snowglobes.UpdateShelf();
                             }
                             else if (snowglobeInHand.currentSGType == sgType.Glory && snowglobes.snowGlobes[i].currentSGType == sgType.Glory)
                             {
@@ -99,6 +102,7 @@ public class Snowglobe : Item
 
                                 ItemController.ClearItemInHand();
                                 ItemController.itemInHand = null;
+                                snowglobes.UpdateShelf();
                             }
                         } 
                     }
