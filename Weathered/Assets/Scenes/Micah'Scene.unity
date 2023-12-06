@@ -18713,6 +18713,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 4.35
       objectReference: {fileID: 0}
+    - target: {fileID: 1494374794305515752, guid: 7909fe1eca7120648814590718c27c71, type: 3}
+      propertyPath: uniqueId
+      value: 27e59d78-d40d-4788-a4d0-2df428a5e276
+      objectReference: {fileID: 0}
     - target: {fileID: 3783056970549416719, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: blackoutImage
       value: 

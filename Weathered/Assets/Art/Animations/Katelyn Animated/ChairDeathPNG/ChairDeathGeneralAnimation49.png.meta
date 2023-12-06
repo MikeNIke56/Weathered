@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ChairDeathGeneralAnimation49_0: -6271783519467728937
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RevengeBook_0: -7034132089075836978
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
