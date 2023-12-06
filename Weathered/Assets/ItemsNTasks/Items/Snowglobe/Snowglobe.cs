@@ -21,12 +21,10 @@ public class Snowglobe : Item
     public Image underSgImg;
 
     SnowglobesButtons sgButtons;
-    ShelfScrolling shelfScrolling;
 
     private void Start()
     {
         sgButtons = FindAnyObjectByType<SnowglobesButtons>(FindObjectsInactive.Include);
-        shelfScrolling = FindAnyObjectByType<ShelfScrolling>(FindObjectsInactive.Include);
     }
 
     public void OnClickedSGObject(SnowglobeObj clickedSG)
@@ -35,7 +33,6 @@ public class Snowglobe : Item
         {
             ItemController.AddItemToHand(this);
             clickedSG.gameObject.SetActive(false);
-            shelfScrolling.Deactivate();
         }
         else if (snowglobes.currentSGState == ArrangeSnowglobes.SGState.InShelf)
         {           
