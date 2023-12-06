@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject pointFlashPrefab;
     static public bool flashDone = false;
     static float deathShotFadeOut = 2f;
+    [SerializeField] AudioSource deathImpactSFX;
 
     void Start()
     {
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(flashPrefab);
             yield return new WaitUntil(() => flashDone);
+            GM.deathImpactSFX.Play();
         }
         yield return new WaitForEndOfFrame();
         UIController.UIControl.ShowDeathScreen();
