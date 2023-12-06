@@ -12,7 +12,6 @@ public class ClosetInteract : Interaction
     {
         if (ItemController.itemInHand == itemToOpen)
         {
-            gameObject.SetActive(false);
             ItemController.ClearItemInHand();
             itemToGive.SetActive(true);
             gameObject.GetComponent<SpriteRenderer>().sprite = doorOpen;
