@@ -176,7 +176,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SallyMaeFrontTwitch20_0: -7141162532183370842
+      SallyMaeFrontTwitch20_1: 8405321387347784002
+      SallyMaeFrontTwitch20_2: 2079647340857494012
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MrBearSideTwitch15_0: 2113878862723039246
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

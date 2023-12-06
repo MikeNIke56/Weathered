@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GameOverWeatheredScreen_0: -5236694956205832503
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

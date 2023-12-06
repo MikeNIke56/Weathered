@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SaintBearFrontTwitch28_0: 3739674647345838987
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
