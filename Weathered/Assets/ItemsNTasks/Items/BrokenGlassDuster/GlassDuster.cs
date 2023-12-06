@@ -5,10 +5,10 @@ using UnityEngine;
 public class GlassDuster : Item
 {
     [SerializeField] GlassDusterObject originalDusterObject;
+    public AudioSource sweepSfx;
     public void ClickedDusterObject(GlassDusterObject dusterClicked)
     {
         ItemController.AddItemToHand(this);
-        //Destroy(dusterClicked.gameObject);
         dusterClicked.gameObject.SetActive(false);
     }
 

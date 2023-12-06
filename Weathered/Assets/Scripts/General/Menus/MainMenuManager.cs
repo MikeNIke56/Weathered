@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [SerializeField] GameObject loadScreen;
+    [SerializeField] GameObject raccoon;
     public void ContinueGame()
     {
         //will load saved data from the last time the player saved
@@ -16,6 +18,8 @@ public class MainMenuManager : MonoBehaviour
         //right now im using this for testing stuff
 
         SceneManager.LoadScene("TestPlayer");
+        loadScreen.SetActive(true);
+        raccoon.SetActive(true);
     }
     public void LoadGame()
     {

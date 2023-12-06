@@ -5,10 +5,10 @@ using UnityEngine;
 public class Mop : Item
 {
     [SerializeField] MopObject originalMopObject;
+    public AudioSource mopSfx;
     public void ClickedMopObject(MopObject  mopClicked)
     {
         ItemController.AddItemToHand(this);
-        //Destroy(dusterClicked.gameObject);
         mopClicked.gameObject.SetActive(false);
     }
 

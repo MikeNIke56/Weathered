@@ -77,6 +77,7 @@ public class InputHandler : MonoBehaviour
         {
             taskIsOn = false;
             UIController.UIControl.CloseTasksMenu();
+            UIController.UIControl.closeNotes.Play();
         }
     }
 }

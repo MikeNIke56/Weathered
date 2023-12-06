@@ -30,6 +30,7 @@ public class DustCobwebs : Task
         {
             webClicked.gameObject.SetActive(false);
             clearedCobweb = true;
+            dusterItem.sweepSfx.Play();
         }
 
         bool isWebsCleaned = true;

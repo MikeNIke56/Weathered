@@ -40,7 +40,7 @@ public class SnowglobesButtons : MonoBehaviour
             ItemController.AddItemToHand(chosenSG);
             arrangeSnowglobes.currentSGState = ArrangeSnowglobes.SGState.InShelf;
             arrangeSnowglobes.isSwitching = true;
-            Debug.Log("chosen");
+            chosenSG.pickup.Play();
         }
     }
 }

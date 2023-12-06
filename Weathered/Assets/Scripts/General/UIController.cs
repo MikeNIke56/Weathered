@@ -18,7 +18,7 @@ public class UIController : MonoBehaviour
 
     PlayerController player;
     [SerializeField] AudioSource openNotes;
-    [SerializeField] AudioSource closeNotes;
+    [SerializeField] public AudioSource closeNotes;
 
     public bool isTasksMenuOpen = false;
     void Start()
@@ -72,7 +72,6 @@ public class UIController : MonoBehaviour
         inputHandler.SetActive(true);
         player.state = PlayerController.GameState.FreeRoam;
         player.moveBlockers["Menu"] = false;
-        closeNotes.Play();
     }
     public void DeathEventScreen()
     {
@@ -87,5 +86,13 @@ public class UIController : MonoBehaviour
     public void ShowDeathScreen()
     {
         deathScreen.SetActive(true);
+    }
+
+    public void HandleTutorial(bool isOn)
+    {
+        if(isOn == true)
+            inputHandler.SetActive(false);
+        else
+            inputHandler.SetActive(true);
     }
 }

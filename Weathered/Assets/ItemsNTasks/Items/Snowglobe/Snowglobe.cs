@@ -23,6 +23,8 @@ public class Snowglobe : Item
     SnowglobesButtons sgButtons;
     ShelfScrolling shelfScrolling;
 
+    public AudioSource pickup;
+
     private void Start()
     {
         sgButtons = FindAnyObjectByType<SnowglobesButtons>(FindObjectsInactive.Include);
@@ -36,6 +38,7 @@ public class Snowglobe : Item
             ItemController.AddItemToHand(this);
             clickedSG.gameObject.SetActive(false);
             shelfScrolling.Deactivate();
+            pickup.Play();
         }
         else if (snowglobes.currentSGState == ArrangeSnowglobes.SGState.InShelf)
         {           

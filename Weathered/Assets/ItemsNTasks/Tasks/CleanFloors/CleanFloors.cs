@@ -38,6 +38,7 @@ public class CleanFloor : Task
             if (ItemController.itemInHand == dusterItem)
             {
                 interaction.gameObject.SetActive(false);
+                dusterItem.sweepSfx.Play();
             }
 
             clearedGlass = true;
@@ -54,6 +55,7 @@ public class CleanFloor : Task
             if (ItemController.itemInHand == mopItem)
             {
                 interaction.gameObject.SetActive(false);
+                mopItem.mopSfx.Play();
             }
 
             clearedSplatters = true;
