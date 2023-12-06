@@ -11,6 +11,8 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject deathScreen;
 
+    [SerializeField] GameObject auntVoicemailScreen;
+
     [SerializeField] GameObject snowglobesUI;
     ArrangeSnowglobes snowglobes;
     ShelfScrolling shelf;
@@ -94,5 +96,24 @@ public class UIController : MonoBehaviour
             inputHandler.SetActive(false);
         else
             inputHandler.SetActive(true);
+    }
+
+    public void OpenAuntVoicemail()
+    {
+        baseGameUI.SetActive(false);
+        tasksMenu.SetActive(false);
+        investigateMenu.SetActive(false);
+        inputHandler.SetActive(false);
+        auntVoicemailScreen.SetActive(true);
+        player.moveBlockers["Menu"] = true;
+    }
+    public void CloseAuntVoicemail()
+    {
+        baseGameUI.SetActive(true);
+        tasksMenu.SetActive(false);
+        investigateMenu.SetActive(false);
+        inputHandler.SetActive(true);
+        auntVoicemailScreen.SetActive(false);
+        player.moveBlockers["Menu"] = false;
     }
 }

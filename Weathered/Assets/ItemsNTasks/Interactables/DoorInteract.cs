@@ -40,6 +40,7 @@ public class DoorInteract : Interaction
         {
             ItemController.ClearItemInHand();
             openDoorSFX.Play();
+            FindFirstObjectByType<PhoneControl>().NewVoicemail();
         }
     }
 }

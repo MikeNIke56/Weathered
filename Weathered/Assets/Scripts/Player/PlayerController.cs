@@ -99,6 +99,7 @@ public class PlayerController : MonoBehaviour, ISavable
         {
             UIController.UIControl.CloseInteractionMenu();
             UIController.UIControl.CloseTasksMenu();
+            UIController.UIControl.CloseAuntVoicemail();
             state = GameState.FreeRoam;
             moveBlockers["Menu"] = false;
         }
