@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
 
     [SerializeField] GameObject snowglobesUI;
     ArrangeSnowglobes snowglobes;
+    ShelfScrolling shelf;
     public GameObject inputHandler;
 
     PlayerController player;
@@ -24,6 +25,7 @@ public class UIController : MonoBehaviour
             UIControl = FindFirstObjectByType<UIController>();
             snowglobes = FindAnyObjectByType<ArrangeSnowglobes>();
             player = FindFirstObjectByType<PlayerController>();
+            shelf = FindFirstObjectByType<ShelfScrolling>(FindObjectsInactive.Include);
         }
     }
 
@@ -40,6 +42,7 @@ public class UIController : MonoBehaviour
     {
         investigateMenu.SetActive(false);
         snowglobesUI.SetActive(false);
+        shelf.Deactivate();
         inputHandler.SetActive(true);
         snowglobes.currentSGState = ArrangeSnowglobes.SGState.OutOfShelf;
         if (isTasksMenuOpen)
