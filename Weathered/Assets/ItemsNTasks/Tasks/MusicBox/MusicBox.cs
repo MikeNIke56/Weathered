@@ -50,11 +50,11 @@ public class MusicBox : Task
             {
                 if (validTapes.IndexOf(boxClicked.currentCassette) != 3)
                 {
-                    SpiritWorldJump.jumpBlockers["CassetteSpirit"] = true;
+                    SpiritWorldJump.SWJ.jumpBlockers["CassetteSpirit"] = true;
                 }
                 else
                 {
-                    SpiritWorldJump.jumpBlockers["CassetteSpirit"] = false;
+                    SpiritWorldJump.SWJ.jumpBlockers["CassetteSpirit"] = false;
                 }
             }
         }
