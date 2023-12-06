@@ -11,6 +11,7 @@ public class TaskController : MonoBehaviour
     public List<Task> taskChosenList = new List<Task>(); //Task list for chosen tasks this game. Referenced commonly. Auto-populated with curation.
     public AudioSource taskCompleteAudio;
     public AudioSource taskBadActionAudio;
+    public AudioSource pageFlip;
 
     public GameObject taskScreenList;
     public GameObject taskObj;
@@ -93,6 +94,7 @@ public class TaskController : MonoBehaviour
                     times++;
                 }
                 times = 0;
+                pageFlip.Play();
             }
 
             UpdateTimer();

@@ -47,8 +47,6 @@ public class InputHandler : MonoBehaviour
                 case "Save":
                     SavingSystem.i.Save("SaveSlot");
                     break;
-                case "Task":
-                case "Item":
                 case "Interactable":
                     //Debug.Log("Trying " + collidedObject.name);
                     try

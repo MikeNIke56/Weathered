@@ -16,7 +16,9 @@ public class UIController : MonoBehaviour
     public GameObject inputHandler;
 
     PlayerController player;
-    
+    [SerializeField] AudioSource openNotes;
+    [SerializeField] AudioSource closeNotes;
+
     public bool isTasksMenuOpen = false;
     void Start()
     {
@@ -60,6 +62,7 @@ public class UIController : MonoBehaviour
         inputHandler.SetActive(false);
         player.state = PlayerController.GameState.Menu;
         player.moveBlockers["Menu"] = true;
+        openNotes.Play();
     }
     public void CloseTasksMenu()
     {
@@ -68,5 +71,6 @@ public class UIController : MonoBehaviour
         inputHandler.SetActive(true);
         player.state = PlayerController.GameState.FreeRoam;
         player.moveBlockers["Menu"] = false;
+        closeNotes.Play();
     }
 }
