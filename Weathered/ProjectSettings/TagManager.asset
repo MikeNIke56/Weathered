@@ -8,6 +8,8 @@ TagManager:
   - Item
   - Task
   - Interactable
+  - UP
+  - DOWN
   layers:
   - Default
   - TransparentFX
