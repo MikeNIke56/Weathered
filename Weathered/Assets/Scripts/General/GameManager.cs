@@ -12,9 +12,12 @@ public class GameManager : MonoBehaviour
     static public bool flashDone = false;
     static float deathShotFadeOut = 2f;
     [SerializeField] AudioSource deathImpactSFX;
+    [SerializeField] Texture2D defaultCursor;
 
     void Start()
     {
+        //Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
+        Cursor.visible = false;
         GM = FindFirstObjectByType<GameManager>();
         flashPrefab = pointFlashPrefab;
     }
