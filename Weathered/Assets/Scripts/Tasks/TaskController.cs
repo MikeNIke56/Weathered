@@ -21,6 +21,9 @@ public class TaskController : MonoBehaviour
     float selectionTimer = 0.2f;
     int times = 0;
 
+    [SerializeField] GameObject keyDVDReward;
+    [SerializeField] Transform keyDVDLocation;
+
     PlayerController player;
 
     void Start()
@@ -106,6 +109,25 @@ public class TaskController : MonoBehaviour
         if (selectionTimer > 0)
         {
             selectionTimer = Mathf.Clamp(selectionTimer - Time.deltaTime, 0, selectionTimer);
+        }
+    }
+
+    public void CheckCompleteTasks()
+    {
+        bool isAllComplete = true;
+        Debug.Log("Checking Tasks...");
+        foreach (Task singleTask in taskList)
+        {
+            if (singleTask.currentState != Task.taskState.Completed)
+            {
+                Debug.Log(singleTask.taskName + " is incomplete.");
+                isAllComplete = false;
+            }
+        }
+        if (isAllComplete)
+        {
+            Debug.Log("All complete!");
+            Instantiate(keyDVDReward, keyDVDLocation);
         }
     }
 }

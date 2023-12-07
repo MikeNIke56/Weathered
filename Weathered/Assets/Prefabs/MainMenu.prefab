@@ -571,13 +571,13 @@ MonoBehaviour:
   SR: {fileID: 6236888226035419615}
   DefaultColor:
     serializedVersion: 2
-    rgba: 4278782217
+    rgba: 4291480266
   HoverColor:
     serializedVersion: 2
-    rgba: 4278190170
+    rgba: 4288059135
   ClickedColor:
     serializedVersion: 2
-    rgba: 4278190140
+    rgba: 4284703625
 --- !u!1 &7368667562470444843
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c927f8d4874e981489025d3293bc146f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadScreen: {fileID: 0}
+  raccoon: {fileID: 0}
 --- !u!1 &7416811906311790579
 GameObject:
   m_ObjectHideFlags: 0

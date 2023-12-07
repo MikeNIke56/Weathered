@@ -43,6 +43,7 @@ public class Task : Interaction
     {
         currentState = taskState.Completed;
         TaskController.taskControl.taskCompleteAudio.Play();
+        TaskController.taskControl.CheckCompleteTasks();
     }
     public virtual void OnBadAction()
     {

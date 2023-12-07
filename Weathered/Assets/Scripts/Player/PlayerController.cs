@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour, ISavable
         CursorShow(isPaused);
         OpenPauseMenu();
 
-        if (!lockMovement && Input.GetKeyDown(KeyCode.P))
+        if (!lockMovement && Input.GetKeyDown(KeyCode.Space))
         {
             SpiritWorldJump.Jump();
         }

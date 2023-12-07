@@ -10,6 +10,9 @@ public class DoorInteract : Interaction
     [SerializeField] AudioSource openDoorSFX;
     [SerializeField] SpriteRenderer doorSR;
     [SerializeField] DoorInteract altDoor;
+    [SerializeField] bool hasVoicemail = true;
+    [SerializeField] bool endDoor = false;
+    [SerializeField] GameObject endScreen;
 
     public override void onClick()
     {
@@ -23,6 +26,10 @@ public class DoorInteract : Interaction
             if (altDoor != null)
             {
                 altDoor.OpenDoor(true);
+            }
+            if (endDoor)
+            {
+                Instantiate(endScreen);
             }
         }
         else
@@ -40,7 +47,10 @@ public class DoorInteract : Interaction
         {
             ItemController.ClearItemInHand();
             openDoorSFX.Play();
-            FindFirstObjectByType<PhoneControl>().NewVoicemail();
+            if (hasVoicemail)
+            {
+                FindFirstObjectByType<PhoneControl>().NewVoicemail();
+            }
         }
     }
 }
