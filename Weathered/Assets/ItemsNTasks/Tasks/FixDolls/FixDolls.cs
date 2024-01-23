@@ -7,6 +7,7 @@ public class FixDolls : Task
     [SerializeField] List<Item> validParts;
     [SerializeField] List<Item> validDolls;
     int fixedDolls = 0;
+
     public void ClickedPart(FixDollsPart partClicked)
     {
         Item tempPart = partClicked.GetPartItem();
@@ -74,5 +75,12 @@ public class FixDolls : Task
             OnCompleted();
         }
         ItemController.ClearItemInHand();
+    }
+
+    public override void LoadFinishedTask()
+    {
+        
+        currentState = taskState.Completed;
+        TaskController.taskControl.CheckCompleteTasks();
     }
 }

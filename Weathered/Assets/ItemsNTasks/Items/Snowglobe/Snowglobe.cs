@@ -20,7 +20,7 @@ public class Snowglobe : Item
     public Image sgImg;
     public Image underSgImg;
 
-    SnowglobesButtons sgButtons;
+    public SnowglobesButtons sgButtons;
     ShelfScrolling shelfScrolling;
 
     public AudioSource pickup;
@@ -130,7 +130,7 @@ public class Snowglobe : Item
         }
     }
 
-    private void UpdateSnowGlobes()
+    void UpdateSnowGlobes()
     {
         foreach (Transform obj in snowGlobesObj.transform)
         {

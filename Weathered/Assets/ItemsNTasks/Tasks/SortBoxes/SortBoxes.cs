@@ -19,6 +19,7 @@ public class SortBoxes : Task
     public bool tookToy = false;
     public bool correctBox = false;
     public bool isDoneBox = false;
+
     public void BoxClicked(SortBoxesBox clickedBox)
     {
         if (currentState == taskState.Available)
@@ -179,5 +180,15 @@ public class SortBoxes : Task
         {
             ShortTextController.STControl.AddShortText("STOP. That's the wrong sorting box.", true);
         }
+    }
+
+    public override void LoadFinishedTask()
+    {
+        Box1st.RemoveBox();
+        Box2nd.RemoveBox();
+        Box3rd.RemoveBox();
+        stairs.isPassable = true;
+        currentState = taskState.Completed;
+        TaskController.taskControl.CheckCompleteTasks();
     }
 }

@@ -10,6 +10,7 @@ public class ArrangeSnowglobes : Task
     public List<Snowglobe> snowGlobes = new List<Snowglobe>();
     [SerializeField] List<SnowglobeObj> snowGlobeObjs = new List<SnowglobeObj>();
     public List<GameObject> shelfSnowGlobes = new List<GameObject>();
+    [SerializeField] List<SnowglobeObj> snowGlobeObjsNotShelf = new List<SnowglobeObj>();
     public Snowglobe placeHolderSG;
 
     [SerializeField] GameObject shelfObj;
@@ -28,8 +29,6 @@ public class ArrangeSnowglobes : Task
     public Image tempImg;
 
     PlayerController player;
-
-
 
     public override void InstanceTask()
     {
@@ -133,7 +132,34 @@ public class ArrangeSnowglobes : Task
         if (inOrder == true)
         {
             OnCompleted();
+            snowGlobes[0].sgButtons.DisableButton();
             Debug.Log("done");
         }
+    }
+
+    public override void LoadFinishedTask()
+    {
+        for (int i = 0; i < snowGlobes.Count; i++)
+        {
+            snowGlobes[i].isShowing = true;
+            snowGlobes[i].included = true;
+            shelfSnowGlobes[i].GetComponentInChildren<SnowglobeObj>().sgItem = snowGlobes[i];
+            slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem = snowGlobes[i];
+
+            shelfSnowGlobes[i].GetComponentInChildren<SpriteRenderer>().sprite = snowGlobes[i].sgImg.sprite;
+            slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem.sgImg.sprite = snowGlobes[i].sgImg.sprite;
+            slotParent.GetComponentsInChildren<SnowglobeObj>()[i].GetComponent<Image>().sprite = snowGlobes[i].sgImg.sprite;
+            slotParent.GetComponentsInChildren<SnowglobeObj>()[i].GetComponent<Image>().color = Color.white;
+
+            snowGlobes[0].sgButtons.DisableButton();
+        }
+
+
+        foreach (SnowglobeObj sg in snowGlobeObjsNotShelf)
+        {
+            sg.gameObject.SetActive(false);
+        }
+        currentState = taskState.Completed;
+        TaskController.taskControl.CheckCompleteTasks();
     }
 }

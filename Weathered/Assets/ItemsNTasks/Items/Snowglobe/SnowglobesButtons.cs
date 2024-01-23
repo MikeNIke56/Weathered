@@ -7,6 +7,7 @@ public class SnowglobesButtons : MonoBehaviour
 {
     public GameObject inspectUI;
     public GameObject snowGlobesObj;
+    public GameObject chooseButton;
     ArrangeSnowglobes arrangeSnowglobes;
 
     public Snowglobe curSG;
@@ -42,5 +43,11 @@ public class SnowglobesButtons : MonoBehaviour
             arrangeSnowglobes.isSwitching = true;
             chosenSG.pickup.Play();
         }
+    }
+
+    public void DisableButton()
+    {
+        chooseButton.GetComponent<Image>().color = Color.gray;
+        chooseButton.GetComponent<Button>().enabled = false;
     }
 }

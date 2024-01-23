@@ -1485,6 +1485,7 @@ MonoBehaviour:
   currentSGType: 8
   sgImg: {fileID: 151212935}
   underSgImg: {fileID: 1509701870}
+  sgButtons: {fileID: 0}
   pickup: {fileID: 1680306447}
 --- !u!4 &158145644 stripped
 Transform:
@@ -1848,6 +1849,7 @@ MonoBehaviour:
   currentSGType: 6
   sgImg: {fileID: 206286500}
   underSgImg: {fileID: 1379955264}
+  sgButtons: {fileID: 0}
   pickup: {fileID: 1680306447}
 --- !u!114 &206286500
 MonoBehaviour:
@@ -2296,6 +2298,7 @@ MonoBehaviour:
   currentSGType: 3
   sgImg: {fileID: 234456461}
   underSgImg: {fileID: 1791165387}
+  sgButtons: {fileID: 0}
   pickup: {fileID: 1680306447}
 --- !u!114 &234456461
 MonoBehaviour:
@@ -3571,6 +3574,7 @@ MonoBehaviour:
   currentSGType: 0
   sgImg: {fileID: 0}
   underSgImg: {fileID: 0}
+  sgButtons: {fileID: 0}
   pickup: {fileID: 0}
 --- !u!4 &359361030 stripped
 Transform:
@@ -5776,6 +5780,9 @@ MonoBehaviour:
   - {fileID: 2005966491}
   - {fileID: 1186235915}
   - {fileID: 574720651}
+  snowGlobeObjsNotShelf:
+  - {fileID: 672407396}
+  - {fileID: 1079991445}
   placeHolderSG: {fileID: 151212937}
   shelfObj: {fileID: 2143195022}
   snowglobesUI: {fileID: 811835308}
@@ -7439,6 +7446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 639653727}
   - component: {fileID: 639653728}
+  - component: {fileID: 639653729}
   m_Layer: 0
   m_Name: TaskController
   m_TagString: Untagged
@@ -7483,7 +7491,6 @@ MonoBehaviour:
   - {fileID: 2066987686}
   - {fileID: 543056631}
   - {fileID: 226107118}
-  taskChosenList: []
   taskCompleteAudio: {fileID: 2018158160}
   taskBadActionAudio: {fileID: 16228670}
   pageFlip: {fileID: 431639190}
@@ -7501,6 +7508,19 @@ MonoBehaviour:
   - 'Clock '
   keyDVDReward: {fileID: 1660052923047825499, guid: cb77fb1da514bd44eb2b7e7c3ad796aa, type: 3}
   keyDVDLocation: {fileID: 1747909283}
+--- !u!114 &639653729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639653726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26509d6939a174042b4104aa53e1c6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: ad5d15ef-434e-4d83-b52f-a0768ddaeb97
 --- !u!1 &642380866
 GameObject:
   m_ObjectHideFlags: 0
@@ -14518,6 +14538,7 @@ MonoBehaviour:
   currentSGType: 5
   sgImg: {fileID: 820772368}
   underSgImg: {fileID: 1685441293}
+  sgButtons: {fileID: 0}
   pickup: {fileID: 1680306447}
 --- !u!114 &820772368
 MonoBehaviour:
@@ -15042,6 +15063,7 @@ MonoBehaviour:
   currentSGType: 1
   sgImg: {fileID: 870484526}
   underSgImg: {fileID: 539265078}
+  sgButtons: {fileID: 0}
   pickup: {fileID: 1680306447}
 --- !u!114 &870484526
 MonoBehaviour:
@@ -16012,6 +16034,7 @@ MonoBehaviour:
   currentSGType: 4
   sgImg: {fileID: 982237326}
   underSgImg: {fileID: 1360260071}
+  sgButtons: {fileID: 0}
   pickup: {fileID: 1680306447}
 --- !u!114 &982237326
 MonoBehaviour:
@@ -18368,6 +18391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inspectUI: {fileID: 1149959690}
   snowGlobesObj: {fileID: 811835308}
+  chooseButton: {fileID: 1613641490}
   curSG: {fileID: 0}
   chosenSG: {fileID: 0}
   curSGObj: {fileID: 0}
@@ -19197,7 +19221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1216369789
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22209,6 +22233,7 @@ MonoBehaviour:
   currentSGType: 0
   sgImg: {fileID: 1468635975}
   underSgImg: {fileID: 1300874241}
+  sgButtons: {fileID: 0}
   pickup: {fileID: 1680306447}
 --- !u!114 &1468635975
 MonoBehaviour:
@@ -23431,6 +23456,7 @@ MonoBehaviour:
   currentSGType: 2
   sgImg: {fileID: 1544952885}
   underSgImg: {fileID: 1847986957}
+  sgButtons: {fileID: 0}
   pickup: {fileID: 1680306447}
 --- !u!114 &1544952885
 MonoBehaviour:
@@ -25965,6 +25991,7 @@ MonoBehaviour:
   currentSGType: 7
   sgImg: {fileID: 1790685130}
   underSgImg: {fileID: 1059474814}
+  sgButtons: {fileID: 0}
   pickup: {fileID: 1680306447}
 --- !u!114 &1790685130
 MonoBehaviour:
@@ -30661,7 +30688,7 @@ PrefabInstance:
       objectReference: {fileID: 626644044}
     - target: {fileID: 4806094309516806123, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.3
+      value: -27.01
       objectReference: {fileID: 0}
     - target: {fileID: 4806094309516806123, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: m_LocalPosition.y
@@ -32727,7 +32754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1059398604540971705, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3902776903070537428, guid: bea8c9a00d45a1a448f06bef9e53a5b6, type: 3}
       propertyPath: m_SortingLayer

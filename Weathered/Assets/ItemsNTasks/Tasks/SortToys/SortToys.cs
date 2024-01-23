@@ -9,6 +9,7 @@ public class SortToys : Task
     int correctToys = 0;
     [SerializeField] AudioSource binPlaceLight;
     [SerializeField] AudioSource binPlaceHeavy;
+
     public void ClickToy(SortToyToy clickedToy)
     {
         if (currentState == taskState.Available)
@@ -70,5 +71,12 @@ public class SortToys : Task
                 ShortTextController.STControl.AddShortText("This doesn't go in there...");
             }
         }
+    }
+
+    public override void LoadFinishedTask()
+    {
+        
+        currentState = taskState.Completed;
+        TaskController.taskControl.CheckCompleteTasks();
     }
 }

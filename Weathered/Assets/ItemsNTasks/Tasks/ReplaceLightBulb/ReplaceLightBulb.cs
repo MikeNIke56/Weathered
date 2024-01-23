@@ -100,4 +100,11 @@ public class ReplaceLightBulb : Task
     {
         time = Random.Range(minTime, maxTime);
     }
+
+    public override void LoadFinishedTask()
+    {
+        
+        currentState = taskState.Completed;
+        TaskController.taskControl.CheckCompleteTasks();
+    }
 }

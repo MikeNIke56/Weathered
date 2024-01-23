@@ -13,6 +13,7 @@ public class ArrangeDolls : Task
     [SerializeField] GameObject sittingSally;
     [SerializeField] GameObject headPopDeath;
     FixDolls fixTask;
+
     public void DollClicked(ArrangeDollsDoll dollClicked)
     {
         if (currentState == taskState.Available)
@@ -129,5 +130,11 @@ public class ArrangeDolls : Task
         base.OnFailed();
         Debug.Log("Mazarine lost her head trying to put the dolls in their rightful places.");
         GameManager.StartDeath(headPopDeath,5f,true);
+    }
+    public override void LoadFinishedTask()
+    {
+        
+        currentState = taskState.Completed;
+        TaskController.taskControl.CheckCompleteTasks();
     }
 }

@@ -49,4 +49,14 @@ public class DustCobwebs : Task
             cobwebsDone = true;
         }
     }
+
+    public override void LoadFinishedTask()
+    {
+        foreach (DustWebsWeb web in allCobwebs)
+        {
+            web.gameObject.SetActive(false);
+        }
+        currentState = taskState.Completed;
+        TaskController.taskControl.CheckCompleteTasks();
+    }
 }

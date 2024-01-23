@@ -5,6 +5,7 @@ using UnityEngine;
 public class MusicBox : Task
 {
     [SerializeField] List<Item> validTapes;
+
     public void ClickedTape(MusicBoxTape tapeClicked)
     {
         if (currentState == taskState.Available)
@@ -62,5 +63,12 @@ public class MusicBox : Task
     public void JumpFailed()
     {
         Debug.Log("Mazarine died by leaving the dancing spirits without music...");
+    }
+
+    public override void LoadFinishedTask()
+    {
+        
+        currentState = taskState.Completed;
+        TaskController.taskControl.CheckCompleteTasks();
     }
 }

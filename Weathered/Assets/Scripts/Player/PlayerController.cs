@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour, ISavable
     bool lockMovement = false;
     public Dictionary<string, bool> moveBlockers = new Dictionary<string, bool>();
 
+    CleanFloor sg;
+
     void Start()
     {
         withinRngIcon.SetActive(false);
@@ -51,11 +53,26 @@ public class PlayerController : MonoBehaviour, ISavable
         moveBlockers.Add("TutorialDialog", false);
         moveBlockers.Add("SpiritWorldTransition", false);
         moveBlockers.Add("Menu", false);
+
+        sg = FindAnyObjectByType<CleanFloor>(FindObjectsInactive.Include);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SavingSystem.i.Save("saveslot1");
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            SavingSystem.i.Load("saveslot1");
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            sg.LoadFinishedTask();
+        }
+
         if (state == GameState.Death)
         {
             return;

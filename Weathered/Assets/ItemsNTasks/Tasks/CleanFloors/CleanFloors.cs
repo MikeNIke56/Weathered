@@ -13,6 +13,7 @@ public class CleanFloor : Task
     bool clearedGlass = false;
     bool clearedSplatters = false;
 
+
     public override void InstanceTask()
     {
         base.InstanceTask();
@@ -78,5 +79,19 @@ public class CleanFloor : Task
     {
         //trigger death condition
         Debug.Log("player has died");
+    }
+
+    public override void LoadFinishedTask()
+    {
+        foreach (BloodSplatter splatters in bloodSplatters)
+        {
+            splatters.gameObject.SetActive(false);
+        }
+        foreach (BrokenGlass glass in brokenGlass)
+        {
+            glass.gameObject.SetActive(false);
+        }
+        currentState = taskState.Completed;
+        TaskController.taskControl.CheckCompleteTasks();
     }
 }

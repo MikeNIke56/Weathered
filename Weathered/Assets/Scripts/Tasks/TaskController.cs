@@ -1,14 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TaskController : MonoBehaviour
+public class TaskController : MonoBehaviour, ISavable
 {
     static public TaskController taskControl;
     public List<Task> taskList = new List<Task>(); //Full list of every task possible
-    public List<Task> taskChosenList = new List<Task>(); //Task list for chosen tasks this game. Referenced commonly. Auto-populated with curation.
+    //public List<Task> taskChosenList = new List<Task>(); //Task list for chosen tasks this game. Referenced commonly. Auto-populated with curation.
     public AudioSource taskCompleteAudio;
     public AudioSource taskBadActionAudio;
     public AudioSource pageFlip;
@@ -128,6 +129,33 @@ public class TaskController : MonoBehaviour
         {
             Debug.Log("All complete!");
             Instantiate(keyDVDReward, keyDVDLocation);
+        }
+    }
+
+    public object CaptureState()
+    {
+        return taskList.Select(q => q.GetSaveData()).ToList();
+    }
+
+    public void RestoreState(object state)
+    {
+        var saveData = state as List<TaskSaveData>;
+        if(saveData != null)
+        {
+            foreach (TaskSaveData task in saveData)
+            {
+                for(int i = 0; i < taskList.Count; i++)
+                {
+                    if (taskList[i].taskName == task.taskName)
+                    {
+                        taskList[i].SetTask(task);
+
+                        if(taskList[i].currentState == Task.taskState.Completed)
+                            taskList[i].LoadFinishedTask();
+                    }
+                }
+            }
+            Debug.Log("loaded");
         }
     }
 }
