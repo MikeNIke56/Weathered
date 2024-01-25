@@ -103,7 +103,8 @@ public class ReplaceLightBulb : Task
 
     public override void LoadFinishedTask()
     {
-        
+        normalLight.enabled = true;
+        spiritLight.gameObject.SetActive(false);
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
     }

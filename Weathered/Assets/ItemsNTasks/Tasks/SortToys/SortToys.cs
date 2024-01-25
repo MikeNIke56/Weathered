@@ -75,7 +75,10 @@ public class SortToys : Task
 
     public override void LoadFinishedTask()
     {
-        
+        foreach(SortToyToy toy in toysList)
+        {
+            toy.gameObject.SetActive(false);
+        }
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
     }

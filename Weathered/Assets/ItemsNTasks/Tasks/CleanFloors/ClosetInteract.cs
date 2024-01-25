@@ -30,4 +30,13 @@ public class ClosetInteract : Interaction
             doorLockedSfx.Play();
         }
     }
+
+    public void OnCompletedLoad()
+    {
+        itemToGive.SetActive(true);
+        gameObject.GetComponent<SpriteRenderer>().sprite = doorOpen;
+        gameObject.GetComponent<Interactable>().enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        isLocked = false;
+    }
 }

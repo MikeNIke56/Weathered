@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArrangeDolls : Task
 {
     [SerializeField] List<Item> validDolls = new List<Item>();
-    [SerializeField] List<ArrangeDollPlaces> allPlaces = new List<ArrangeDollPlaces>();
+    [SerializeField] public List<ArrangeDollPlaces> allPlaces = new List<ArrangeDollPlaces>();
     [SerializeField] GameObject sittingBear;
     [SerializeField] GameObject sittingBenni;
     [SerializeField] GameObject sittingClemmy;
@@ -13,6 +13,8 @@ public class ArrangeDolls : Task
     [SerializeField] GameObject sittingSally;
     [SerializeField] GameObject headPopDeath;
     FixDolls fixTask;
+
+    [SerializeField] GameObject[] dollsToDisable;
 
     public void DollClicked(ArrangeDollsDoll dollClicked)
     {
@@ -133,7 +135,55 @@ public class ArrangeDolls : Task
     }
     public override void LoadFinishedTask()
     {
-        
+        for (int i = 0; i < allPlaces.Count; i++)
+        {
+            for(int j = 0; j < allPlaces[i].dollSitPosition.GetComponentsInChildren<SittingDoll>().Length; j++)
+            {
+                Destroy(allPlaces[i].dollSitPosition.GetComponentsInChildren<SittingDoll>()[j].gameObject);
+            }
+
+            switch (i)
+            {
+                case 0:
+                    var tempObject = Instantiate(sittingClemmy, allPlaces[i].dollSitPosition);
+                    allPlaces[i].satDoll = tempObject.GetComponent<SittingDoll>();
+                    SitDoll(tempObject, allPlaces[i].isInFront, allPlaces[i].facingNum);
+                    break;
+                case 1:
+                    var tempObject1 = Instantiate(sittingSaint, allPlaces[i].dollSitPosition);
+                    allPlaces[i].satDoll = tempObject1.GetComponent<SittingDoll>();
+                    SitDoll(tempObject1, allPlaces[i].isInFront, allPlaces[i].facingNum);
+                    break;
+                case 2:
+                    var tempObject2 = Instantiate(sittingSally, allPlaces[i].dollSitPosition);
+                    allPlaces[i].satDoll = tempObject2.GetComponent<SittingDoll>();
+                    SitDoll(tempObject2, allPlaces[i].isInFront, allPlaces[i].facingNum);
+                    break;
+                case 3:
+                    var tempObject3 = Instantiate(sittingBenni, allPlaces[i].dollSitPosition);
+                    allPlaces[i].satDoll = tempObject3.GetComponent<SittingDoll>();
+                    SitDoll(tempObject3, allPlaces[i].isInFront, allPlaces[i].facingNum);
+                    break;
+                case 4:
+                    var tempObject4 = Instantiate(sittingBear, allPlaces[i].dollSitPosition);
+                    allPlaces[i].satDoll = tempObject4.GetComponent<SittingDoll>();
+                    SitDoll(tempObject4, allPlaces[i].isInFront, allPlaces[i].facingNum);
+                    break;
+                default:
+                    var tempObject5 = Instantiate(sittingClemmy, allPlaces[i].dollSitPosition);
+                    allPlaces[i].satDoll = tempObject5.GetComponent<SittingDoll>();
+                    SitDoll(tempObject5, allPlaces[i].isInFront, allPlaces[i].facingNum);
+                    break;
+            }
+            allPlaces[i].isCorrect = true;
+        }
+
+        for (int i = 0; i < dollsToDisable.Length; i++)
+        {
+            dollsToDisable[i].SetActive(false);
+        }
+
+        UpdateDolls();
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
     }

@@ -5,6 +5,10 @@ using UnityEngine;
 public class MusicBox : Task
 {
     [SerializeField] List<Item> validTapes;
+    [SerializeField] MusicBoxBox musicBoxNormal;
+    [SerializeField] MusicBoxBox musicBoxSpirit;
+    [SerializeField] GameObject[] itemsToHide;
+
 
     public void ClickedTape(MusicBoxTape tapeClicked)
     {
@@ -67,7 +71,16 @@ public class MusicBox : Task
 
     public override void LoadFinishedTask()
     {
-        
+        musicBoxNormal.RetreiveTape();
+        musicBoxNormal.InsertTape(validTapes[2]);
+        musicBoxSpirit.RetreiveTape();
+        musicBoxSpirit.InsertTape(validTapes[3]);
+
+        foreach (var item in itemsToHide)
+        {
+            item.SetActive(false);
+        }
+
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
     }

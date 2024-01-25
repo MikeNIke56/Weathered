@@ -8,6 +8,14 @@ public class FixDolls : Task
     [SerializeField] List<Item> validDolls;
     int fixedDolls = 0;
 
+    ArrangeDolls arrangeDolls;
+    public GameObject[] dollPartsToDisable;
+
+    private void Start()
+    {
+        arrangeDolls = FindAnyObjectByType<ArrangeDolls>(FindObjectsInactive.Include);
+    }
+
     public void ClickedPart(FixDollsPart partClicked)
     {
         Item tempPart = partClicked.GetPartItem();
@@ -79,7 +87,15 @@ public class FixDolls : Task
 
     public override void LoadFinishedTask()
     {
-        
+        foreach (var doll in arrangeDolls.allPlaces)
+        {
+            AttachPart(doll);
+        }
+        for (int i = 0; i < dollPartsToDisable.Length; i++)
+        {
+            dollPartsToDisable[i].SetActive(false);
+        }
+
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
     }

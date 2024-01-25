@@ -60,6 +60,7 @@ public class MusicBoxBox : Interaction
                 BGMManager.BGM = FindFirstObjectByType<BGMManager>();
             }
             BGMManager.BGM.AddVoid(transform.position, new Vector2(18, 5));
+
             StartCoroutine(TapeInsertTimer());
         }
         else
@@ -78,6 +79,4 @@ public class MusicBoxBox : Interaction
         yield return new WaitForSeconds(0.5f);
         isInserting = false;
     }
-
-
 }

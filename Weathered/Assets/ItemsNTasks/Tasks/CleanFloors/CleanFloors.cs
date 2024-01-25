@@ -13,6 +13,8 @@ public class CleanFloor : Task
     bool clearedGlass = false;
     bool clearedSplatters = false;
 
+    [SerializeField] ClosetInteract closet;
+
 
     public override void InstanceTask()
     {
@@ -91,6 +93,7 @@ public class CleanFloor : Task
         {
             glass.gameObject.SetActive(false);
         }
+        closet.OnCompletedLoad();
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
     }
