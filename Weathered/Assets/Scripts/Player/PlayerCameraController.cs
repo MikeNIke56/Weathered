@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerCameraController : MonoBehaviour
 {
-    //Rigidbody's linear drag slows the camera down. followPosLocal is set by the playercontroller. This is setup so if other controls change the player actions it can be changed easily enough. Otherwise, disable this camera and activate other cameras for framing changes/cuts.
+    //Rigidbody's linear drag slows the camera down. followPosLocal is set by the playercontroller.
+    //This is setup so if other controls change the player actions it can be changed easily enough. Otherwise, disable this camera and activate other cameras for framing changes/cuts.
     public Vector3 followPosLocal = new Vector3(0f, 0f, -10f);
     [SerializeField]
     float accelerationModifier = 1f;
