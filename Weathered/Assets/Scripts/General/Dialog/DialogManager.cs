@@ -9,7 +9,13 @@ public class DialogManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogBox;
     [SerializeField] Text dialogText;
+
     [SerializeField] int lettersPerSecond;
+
+    bool skipped = false;
+    bool lineEnded = false;
+
+    float skipTimer = 0.2f;
 
     public event Action OnShowDialog;
     public event Action OnCloseDialog;
@@ -19,6 +25,15 @@ public class DialogManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Update()
+    {
+        UpdateTimer();
+        if (IsShowing == true && lineEnded == false && Input.GetMouseButtonDown(0))
+        {
+            skipped = true;
+        }
     }
 
     public IEnumerator ShowDialogText(string text, bool waitForInput=true, bool autoClose=true, List<string> choices = null, Action<int> onSelected = null)
@@ -51,17 +66,19 @@ public class DialogManager : MonoBehaviour
     public IEnumerator ShowDialog(Dialog dialog, Action onFinished=null, List<string> choices = null, Action<int> onSelected=null)
     {
         yield return new WaitForEndOfFrame();
-
         OnShowDialog?.Invoke();
 
         IsShowing = true;
+        UIController.UIControl.HandleTutorial(IsShowing);
 
         dialogBox.SetActive(true);
 
-        foreach(var line in dialog.Lines)
+        foreach (var line in dialog.Lines)
         {
             yield return TypeDialogue(line);
-            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && skipTimer == 0.0f);
+            skipTimer = 0.2f;
+            skipped = false;
         }
 
         dialogBox.SetActive(false);
@@ -69,18 +86,32 @@ public class DialogManager : MonoBehaviour
         OnCloseDialog?.Invoke();
     }
 
-    public void HandleUpdate()
-    {
-
-    }
-
     public IEnumerator TypeDialogue(string line)
     {
         dialogText.text = "";
+        lineEnded = false;
+
         foreach (var letter in line.ToCharArray())
         {
-            dialogText.text += letter;
-            yield return new WaitForSeconds(1f / lettersPerSecond);
+            if (skipped == false)
+            {
+                dialogText.text += letter;
+                yield return new WaitForSeconds(1f / lettersPerSecond);
+            }
+            else
+            {
+                dialogText.text += letter;
+            }
+            skipTimer = 0.2f;
+        }
+        lineEnded = true;
+    }
+
+    void UpdateTimer()
+    {
+        if (skipTimer > 0)
+        {
+            skipTimer = Mathf.Clamp(skipTimer - Time.deltaTime, 0, skipTimer);
         }
     }
 }

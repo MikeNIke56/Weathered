@@ -40,7 +40,6 @@ public class TutorialDialog : MonoBehaviour
     public GameObject boxesArrow;
 
     PlayerController player;
-    float speedB4Pause;
 
     public static TutorialDialog i { get; private set; }
 
@@ -51,8 +50,6 @@ public class TutorialDialog : MonoBehaviour
         sortBoxes = FindFirstObjectByType<SortBoxes>();
         dustCobwebs = FindFirstObjectByType<DustCobwebs>();
         player = FindFirstObjectByType<PlayerController>();
-
-        speedB4Pause = player.moveSpeed;
     }
     // Start is called before the first frame update
     void Start()
@@ -68,9 +65,9 @@ public class TutorialDialog : MonoBehaviour
     public IEnumerator StartDialog()
     {
         //entrance animation 
+        player.moveBlockers["TutorialDialog"] = true;
         yield return new WaitForSeconds(.5f);
         dialogBox.SetActive(true);
-        player.moveBlockers["TutorialDialog"] = true;
 
         //starting dialog
         yield return new WaitForSeconds(.5f);
