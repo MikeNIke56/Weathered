@@ -43,11 +43,11 @@ public class CameraBehavior : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, rightLimit.position, speed * Time.deltaTime);
         }
         //Return to default
-        /*else
+        else
         {
-            cameraDefaultPos = new Vector3(playerPos.position.x, playerPos.position.y + 3.5f, -10f);
+            cameraDefaultPos = new Vector3(transform.position.x, playerPos.position.y + 3.5f, -10f);
             transform.position = Vector3.MoveTowards(transform.position, cameraDefaultPos, speed * Time.deltaTime);
-        }*/
+        }
 
     }
 }

@@ -3405,6 +3405,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5743277611565387016, guid: 4c8dfaf1917aaa64181bb328c70b2fe5, type: 3}
   m_PrefabInstance: {fileID: 1339096632}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &331385921 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8399068113364706259, guid: 4c8dfaf1917aaa64181bb328c70b2fe5, type: 3}
+  m_PrefabInstance: {fileID: 1339096632}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188556105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ffb66e857763e49af7340552e0cf82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &341425104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29325,7 +29336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPos: {fileID: 1703278482}
-  speed: 5
+  speed: 10
   topLimit: {fileID: 1787183402}
   bottomLimit: {fileID: 927277340}
   leftLimit: {fileID: 1243288176}
@@ -29432,6 +29443,7 @@ MonoBehaviour:
   investigateObjectPrefab: {fileID: 0}
   canInvestigate: 0
   currentDroppedObject: {fileID: 0}
+  stepStoolObj: {fileID: 331385921}
 --- !u!82 &2018158160 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 4109720965152548043, guid: 7909fe1eca7120648814590718c27c71, type: 3}
