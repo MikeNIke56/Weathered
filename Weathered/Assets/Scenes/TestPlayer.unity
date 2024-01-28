@@ -30811,6 +30811,10 @@ PrefabInstance:
       propertyPath: pauseMan
       value: 
       objectReference: {fileID: 8246279852276027736}
+    - target: {fileID: 93977589355444523, guid: 7909fe1eca7120648814590718c27c71, type: 3}
+      propertyPath: interactRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2569014195126510399, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: m_LinearDrag
       value: 1
