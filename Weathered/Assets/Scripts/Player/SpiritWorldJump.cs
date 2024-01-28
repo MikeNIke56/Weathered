@@ -148,6 +148,7 @@ public class SpiritWorldJump : MonoBehaviour
         {
             //Kill player
             Debug.Log("Player has failed to escape the spirit world.");
+            GameManager.StartDeath(null, 0f, false);
         }
     }
 }

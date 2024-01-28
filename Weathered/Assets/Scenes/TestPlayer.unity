@@ -30982,7 +30982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointFlashPrefab: {fileID: 3513534376197621042, guid: 80d96fd8e8b8d314a92843815e9ea379, type: 3}
-  deathImpactSFX: {fileID: 0}
+  deathImpactSFX: {fileID: 693423013}
   defaultCursor: {fileID: 2800000, guid: fbd3cbb94b96ad5478803a1c431cb7e4, type: 3}
 --- !u!1001 &2100040099
 PrefabInstance:
