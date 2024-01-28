@@ -132,6 +132,19 @@ public class ArrangeDolls : Task
         base.OnFailed();
         Debug.Log("Mazarine lost her head trying to put the dolls in their rightful places.");
         GameManager.StartDeath(headPopDeath,5f,true);
+        foreach (ArrangeDollPlaces place in allPlaces)
+        {
+            if (place.satDoll != null && place.satDoll.hasEvil)
+            {
+                foreach (Transform childTransform in place.dollSitPosition)
+                {
+                    Destroy(childTransform.gameObject);
+                }
+            }
+        }
+        Destroy(FindFirstObjectByType<MrBear>().currentDroppedObject);
+        Destroy(FindFirstObjectByType<SallyMae>().currentDroppedObject);
+        Destroy(FindFirstObjectByType<SaintBearnard>().currentDroppedObject);
     }
     public override void LoadFinishedTask()
     {
