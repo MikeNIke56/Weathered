@@ -104,7 +104,7 @@ TextureImporter:
       name: DefaultWoodDoorFrontFrame_0
       rect:
         serializedVersion: 2
-        x: 258
+        x: 268
         y: 56
         width: 127
         height: 712
@@ -125,7 +125,7 @@ TextureImporter:
       name: DefaultWoodDoorFrontFrame_1
       rect:
         serializedVersion: 2
-        x: 639
+        x: 629
         y: 56
         width: 130
         height: 712
