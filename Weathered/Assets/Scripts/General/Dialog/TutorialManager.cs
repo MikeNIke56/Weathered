@@ -10,6 +10,8 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] Text dialogText;
 
     [SerializeField] int lettersPerSecond;
+    [SerializeField] GameObject fadeObj;
+    GameManager gameManager;
 
     bool skipped = false;
     bool lineEnded = false;
@@ -24,6 +26,17 @@ public class TutorialManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        gameManager = FindAnyObjectByType<GameManager>(FindObjectsInactive.Include);
+
+        if (gameManager.tutorialPlayed == false)
+        {
+            fadeObj.SetActive(true);
+            gameManager.tutorialPlayed = true;
+        }
     }
 
     private void Update()

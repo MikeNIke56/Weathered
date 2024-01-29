@@ -965,7 +965,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: ce746aab43fcf704fa35eb1f9d783a63, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -1051,7 +1051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8917915553766912730, guid: 6b6298309f9240b4cb4305b86a231d02, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8917915553766912730, guid: 6b6298309f9240b4cb4305b86a231d02, type: 3}
       propertyPath: m_SortingLayerID
@@ -1247,10 +1247,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4160833371452974712, guid: 805838acbfc34544bb436c161652407a, type: 3}
       insertIndex: 3
-      addedObject: {fileID: 1366222817}
+      addedObject: {fileID: 1852802164}
     - targetCorrespondingSourceObject: {fileID: 4160833371452974712, guid: 805838acbfc34544bb436c161652407a, type: 3}
       insertIndex: 4
-      addedObject: {fileID: 1852802164}
+      addedObject: {fileID: 1366222817}
     - targetCorrespondingSourceObject: {fileID: 4160833371452974712, guid: 805838acbfc34544bb436c161652407a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 998629455}

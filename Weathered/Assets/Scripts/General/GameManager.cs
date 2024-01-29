@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour, ISavable
 {
     static public GameManager GM;
     static GameObject flashPrefab;
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     static float deathShotFadeOut = 2f;
     [SerializeField] AudioSource deathImpactSFX;
     [SerializeField] Texture2D defaultCursor;
+
+    public bool tutorialPlayed = false;
 
     void Start()
     {
@@ -59,5 +62,27 @@ public class GameManager : MonoBehaviour
     static public void RestartGame()
     {
         SceneManager.LoadScene("TestPlayer");
+    }
+
+    public object CaptureState()
+    {
+        var saveData = new GameManagerSaveData()
+        {
+            tutorialPlayed = tutorialPlayed,
+        };
+
+        return saveData;
+    }
+
+    public void RestoreState(object state)
+    {
+        var saveData = (GameManagerSaveData)state;
+        var tutPlayed = saveData.tutorialPlayed;
+        this.tutorialPlayed = tutPlayed;
+    }
+    [Serializable]
+    public class GameManagerSaveData
+    {
+        public bool tutorialPlayed = false;
     }
 }
