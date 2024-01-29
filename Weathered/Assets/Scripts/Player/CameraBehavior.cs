@@ -6,17 +6,21 @@ public class CameraBehavior : MonoBehaviour
 {
     public Transform playerPos;
     private Vector3 cameraDefaultPos;
-    public float speed = .1f;
+    public float speed = 10f;
 
     [Header("Limit Points")]
     public Transform topLimit;
     public Transform bottomLimit;
     public Transform leftLimit;
     public Transform rightLimit;
+    public Transform topLeftLimit;
+    public Transform topRightLimit;
+    public Transform bottomLeftLimit;
+    public Transform bottomRightLimit;
 
     void Start()
     {
-        cameraDefaultPos = new Vector3(playerPos.position.x, playerPos.position.y + 3.5f, -10f);
+        cameraDefaultPos = new Vector3(playerPos.position.x + 2f, playerPos.position.y + 3.5f, -10f);
         transform.position = cameraDefaultPos;
     }
 
@@ -25,12 +29,40 @@ public class CameraBehavior : MonoBehaviour
         //Look up
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position = Vector3.MoveTowards(transform.position, topLimit.position, speed * Time.deltaTime);
+            //Left up
+            if (Input.GetKey(KeyCode.A) || transform.position.x < playerPos.position.x)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, topLeftLimit.position, speed * Time.deltaTime);
+            }
+            //Right up
+            else if (Input.GetKey(KeyCode.D) || transform.position.x > playerPos.position.x)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, topRightLimit.position, speed * Time.deltaTime);
+            }
+            //up
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, topLimit.position, speed * Time.deltaTime);
+            }
         }
         //Look down
         else if (Input.GetKey(KeyCode.S))
         {
-            transform.position = Vector3.MoveTowards(transform.position, bottomLimit.position, speed * Time.deltaTime);
+            //Left down
+            if (Input.GetKey(KeyCode.A) || transform.position.x < playerPos.position.x)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, bottomLeftLimit.position, speed * Time.deltaTime);
+            }
+            //Right down
+            else if (Input.GetKey(KeyCode.D) || transform.position.x > playerPos.position.x)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, bottomRightLimit.position, speed * Time.deltaTime);
+            }
+            //down
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, bottomLimit.position, speed * Time.deltaTime);
+            }
         }
         //Look left
         else if (Input.GetKey(KeyCode.A))
