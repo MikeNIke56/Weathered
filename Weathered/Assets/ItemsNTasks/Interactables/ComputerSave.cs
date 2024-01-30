@@ -5,7 +5,6 @@ using static PlayerController;
 
 public class ComputerSave : Interaction
 {
-    [SerializeField] GameObject saveUI;
     PlayerController player;
 
     void Start()
@@ -14,7 +13,7 @@ public class ComputerSave : Interaction
     }
     public override void onClick()
     {
-        saveUI.SetActive(true);
+        UIController.UIControl.OpenSaveUI();
         player.state = GameState.Menu;
     }
 }

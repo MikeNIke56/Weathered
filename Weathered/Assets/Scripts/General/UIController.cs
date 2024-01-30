@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject tasksMenu;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject deathScreen;
+    [SerializeField] GameObject saveScreen;
 
     [SerializeField] GameObject auntVoicemailScreen;
 
@@ -41,6 +42,7 @@ public class UIController : MonoBehaviour
         investigateMenu.SetActive(true);
         inputHandler.SetActive(false);
         player.moveBlockers["Menu"] = true;
+        saveScreen.SetActive(false);
     }
 
     public void CloseInteractionMenu()
@@ -63,10 +65,18 @@ public class UIController : MonoBehaviour
         isTasksMenuOpen = true;
         tasksMenu.SetActive(true);
         inputHandler.SetActive(false);
+        saveScreen.SetActive(false);
         player.state = PlayerController.GameState.Menu;
         player.moveBlockers["Menu"] = true;
         openNotes.Play();
     }
+    public void OpenSaveUI()
+    {
+        saveScreen.SetActive(true);
+        tasksMenu.SetActive(false);
+        inputHandler.SetActive(false);
+        player.state = PlayerController.GameState.Menu;
+        player.moveBlockers["Menu"] = true;    }
     public void CloseTasksMenu()
     {
         isTasksMenuOpen = false;
@@ -84,6 +94,7 @@ public class UIController : MonoBehaviour
         baseGameUI.SetActive(false);
         investigateMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        saveScreen.SetActive(false);
     }
     public void ShowDeathScreen()
     {
@@ -105,6 +116,7 @@ public class UIController : MonoBehaviour
         investigateMenu.SetActive(false);
         inputHandler.SetActive(false);
         auntVoicemailScreen.SetActive(true);
+        saveScreen.SetActive(false);
         player.moveBlockers["Menu"] = true;
     }
     public void CloseAuntVoicemail()
@@ -115,5 +127,6 @@ public class UIController : MonoBehaviour
         inputHandler.SetActive(true);
         auntVoicemailScreen.SetActive(false);
         player.moveBlockers["Menu"] = false;
+        saveScreen.SetActive(false);
     }
 }

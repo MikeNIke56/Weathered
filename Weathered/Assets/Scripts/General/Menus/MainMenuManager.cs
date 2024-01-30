@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,25 +17,31 @@ public class MainMenuManager : MonoBehaviour
     public IEnumerator NewGame()
     {
         //opens the scene that will start a new game
-        //right now im using this for testing stuff
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync("TestPlayer");
+        //loading main scene in background
+        UnityEngine.AsyncOperation operation = SceneManager.LoadSceneAsync("TestPlayer");
         operation.allowSceneActivation = false;
 
+        //while scene is being loaded
         while(!operation.isDone)
         {
-            if(activated == false)
+            if (activated == false)
             {
+                //the loading screen will appear and the raccoon wave animation will play
                 loadScreen.SetActive(true);
                 raccoon.SetActive(true);
                 activated = true;
+
+                //tiny buffer between the loading screen stuff and the below logic
+                yield return new WaitForSeconds(.5f);
             }
+
+            //once loading of the main scene is done- loads it in
+            if (operation.progress >= 0.9f)
+                operation.allowSceneActivation = true;
+
             yield return null;
         }
-
-        //loadScreen.SetActive(true);
-        //raccoon.SetActive(true);
-        //SceneManager.LoadScene("TestPlayer");
     }
     public void LoadGame()
     {
