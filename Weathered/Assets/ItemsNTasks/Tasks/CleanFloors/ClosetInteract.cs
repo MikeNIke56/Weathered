@@ -6,6 +6,7 @@ public class ClosetInteract : Interaction
 {
     [SerializeField] Item itemToOpen;
     [SerializeField] GameObject itemToGive;
+    [SerializeField] GameObject itemToGive2;
     [SerializeField] Sprite doorOpen;
     [SerializeField] AudioSource doorOpenSfx;
     [SerializeField] AudioSource doorLockedSfx;
@@ -18,6 +19,7 @@ public class ClosetInteract : Interaction
         {
             ItemController.ClearItemInHand();
             itemToGive.SetActive(true);
+            itemToGive2.SetActive(true);
             gameObject.GetComponent<SpriteRenderer>().sprite = doorOpen;
             doorOpenSfx.Play();
             gameObject.GetComponent<Interactable>().enabled = false;
@@ -34,6 +36,7 @@ public class ClosetInteract : Interaction
     public void OnCompletedLoad()
     {
         itemToGive.SetActive(true);
+        itemToGive2.SetActive(true);
         gameObject.GetComponent<SpriteRenderer>().sprite = doorOpen;
         gameObject.GetComponent<Interactable>().enabled = false;
         gameObject.GetComponent<BoxCollider2D>().enabled = false;

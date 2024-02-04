@@ -70,13 +70,6 @@ public class UIController : MonoBehaviour
         player.moveBlockers["Menu"] = true;
         openNotes.Play();
     }
-    public void OpenSaveUI()
-    {
-        saveScreen.SetActive(true);
-        tasksMenu.SetActive(false);
-        inputHandler.SetActive(false);
-        player.state = PlayerController.GameState.Menu;
-        player.moveBlockers["Menu"] = true;    }
     public void CloseTasksMenu()
     {
         isTasksMenuOpen = false;
@@ -84,6 +77,26 @@ public class UIController : MonoBehaviour
         inputHandler.SetActive(true);
         player.state = PlayerController.GameState.FreeRoam;
         player.moveBlockers["Menu"] = false;
+    }
+    public void OpenSaveUI()
+    {
+        saveScreen.SetActive(true);
+        tasksMenu.SetActive(false);
+        inputHandler.SetActive(false);
+        player.state = PlayerController.GameState.Menu;
+        player.moveBlockers["Menu"] = true;
+        Time.timeScale = 0f;
+    }
+    public void CloseSaveUI()
+    {
+        saveScreen.SetActive(false);
+        saveScreen.GetComponent<SaveMenu>().buttonsUI.SetActive(true);
+        saveScreen.GetComponent<SaveMenu>().slotsUI.SetActive(false);
+        tasksMenu.SetActive(false);
+        inputHandler.SetActive(false);
+        player.state = PlayerController.GameState.FreeRoam;
+        player.moveBlockers["Menu"] = false;
+        Time.timeScale = 1f;
     }
     public void DeathEventScreen()
     {
