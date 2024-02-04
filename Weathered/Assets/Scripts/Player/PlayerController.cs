@@ -60,14 +60,6 @@ public class PlayerController : MonoBehaviour, ISavable
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SavingSystem.i.Save("saveslot1");
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            SavingSystem.i.Load("saveslot1");
-        }
         if (Input.GetKeyDown(KeyCode.I))
         {
             sg.LoadFinishedTask();
@@ -116,6 +108,7 @@ public class PlayerController : MonoBehaviour, ISavable
         {
             UIController.UIControl.CloseInteractionMenu();
             UIController.UIControl.CloseTasksMenu();
+            UIController.UIControl.CloseSaveUI();
             UIController.UIControl.CloseAuntVoicemail();
             state = GameState.FreeRoam;
             moveBlockers["Menu"] = false;
