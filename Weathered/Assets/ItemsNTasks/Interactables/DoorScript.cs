@@ -4,25 +4,35 @@ using UnityEngine;
 
 public class DoorScript : Interaction
 {
+    [SerializeField] bool isLocked = false;
     [SerializeField] Item itemToOpen;
+    [SerializeField] DoorScript altDoor;
+    [SerializeField] string voicemailID = "";
+
     [SerializeField] GameObject DoorLogic; //Collider to disable
     [SerializeField] AudioSource lockedSFX;
     [SerializeField] AudioSource openDoorSFX;
     [SerializeField] GameObject DoorOpenRoot;
     [SerializeField] GameObject DoorClosedRoot;
-    [SerializeField] DoorScript altDoor;
-    [SerializeField] bool hasVoicemail = true;
 
     public override void onClick()
     {
-        Debug.Log("Hello");
-        if (ItemController.itemInHand == itemToOpen)
+        if (isLocked)
         {
-            DoorLogic.SetActive(false);
+            lockedSFX.Play();
+            ShortTextController.STControl.AddShortText("It's locked.", true);
+        }
+        else if (itemToOpen != null && ItemController.itemInHand == itemToOpen)
+        {
             ItemController.ClearItemInHand();
-            DoorClosedRoot.SetActive(false);
-            DoorOpenRoot.SetActive(true);
-            openDoorSFX.Play();
+            OpenDoor(false);
+            if (altDoor != null)
+            {
+                altDoor.OpenDoor(true);
+            }
+        }
+        else if (itemToOpen == null && !isLocked)
+        {
             OpenDoor(false);
             if (altDoor != null)
             {
@@ -32,7 +42,7 @@ public class DoorScript : Interaction
         else
         {
             lockedSFX.Play();
-            ShortTextController.STControl.AddShortText("Oh, it looks like I can’t get through here yet…", true);
+            ShortTextController.STControl.AddShortText("Oh, I can’t get through here yet…", true);
         }
     }
 
@@ -43,9 +53,8 @@ public class DoorScript : Interaction
         DoorOpenRoot.SetActive(true);
         if (!isAltDoor)
         {
-            ItemController.ClearItemInHand();
             openDoorSFX.Play();
-            if (hasVoicemail)
+            if (!string.IsNullOrEmpty(voicemailID))
             {
                 FindFirstObjectByType<PhoneControl>().NewVoicemail();
             }

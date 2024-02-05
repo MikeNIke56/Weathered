@@ -12,6 +12,7 @@ public class SpiritWorldJump : MonoBehaviour
     [SerializeField] Image deathEffectImage;
     [SerializeField] Image vignetteImage;
     [SerializeField] float fadeInSeconds = 2f;
+    public bool isEntrance = false;
     static bool isJumping = false;
     public Dictionary<string, bool> jumpBlockers = new Dictionary<string, bool>();
     void Start()
@@ -137,7 +138,14 @@ public class SpiritWorldJump : MonoBehaviour
                 isEscaped = true;
                 break;
             }
-            deathEffectImage.color += new Color32(0, 0, 0, 1);
+            if (isEntrance)
+            {
+                deathEffectImage.color -= new Color32(0, 0, 0, 1);
+            }
+            else
+            {
+                deathEffectImage.color += new Color32(0, 0, 0, 1);
+            }
             yield return new WaitForSeconds(fadeStep);
         }
         if (isEscaped)

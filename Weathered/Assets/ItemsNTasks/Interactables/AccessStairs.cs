@@ -5,11 +5,12 @@ using UnityEngine;
 public class AccessStairs : Interaction
 {
     public bool isPassable = false;
-    bool isDown = true;
-    //bool isUp = false;
+    bool isAboutToBreak = true;
+    bool isBroken = false;
 
-    public Transform upStairsSpawnPos;
-    public Transform downStairsSpawnPos;
+    [SerializeField] Transform upStairsSpawnPos;
+    [SerializeField] Transform downStairsSpawnPos;
+    [SerializeField] Transform stairsFallSpotPos;
 
     PlayerController player;
 
@@ -20,22 +21,23 @@ public class AccessStairs : Interaction
 
     public override void onClick()
     {
-        Debug.Log("Clicked Stairs");
-        if (isPassable == true)
+        if (isAboutToBreak && isPassable)
         {
-            if(isDown == true)
+            player.transform.position = stairsFallSpotPos.position;
+        }
+        else if (isBroken)
+        {
+
+        }
+        else if (isPassable && !isBroken)
+        {
+            if(player.transform.position.y <= downStairsSpawnPos.position.y)
             {
                 player.transform.position = upStairsSpawnPos.position;
-                isDown = false;
-                //isUp = true;
-                Debug.Log("moved upstairs");
             }
             else
             {
                 player.transform.position = downStairsSpawnPos.position;
-                isDown = true;
-                //isUp = false;
-                Debug.Log("moved downstairs");
             }
         }
     }
