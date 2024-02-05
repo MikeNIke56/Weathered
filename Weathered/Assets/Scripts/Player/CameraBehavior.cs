@@ -26,8 +26,44 @@ public class CameraBehavior : MonoBehaviour
 
     void Update()
     {
+        //Look right
+        if (Input.GetKey(KeyCode.D))
+        {
+            //Right up
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.position = Vector3.MoveTowards(transform.position, topRightLimit.position, speed * Time.deltaTime);
+            }
+            //Right down
+            else if (Input.GetKey(KeyCode.S))
+            {
+                transform.position = Vector3.MoveTowards(transform.position, bottomRightLimit.position, speed * Time.deltaTime);
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, rightLimit.position, speed * Time.deltaTime);
+            }
+        }
+        //Look left
+        else if (Input.GetKey(KeyCode.A))
+        {
+            //Left up
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.position = Vector3.MoveTowards(transform.position, topLeftLimit.position, speed * Time.deltaTime);
+            }
+            //Left down
+            else if (Input.GetKey(KeyCode.S))
+            {
+                transform.position = Vector3.MoveTowards(transform.position, bottomLeftLimit.position, speed * Time.deltaTime);
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, leftLimit.position, speed * Time.deltaTime);
+            }
+        }
         //Look up
-        if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W))
         {
             //Left up
             if (Input.GetKey(KeyCode.A) || transform.position.x < playerPos.position.x)
@@ -63,16 +99,6 @@ public class CameraBehavior : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, bottomLimit.position, speed * Time.deltaTime);
             }
-        }
-        //Look left
-        else if (Input.GetKey(KeyCode.A))
-        {
-            transform.position = Vector3.MoveTowards(transform.position, leftLimit.position, speed * Time.deltaTime);
-        }
-        //Look right
-        else if (Input.GetKey(KeyCode.D))
-        {
-            transform.position = Vector3.MoveTowards(transform.position, rightLimit.position, speed * Time.deltaTime);
         }
         //Return to default
         else
