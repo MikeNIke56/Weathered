@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour, ISavable
         state = GameState.FreeRoam;
         moveBlockers.Add("StepStool", false);
         moveBlockers.Add("TutorialDialog", false);
+        moveBlockers.Add("CharacterDialog", false);
         moveBlockers.Add("SpiritWorldTransition", false);
         moveBlockers.Add("Menu", false);
 

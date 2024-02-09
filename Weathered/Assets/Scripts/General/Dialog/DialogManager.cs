@@ -63,13 +63,13 @@ public class DialogManager : MonoBehaviour
         IsShowing = false;
     }
 
-    public IEnumerator ShowDialog(Dialog dialog, Action onFinished=null, List<string> choices = null, Action<int> onSelected=null)
+    public IEnumerator ShowDialog(Dialog dialog)
     {
         yield return new WaitForEndOfFrame();
         OnShowDialog?.Invoke();
 
         IsShowing = true;
-        UIController.UIControl.HandleTutorial(IsShowing);
+        UIController.UIControl.HandleDialogBox(IsShowing);
 
         dialogBox.SetActive(true);
 
@@ -80,6 +80,52 @@ public class DialogManager : MonoBehaviour
             skipTimer = 0.2f;
             skipped = false;
         }
+
+        dialogBox.SetActive(false);
+        IsShowing = false;
+        OnCloseDialog?.Invoke();
+    }
+
+    public IEnumerator ShowDialog(string line)
+    {
+        yield return new WaitForEndOfFrame();
+        OnShowDialog?.Invoke();
+
+        IsShowing = true;
+        UIController.UIControl.HandleDialogBox(IsShowing);
+
+        dialogBox.SetActive(true);
+
+        yield return TypeDialogue(line);
+        yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && skipTimer == 0.0f);
+        skipTimer = 0.2f;
+        skipped = false;
+
+        dialogBox.SetActive(false);
+        IsShowing = false;
+        OnCloseDialog?.Invoke();
+    }
+
+
+    public IEnumerator ShowDialog(Dialog[] dialog, int dialogGroupPos)
+    {
+        yield return new WaitForEndOfFrame();
+        OnShowDialog?.Invoke();
+
+        IsShowing = true;
+        UIController.UIControl.HandleDialogBox(IsShowing);
+
+        dialogBox.SetActive(true);
+
+        foreach (var line in dialog[dialogGroupPos].Lines)
+        {
+            yield return TypeDialogue(line);
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && skipTimer == 0.0f);
+            skipTimer = 0.2f;
+            skipped = false;
+        }
+
+        
 
         dialogBox.SetActive(false);
         IsShowing = false;
