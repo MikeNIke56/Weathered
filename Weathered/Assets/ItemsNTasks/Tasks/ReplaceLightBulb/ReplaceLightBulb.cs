@@ -69,6 +69,7 @@ public class ReplaceLightBulb : Task
             {
                 OnCompleted();
                 ItemController.ClearItemInHand();
+                FindFirstObjectByType<ClosetInteract>().isLocked = false;
             }
         }
     }

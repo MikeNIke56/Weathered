@@ -35,7 +35,7 @@ public class SpiritLightHB : MonoBehaviour
 
             if(isRefreshed == true)
             {
-                ShortTextController.STControl.AddShortText("Something is keeping me from openeing this door...");
+                ShortTextController.STControl.AddShortText("Something is keeping me from opening this door...");
                 isRefreshed = false;
             }
         }
