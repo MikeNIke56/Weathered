@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogBox;
+    [SerializeField] Image characterImg;
     [SerializeField] Text dialogText;
 
     [SerializeField] int lettersPerSecond;
@@ -20,7 +21,13 @@ public class DialogManager : MonoBehaviour
     public event Action OnShowDialog;
     public event Action OnCloseDialog;
     public bool IsShowing { get; private set; }
-   
+
+    public Sprite mazarineImg;
+    public Sprite chairImg;
+
+    public enum Character { Mazarine, Chair }; //states that the player can be in
+    public Character character;
+
     public static DialogManager Instance { get; private set; }
     private void Awake()
     {
@@ -63,7 +70,42 @@ public class DialogManager : MonoBehaviour
         IsShowing = false;
     }
 
-    public IEnumerator ShowDialog(Dialog dialog)
+    public IEnumerator ShowDialog(Character character, string line)
+    {
+        yield return new WaitForEndOfFrame();
+        OnShowDialog?.Invoke();
+
+        IsShowing = true;
+        UIController.UIControl.HandleDialogBox(IsShowing);
+
+        dialogBox.SetActive(true);
+
+        switch (character)
+        {
+            case Character.Mazarine:
+                characterImg.sprite = mazarineImg;
+                break;
+            case Character.Chair:
+                characterImg.sprite = chairImg;
+                break;
+            default:
+                characterImg = null;
+                break;
+        }
+
+        yield return TypeDialogue(line);
+        yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && skipTimer == 0.0f);
+        skipTimer = 0.2f;
+        skipped = false;
+
+        dialogBox.SetActive(false);
+        IsShowing = false;
+        UIController.UIControl.HandleDialogBox(IsShowing);
+        OnCloseDialog?.Invoke();
+    }
+
+
+    public IEnumerator ShowDialog(Character character, Dialog dialog)
     {
         yield return new WaitForEndOfFrame();
         OnShowDialog?.Invoke();
@@ -74,50 +116,6 @@ public class DialogManager : MonoBehaviour
         dialogBox.SetActive(true);
 
         foreach (var line in dialog.Lines)
-        {
-            yield return TypeDialogue(line);
-            yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && skipTimer == 0.0f);
-            skipTimer = 0.2f;
-            skipped = false;
-        }
-
-        dialogBox.SetActive(false);
-        IsShowing = false;
-        OnCloseDialog?.Invoke();
-    }
-
-    public IEnumerator ShowDialog(string line)
-    {
-        yield return new WaitForEndOfFrame();
-        OnShowDialog?.Invoke();
-
-        IsShowing = true;
-        UIController.UIControl.HandleDialogBox(IsShowing);
-
-        dialogBox.SetActive(true);
-
-        yield return TypeDialogue(line);
-        yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && skipTimer == 0.0f);
-        skipTimer = 0.2f;
-        skipped = false;
-
-        dialogBox.SetActive(false);
-        IsShowing = false;
-        OnCloseDialog?.Invoke();
-    }
-
-
-    public IEnumerator ShowDialog(Dialog[] dialog, int dialogGroupPos)
-    {
-        yield return new WaitForEndOfFrame();
-        OnShowDialog?.Invoke();
-
-        IsShowing = true;
-        UIController.UIControl.HandleDialogBox(IsShowing);
-
-        dialogBox.SetActive(true);
-
-        foreach (var line in dialog[dialogGroupPos].Lines)
         {
             yield return TypeDialogue(line);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && skipTimer == 0.0f);

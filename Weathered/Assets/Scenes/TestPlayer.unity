@@ -7323,7 +7323,6 @@ MonoBehaviour:
   - {fileID: 569233655}
   - {fileID: 2066987686}
   - {fileID: 543056631}
-  - {fileID: 226107118}
   taskCompleteAudio: {fileID: 2018158160}
   taskBadActionAudio: {fileID: 16228670}
   pageFlip: {fileID: 431639190}
@@ -23633,7 +23632,7 @@ GameObject:
   - component: {fileID: 1603545270}
   - component: {fileID: 1603545273}
   m_Layer: 0
-  m_Name: TestCharacterDialogObj
+  m_Name: Chair
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23778,9 +23777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e3ff8926257e5f42a6764dd7b0a836e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggered: 0
-  talksFirst: 0
-  dialogBox: {fileID: 295859160}
 --- !u!1 &1607825970
 GameObject:
   m_ObjectHideFlags: 0
@@ -28541,6 +28537,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2114710253523732254, guid: 9d05b32f763263d45a01c29fa54870ed, type: 3}
   m_PrefabInstance: {fileID: 1159475088}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2032871147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2032871149}
+  - component: {fileID: 2032871148}
+  m_Layer: 0
+  m_Name: DialogTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &2032871148
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032871147}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.7122574, y: -0.46369576}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.3959217, y: 1.9273915}
+  m_EdgeRadius: 0
+--- !u!4 &2032871149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032871147}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.44, y: -5.85, z: -0.023364753}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2037567225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29547,7 +29621,7 @@ GameObject:
   - component: {fileID: 2079627850}
   - component: {fileID: 2079627849}
   m_Layer: 0
-  m_Name: Mazarine
+  m_Name: PFPImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29815,38 +29889,6 @@ PrefabInstance:
       propertyPath: pauseMan
       value: 
       objectReference: {fileID: 8246279852276027736}
-    - target: {fileID: 1216280231285071758, guid: 7909fe1eca7120648814590718c27c71, type: 3}
-      propertyPath: dialogBox
-      value: 
-      objectReference: {fileID: 295859160}
-    - target: {fileID: 1216280231285071758, guid: 7909fe1eca7120648814590718c27c71, type: 3}
-      propertyPath: testDialog.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1216280231285071758, guid: 7909fe1eca7120648814590718c27c71, type: 3}
-      propertyPath: testDialog.Array.data[0].lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1216280231285071758, guid: 7909fe1eca7120648814590718c27c71, type: 3}
-      propertyPath: testDialog.Array.data[1].lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1216280231285071758, guid: 7909fe1eca7120648814590718c27c71, type: 3}
-      propertyPath: 'testDialog.Array.data[0].lines.Array.data[0]'
-      value: this is line 1 of group 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1216280231285071758, guid: 7909fe1eca7120648814590718c27c71, type: 3}
-      propertyPath: 'testDialog.Array.data[0].lines.Array.data[1]'
-      value: this is the line after line 1 in group 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1216280231285071758, guid: 7909fe1eca7120648814590718c27c71, type: 3}
-      propertyPath: 'testDialog.Array.data[1].lines.Array.data[0]'
-      value: this is line 1 of group 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1216280231285071758, guid: 7909fe1eca7120648814590718c27c71, type: 3}
-      propertyPath: 'testDialog.Array.data[1].lines.Array.data[1]'
-      value: this is the line after line 1 in group 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3783056970549416719, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: blackoutImage
       value: 
@@ -29861,7 +29903,7 @@ PrefabInstance:
       objectReference: {fileID: 626644044}
     - target: {fileID: 4806094309516806123, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.92
+      value: -11.68
       objectReference: {fileID: 0}
     - target: {fileID: 4806094309516806123, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33427,8 +33469,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 295859160}
+  characterImg: {fileID: 2079627849}
   dialogText: {fileID: 2131506699}
   lettersPerSecond: 50
+  mazarineImg: {fileID: 5371026385874713445, guid: acbeca46b96bc194885910663be47641, type: 3}
+  chairImg: {fileID: 8167391272134822621, guid: 4bac1147db5992a4c91e62c46ccaf3a3, type: 3}
+  character: 0
 --- !u!114 &7587901819053004707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34101,6 +34147,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1793989010}
   - {fileID: 2089686627}
+  - {fileID: 2032871149}
   - {fileID: 2080871554}
   - {fileID: 1603545272}
   - {fileID: 101354581}

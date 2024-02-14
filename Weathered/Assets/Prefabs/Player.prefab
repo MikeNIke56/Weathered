@@ -871,7 +871,6 @@ GameObject:
   - component: {fileID: 3327759460287485382}
   - component: {fileID: 93977589355444523}
   - component: {fileID: 1494374794305515752}
-  - component: {fileID: 1216280231285071758}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1007,23 +1006,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueId: 9a1a88b8-02b8-4930-a827-057ecf8efdf1
---- !u!114 &1216280231285071758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6726939028777187097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45ee6e04eb60191458e37977263a14c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 0}
-  targetCharacter: {fileID: 0}
-  triggered: 0
-  talksFirst: 0
-  testDialog: []
 --- !u!1 &6898085202574206208
 GameObject:
   m_ObjectHideFlags: 0
