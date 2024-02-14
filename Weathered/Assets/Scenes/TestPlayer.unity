@@ -28547,6 +28547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032871149}
   - component: {fileID: 2032871148}
+  - component: {fileID: 2032871150}
   m_Layer: 0
   m_Name: DialogTrigger
   m_TagString: Untagged
@@ -28615,6 +28616,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2032871150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032871147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e20495869e50384ba5ac7b3c620c159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2037567225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33474,7 +33487,7 @@ MonoBehaviour:
   lettersPerSecond: 50
   mazarineImg: {fileID: 5371026385874713445, guid: acbeca46b96bc194885910663be47641, type: 3}
   chairImg: {fileID: 8167391272134822621, guid: 4bac1147db5992a4c91e62c46ccaf3a3, type: 3}
-  character: 0
+  trigger: 0
 --- !u!114 &7587901819053004707
 MonoBehaviour:
   m_ObjectHideFlags: 0

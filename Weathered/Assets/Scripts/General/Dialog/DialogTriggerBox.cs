@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class DialogTriggerBox : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    PlayerController player;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        player = FindAnyObjectByType<PlayerController>();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.name)
+        {
+            case "Player":
+                StartCoroutine(TalkableCharacter.i.TriggerCutsceneDialog(DialogManager.DialogTriggers.MazarineTestCutScene, this.gameObject));
+                break;
+            default:
+                StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Chair, "fail"));
+                break;
+        }
     }
 }

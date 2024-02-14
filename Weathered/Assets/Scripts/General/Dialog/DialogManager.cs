@@ -25,8 +25,8 @@ public class DialogManager : MonoBehaviour
     public Sprite mazarineImg;
     public Sprite chairImg;
 
-    public enum Character { Mazarine, Chair }; //states that the player can be in
-    public Character character;
+    public enum DialogTriggers { Mazarine, Chair, MazarineTestCutScene }; //states that the player can be in
+    public DialogTriggers trigger;
 
     public static DialogManager Instance { get; private set; }
     private void Awake()
@@ -70,7 +70,7 @@ public class DialogManager : MonoBehaviour
         IsShowing = false;
     }
 
-    public IEnumerator ShowDialog(Character character, string line)
+    public IEnumerator ShowDialog(DialogTriggers character, string line)
     {
         yield return new WaitForEndOfFrame();
         OnShowDialog?.Invoke();
@@ -82,10 +82,10 @@ public class DialogManager : MonoBehaviour
 
         switch (character)
         {
-            case Character.Mazarine:
+            case DialogTriggers.Mazarine:
                 characterImg.sprite = mazarineImg;
                 break;
-            case Character.Chair:
+            case DialogTriggers.Chair:
                 characterImg.sprite = chairImg;
                 break;
             default:
@@ -105,7 +105,7 @@ public class DialogManager : MonoBehaviour
     }
 
 
-    public IEnumerator ShowDialog(Character character, Dialog dialog)
+    public IEnumerator ShowDialog(DialogTriggers character, Dialog dialog)
     {
         yield return new WaitForEndOfFrame();
         OnShowDialog?.Invoke();
