@@ -5760,6 +5760,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 101354581}
     m_Modifications:
+    - target: {fileID: 980256886666503642, guid: df6a4397172800449b0095eb64c88aab, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2240057899269859116, guid: df6a4397172800449b0095eb64c88aab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5805,6 +5809,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1041175422}
     - target: {fileID: 4679025160844276058, guid: df6a4397172800449b0095eb64c88aab, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679025160844276058, guid: df6a4397172800449b0095eb64c88aab, type: 3}
       propertyPath: itemToOpen
       value: 
       objectReference: {fileID: 1693261126}
@@ -5812,9 +5820,17 @@ PrefabInstance:
       propertyPath: voicemailID
       value: Toys
       objectReference: {fileID: 0}
+    - target: {fileID: 7712091344266066028, guid: df6a4397172800449b0095eb64c88aab, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8030476575161749459, guid: df6a4397172800449b0095eb64c88aab, type: 3}
       propertyPath: m_Name
       value: EntranceRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8719162500466809826, guid: df6a4397172800449b0095eb64c88aab, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8938772427941810248, guid: df6a4397172800449b0095eb64c88aab, type: 3}
       propertyPath: altDoor

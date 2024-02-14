@@ -63,16 +63,19 @@ public class SaveMenu : MonoBehaviour
             switch (slot)
             {
                 case 1:
-                    SavingSystem.i.Load("SaveSlot1");
+                    if(slots[0].GetComponentInChildren<Text>().text != "Empty Slot")
+                        SavingSystem.i.Load("SaveSlot1");
                     break;
                 case 2:
-                    SavingSystem.i.Load("SaveSlot2");
+                    if(slots[1].GetComponentInChildren<Text>().text != "Empty Slot")
+                        SavingSystem.i.Load("SaveSlot2");
                     break;
                 case 3:
-                    SavingSystem.i.Load("SaveSlot3");
+                    if (slots[2].GetComponentInChildren<Text>().text != "Empty Slot")
+                        SavingSystem.i.Load("SaveSlot3");
                     break;
                 default:
-                    SavingSystem.i.Load("SaveSlot1");
+                    Debug.Log("failed load");
                     break;
             }
         }
