@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour, ISavable
     bool lockMovement = false;
     public Dictionary<string, bool> moveBlockers = new Dictionary<string, bool>();
 
-    MusicBox sg;
+    CleanMirrors sg;
 
     void Start()
     {
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour, ISavable
         moveBlockers.Add("SpiritWorldTransition", false);
         moveBlockers.Add("Menu", false);
 
-        sg = FindAnyObjectByType<MusicBox>(FindObjectsInactive.Include);
+        sg = FindAnyObjectByType<CleanMirrors>(FindObjectsInactive.Include);
     }
 
     // Update is called once per frame

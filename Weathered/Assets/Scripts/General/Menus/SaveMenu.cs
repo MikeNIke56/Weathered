@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,9 +14,16 @@ public class SaveMenu : MonoBehaviour
 
     public GameObject[] slots;
 
+
     private void Start()
     {
-        
+        if (SavingSystem.i.GetPath("SaveSlot1") != null)
+            slots[0].GetComponentInChildren<Text>().text = File.GetLastWriteTime(SavingSystem.i.GetPath("SaveSlot1")).ToString();
+        if (SavingSystem.i.GetPath("SaveSlot2") != null)
+            slots[1].GetComponentInChildren<Text>().text = File.GetLastWriteTime(SavingSystem.i.GetPath("SaveSlot2")).ToString();
+        if (SavingSystem.i.GetPath("SaveSlot3") != null)
+            slots[2].GetComponentInChildren<Text>().text = File.GetLastWriteTime(SavingSystem.i.GetPath("SaveSlot3")).ToString();
+
     }
     private void Update()
     {

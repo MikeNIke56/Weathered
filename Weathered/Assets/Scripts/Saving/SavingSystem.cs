@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class SavingSystem : MonoBehaviour
 {
+   
     public static SavingSystem i { get; private set; }
     private void Awake()
     {
@@ -98,7 +99,7 @@ public class SavingSystem : MonoBehaviour
         }
     }
 
-    private string GetPath(string saveFile)
+    public string GetPath(string saveFile)
     {
         return Path.Combine(Application.persistentDataPath, saveFile);
     }

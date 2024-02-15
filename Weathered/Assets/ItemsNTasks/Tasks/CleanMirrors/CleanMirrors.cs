@@ -76,18 +76,14 @@ public class CleanMirrors : Task
         Debug.Log("player has died");
     }
 
-    /*public override void LoadFinishedTask()
+    public override void LoadFinishedTask()
     {
-        foreach (BloodSplatter splatters in bloodSplatters)
+        foreach (MirrorSmudges smudge in smudges)
         {
-            splatters.gameObject.SetActive(false);
+            smudge.gameObject.SetActive(false);
         }
-        foreach (BrokenGlass glass in brokenGlass)
-        {
-            glass.gameObject.SetActive(false);
-        }
-        closet.OnCompletedLoad();
+
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
-    }*/
+    }
 }
