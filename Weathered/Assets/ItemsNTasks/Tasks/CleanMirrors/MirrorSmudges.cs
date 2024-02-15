@@ -6,6 +6,8 @@ public class MirrorSmudges : Interaction
 {
     [SerializeField] CleanMirrors cleanMirrors;
     public int cleanCount;
+    [SerializeField] AudioSource cleanSqueakSfx;
+    public MirrorRange mirror;
 
     public override void onClick()
     {
@@ -14,6 +16,7 @@ public class MirrorSmudges : Interaction
             cleanMirrors = FindFirstObjectByType<CleanMirrors>();
         }
 
+        //cleanSqueakSfx.Play();
         cleanMirrors.ClickedSmudge(this);
     }
 }

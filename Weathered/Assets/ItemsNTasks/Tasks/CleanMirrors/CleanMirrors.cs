@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class CleanMirrors : Task
 {
@@ -8,6 +9,8 @@ public class CleanMirrors : Task
     [SerializeField] MirrorCloth clothItem;
 
     bool clearedAllMirrors = false;
+
+    [SerializeField] PlayerController player;
 
 
     public override void InstanceTask()
@@ -30,6 +33,9 @@ public class CleanMirrors : Task
         {
             if (ItemController.itemInHand == clothItem)
             {
+                if(IsFacingMirror(interaction.gameObject.GetComponent<MirrorSmudges>().mirror)==true)
+                    OnFailed();
+
                 if (interaction.gameObject.GetComponent<MirrorSmudges>().cleanCount > 0)
                 {
                     interaction.gameObject.GetComponent<MirrorSmudges>().cleanCount--;
@@ -56,6 +62,14 @@ public class CleanMirrors : Task
         }
 
     }
+
+    bool IsFacingMirror(MirrorRange mirror)
+    {
+        if (mirror.isFacingMirror==true)
+            return true;
+        else return false;
+    }
+
     public override void OnFailed()
     {
         //trigger death condition

@@ -7,14 +7,14 @@ using System;
 
 public class InputHandler : MonoBehaviour
 {
-    private Camera _camera;
+    public Camera _camera;
     PlayerController player;
 
     bool taskIsOn = false;
 
     private void Awake()
     {
-        _camera = Camera.main;
+        //_camera = Camera.main;
         player = FindAnyObjectByType<PlayerController>();
     }
 
@@ -26,10 +26,14 @@ public class InputHandler : MonoBehaviour
         {
             _camera = GameObject.FindFirstObjectByType<Camera>();
         }
-        var rayHit = Physics2D.GetRayIntersection(_camera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-        if(!rayHit.collider) return;
+        //var rayHit = Physics2D.GetRayIntersection(_camera.ScreenPointToRay(Mouse.current.position.ReadValue()));
+        //if(!rayHit.collider) return;
 
-        IsCloseEnough(rayHit);
+        RaycastHit2D hit = Physics2D.Raycast(_camera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        if (!hit.collider) return;
+        IsCloseEnough(hit);
+
+        //IsCloseEnough(rayHit);
     }
 
     void IsCloseEnough(RaycastHit2D obj)
@@ -38,6 +42,8 @@ public class InputHandler : MonoBehaviour
 
         float xVal = collidedObject.transform.position.x - player.transform.position.x;
         float yVal = collidedObject.transform.position.y - player.transform.position.y;
+
+        Debug.Log("Trying " + collidedObject.name);
 
 
         if (Mathf.Abs(xVal) <= player.interactRange && Mathf.Abs(yVal) <= player.interactRange)
