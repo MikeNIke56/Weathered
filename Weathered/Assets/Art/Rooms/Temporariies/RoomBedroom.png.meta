@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c98b6024dca81ec4a8c4c5e40d57f2db
+guid: a337cddbfa3737041a41bc95b68452a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2688485901286366208
-    second: mirrorstand_0
+      213: -6791449356947560876
+    second: RoomBedroom_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
-  spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMode: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 102.4
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mirrorstand_0
+      name: RoomBedroom_0
       rect:
         serializedVersion: 2
-        x: 297
-        y: 44
-        width: 366
-        height: 872
+        x: 0
+        y: 6
+        width: 2048
+        height: 1851
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0042e26215490bad0800000000000000
-      internalID: -2688485901286366208
+      spriteID: 456e511eaccefb1a0800000000000000
+      internalID: -6791449356947560876
       vertices: []
       indices: 
       edges: []
@@ -121,7 +121,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mirrorstand_0: -2688485901286366208
+      RoomBedroom_0: -6791449356947560876
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
