@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour, ISavable
     bool lockMovement = false;
     public Dictionary<string, bool> moveBlockers = new Dictionary<string, bool>();
 
-    CleanMirrors sg;
+    TeaParty sg;
 
     void Start()
     {
@@ -53,9 +53,10 @@ public class PlayerController : MonoBehaviour, ISavable
         moveBlockers.Add("TutorialDialog", false);
         moveBlockers.Add("CharacterDialog", false);
         moveBlockers.Add("SpiritWorldTransition", false);
+        moveBlockers.Add("CutScene", false);
         moveBlockers.Add("Menu", false);
 
-        sg = FindAnyObjectByType<CleanMirrors>(FindObjectsInactive.Include);
+        sg = FindAnyObjectByType<TeaParty>(FindObjectsInactive.Include);
     }
 
     // Update is called once per frame

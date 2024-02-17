@@ -57,7 +57,8 @@ public class InputHandler : MonoBehaviour
                     //Debug.Log("Trying " + collidedObject.name);
                     try
                     {
-                        collidedObject.GetComponent<Interactable>().onClick();
+                        if(collidedObject.GetComponent<Interactable>().isActiveAndEnabled == true)
+                            collidedObject.GetComponent<Interactable>().onClick();
                     }
                     catch (Exception e)
                     {                    
