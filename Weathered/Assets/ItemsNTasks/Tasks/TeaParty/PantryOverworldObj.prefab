@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5668468031428545948}
   - component: {fileID: 3930540067611209184}
   - component: {fileID: -5678488287202530842}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: PantryOverworldObj
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -160,3 +160,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookies: {fileID: 0}
+  canStillInteract: 0

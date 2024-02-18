@@ -9,7 +9,6 @@ public class TaskController : MonoBehaviour, ISavable
 {
     static public TaskController taskControl;
     public List<Task> taskList = new List<Task>(); //Full list of every task possible
-    //public List<Task> taskChosenList = new List<Task>(); //Task list for chosen tasks this game. Referenced commonly. Auto-populated with curation.
     public AudioSource taskCompleteAudio;
     public AudioSource taskBadActionAudio;
     public AudioSource pageFlip;
@@ -17,7 +16,7 @@ public class TaskController : MonoBehaviour, ISavable
     public GameObject taskScreenList;
     public GameObject taskObj;
 
-    public string[] roomnames = new string[]{ "Entrance", "ChildrensToy", "DVDNBook", "ChinaNFurniture", "Doll", "CollectiblesNMemoirs", "Taxidermy", "CelebrityMerch", "Clock " };
+    public string[] roomnames = new string[]{ "Entrance", "ChildrensToy", "DVDNBook", "ChinaNFurniture", "CollectiblesNMemoirs", "Taxidermy", "CelebrityMerch", "Mazarine", "Aunt" };
     int selectedPage = 0;
     float selectionTimer = 0.2f;
     int times = 0;

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4357955324937531332}
   - component: {fileID: 4845830624967340960}
   - component: {fileID: 254862682572580470}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: KettleOverworldObj
   m_TagString: Interactable
   m_Icon: {fileID: 0}

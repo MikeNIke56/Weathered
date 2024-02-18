@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1716095424864707161}
   - component: {fileID: 5668468031428545948}
   - component: {fileID: 3930540067611209184}
-  - component: {fileID: -2940881759644823730}
+  - component: {fileID: -7160865917035384479}
   m_Layer: 0
-  m_Name: CookieOverworldObj
+  m_Name: FuseOverworldObj
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteractable: 1
-  interactionScript: {fileID: -2940881759644823730}
+  interactionScript: {fileID: -7160865917035384479}
 --- !u!61 &3930540067611209184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,7 +147,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.2, y: 7.2}
   m_EdgeRadius: 0
---- !u!114 &-2940881759644823730
+--- !u!114 &-7160865917035384479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7289946788990758012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48b09a60f23ecf649add4c762f919771, type: 3}
+  m_Script: {fileID: 11500000, guid: b3d5fee4c157c354586027bdcfff3b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cookies: {fileID: 0}
+  fuse: {fileID: 0}

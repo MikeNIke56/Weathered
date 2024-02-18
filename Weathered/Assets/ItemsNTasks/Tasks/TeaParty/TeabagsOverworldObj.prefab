@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5668468031428545948}
   - component: {fileID: 3930540067611209184}
   - component: {fileID: -9157161340759859656}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: TeabagsOverworldObj
   m_TagString: Interactable
   m_Icon: {fileID: 0}

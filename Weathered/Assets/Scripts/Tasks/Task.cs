@@ -23,7 +23,7 @@ public class Task : Interaction
     public GameObject taskCompletedIconPrefab; // Completed icon
     public int timesFailed = 0;
 
-    public enum taskRoom { Entrance, ChildrensToy, DVDNBook, ChinaNFurniture, Doll, CollectiblesNMemoirs, Taxidermy, CelebrityMerch, Clock }
+    public enum taskRoom { Entrance, ChildrensToy, DVDNBook, ChinaNFurniture, CollectiblesNMemoirs, Taxidermy, CelebrityMerch, Mazarine, Aunt }
     public taskRoom room;
 
     public void SetTask(TaskSaveData saveData)
