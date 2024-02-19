@@ -7,7 +7,7 @@ public class DoorScript : Interaction
     [SerializeField] bool isLocked = false;
     [SerializeField] Item itemToOpen;
     [SerializeField] DoorScript altDoor;
-    [SerializeField] string voicemailID = "";
+    [SerializeField] PhoneControl.VoicemailID voicemailID = PhoneControl.VoicemailID.None;
 
     [SerializeField] GameObject DoorLogic; //Collider to disable
     [SerializeField] AudioSource lockedSFX;
@@ -54,9 +54,9 @@ public class DoorScript : Interaction
         if (!isAltDoor)
         {
             openDoorSFX.Play();
-            if (!string.IsNullOrEmpty(voicemailID))
+            if (voicemailID != PhoneControl.VoicemailID.None)
             {
-                FindFirstObjectByType<PhoneControl>().NewVoicemail();
+                PhoneControl.NewVoicemail(voicemailID);
             }
         }
     }

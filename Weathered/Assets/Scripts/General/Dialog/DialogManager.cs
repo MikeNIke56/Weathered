@@ -25,7 +25,7 @@ public class DialogManager : MonoBehaviour
     public Sprite mazarineImg;
     public Sprite chairImg;
 
-    public enum DialogTriggers { Mazarine, Chair, MazarineTestCutScene }; //states that the player can be in
+    public enum DialogTriggers { Mazarine, Celebrity, DollSong, Doll, Worker, Narrator, Aunt, Chair, MazarineTestCutScene }; //states that the player can be in
     public DialogTriggers trigger;
 
     public static DialogManager Instance { get; private set; }
@@ -89,7 +89,7 @@ public class DialogManager : MonoBehaviour
                 characterImg.sprite = chairImg;
                 break;
             default:
-                characterImg = null;
+                characterImg.sprite = null;
                 break;
         }
 

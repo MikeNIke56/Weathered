@@ -5,45 +5,46 @@ using UnityEngine;
 public class PhoneControl : Interaction
 {
     [SerializeField] AudioSource ringingSFX;
-    [SerializeField] SpriteRenderer phoneSR;
-    [SerializeField] Sprite phoneOff;
-    [SerializeField] Sprite phoneLight;
-    bool isAnswered = false;
-    [SerializeField] float flashSpeed = 1f;
-    bool isOffSprite = true;
-    bool isAnswerable = false;
+    static bool isAnswerable = false;
+    static PhoneControl PC;
+    public enum VoicemailID {None, Toys, China, DVDs, Taxidermy, Celebrity, Aunts, Mazarines};
+    static VoicemailID CurrentVID = VoicemailID.Toys;
+    private void Start()
+    {
+        PC = FindFirstObjectByType<PhoneControl>();
+    }
 
-    public void NewVoicemail()
+    public static void NewVoicemail(VoicemailID VID)
     {
         isAnswerable = true;
-        ringingSFX.Play();
-        StartCoroutine(PendingVoicemail());
+        CurrentVID = VID;
+        PC.ringingSFX.Play();
+        PC.GetComponent<Animator>().SetBool("isBeeping", true);
     }
-    public IEnumerator PendingVoicemail()
-    {
-        while (!isAnswered)
-        {
-            if (isOffSprite)
-            {
-                phoneSR.sprite = phoneLight;
-                isOffSprite = false;
-            }
-            else
-            {
-                phoneSR.sprite = phoneOff;
-                isOffSprite = true;
-            }
-            yield return new WaitForSeconds(flashSpeed);
-        }
-        phoneSR.sprite = phoneLight;
-    }
-
     public override void onClick()
     {
         if (isAnswerable)
         {
-            UIController.UIControl.OpenAuntVoicemail();
-            isAnswered = true;
+            StartCoroutine(VoicemailDialog());
+            isAnswerable = false;
+            PC.GetComponent<Animator>().SetBool("isBeeping", false);
+        }
+    }
+
+    IEnumerator VoicemailDialog()
+    {
+        switch (CurrentVID)
+        {
+            case VoicemailID.Toys:
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "My dear Mazarine...");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "How could you miss my call?");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "You couldn't have been helping out another customer, could you?");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "I have so much to tell you about!");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "In this room... You do this... And then...");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Narrator, "Mazarine writes the helpful information down in her journal~~");
+                break;
+            default:
+                break;
         }
     }
 }
