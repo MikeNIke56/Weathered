@@ -122,6 +122,27 @@ public class UIController : MonoBehaviour
             inputHandler.SetActive(true);
     }
 
+    public void OpenDialog()
+    {
+        baseGameUI.SetActive(false);
+        tasksMenu.SetActive(false);
+        investigateMenu.SetActive(false);
+        inputHandler.SetActive(false);
+        auntVoicemailScreen.SetActive(false);
+        saveScreen.SetActive(false);
+        player.moveBlockers["Menu"] = true;
+    }
+    public void CloseDialog()
+    {
+        baseGameUI.SetActive(true);
+        tasksMenu.SetActive(false);
+        investigateMenu.SetActive(false);
+        inputHandler.SetActive(true);
+        auntVoicemailScreen.SetActive(false);
+        player.moveBlockers["Menu"] = false;
+        saveScreen.SetActive(false);
+    }
+
     public void OpenAuntVoicemail()
     {
         baseGameUI.SetActive(false);

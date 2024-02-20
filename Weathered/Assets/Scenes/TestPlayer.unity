@@ -18175,7 +18175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &864718480
 Transform:
   m_ObjectHideFlags: 0
@@ -26324,6 +26324,7 @@ MonoBehaviour:
   openDoorSFX: {fileID: 1005769511}
   DoorOpenRoot: {fileID: 1502410127}
   DoorClosedRoot: {fileID: 1255913836}
+  CelebrityIntroRoot: {fileID: 864718479}
 --- !u!1 &1451197214
 GameObject:
   m_ObjectHideFlags: 0
@@ -36774,6 +36775,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 864718480}
     m_Modifications:
+    - target: {fileID: 1085601698039785201, guid: eabb14af6fd271e42b9f1429c93874aa, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2696065858450065647, guid: eabb14af6fd271e42b9f1429c93874aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -36813,6 +36818,10 @@ PrefabInstance:
     - target: {fileID: 2696065858450065647, guid: eabb14af6fd271e42b9f1429c93874aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297144627128560187, guid: eabb14af6fd271e42b9f1429c93874aa, type: 3}
+      propertyPath: CurrentPoint
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6766028358269694515, guid: eabb14af6fd271e42b9f1429c93874aa, type: 3}
       propertyPath: m_Name

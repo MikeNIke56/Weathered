@@ -13,6 +13,8 @@ public class ToysDoor : Interaction
     [SerializeField] GameObject DoorOpenRoot;
     [SerializeField] GameObject DoorClosedRoot;
 
+    [SerializeField] GameObject CelebrityIntroRoot;
+
     public override void onClick()
     {
         if (ItemController.itemInHand == itemToOpen)
@@ -46,7 +48,9 @@ public class ToysDoor : Interaction
     IEnumerator IntroduceCelebrity()
     {
         Progression.ToysDoorSceneTriggered = true;
+        CelebrityIntroRoot.SetActive(true);
 
+        UIController.UIControl.OpenDialog();
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Don't yell!");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Ahhh!");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Tsk. That never works.");
@@ -68,5 +72,7 @@ public class ToysDoor : Interaction
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "...");
         PhoneControl.NewVoicemail(PhoneControl.VoicemailID.Toys);
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "...!");
+        FindFirstObjectByType<CIntro>().MoveCeleb();
+        UIController.UIControl.CloseDialog();
     }
 }

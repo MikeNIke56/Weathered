@@ -13,6 +13,7 @@ public class ComputerSave : Interaction
     }
     public override void onClick()
     {
+        Progression.HasCheckedOutDesk = true;
         UIController.UIControl.OpenSaveUI();
         player.state = GameState.Menu;
     }

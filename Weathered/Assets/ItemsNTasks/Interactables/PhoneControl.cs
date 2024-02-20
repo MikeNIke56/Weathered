@@ -33,18 +33,20 @@ public class PhoneControl : Interaction
 
     IEnumerator VoicemailDialog()
     {
+        UIController.UIControl.OpenDialog();
         switch (CurrentVID)
         {
             case VoicemailID.Toys:
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "My dear Mazarine...");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "How could you miss my call?");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "You couldn't have been helping out another customer, could you?");
-                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "I have so much to tell you about!");
-                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "In this room... You do this... And then...");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "I have so much to tell you!");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, ".......................................");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Narrator, "Mazarine writes the helpful information down in her journal~~");
                 break;
             default:
                 break;
         }
+        UIController.UIControl.CloseDialog();
     }
 }
