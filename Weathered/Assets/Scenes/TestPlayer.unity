@@ -6073,6 +6073,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5009483826467595262}
+  - {fileID: 1756261634}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &464471873
@@ -31070,6 +31071,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81383d06d4cc50345a1a72bcbdddb04e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1756261633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1756261634}
+  - component: {fileID: 1756261635}
+  m_Layer: 0
+  m_Name: WaterPlants
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1756261634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756261633}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 448595641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1756261635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756261633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78fcf1527dba9e544b4e0bc8622d4b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskName: Water Plants
+  description: Pick up the water can and water the plants
+  shortName: 
+  shortDescription: 
+  voicemailDescription: 
+  voicemailShortQuote: 
+  currentState: 0
+  isFailed: 0
+  isAlwaysChosen: 0
+  taskToggleRoot: {fileID: 0}
+  taskIconPrefab: {fileID: 0}
+  taskInProgressIconPrefab: {fileID: 0}
+  taskCompletedIconPrefab: {fileID: 0}
+  timesFailed: 0
+  room: 0
 --- !u!4 &1764874514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4951662314818986514, guid: 4edc8f682cef17244aedf3f1598af4f0, type: 3}
