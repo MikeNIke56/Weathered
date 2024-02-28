@@ -36,7 +36,7 @@ public class FixElevator : Task
             interaction.gameObject.GetComponent<FuseBox>().fuseBoxObjs[1].SetActive(true);
             interaction.gameObject.GetComponent<FuseBox>().fuseBoxObjs[2].SetActive(false);
 
-            ShortTextController.STControl.AddShortText("“The elevator is broken! I can’t go upstairs!”");
+            ShortTextController.STControl.AddShortText("The elevator is broken! I can’t go upstairs!");
             return;
         }
         else if (ItemController.itemInHand is Fuse)

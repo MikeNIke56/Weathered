@@ -6073,7 +6073,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5009483826467595262}
-  - {fileID: 1756261634}
+  - {fileID: 2008484347}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &464471873
@@ -28292,6 +28292,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7410990877815004649}
+  - {fileID: 2085813677}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1549008597 stripped
@@ -31097,12 +31098,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756261633}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 448595641}
+  m_Father: {fileID: 2008484347}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1756261635
 MonoBehaviour:
@@ -31130,7 +31131,7 @@ MonoBehaviour:
   taskInProgressIconPrefab: {fileID: 0}
   taskCompletedIconPrefab: {fileID: 0}
   timesFailed: 0
-  room: 0
+  room: 5
 --- !u!4 &1764874514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4951662314818986514, guid: 4edc8f682cef17244aedf3f1598af4f0, type: 3}
@@ -31152,6 +31153,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f287d4ac0c86a4c9d8907c8d32b93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1765958591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765958592}
+  - component: {fileID: 1765958593}
+  m_Layer: 0
+  m_Name: DVDRitual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1765958592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765958591}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2085813677}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1765958593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765958591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fabd3f172808c48a42fa1f0558cfe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskName: Summon the perfect movie
+  description: The picky dolls want to watch a movie but they all want different
+    things! Find and play the perfect movie!
+  shortName: 
+  shortDescription: 
+  voicemailDescription: 
+  voicemailShortQuote: 
+  currentState: 0
+  isFailed: 0
+  isAlwaysChosen: 0
+  taskToggleRoot: {fileID: 0}
+  taskIconPrefab: {fileID: 0}
+  taskInProgressIconPrefab: {fileID: 0}
+  taskCompletedIconPrefab: {fileID: 0}
+  timesFailed: 0
+  room: 2
 --- !u!1 &1779561366
 GameObject:
   m_ObjectHideFlags: 0
@@ -34872,6 +34933,38 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
   m_PrefabInstance: {fileID: 1337869509}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2008484346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2008484347}
+  m_Layer: 0
+  m_Name: Tasks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2008484347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008484346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1756261634}
+  m_Father: {fileID: 448595641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2013646546
 GameObject:
   m_ObjectHideFlags: 0
@@ -36528,6 +36621,38 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8298132681218112868, guid: 8ca910320fd17db41bfa5ba1cdf429b9, type: 3}
   m_PrefabInstance: {fileID: 1641783182}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2085813676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085813677}
+  m_Layer: 0
+  m_Name: Tasks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2085813677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085813676}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1765958592}
+  m_Father: {fileID: 1545750404}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2087620459
 PrefabInstance:
   m_ObjectHideFlags: 0
