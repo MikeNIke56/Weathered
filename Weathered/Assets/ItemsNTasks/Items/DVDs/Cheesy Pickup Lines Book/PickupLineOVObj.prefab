@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5596983560654173811}
   - component: {fileID: 228281074075917857}
   m_Layer: 0
-  m_Name: broom_0
+  m_Name: dvdSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 598431347
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4964869317685371108, guid: caa5b8b31a97a3d459072e632ff53905, type: 3}
+  m_Sprite: {fileID: 4691096506232746518, guid: 478ffc626be38324fa9456c200cc7930, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -94,8 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7336170566692751400}
   - component: {fileID: 5317443274070224869}
-  - component: {fileID: 5207762654443960330}
   - component: {fileID: 6901595245873304042}
+  - component: {fileID: 8807306393555962915}
   m_Layer: 0
   m_Name: PickupLineOVObj
   m_TagString: Interactable
@@ -113,7 +113,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
   m_LocalPosition: {x: 28.9, y: -2.63, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5596983560654173811}
@@ -132,21 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteractable: 1
-  interactionScript: {fileID: 5207762654443960330}
---- !u!114 &5207762654443960330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5857157431981508503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ec9ede05ae3c84c97ff574273eb4d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mopItem: {fileID: 0}
-  pickedUpMop: 0
+  interactionScript: {fileID: 8807306393555962915}
 --- !u!61 &6901595245873304042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,7 +167,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.039829493, y: 0.057303905}
+  m_Offset: {x: 0.074100494, y: 0.0003414154}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -191,5 +177,18 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.460548, y: 9.289983}
+  m_Size: {x: 4.688408, y: 4.732811}
   m_EdgeRadius: 0
+--- !u!114 &8807306393555962915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5857157431981508503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b25f9bdaf84d7943aea47897ef066a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cheesyPickupLine: {fileID: 0}

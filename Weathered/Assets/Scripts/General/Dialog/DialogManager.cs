@@ -23,9 +23,11 @@ public class DialogManager : MonoBehaviour
     public bool IsShowing { get; private set; }
 
     public Sprite mazarineImg;
+    public Sprite celebrityImg;
     public Sprite chairImg;
+    public Sprite placeholderImg;
 
-    public enum DialogTriggers { Mazarine, Celebrity, DollSong, Doll, Worker, Narrator, Aunt, Chair, MazarineTestCutScene }; //states that the player can be in
+    public enum DialogTriggers { Mazarine, Celebrity, DollSong, Doll, Worker, Narrator, Aunt, Chair, MazarineTestCutScene, TvDoll1, TvDoll2, TvDoll3 }; //states that the player can be in
     public DialogTriggers trigger;
 
     public static DialogManager Instance { get; private set; }
@@ -84,6 +86,18 @@ public class DialogManager : MonoBehaviour
         {
             case DialogTriggers.Mazarine:
                 characterImg.sprite = mazarineImg;
+                break;
+            case DialogTriggers.Celebrity:
+                characterImg.sprite = celebrityImg;
+                break;
+            case DialogTriggers.TvDoll1:
+                characterImg.sprite = placeholderImg;
+                break;
+            case DialogTriggers.TvDoll2:
+                characterImg.sprite = placeholderImg;
+                break;
+            case DialogTriggers.TvDoll3:
+                characterImg.sprite = placeholderImg;
                 break;
             case DialogTriggers.Chair:
                 characterImg.sprite = chairImg;

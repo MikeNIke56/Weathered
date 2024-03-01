@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ArvensHits : Item
 {
-    [SerializeField] ActionDVDObj ogArvenObj;
-    public AudioSource mopSfx;
+    [SerializeField] ArvensHitsObj ogArvenObj;
     public void ClickedDVDObject(ArvensHitsObj dvdClicked)
     {
         ItemController.AddItemToHand(this);

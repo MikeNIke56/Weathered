@@ -8,7 +8,7 @@ public class DVDRitual : Task
     {
         base.InstanceTask();
     }
-    public void ClickedSpot(Interaction interaction)
+    public void ClickedSummonCircle(Interaction interaction)
     {
         if (currentState == taskState.Available)
         {
@@ -23,6 +23,16 @@ public class DVDRitual : Task
         {
             
         }
+
+    }
+    public void ClickedTV()
+    {
+        if (currentState == taskState.Available)
+        {
+            OnInProgress();
+        }
+
+        
 
     }
     public override void OnFailed()

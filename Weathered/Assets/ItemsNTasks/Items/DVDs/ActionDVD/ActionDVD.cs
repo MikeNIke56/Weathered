@@ -5,7 +5,7 @@ using UnityEngine;
 public class ActionDVD : Item
 {
     [SerializeField] ActionDVDObj originalActionDVDObject;
-    public AudioSource mopSfx;
+
     public void ClickedDVDObject(ActionDVDObj dvdClicked)
     {
         ItemController.AddItemToHand(this);
