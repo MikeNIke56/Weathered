@@ -18,6 +18,7 @@ public class CelebrityInteractionScript : Interaction
         if (CurrentPoint != CPoints.Default)
         {
             UIController.UIControl.OpenDialog();
+            DialogManager.Instance.OpenDialog();
         }
         switch (CurrentPoint)
         {
@@ -85,6 +86,8 @@ public class CelebrityInteractionScript : Interaction
             default:
                 break;
         }
+
+        DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
     }
 }

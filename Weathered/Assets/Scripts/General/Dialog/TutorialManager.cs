@@ -81,7 +81,7 @@ public class TutorialManager : MonoBehaviour
         OnShowDialog?.Invoke();
 
         IsShowing = true;
-        UIController.UIControl.HandleDialogBox(IsShowing);
+        UIController.UIControl.ToggleInputHandler(IsShowing);
 
         dialogBox.SetActive(true);
 

@@ -15,7 +15,7 @@ public class TvDollsDialog : Interaction
     IEnumerator DollTalk(int dollnum)
     {
         UIController.UIControl.OpenDialog();
-
+        DialogManager.Instance.OpenDialog();
         switch (dollnum)
         {
             case 0:
@@ -34,7 +34,7 @@ public class TvDollsDialog : Interaction
                 Debug.Log("fail");
                 break;
         }
-
+        DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
     }
 }

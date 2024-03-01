@@ -34,6 +34,8 @@ public class PhoneControl : Interaction
     IEnumerator VoicemailDialog()
     {
         UIController.UIControl.OpenDialog();
+        DialogManager.Instance.OpenDialog();
+
         switch (CurrentVID)
         {
             case VoicemailID.Toys:
@@ -47,6 +49,8 @@ public class PhoneControl : Interaction
             default:
                 break;
         }
+
+        DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
     }
 }

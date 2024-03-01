@@ -51,6 +51,7 @@ public class ToysDoor : Interaction
         CelebrityIntroRoot.SetActive(true);
 
         UIController.UIControl.OpenDialog();
+        DialogManager.Instance.OpenDialog();
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Don't yell!");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Ahhh!");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Tsk. That never works.");
@@ -73,6 +74,7 @@ public class ToysDoor : Interaction
         PhoneControl.NewVoicemail(PhoneControl.VoicemailID.Toys);
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "...!");
         FindFirstObjectByType<CIntro>().MoveCeleb();
+        DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
     }
 }

@@ -114,7 +114,7 @@ public class UIController : MonoBehaviour
         deathScreen.SetActive(true);
     }
 
-    public void HandleDialogBox(bool isOn)
+    public void ToggleInputHandler(bool isOn)
     {
         if(isOn == true)
             inputHandler.SetActive(false);

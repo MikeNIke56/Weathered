@@ -81,26 +81,26 @@ public class TutorialDialog : MonoBehaviour
 
         //unfreezes player
         player.moveBlockers["TutorialDialog"] = false;
-        UIController.UIControl.HandleDialogBox(false);
+        UIController.UIControl.ToggleInputHandler(false);
     }
 
     public IEnumerator HandleUpdate()
     {
         if (sortBoxes.startBox == true && startBoxLockout == false)
         {
-            UIController.UIControl.HandleDialogBox(true);
+            UIController.UIControl.ToggleInputHandler(true);
             sortBoxes.startBox = false;
             startBoxLockout = true;
             yield return TutorialManager.Instance.ShowDialog(dialogStartBox);
-            UIController.UIControl.HandleDialogBox(false);
+            UIController.UIControl.ToggleInputHandler(false);
         }
         else if (sortBoxes.tookToy == true && tookToyLockout == false)
         {
-            UIController.UIControl.HandleDialogBox(true);
+            UIController.UIControl.ToggleInputHandler(true);
             sortBoxes.tookToy = false;
             tookToyLockout = true;
             yield return TutorialManager.Instance.ShowDialog(dialogInBox);
-            UIController.UIControl.HandleDialogBox(false);
+            UIController.UIControl.ToggleInputHandler(false);
         }
         else if (sortBoxes.isDoneBox == true && isDoneBoxLockout == false)
         {
@@ -109,45 +109,45 @@ public class TutorialDialog : MonoBehaviour
 
             if(boxesFirst == true)
             {
-                UIController.UIControl.HandleDialogBox(true);
+                UIController.UIControl.ToggleInputHandler(true);
                 player.moveBlockers["TutorialDialog"] = true;
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterBoxFirst);
                 cobwebsArrow.SetActive(true);
                 player.moveBlockers["TutorialDialog"] = false;
-                UIController.UIControl.HandleDialogBox(false);
+                UIController.UIControl.ToggleInputHandler(false);
             } 
             else
             {
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterBoxSecond);
-                UIController.UIControl.HandleDialogBox(false);
+                UIController.UIControl.ToggleInputHandler(false);
             }        
         }
 
 
         if (sortBoxes.correctBox == true && correctBoxLockout == false)
         {
-            UIController.UIControl.HandleDialogBox(true);
+            UIController.UIControl.ToggleInputHandler(true);
             sortBoxes.correctBox = false;
             correctBoxLockout = true;
             yield return TutorialManager.Instance.ShowDialog(dialogBoxRight);
-            UIController.UIControl.HandleDialogBox(false);
+            UIController.UIControl.ToggleInputHandler(false);
         }
 
         if (dustObject.pickedUpBroom == true && pickedUpBroomLockout == false)
         {
-            UIController.UIControl.HandleDialogBox(true);
+            UIController.UIControl.ToggleInputHandler(true);
             dustObject.pickedUpBroom = false;
             pickedUpBroomLockout = true;
             yield return TutorialManager.Instance.ShowDialog(dialogStartCobwebs);
-            UIController.UIControl.HandleDialogBox(false);
+            UIController.UIControl.ToggleInputHandler(false);
         }
         else if (dustCobwebs.clearedCobweb == true && clearedCobwebLockout == false)
         {
-            UIController.UIControl.HandleDialogBox(true);
+            UIController.UIControl.ToggleInputHandler(true);
             dustCobwebs.clearedCobweb = false;
             clearedCobwebLockout = true;
             yield return TutorialManager.Instance.ShowDialog(dialogInCobwebs);
-            UIController.UIControl.HandleDialogBox(false);
+            UIController.UIControl.ToggleInputHandler(false);
         }
         else if (dustCobwebs.cobwebsDone == true && cobwebIsDoneLockout == false)
         {
@@ -156,17 +156,17 @@ public class TutorialDialog : MonoBehaviour
 
             if(cobWebsFirst == true)
             {
-                UIController.UIControl.HandleDialogBox(true);
+                UIController.UIControl.ToggleInputHandler(true);
                 player.moveBlockers["TutorialDialog"] = true;
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterCobwebsFirst);
                 boxesArrow.SetActive(true);
                 player.moveBlockers["TutorialDialog"] = false;
-                UIController.UIControl.HandleDialogBox(false);
+                UIController.UIControl.ToggleInputHandler(false);
             }
             else
             {
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterCobwebsSecond);
-                UIController.UIControl.HandleDialogBox(false);
+                UIController.UIControl.ToggleInputHandler(false);
             }
         }
 

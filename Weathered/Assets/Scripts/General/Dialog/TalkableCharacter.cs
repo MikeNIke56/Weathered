@@ -23,7 +23,7 @@ public class TalkableCharacter : Interaction
 
     IEnumerator HandleUpdate()
     {
-        UIController.UIControl.HandleDialogBox(false);
+        UIController.UIControl.ToggleInputHandler(false);
 
         switch (name)
         {

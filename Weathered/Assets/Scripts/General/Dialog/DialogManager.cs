@@ -66,19 +66,23 @@ public class DialogManager : MonoBehaviour
         OnCloseDialog?.Invoke();
     }
 
+    public void OpenDialog()
+    {
+        dialogBox.SetActive(true);
+        IsShowing = true;
+        UIController.UIControl.ToggleInputHandler(IsShowing);
+    }
     public void CloseDialog()
     {
         dialogBox.SetActive(false);
         IsShowing = false;
+        UIController.UIControl.ToggleInputHandler(IsShowing);
     }
 
     public IEnumerator ShowDialog(DialogTriggers character, string line)
     {
         yield return new WaitForEndOfFrame();
         OnShowDialog?.Invoke();
-
-        IsShowing = true;
-        UIController.UIControl.HandleDialogBox(IsShowing);
 
         dialogBox.SetActive(true);
 
@@ -112,9 +116,6 @@ public class DialogManager : MonoBehaviour
         skipTimer = 0.2f;
         skipped = false;
 
-        dialogBox.SetActive(false);
-        IsShowing = false;
-        UIController.UIControl.HandleDialogBox(IsShowing);
         OnCloseDialog?.Invoke();
     }
 
@@ -125,7 +126,7 @@ public class DialogManager : MonoBehaviour
         OnShowDialog?.Invoke();
 
         IsShowing = true;
-        UIController.UIControl.HandleDialogBox(IsShowing);
+        UIController.UIControl.ToggleInputHandler(IsShowing);
 
         dialogBox.SetActive(true);
 
