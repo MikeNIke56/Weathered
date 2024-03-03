@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class DVDRitual : Task
 {
@@ -11,6 +12,11 @@ public class DVDRitual : Task
     ThrillingDVD thrillingDVD;
 
     bool[] requirementsMet = {false, false, false};
+    [SerializeField] GameObject[] objects2Dis;
+    [SerializeField] Light2D tvSpiritLight;
+
+    SummoningCircleObj summoningCircle;
+    [SerializeField] GameObject[] tvStages;
 
     public override void InstanceTask()
     {
@@ -18,6 +24,9 @@ public class DVDRitual : Task
         strangeDVD = FindAnyObjectByType<StrangeDVD>();
         funDVD = FindAnyObjectByType<FunDVD>();
         thrillingDVD = FindAnyObjectByType<ThrillingDVD>();
+        summoningCircle = FindAnyObjectByType<SummoningCircleObj>();
+
+        HandleTvStage(0);
     }
     public void ClickedSummoningCircle(SummoningCircleObj summoningCircle)
     {
@@ -122,11 +131,22 @@ public class DVDRitual : Task
         {
             case FunDVD:
                 Debug.Log("fun dvd");
+                //Handle upset dialog here
+                HandleTvStage(1);
+                StartCoroutine(AngryDialog());
                 break;
             case ThrillingDVD:
-                Debug.Log("thrilling dvd");
+                HandleTvStage(3);
+                Debug.Log("player has died");
                 break;
             case StrangeDVD:
+                objects2Dis[0].SetActive(false);
+                objects2Dis[1].SetActive(false);
+                objects2Dis[2].SetActive(false);
+                tvSpiritLight.intensity = 1.5f;
+                tvSpiritLight.pointLightOuterRadius = 15;
+                summoningCircle.gameObject.GetComponent<Interactable>().enabled = false;
+                HandleTvStage(2);
                 OnCompleted();
                 Debug.Log("strange dvd");
                 break;
@@ -136,6 +156,24 @@ public class DVDRitual : Task
         }
 
     }
+    IEnumerator AngryDialog()
+    {
+        UIController.UIControl.OpenDialog();
+        DialogManager.Instance.OpenDialog();
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll1, "I am upset cuz you put in the wrong movie but i wont kill you :)");
+        DialogManager.Instance.CloseDialog();
+        UIController.UIControl.CloseDialog();
+    }
+    void HandleTvStage(int num)
+    {
+        for(int i = 0; i < tvStages.Length; i++)
+        {
+            if(i != num)
+                tvStages[i].SetActive(false);
+            else
+                tvStages[i].SetActive(true);
+        }
+    }
     public override void OnFailed()
     {
         //trigger death condition
@@ -143,7 +181,14 @@ public class DVDRitual : Task
     }
 
     public override void LoadFinishedTask()
-    {      
+    {
+        objects2Dis[0].SetActive(false);
+        objects2Dis[1].SetActive(false);
+        objects2Dis[2].SetActive(false);
+        tvSpiritLight.intensity = 1.5f;
+        tvSpiritLight.pointLightOuterRadius = 15;
+        summoningCircle.gameObject.GetComponent<Interactable>().enabled = false;
+        HandleTvStage(2);
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
     }
