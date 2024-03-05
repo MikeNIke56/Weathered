@@ -26,6 +26,7 @@ public class SnowglobesButtons : MonoBehaviour
         snowGlobesObj.SetActive(true);
         inspectUI.SetActive(false);
         arrangeSnowglobes.currentSGState = ArrangeSnowglobes.SGState.InShelf;
+        arrangeSnowglobes.quitButton.SetActive(true);
     }
 
     public void ChooseSnowGlobe()
@@ -41,6 +42,7 @@ public class SnowglobesButtons : MonoBehaviour
             ItemController.AddItemToHand(chosenSG);
             arrangeSnowglobes.currentSGState = ArrangeSnowglobes.SGState.InShelf;
             arrangeSnowglobes.isSwitching = true;
+            arrangeSnowglobes.quitButton.SetActive(false);
             chosenSG.pickup.Play();
         }
     }

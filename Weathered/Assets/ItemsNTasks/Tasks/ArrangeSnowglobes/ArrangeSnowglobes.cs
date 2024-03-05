@@ -16,6 +16,8 @@ public class ArrangeSnowglobes : Task
     [SerializeField] GameObject shelfObj;
     [SerializeField] GameObject snowglobesUI;
     [SerializeField] GameObject snowglobesUnder;
+    public GameObject quitButton;
+
     public SnowglobeObj slotOriginal;
     public GameObject slotParent;
     public GameObject snowGlobesObjUnder;

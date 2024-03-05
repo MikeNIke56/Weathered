@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static PlayerController;
 
 public class UIController : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject deathScreen;
     [SerializeField] GameObject saveScreen;
-
+    [SerializeField] GameObject pauseScreen;
     [SerializeField] GameObject auntVoicemailScreen;
 
     [SerializeField] GameObject snowglobesUI;
@@ -39,12 +40,11 @@ public class UIController : MonoBehaviour
     {
         baseGameUI.SetActive(false);
         tasksMenu.SetActive(false);
-        investigateMenu.SetActive(true);
         inputHandler.SetActive(false);
+        investigateMenu.SetActive(true);
         player.moveBlockers["Menu"] = true;
         saveScreen.SetActive(false);
     }
-
     public void CloseInteractionMenu()
     {
         investigateMenu.SetActive(false);
@@ -59,7 +59,6 @@ public class UIController : MonoBehaviour
         baseGameUI.SetActive(true);
         player.moveBlockers["Menu"] = false;
     }
-
     public void OpenTasksMenu()
     {
         isTasksMenuOpen = true;
@@ -162,5 +161,34 @@ public class UIController : MonoBehaviour
         auntVoicemailScreen.SetActive(false);
         player.moveBlockers["Menu"] = false;
         saveScreen.SetActive(false);
+    }
+
+    void OpenPauseMenu()
+    {
+        if (player.isPaused == false)
+        {
+            pauseScreen.SetActive(true);
+            Time.timeScale = 0f;
+            player.isPaused = true;
+        }
+    }
+    void ClosePauseMenu()
+    {
+        if (player.isPaused == true)
+        {
+            pauseScreen.SetActive(false);
+            Time.timeScale = 1f;
+            player.isPaused = false;
+        }
+    }
+    public void Back()
+    {
+        CloseInteractionMenu();
+        CloseTasksMenu();
+        CloseSaveUI();
+        CloseAuntVoicemail();
+        ClosePauseMenu();
+        player.state = GameState.FreeRoam;
+        player.moveBlockers["Menu"] = false;
     }
 }

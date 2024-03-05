@@ -14,5 +14,6 @@ public class ShelfInteract : Interaction
     public override void onClick()
     {
         snowglobes.ShelfClicked();
+        snowglobes.quitButton.SetActive(true);
     }
 }

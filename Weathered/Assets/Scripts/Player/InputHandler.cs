@@ -50,11 +50,7 @@ public class InputHandler : MonoBehaviour
         {
             switch (collidedObject.tag)
             {
-                case "Save":
-                    SavingSystem.i.Save("SaveSlot");
-                    break;
                 case "Interactable":
-                    //Debug.Log("Trying " + collidedObject.name);
                     try
                     {
                         if(collidedObject.GetComponent<Interactable>().isActiveAndEnabled == true)
@@ -66,8 +62,23 @@ public class InputHandler : MonoBehaviour
                         Debug.Log(e);
                     }
                     break;
+                case "Obstructor":
+                    try
+                    {
+                        if (collidedObject.transform.parent.gameObject.name == "ArvensPile")
+                        {
+                            var parentObj = collidedObject.transform.parent.gameObject;
+                            parentObj.GetComponent<Interactable>().onClick();
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.Log("Failed to interact with " + collidedObject.name);
+                        Debug.Log(e);
+                    }
+                    break;
                 default:
-                    //Debug.Log(collidedObject.name);
+                    Debug.Log("Fail");
                     break;
             }
         }

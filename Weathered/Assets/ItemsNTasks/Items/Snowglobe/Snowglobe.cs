@@ -67,6 +67,7 @@ public class Snowglobe : Item
                         }
                     }
                 }
+                snowglobes.quitButton.SetActive(true);
             }
             else
             {
@@ -77,6 +78,7 @@ public class Snowglobe : Item
                         sgButtons.curSG = this;
                         sgButtons.curSGObj = clickedSG;
                         snowglobes.currentSGState = ArrangeSnowglobes.SGState.InspectingSG;
+                        snowglobes.quitButton.SetActive(false);
                     }
                     else if (clickedSG.sgItem.currentSGType == sgType.Placeholder)
                     {
@@ -110,7 +112,7 @@ public class Snowglobe : Item
                                 ItemController.itemInHand = null;
                                 snowglobes.UpdateShelf();
                             }
-                        } 
+                        }
                     }
                 }
                 catch (Exception e)

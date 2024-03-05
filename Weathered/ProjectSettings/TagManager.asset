@@ -10,6 +10,7 @@ TagManager:
   - Interactable
   - UP
   - DOWN
+  - Obstructor
   layers:
   - Default
   - TransparentFX

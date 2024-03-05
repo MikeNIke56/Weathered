@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour, ISavable
     [SerializeField] float playerCameraUpY = 5f;
     [SerializeField] float playerCameraDownY = 1f;
 
-    [SerializeField] PauseMenuManager pauseMan;
     public bool isPaused = false;
 
     public Item curItem;
@@ -99,21 +98,10 @@ public class PlayerController : MonoBehaviour, ISavable
         //if (Input.GetKeyDown(KeyCode.Space)) { SavingSystem.i.Load("SaveSlot"); }
 
         CursorShow(isPaused);
-        OpenPauseMenu();
 
         if (!lockMovement && Input.GetKeyDown(KeyCode.Space))
         {
             SpiritWorldJump.Jump();
-        }
-        
-        if (Input.GetKeyDown(KeyCode.Q) && state != GameState.Death)
-        {
-            UIController.UIControl.CloseInteractionMenu();
-            UIController.UIControl.CloseTasksMenu();
-            UIController.UIControl.CloseSaveUI();
-            UIController.UIControl.CloseAuntVoicemail();
-            state = GameState.FreeRoam;
-            moveBlockers["Menu"] = false;
         }
 
         if (state == GameState.FreeRoam)
@@ -122,7 +110,7 @@ public class PlayerController : MonoBehaviour, ISavable
         }
         if (state == GameState.Menu)
         {
-            moveBlockers["Menu"] = true;
+            moveBlockers["Menu"] = true;     
         }
     }
 
@@ -251,16 +239,6 @@ public class PlayerController : MonoBehaviour, ISavable
         }
         else
             withinRngIcon.SetActive(false);
-    }
-
-    void OpenPauseMenu()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && isPaused == false) 
-        { 
-            pauseMan.gameObject.SetActive(true); 
-            Time.timeScale = 0f;
-            isPaused = true;
-        }
     }
 
     public void StartDeath()

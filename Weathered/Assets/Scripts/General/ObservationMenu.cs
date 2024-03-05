@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,12 +11,19 @@ public class ObservationMenu : MonoBehaviour
     public Image descBox;
     public Text descText;
     public Text nameText;
+
+    PlayerController player;
     ObservationMenu()
     {
         if (observeMenu == null)
         {
             observeMenu = this;
         }
+    }
+
+    private void Start()
+    {
+        player = FindAnyObjectByType<PlayerController>();
     }
     public void SetDescText(string textToSet)
     {
