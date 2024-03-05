@@ -15,10 +15,10 @@ public class TeaParty : Task
     [SerializeField] Teabags teabags;
     [SerializeField] Kettle kettle;
 
-    [SerializeField] Transform cookiesPos;
-    [SerializeField] Transform teaSetPos;
-    [SerializeField] Transform teabagsPos;
-    [SerializeField] Transform kettlePos;
+    [SerializeField] GameObject TeaSetLayer;
+    [SerializeField] GameObject WaterLayer;
+    [SerializeField] GameObject TeaLayer;
+    [SerializeField] GameObject CookiesLayer;
 
     Pantry pantry;
     TeaCabinet teaCabinet;
@@ -53,10 +53,7 @@ public class TeaParty : Task
         if (ItemController.itemInHand == teaSet && isTeaPlaced == false)
         {
             isTeaPlaced = true;
-            teaSet.teaSetObject.gameObject.transform.position = teaSetPos.position;
-            teaSet.teaSetObject.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "InFront";
-            teaSet.teaSetObject.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
-            teaSet.teaSetObject.gameObject.GetComponent<Interactable>().enabled = false;
+            TeaSetLayer.SetActive(true);
             ItemController.ClearItemInHand();
             CheckOffASpot(0);
         }
@@ -64,37 +61,29 @@ public class TeaParty : Task
         {
             if(isTeaPlaced == false && ItemController.itemInHand != null)
             {
-                ShortTextController.STControl.AddShortText("I need to get plates and cups first.");
+                ShortTextController.STControl.AddShortText("I need plates and cups first.", true);
             }
             else
             {
                 switch (ItemController.itemInHand)
                 {
                     case Cookies:
-                        cookies.cookiesObject.gameObject.transform.position = cookiesPos.position;
-                        cookies.cookiesObject.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "InFront";
-                        cookies.cookiesObject.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
+                        CookiesLayer.SetActive(true);
                         pantry.canStillInteract = false;
-                        cookies.cookiesObject.gameObject.GetComponent<Interactable>().enabled = false;
                         ItemController.ClearItemInHand();
                         CheckOffASpot(1);
                         CheckSpots();
                         break;
                     case Kettle:
-                        kettle.kettleObject.gameObject.transform.position = kettlePos.position;
-                        kettle.kettleObject.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "InFront";
-                        kettle.kettleObject.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
-                        kettle.kettleObject.gameObject.GetComponent<Interactable>().enabled = false;
+                        WaterLayer.SetActive(true);
                         ItemController.ClearItemInHand();
+                        kettle.kettleObject.GetComponent<BoxCollider2D>().enabled = false;
                         CheckOffASpot(2);
                         CheckSpots();
                         break;
                     case Teabags:
-                        teabags.teaBagsObject.gameObject.transform.position = teabagsPos.position;
-                        teabags.teaBagsObject.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "InFront";
-                        teabags.teaBagsObject.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
+                        TeaLayer.SetActive(true);
                         teabagsCabinet.canStillInteract = false;
-                        teabags.teaBagsObject.gameObject.GetComponent<Interactable>().enabled = false;
                         ItemController.ClearItemInHand();
                         CheckOffASpot(3);
                         CheckSpots();
@@ -139,31 +128,15 @@ public class TeaParty : Task
 
     public override void LoadFinishedTask()
     {
-        teaSet.teaSetObject.gameObject.transform.position = teaSetPos.position;
-        cookies.cookiesObject.gameObject.transform.position = cookiesPos.position;
-        kettle.kettleObject.gameObject.transform.position = kettlePos.position;
-        teabags.teaBagsObject.gameObject.transform.position = teabagsPos.position;
+        TeaSetLayer.SetActive(true);
+        WaterLayer.SetActive(true);
+        TeaLayer.SetActive(true);
+        CookiesLayer.SetActive(true);
 
-
-        teaSet.teaSetObject.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "InFront";
-        teaSet.teaSetObject.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
-        teaSet.teaSetObject.gameObject.GetComponent<Interactable>().enabled = false;
-
-        cookies.cookiesObject.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "InFront";
-        cookies.cookiesObject.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
-        cookies.cookiesObject.gameObject.GetComponent<Interactable>().enabled = false;
-
-        kettle.kettleObject.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "InFront";
-        kettle.kettleObject.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
-        kettle.kettleObject.gameObject.GetComponent<Interactable>().enabled = false;
-
-        teabags.teaBagsObject.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "InFront";
-        teabags.teaBagsObject.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
-        teabags.teaBagsObject.gameObject.GetComponent<Interactable>().enabled = false;
-
-        teaCabinet.hasGiven = true;
+        teaCabinet.LoadCabinet();
         pantry.canStillInteract = false;
         teabagsCabinet.canStillInteract = false;
+        kettle.kettleObject.GetComponent<BoxCollider2D>().enabled = false;
 
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();

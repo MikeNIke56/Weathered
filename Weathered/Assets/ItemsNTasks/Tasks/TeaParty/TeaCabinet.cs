@@ -5,6 +5,8 @@ using UnityEngine;
 public class TeaCabinet : Interaction
 {
     [SerializeField] TeaSet teaSet;
+    [SerializeField] GameObject CabinetSetLayer;
+    [SerializeField] GameObject CabinetEmptyLayer;
     public bool hasGiven = false;
 
     public override void onClick()
@@ -17,8 +19,15 @@ public class TeaCabinet : Interaction
         if(hasGiven==false)
         {
             teaSet.ClickedTeaSetObject(teaSet.teaSetObject);
-            hasGiven = true;
             ShortTextController.STControl.AddShortText("This looks valuable, better be careful...");
+            LoadCabinet();
         }     
+    }
+
+    public void LoadCabinet()
+    {
+        hasGiven = true;
+        CabinetEmptyLayer.SetActive(true);
+        CabinetSetLayer.SetActive(false);
     }
 }
