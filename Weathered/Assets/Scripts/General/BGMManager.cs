@@ -35,6 +35,7 @@ public class BGMManager : MonoBehaviour
     }
     public void SwitchWorldBGM(bool toSpiritWorld)
     {
+        float currentTime = bgmSource.time;
         if (toSpiritWorld)
         {
             bgmSource.clip = spiritBGMs[currentBGMTrack];
@@ -43,6 +44,8 @@ public class BGMManager : MonoBehaviour
         {
             bgmSource.clip = normalBGMs[currentBGMTrack];
         }
+        bgmSource.time = currentTime;
+        bgmSource.Play();
     }
     public void AddVoid(Vector3 voidPos, Vector2 voidSize)
     {

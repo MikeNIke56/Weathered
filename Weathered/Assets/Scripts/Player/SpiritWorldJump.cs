@@ -81,6 +81,7 @@ public class SpiritWorldJump : MonoBehaviour
         //PlayerPosMove
         playerControl.transform.position += new Vector3(0, -5000, 0);
         isInSpiritWorld = true;
+        BGMManager.BGM.SwitchWorldBGM(true);
         //EnableVignette
         vignetteImage.color = new Color(0,0,0,1);
         yield return new WaitForSeconds(1f);
@@ -110,6 +111,7 @@ public class SpiritWorldJump : MonoBehaviour
         //PlayerPosMove
         playerControl.transform.position += new Vector3(0, 5000, 0);
         isInSpiritWorld = false;
+        BGMManager.BGM.SwitchWorldBGM(false);
         //EnableVignette
         deathEffectImage.color = new Color32(0, 0, 0, 0);
         vignetteImage.color = new Color(0, 0, 0, 0);
