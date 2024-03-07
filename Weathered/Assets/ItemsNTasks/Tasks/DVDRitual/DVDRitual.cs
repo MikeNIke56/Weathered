@@ -18,6 +18,8 @@ public class DVDRitual : Task
     SummoningCircleObj summoningCircle;
     [SerializeField] GameObject[] tvStages;
 
+    [SerializeField] AudioSource tvStatic;
+
     public override void InstanceTask()
     {
         base.InstanceTask();
@@ -130,28 +132,28 @@ public class DVDRitual : Task
         switch(itemInHand)
         {
             case FunDVD:
-                Debug.Log("fun dvd");
                 //Handle upset dialog here
                 HandleTvStage(1);
                 StartCoroutine(AngryDialog());
+                ItemController.ClearItemInHand();
+                tvStatic.Stop();
                 break;
             case ThrillingDVD:
                 HandleTvStage(3);
-                Debug.Log("player has died");
+                tvStatic.Stop();
                 break;
             case StrangeDVD:
-                objects2Dis[0].SetActive(false);
-                objects2Dis[1].SetActive(false);
-                objects2Dis[2].SetActive(false);
+                DisableObjects();
                 tvSpiritLight.intensity = 1.5f;
                 tvSpiritLight.pointLightOuterRadius = 15;
                 summoningCircle.gameObject.GetComponent<Interactable>().enabled = false;
                 HandleTvStage(2);
                 OnCompleted();
-                Debug.Log("strange dvd");
+                ItemController.ClearItemInHand();
+                tvStatic.Stop();
                 break;
             default:
-                Debug.Log("fail");
+                Debug.Log("interacted with tv");
                 break;
         }
 
@@ -180,15 +182,25 @@ public class DVDRitual : Task
         Debug.Log("player has died");
     }
 
+    void DisableObjects()
+    {
+        for (int i = 0; i < objects2Dis.Length; i++)
+        {
+            if (objects2Dis[i].tag == "Untagged")
+                objects2Dis[i].SetActive(false);
+            else if(objects2Dis[i].tag == "Interactable")
+                objects2Dis[i].tag = "Untagged";
+        }
+    }
+
     public override void LoadFinishedTask()
     {
-        objects2Dis[0].SetActive(false);
-        objects2Dis[1].SetActive(false);
-        objects2Dis[2].SetActive(false);
+        DisableObjects();
         tvSpiritLight.intensity = 1.5f;
         tvSpiritLight.pointLightOuterRadius = 15;
         summoningCircle.gameObject.GetComponent<Interactable>().enabled = false;
         HandleTvStage(2);
+        tvStatic.Stop();
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
     }
