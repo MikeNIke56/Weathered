@@ -10,10 +10,14 @@ public class Plant : MonoBehaviour
 
     [SerializeField] Slider waterBar;
     bool isDone = false;
+    CelebAutoGraphs autoGraphs;
+    [SerializeField] int numFlower;
+    public GameObject rose;
 
     void Start()
     {
         curFillAmnt = 0;
+        autoGraphs = FindAnyObjectByType<CelebAutoGraphs>();
     }
 
     private void OnMouseDrag()
@@ -30,6 +34,7 @@ public class Plant : MonoBehaviour
                 //handle sprite change of flowers
                 Debug.Log("plant is done");
                 isDone = true;
+                autoGraphs.UpdatePlants(numFlower);
             }
         }
         

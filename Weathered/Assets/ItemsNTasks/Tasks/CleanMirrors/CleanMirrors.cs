@@ -11,11 +11,13 @@ public class CleanMirrors : Task
     bool clearedAllMirrors = false;
 
     [SerializeField] PlayerController player;
+    CelebAutoGraphs autoGraphs;
 
 
     public override void InstanceTask()
     {
         base.InstanceTask();
+        autoGraphs = FindAnyObjectByType<CelebAutoGraphs>();
 
         foreach (MirrorSmudges smudge in smudges)
         {
@@ -59,6 +61,7 @@ public class CleanMirrors : Task
         if (clearedAllMirrors == true)
         {
             OnCompleted();
+            autoGraphs.requirementsMet[0] = true;
         }
 
     }
@@ -83,6 +86,7 @@ public class CleanMirrors : Task
             smudge.gameObject.SetActive(false);
         }
 
+        autoGraphs.requirementsMet[0] = true;
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,17 @@ using UnityEngine;
 public class CelebAutoGraphs : Task
 {
     [SerializeField] GameObject[] objects2Dis;
+    public bool[] requirementsMet = { false, false, false };
+    public Plant[] plants;
+    public bool[] requirementsMetFlowers = { false, false, false };
+    public int completedDolls = 0;
 
     public override void InstanceTask()
     {
         base.InstanceTask();
-        
+
+        if (currentState == taskState.Available)
+            currentState = taskState.InProgress;
     }
     
 
@@ -17,6 +24,43 @@ public class CelebAutoGraphs : Task
     {
         //trigger death condition
         Debug.Log("player has died");
+    }
+
+    public void BloomRose(int num)
+    {
+        plants[num].rose.SetActive(true);
+    }
+
+    public void CheckCompleted()
+    {
+        if (completedDolls >= 3)
+            OnCompleted();
+    }
+
+    public void UpdatePlants(int num)
+    {
+        bool isDone = true;
+        for (int i = 0; i < requirementsMet.Length; i++)
+        {
+            if(i == num)
+                requirementsMetFlowers[i] = true;
+            else
+            {
+                if(requirementsMetFlowers[i] == false)
+                    isDone = false;
+            }
+        }
+ 
+        if (isDone)
+        {
+            if (num < 0 || num > 2)
+            {
+                UpdatePlants(num);
+            }
+            else
+                BloomRose(num);
+        }
+
     }
 
     void DisableObjects()
