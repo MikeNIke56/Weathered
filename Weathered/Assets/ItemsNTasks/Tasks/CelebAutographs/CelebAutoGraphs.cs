@@ -7,7 +7,6 @@ public class CelebAutoGraphs : Task
 {
     [SerializeField] GameObject[] objects2Dis;
     public bool[] requirementsMet = { false, false, false };
-    public Plant[] plants;
     public bool[] requirementsMetFlowers = { false, false, false };
     public int completedDolls = 0;
 
@@ -26,9 +25,9 @@ public class CelebAutoGraphs : Task
         Debug.Log("player has died");
     }
 
-    public void BloomRose(int num)
+    public void BloomRose(Plant plant)
     {
-        plants[num].rose.SetActive(true);
+        plant.rose.SetActive(true);
     }
 
     public void CheckCompleted()
@@ -37,7 +36,7 @@ public class CelebAutoGraphs : Task
             OnCompleted();
     }
 
-    public void UpdatePlants(int num)
+    public void UpdatePlants(int num, Plant plant)
     {
         bool isDone = true;
         for (int i = 0; i < requirementsMet.Length; i++)
@@ -55,10 +54,10 @@ public class CelebAutoGraphs : Task
         {
             if (num < 0 || num > 2)
             {
-                UpdatePlants(num);
+                UpdatePlants(num, plant);
             }
             else
-                BloomRose(num);
+                BloomRose(plant);
         }
 
     }

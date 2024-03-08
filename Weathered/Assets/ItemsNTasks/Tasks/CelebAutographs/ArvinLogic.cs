@@ -16,6 +16,9 @@ public class ArvinLogic : Interaction
     }
     public override void onClick()
     {
+        if(ItemController.itemInHand is BloodyRose)
+            autoGraphs.requirementsMet[1] = true;
+
         StartCoroutine(TalkToArvin(stage));
     }
     IEnumerator TalkToArvin(int stage)

@@ -34,7 +34,7 @@ public class Plant : MonoBehaviour
                 //handle sprite change of flowers
                 Debug.Log("plant is done");
                 isDone = true;
-                autoGraphs.UpdatePlants(numFlower);
+                autoGraphs.UpdatePlants(numFlower, this);
             }
         }
         
