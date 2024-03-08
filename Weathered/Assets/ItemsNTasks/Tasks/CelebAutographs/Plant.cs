@@ -27,6 +27,7 @@ public class Plant : MonoBehaviour
 
             if (curFillAmnt >= 1)
             {
+                //handle sprite change of flowers
                 Debug.Log("plant is done");
                 isDone = true;
             }
