@@ -21,7 +21,11 @@ public class StuffedEagleOVObj : Interaction
     {
         gameObject.tag = "Untagged";
         GetComponent<BoxCollider2D>().enabled = false;
-        headObj.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
+        headObj.gameObject.GetComponent<Rigidbody2D>().gravityScale = 2f;
+        headObj.isKillable = true;
+
+        yield return new WaitForSeconds(1f);
+        headObj.isKillable = false;
 
         yield return new WaitForSeconds(waitTime);
         headObj.gameObject.tag = "Interactable";

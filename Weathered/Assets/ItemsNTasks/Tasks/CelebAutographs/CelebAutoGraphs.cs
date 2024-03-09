@@ -16,6 +16,8 @@ public class CelebAutoGraphs : Task
     Plant plant;
     ArvinAutograph autograph;
 
+    [SerializeField] DoorScript auntsDoor;
+
     private void Start()
     {
         arvinLogic = FindAnyObjectByType<ArvinLogic>();
@@ -60,7 +62,10 @@ public class CelebAutoGraphs : Task
     public void CheckCompleted()
     {
         if (completedDolls >= 3)
+        {
+            auntsDoor.OpenDoor(true);
             OnCompleted();
+        }
     }
 
     public void UpdatePlants(int num, Plant plant)
@@ -122,6 +127,7 @@ public class CelebAutoGraphs : Task
         statue.CompleteStatue();
         BloomRose(plant);
         autograph.SaveAutoGraph();
+        auntsDoor.OpenDoor(true);
 
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();

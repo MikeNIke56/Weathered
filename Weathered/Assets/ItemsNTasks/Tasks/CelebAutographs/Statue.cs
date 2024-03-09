@@ -28,5 +28,5 @@ public class Statue : Interaction
         this.gameObject.SetActive(false);
         ItemController.ClearItemInHand();
         head.SetActive(false);
-    }
+    } 
 }
