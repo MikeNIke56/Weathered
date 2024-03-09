@@ -91,14 +91,15 @@ public class FanDollsDialog : Interaction
         UIController.UIControl.CloseDialog();
     }
 
-    void Complete()
+    public void Complete()
     {
         autoGraphs.completedDolls++;
         autoGraphs.CheckCompleted();
         isCompleted = true;
         transform.position = sitPos.position;
         ItemController.itemInHand = null;
-        arvinLogic.autoGraphGiven = false;
+        arvinLogic.autographsNotUsed--;
+        gameObject.tag = "Untagged";
 
         foreach(Transform obj in parent.transform)
             Destroy(obj.gameObject);

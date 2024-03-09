@@ -5,8 +5,9 @@ using UnityEngine;
 public class ArvinLogic : Interaction
 {
     CelebAutoGraphs autoGraphs;
-    int stage = 1;
-    public bool autoGraphGiven = false;
+    public int stage = 1;
+    public int autographsNotUsed = 3;
+    public bool isSaved = false;
 
     [SerializeField] ArvinAutograph autograph;
 

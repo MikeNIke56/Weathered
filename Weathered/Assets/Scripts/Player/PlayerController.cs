@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour, ISavable
     bool lockMovement = false;
     public Dictionary<string, bool> moveBlockers = new Dictionary<string, bool>();
 
-    TeaParty sg;
+    CelebAutoGraphs sg;
 
     void Start()
     {
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour, ISavable
         moveBlockers.Add("CutScene", false);
         moveBlockers.Add("Menu", false);
 
-        sg = FindAnyObjectByType<TeaParty>(FindObjectsInactive.Include);
+        sg = FindAnyObjectByType<CelebAutoGraphs>(FindObjectsInactive.Include);
     }
 
     // Update is called once per frame

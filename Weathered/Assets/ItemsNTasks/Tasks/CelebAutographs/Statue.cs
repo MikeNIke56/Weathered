@@ -7,6 +7,11 @@ public class Statue : Interaction
     CelebAutoGraphs autoGraphs;
     [SerializeField] GameObject completedStatue;
     [SerializeField] GameObject head;
+
+    private void Start()
+    {
+        autoGraphs = FindAnyObjectByType<CelebAutoGraphs>();
+    }
     public override void onClick()
     {
         if (autoGraphs == null)
@@ -18,9 +23,9 @@ public class Statue : Interaction
 
     public void CompleteStatue()
     {
+        autoGraphs.requirementsMet[2] = true;
         completedStatue.SetActive(true);
         this.gameObject.SetActive(false);
-        autoGraphs.requirementsMet[2] = true;
         ItemController.ClearItemInHand();
         head.SetActive(false);
     }

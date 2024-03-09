@@ -10,6 +10,20 @@ public class CelebAutoGraphs : Task
     public bool[] requirementsMetFlowers = { false, false, false };
     public int completedDolls = 0;
 
+    [SerializeField] FanDollsDialog[] dolls;
+    ArvinLogic arvinLogic;
+    Statue statue;
+    Plant plant;
+    ArvinAutograph autograph;
+
+    private void Start()
+    {
+        arvinLogic = FindAnyObjectByType<ArvinLogic>();
+        statue = FindAnyObjectByType<Statue>();
+        plant = FindAnyObjectByType<Plant>();
+        autograph = FindAnyObjectByType<ArvinAutograph>();
+    }
+
     public override void InstanceTask()
     {
         base.InstanceTask();
@@ -79,9 +93,7 @@ public class CelebAutoGraphs : Task
     {
         for (int i = 0; i < objects2Dis.Length; i++)
         {
-            if (objects2Dis[i].tag == "Untagged")
-                objects2Dis[i].SetActive(false);
-            else if (objects2Dis[i].tag == "Interactable")
+            if (objects2Dis[i].tag == "Interactable")
                 objects2Dis[i].tag = "Untagged";
         }
     }
@@ -94,7 +106,23 @@ public class CelebAutoGraphs : Task
 
     public override void LoadFinishedTask()
     {
-       
+        for (int i = 0; i < dolls.Length; i++)
+        {
+            dolls[i].Complete();
+        }
+
+
+        DisableObjects();
+        requirementsMet[0] = true;
+        requirementsMet[1] = true;
+        requirementsMet[2] = true;
+        arvinLogic.stage = 4;
+        arvinLogic.autographsNotUsed = 0;
+        arvinLogic.isSaved = true;
+        statue.CompleteStatue();
+        BloomRose(plant);
+        autograph.SaveAutoGraph();
+
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
     }

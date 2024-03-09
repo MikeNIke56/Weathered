@@ -15,13 +15,20 @@ public class ArvinAutograph : Item
     public void ClickedAutographObject(ArvinAutographObj autoClicked)
     {
         ItemController.AddItemToHand(this);
-        autoClicked.gameObject.SetActive(false);
+
+        if (arvinLogic.stage == 1)
+            arvinAutoObject.gameObject.SetActive(false);
+        else if (arvinLogic.stage >= 2)
+        {
+            if (arvinLogic.autographsNotUsed <= 0)
+                arvinAutoObject.gameObject.SetActive(false);
+        }       
     }
     public void GiveAutographObject()
     {
         ItemController.AddItemToHand(this);
-        arvinAutoObject.gameObject.SetActive(false);
-        arvinLogic.autoGraphGiven = true;
+        if (arvinLogic.autographsNotUsed <= 0)
+            arvinAutoObject.gameObject.SetActive(false);
     }
 
     public override void OnDropped()
@@ -33,9 +40,14 @@ public class ArvinAutograph : Item
     {
         base.ClearItem();
 
-        if(arvinLogic.autoGraphGiven == true)
+        if(arvinLogic.autographsNotUsed > 0 || arvinLogic.isSaved == true)
             arvinAutoObject.gameObject.SetActive(true);
         else
             arvinAutoObject.gameObject.SetActive(false);
+    }
+
+    public void SaveAutoGraph()
+    {
+        arvinAutoObject.gameObject.SetActive(true);
     }
 }
