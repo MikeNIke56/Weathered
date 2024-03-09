@@ -18,12 +18,25 @@ public class CelebAutoGraphs : Task
             currentState = taskState.InProgress;
     }
     
-
-    public override void OnFailed()
+    public void ClickedStatueObject(Statue statue)
     {
-        //trigger death condition
-        Debug.Log("player has died");
+        if(ItemController.itemInHand is StatueHead)
+        {
+            statue.CompleteStatue();
+        }
     }
+    public void ClickedEagleObject(StuffedEagleOVObj stuffedEagle)
+    {
+        if (ItemController.itemInHand is FakeRock)
+        {
+            StartCoroutine(stuffedEagle.DropHead());
+        }
+        else
+        {
+            ShortTextController.STControl.AddShortText("That’s really high!");
+        }
+    }
+
 
     public void BloomRose(Plant plant)
     {
@@ -71,6 +84,12 @@ public class CelebAutoGraphs : Task
             else if (objects2Dis[i].tag == "Interactable")
                 objects2Dis[i].tag = "Untagged";
         }
+    }
+
+    public override void OnFailed()
+    {
+        //trigger death condition
+        Debug.Log("player has died");
     }
 
     public override void LoadFinishedTask()
