@@ -10,6 +10,7 @@ public class Kettle : Item
     {
         ItemController.AddItemToHand(this);
         kettleClicked.gameObject.SetActive(false);
+        kettleObject.kettleWhistle.Stop();
     }
 
     public override void OnDropped()
@@ -21,5 +22,6 @@ public class Kettle : Item
     {
         base.ClearItem();
         kettleObject.gameObject.SetActive(true);
+        kettleObject.kettleWhistle.Play();
     }
 }

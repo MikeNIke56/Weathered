@@ -12,6 +12,10 @@ public class FixElevator : Task
     public enum FuseBoxState { Closed, Open, Fixed };
     public FuseBoxState state;
 
+    [SerializeField] AudioSource fuseboxOpen;
+    [SerializeField] AudioSource fuseboxClose;
+    [SerializeField] AudioSource fuseboxButton;
+
     private void Awake()
     {
         player = FindAnyObjectByType<PlayerController>();
@@ -35,6 +39,7 @@ public class FixElevator : Task
             interaction.gameObject.GetComponent<FuseBox>().fuseBoxObjs[0].SetActive(false);
             interaction.gameObject.GetComponent<FuseBox>().fuseBoxObjs[1].SetActive(true);
             interaction.gameObject.GetComponent<FuseBox>().fuseBoxObjs[2].SetActive(false);
+            fuseboxOpen.Play();
 
             ShortTextController.STControl.AddShortText("The elevator is broken! I can’t go upstairs!");
             return;
@@ -47,7 +52,7 @@ public class FixElevator : Task
                 interaction.gameObject.GetComponent<FuseBox>().fuseBoxObjs[0].SetActive(false);
                 interaction.gameObject.GetComponent<FuseBox>().fuseBoxObjs[1].SetActive(false);
                 interaction.gameObject.GetComponent<FuseBox>().fuseBoxObjs[2].SetActive(true);
-
+                fuseboxClose.Play();
 
                 ItemController.itemInHand.ClearItem();
                 ItemController.itemInHand.gameObject.GetComponent<Fuse>().fuseObject.gameObject.SetActive(false);
@@ -56,6 +61,7 @@ public class FixElevator : Task
             }
             else if (state == FuseBoxState.Fixed)
             {
+                fuseboxButton.Play();
                 Debug.Log("taking elevator up");
                 var playerPos = player.gameObject.transform.position.y;
                 playerPos += 20;

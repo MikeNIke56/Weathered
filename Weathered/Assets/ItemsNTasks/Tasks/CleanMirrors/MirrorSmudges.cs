@@ -16,7 +16,7 @@ public class MirrorSmudges : Interaction
             cleanMirrors = FindFirstObjectByType<CleanMirrors>();
         }
 
-        //cleanSqueakSfx.Play();
+        cleanSqueakSfx.Play();
         cleanMirrors.ClickedSmudge(this);
     }
 }

@@ -11,6 +11,8 @@ public class DoorCurseFlicker : MonoBehaviour
     [SerializeField] float maxTime;
     float time;
 
+    [SerializeField] AudioSource cursedDoorHowls;
+
     void Start()
     {
         ResetStuff();
