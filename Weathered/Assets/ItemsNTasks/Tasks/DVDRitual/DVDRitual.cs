@@ -17,6 +17,7 @@ public class DVDRitual : Task
 
     SummoningCircleObj summoningCircle;
     [SerializeField] GameObject[] tvStages;
+    [SerializeField] GameObject[] spiritTvStages;
 
     [SerializeField] AudioSource tvStatic;
 
@@ -29,6 +30,7 @@ public class DVDRitual : Task
         summoningCircle = FindAnyObjectByType<SummoningCircleObj>();
 
         HandleTvStage(0);
+        HandleSpiritTvStage(0);
     }
     public void ClickedSummoningCircle(SummoningCircleObj summoningCircle)
     {
@@ -42,41 +44,41 @@ public class DVDRitual : Task
         {
             case ActionDVD:
                 Debug.Log("action dvd added");
-                summoningCircle.candleLitCount++;
                 summoningCircle.LightCandle();
+                summoningCircle.candleLitCount++;
                 requirementsMet[0] = true;
                 ItemController.ClearItemInHand();
                 break;
             case ArvensHits:
                 Debug.Log("arvens hits added");
-                summoningCircle.candleLitCount++;
                 summoningCircle.LightCandle();
+                summoningCircle.candleLitCount++;
                 requirementsMet[1] = true;
                 ItemController.ClearItemInHand();
                 break;
             case BiographyMatt:
                 Debug.Log("matts bio added");
-                summoningCircle.candleLitCount++;
                 summoningCircle.LightCandle();
+                summoningCircle.candleLitCount++;
                 ItemController.ClearItemInHand();
                 break;
             case CheesyPickupLine:
                 Debug.Log("pickup lines added");
-                summoningCircle.candleLitCount++;
                 summoningCircle.LightCandle();
+                summoningCircle.candleLitCount++;
                 requirementsMet[2] = true;
                 ItemController.ClearItemInHand();
                 break;
             case ComedyDVD:
                 Debug.Log("comedy dvd added");
-                summoningCircle.candleLitCount++;
                 summoningCircle.LightCandle();
+                summoningCircle.candleLitCount++;
                 ItemController.ClearItemInHand();
                 break;
             case PoemBook:
                 Debug.Log("poem added");
-                summoningCircle.candleLitCount++;
                 summoningCircle.LightCandle();
+                summoningCircle.candleLitCount++;
                 ItemController.ClearItemInHand();
                 break;
             default:
@@ -119,7 +121,7 @@ public class DVDRitual : Task
         requirementsMet[2] = false;
 
         yield return new WaitForSeconds(1);
-        summoningCircle.ResetCandles();
+        summoningCircle.ResetCircle();
     }
     public void ClickedTV()
     {
@@ -148,6 +150,7 @@ public class DVDRitual : Task
                 tvSpiritLight.pointLightOuterRadius = 15;
                 summoningCircle.gameObject.GetComponent<Interactable>().enabled = false;
                 HandleTvStage(2);
+                HandleSpiritTvStage(1);
                 OnCompleted();
                 ItemController.ClearItemInHand();
                 tvStatic.Stop();
@@ -176,6 +179,16 @@ public class DVDRitual : Task
                 tvStages[i].SetActive(true);
         }
     }
+    void HandleSpiritTvStage(int num)
+    {
+        for (int i = 0; i < spiritTvStages.Length; i++)
+        {
+            if (i != num)
+                spiritTvStages[i].SetActive(false);
+            else
+                spiritTvStages[i].SetActive(true);
+        }
+    }
     public override void OnFailed()
     {
         //trigger death condition
@@ -200,6 +213,7 @@ public class DVDRitual : Task
         tvSpiritLight.pointLightOuterRadius = 15;
         summoningCircle.gameObject.GetComponent<Interactable>().enabled = false;
         HandleTvStage(2);
+        HandleSpiritTvStage(1);
         tvStatic.Stop();
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
