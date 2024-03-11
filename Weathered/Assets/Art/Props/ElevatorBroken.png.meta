@@ -1,0 +1,2412 @@
+fileFormatVersion: 2
+guid: 14b214e6a251bb641b39f1a312fbc6c5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3879559150196965266
+    second: ElevatorBroken_0
+  - first:
+      213: -9222317895977877577
+    second: ElevatorBroken_1
+  - first:
+      213: 5681468165163677930
+    second: ElevatorBroken_2
+  - first:
+      213: -3380559115454327611
+    second: ElevatorBroken_3
+  - first:
+      213: -7833591902352220083
+    second: ElevatorBroken_4
+  - first:
+      213: -3253133142739465828
+    second: ElevatorBroken_5
+  - first:
+      213: 4226464625478157665
+    second: ElevatorBroken_6
+  - first:
+      213: -2314682059306597368
+    second: ElevatorBroken_7
+  - first:
+      213: -4023109263201474637
+    second: ElevatorBroken_8
+  - first:
+      213: -3941892559779736116
+    second: ElevatorBroken_9
+  - first:
+      213: 1316021226220258954
+    second: ElevatorBroken_10
+  - first:
+      213: 3142631797143103273
+    second: ElevatorBroken_11
+  - first:
+      213: -8980960486770241825
+    second: ElevatorBroken_12
+  - first:
+      213: -2835078331464598555
+    second: ElevatorBroken_13
+  - first:
+      213: 281885391572796996
+    second: ElevatorBroken_14
+  - first:
+      213: 346369548956629796
+    second: ElevatorBroken_15
+  - first:
+      213: -5551974775628951665
+    second: ElevatorBroken_16
+  - first:
+      213: -3480359247926083445
+    second: ElevatorBroken_17
+  - first:
+      213: -111048374623326336
+    second: ElevatorBroken_18
+  - first:
+      213: 7863115694138138396
+    second: ElevatorBroken_19
+  - first:
+      213: 8245297699858203541
+    second: ElevatorBroken_20
+  - first:
+      213: -2438871328937558606
+    second: ElevatorBroken_21
+  - first:
+      213: 2500950902380691585
+    second: ElevatorBroken_22
+  - first:
+      213: -2943506965968518601
+    second: ElevatorBroken_23
+  - first:
+      213: -2699976937366349902
+    second: ElevatorBroken_24
+  - first:
+      213: -230930555486746209
+    second: ElevatorBroken_25
+  - first:
+      213: 4648501356683851334
+    second: ElevatorBroken_26
+  - first:
+      213: -690943074452709772
+    second: ElevatorBroken_27
+  - first:
+      213: -5870733802012395973
+    second: ElevatorBroken_28
+  - first:
+      213: 2462510655896471189
+    second: ElevatorBroken_29
+  - first:
+      213: 8301811103048418828
+    second: ElevatorBroken_30
+  - first:
+      213: -1254677084948970981
+    second: ElevatorBroken_31
+  - first:
+      213: -670548905038764997
+    second: ElevatorBroken_32
+  - first:
+      213: 5113603044732258721
+    second: ElevatorBroken_33
+  - first:
+      213: -21844084342570338
+    second: ElevatorBroken_34
+  - first:
+      213: 2422072485990375162
+    second: ElevatorBroken_35
+  - first:
+      213: 7455985819215263318
+    second: ElevatorBroken_36
+  - first:
+      213: -6747025837581054645
+    second: ElevatorBroken_37
+  - first:
+      213: 113190383705708266
+    second: ElevatorBroken_38
+  - first:
+      213: 8178797407832117323
+    second: ElevatorBroken_39
+  - first:
+      213: -2734751619515085974
+    second: ElevatorBroken_40
+  - first:
+      213: 1124874510072283537
+    second: ElevatorBroken_41
+  - first:
+      213: -3679099524104280022
+    second: ElevatorBroken_42
+  - first:
+      213: -6135521392598028354
+    second: ElevatorBroken_43
+  - first:
+      213: 3348472495290735813
+    second: ElevatorBroken_44
+  - first:
+      213: 8356193740848386006
+    second: ElevatorBroken_45
+  - first:
+      213: -1140801267205117791
+    second: ElevatorBroken_46
+  - first:
+      213: 3031019437760285228
+    second: ElevatorBroken_47
+  - first:
+      213: 4559220677068438901
+    second: ElevatorBroken_48
+  - first:
+      213: 1545007031095976219
+    second: ElevatorBroken_49
+  - first:
+      213: -8203799496142699897
+    second: ElevatorBroken_50
+  - first:
+      213: 2797805149694414469
+    second: ElevatorBroken_51
+  - first:
+      213: -1956704736341056254
+    second: ElevatorBroken_52
+  - first:
+      213: 2127403854025918709
+    second: ElevatorBroken_53
+  - first:
+      213: 2422308842349929010
+    second: ElevatorBroken_54
+  - first:
+      213: 418785571191613630
+    second: ElevatorBroken_55
+  - first:
+      213: -4505173196649392840
+    second: ElevatorBroken_56
+  - first:
+      213: 7990090467416822936
+    second: ElevatorBroken_57
+  - first:
+      213: -5617312080568438120
+    second: ElevatorBroken_58
+  - first:
+      213: -8544831249678436431
+    second: ElevatorBroken_59
+  - first:
+      213: 3700777663399160594
+    second: ElevatorBroken_60
+  - first:
+      213: 4545326474540776005
+    second: ElevatorBroken_61
+  - first:
+      213: -2171272371333223637
+    second: ElevatorBroken_62
+  - first:
+      213: 6774988383444018250
+    second: ElevatorBroken_63
+  - first:
+      213: -7690374434646953475
+    second: ElevatorBroken_64
+  - first:
+      213: 3382191559903833970
+    second: ElevatorBroken_65
+  - first:
+      213: -4726226429217524133
+    second: ElevatorBroken_66
+  - first:
+      213: 1315748566758927609
+    second: ElevatorBroken_67
+  - first:
+      213: -2991166211142072929
+    second: ElevatorBroken_68
+  - first:
+      213: 7055564476581108542
+    second: ElevatorBroken_69
+  - first:
+      213: -5023127481013422022
+    second: ElevatorBroken_70
+  - first:
+      213: 2116799266202809952
+    second: ElevatorBroken_71
+  - first:
+      213: -5089649982478503102
+    second: ElevatorBroken_72
+  - first:
+      213: 204232647013583391
+    second: ElevatorBroken_73
+  - first:
+      213: -177251935788060281
+    second: ElevatorBroken_74
+  - first:
+      213: 8990409199901023966
+    second: ElevatorBroken_75
+  - first:
+      213: 2313918605205110147
+    second: ElevatorBroken_76
+  - first:
+      213: 8110525250660794723
+    second: ElevatorBroken_77
+  - first:
+      213: 6809043061582391129
+    second: ElevatorBroken_78
+  - first:
+      213: -7797133044001230285
+    second: ElevatorBroken_79
+  - first:
+      213: 4198111120764594116
+    second: ElevatorBroken_80
+  - first:
+      213: 4933965707625758863
+    second: ElevatorBroken_81
+  - first:
+      213: 2138618682205129860
+    second: ElevatorBroken_82
+  - first:
+      213: 2144680801717662999
+    second: ElevatorBroken_83
+  - first:
+      213: 2848500275579480085
+    second: ElevatorBroken_84
+  - first:
+      213: -2151759079434520787
+    second: ElevatorBroken_85
+  - first:
+      213: 222422905265820374
+    second: ElevatorBroken_86
+  - first:
+      213: -905611205823226167
+    second: ElevatorBroken_87
+  - first:
+      213: -6575637454456070028
+    second: ElevatorBroken_88
+  - first:
+      213: 9062925796336995244
+    second: ElevatorBroken_89
+  - first:
+      213: -7886797073676868453
+    second: ElevatorBroken_90
+  - first:
+      213: -1510411987001901532
+    second: ElevatorBroken_91
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 102.4
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ElevatorBroken_0
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 372
+        width: 672
+        height: 909
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60c467f189092ac0800000000000000
+      internalID: -3879559150196965266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_1
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 779
+        width: 42
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bfb28c4cbeb30080800000000000000
+      internalID: -9222317895977877577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_2
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 546
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae8754bc131a8de40800000000000000
+      internalID: 5681468165163677930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_3
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 536
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4d22d3567d511d0800000000000000
+      internalID: -3380559115454327611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_4
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 543
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d406be04bad794390800000000000000
+      internalID: -7833591902352220083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_5
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 425
+        width: 55
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99c6fb74ac8ad2d0800000000000000
+      internalID: -3253133142739465828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_6
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 530
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16541612f2b67aa30800000000000000
+      internalID: 4226464625478157665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_7
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 531
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8048f074ee890efd0800000000000000
+      internalID: -2314682059306597368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_8
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 538
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b7ea42c07b0b28c0800000000000000
+      internalID: -4023109263201474637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 525
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc5d2971a959b49c0800000000000000
+      internalID: -3941892559779736116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_10
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 527
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a868bb92552734210800000000000000
+      internalID: 1316021226220258954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_11
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 519
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 927ef8818fedc9b20800000000000000
+      internalID: 3142631797143103273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_12
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 518
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde8d3c35083d5380800000000000000
+      internalID: -8980960486770241825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_13
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 528
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb35a64747c7a8d0800000000000000
+      internalID: -2835078331464598555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_14
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 522
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4468118254579e300800000000000000
+      internalID: 281885391572796996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_15
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 513
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b7296054d8ec400800000000000000
+      internalID: 346369548956629796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_16
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 521
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f05b07b5c63f2b0800000000000000
+      internalID: -5551974775628951665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_17
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 508
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80ce9824b743bfc0800000000000000
+      internalID: -3480359247926083445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_18
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 510
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f21b5771a757ef0800000000000000
+      internalID: -111048374623326336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_19
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 503
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f17e030166f1d60800000000000000
+      internalID: 7863115694138138396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_20
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 510
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593c463929e2d6270800000000000000
+      internalID: 8245297699858203541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_21
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 500
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bdbac1b273672ed0800000000000000
+      internalID: -2438871328937558606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_22
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 498
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1800819589925b220800000000000000
+      internalID: 2500950902380691585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_23
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 491
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7320f8382009627d0800000000000000
+      internalID: -2943506965968518601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_24
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 497
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b71882d741c78ad0800000000000000
+      internalID: -2699976937366349902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_25
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 491
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f99cd6022e19bccf0800000000000000
+      internalID: -230930555486746209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_26
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 486
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 646ff07ea5bc28040800000000000000
+      internalID: 4648501356683851334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_27
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 483
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47eda3f3fe64966f0800000000000000
+      internalID: -690943074452709772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_28
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 478
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b363c2826b6f68ea0800000000000000
+      internalID: -5870733802012395973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_29
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 488
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 596c25405689c2220800000000000000
+      internalID: 2462510655896471189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_30
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 474
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c06489d9635f53370800000000000000
+      internalID: 8301811103048418828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_31
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 479
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b124bcbb6dd769ee0800000000000000
+      internalID: -1254677084948970981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_32
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 475
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3423a6d25bb1b6f0800000000000000
+      internalID: -670548905038764997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_33
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 466
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a94f9b40ea27f640800000000000000
+      internalID: 5113603044732258721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_34
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 471
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e924158cbe462bff0800000000000000
+      internalID: -21844084342570338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_35
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 462
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe14b3e71eec9120800000000000000
+      internalID: 2422072485990375162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_36
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 468
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656fcac599bf87760800000000000000
+      internalID: 7455985819215263318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_37
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 453
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d499c7fbfbd52a0800000000000000
+      internalID: -6747025837581054645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_38
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 459
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6d4c4ed02229100800000000000000
+      internalID: 113190383705708266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_39
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 457
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4018b7c8ece08170800000000000000
+      internalID: 8178797407832117323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_40
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 457
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b01e134e53c0ad0800000000000000
+      internalID: -2734751619515085974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_41
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 451
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19100c5386b5c9f00800000000000000
+      internalID: 1124874510072283537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_42
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 444
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a28a47cb97631fcc0800000000000000
+      internalID: -3679099524104280022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_43
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 451
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf62620dcf3adaa0800000000000000
+      internalID: -6135521392598028354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_44
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 443
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc58f55ef9287e20800000000000000
+      internalID: 3348472495290735813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_45
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 433
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df4c9d2fe927f370800000000000000
+      internalID: 8356193740848386006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_46
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 429
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a86cecaa4f0b20f0800000000000000
+      internalID: -1140801267205117791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_47
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 434
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a810f9e18501a20800000000000000
+      internalID: 3031019437760285228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_48
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 423
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57db74dcc0b954f30800000000000000
+      internalID: 4559220677068438901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_49
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 402
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b11e4ff75b7f07510800000000000000
+      internalID: 1545007031095976219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_50
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 406
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782c2e7e2df362e80800000000000000
+      internalID: -8203799496142699897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_51
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 405
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e4b42d5fcc3d620800000000000000
+      internalID: 2797805149694414469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_52
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 400
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205211cc86368d4e0800000000000000
+      internalID: -1956704736341056254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_53
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 400
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f80305a88e068d10800000000000000
+      internalID: 2127403854025918709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_54
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 401
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2322e84ee05cd9120800000000000000
+      internalID: 2422308842349929010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_55
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 404
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb86fe71243dfc500800000000000000
+      internalID: 418785571191613630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_56
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 406
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8351a1ad8d86a71c0800000000000000
+      internalID: -4505173196649392840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_57
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 404
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8945d9162f082ee60800000000000000
+      internalID: 7990090467416822936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_58
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 404
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892353dac6c4b02b0800000000000000
+      internalID: -5617312080568438120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_59
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 404
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b772493049aa6980800000000000000
+      internalID: -8544831249678436431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_60
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 404
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b6b936dadcb5330800000000000000
+      internalID: 3700777663399160594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_61
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 400
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a7e2fa85e341f30800000000000000
+      internalID: 4545326474540776005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_62
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 400
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b201c38471ed1e0800000000000000
+      internalID: -2171272371333223637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_63
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 406
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4424901a08950e50800000000000000
+      internalID: 6774988383444018250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_64
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 403
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df17f11723d464590800000000000000
+      internalID: -7690374434646953475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_65
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 401
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27f646add45ffee20800000000000000
+      internalID: 3382191559903833970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_66
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 401
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b563d6e6a12196eb0800000000000000
+      internalID: -4726226429217524133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_67
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 406
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc256fa95a724210800000000000000
+      internalID: 1315748566758927609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_68
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 398
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f95c9b8cd2e3d76d0800000000000000
+      internalID: -2991166211142072929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_69
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 406
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b5b7c62866ae160800000000000000
+      internalID: 7055564476581108542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_70
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 401
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3831b07b244a4ab0800000000000000
+      internalID: -5023127481013422022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_71
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 400
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06673d2a7b1606d10800000000000000
+      internalID: 2116799266202809952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_72
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 400
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243bb4b9e4eed59b0800000000000000
+      internalID: -5089649982478503102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_73
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 400
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a48c8a28495d200800000000000000
+      internalID: 204232647013583391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_74
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 405
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7813a93bd464a8df0800000000000000
+      internalID: -177251935788060281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_75
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 402
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede1189b88954cc70800000000000000
+      internalID: 8990409199901023966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_76
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 404
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38dfa6636b0bc1020800000000000000
+      internalID: 2313918605205110147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_77
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 398
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361097b7ebf5e8070800000000000000
+      internalID: 8110525250660794723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_78
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 400
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 957e4f1b6949e7e50800000000000000
+      internalID: 6809043061582391129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_79
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 402
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 332b8d5bec40bc390800000000000000
+      internalID: -7797133044001230285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_80
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 404
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c76ac062dfa24a30800000000000000
+      internalID: 4198111120764594116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_81
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 398
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f800ef87ba7f87440800000000000000
+      internalID: 4933965707625758863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_82
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 404
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48cc9de4c56edad10800000000000000
+      internalID: 2138618682205129860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_83
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 390
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7153bfe73df63cd10800000000000000
+      internalID: 2144680801717662999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_84
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 395
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 518648c98e7e78720800000000000000
+      internalID: 2848500275579480085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_85
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 392
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27751c848a6322e0800000000000000
+      internalID: -2151759079434520787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_86
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 394
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d297423474361300800000000000000
+      internalID: 222422905265820374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_87
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 392
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce1b4c086f9e63f0800000000000000
+      internalID: -905611205823226167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_88
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 392
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470646b0394aeb4a0800000000000000
+      internalID: -6575637454456070028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_89
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 393
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab046c8efaf5cd70800000000000000
+      internalID: 9062925796336995244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_90
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 393
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9466e7f8d77c8290800000000000000
+      internalID: -7886797073676868453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElevatorBroken_91
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 388
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e7242ec40f90be0800000000000000
+      internalID: -1510411987001901532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ElevatorBroken_0: -3879559150196965266
+      ElevatorBroken_1: -9222317895977877577
+      ElevatorBroken_10: 1316021226220258954
+      ElevatorBroken_11: 3142631797143103273
+      ElevatorBroken_12: -8980960486770241825
+      ElevatorBroken_13: -2835078331464598555
+      ElevatorBroken_14: 281885391572796996
+      ElevatorBroken_15: 346369548956629796
+      ElevatorBroken_16: -5551974775628951665
+      ElevatorBroken_17: -3480359247926083445
+      ElevatorBroken_18: -111048374623326336
+      ElevatorBroken_19: 7863115694138138396
+      ElevatorBroken_2: 5681468165163677930
+      ElevatorBroken_20: 8245297699858203541
+      ElevatorBroken_21: -2438871328937558606
+      ElevatorBroken_22: 2500950902380691585
+      ElevatorBroken_23: -2943506965968518601
+      ElevatorBroken_24: -2699976937366349902
+      ElevatorBroken_25: -230930555486746209
+      ElevatorBroken_26: 4648501356683851334
+      ElevatorBroken_27: -690943074452709772
+      ElevatorBroken_28: -5870733802012395973
+      ElevatorBroken_29: 2462510655896471189
+      ElevatorBroken_3: -3380559115454327611
+      ElevatorBroken_30: 8301811103048418828
+      ElevatorBroken_31: -1254677084948970981
+      ElevatorBroken_32: -670548905038764997
+      ElevatorBroken_33: 5113603044732258721
+      ElevatorBroken_34: -21844084342570338
+      ElevatorBroken_35: 2422072485990375162
+      ElevatorBroken_36: 7455985819215263318
+      ElevatorBroken_37: -6747025837581054645
+      ElevatorBroken_38: 113190383705708266
+      ElevatorBroken_39: 8178797407832117323
+      ElevatorBroken_4: -7833591902352220083
+      ElevatorBroken_40: -2734751619515085974
+      ElevatorBroken_41: 1124874510072283537
+      ElevatorBroken_42: -3679099524104280022
+      ElevatorBroken_43: -6135521392598028354
+      ElevatorBroken_44: 3348472495290735813
+      ElevatorBroken_45: 8356193740848386006
+      ElevatorBroken_46: -1140801267205117791
+      ElevatorBroken_47: 3031019437760285228
+      ElevatorBroken_48: 4559220677068438901
+      ElevatorBroken_49: 1545007031095976219
+      ElevatorBroken_5: -3253133142739465828
+      ElevatorBroken_50: -8203799496142699897
+      ElevatorBroken_51: 2797805149694414469
+      ElevatorBroken_52: -1956704736341056254
+      ElevatorBroken_53: 2127403854025918709
+      ElevatorBroken_54: 2422308842349929010
+      ElevatorBroken_55: 418785571191613630
+      ElevatorBroken_56: -4505173196649392840
+      ElevatorBroken_57: 7990090467416822936
+      ElevatorBroken_58: -5617312080568438120
+      ElevatorBroken_59: -8544831249678436431
+      ElevatorBroken_6: 4226464625478157665
+      ElevatorBroken_60: 3700777663399160594
+      ElevatorBroken_61: 4545326474540776005
+      ElevatorBroken_62: -2171272371333223637
+      ElevatorBroken_63: 6774988383444018250
+      ElevatorBroken_64: -7690374434646953475
+      ElevatorBroken_65: 3382191559903833970
+      ElevatorBroken_66: -4726226429217524133
+      ElevatorBroken_67: 1315748566758927609
+      ElevatorBroken_68: -2991166211142072929
+      ElevatorBroken_69: 7055564476581108542
+      ElevatorBroken_7: -2314682059306597368
+      ElevatorBroken_70: -5023127481013422022
+      ElevatorBroken_71: 2116799266202809952
+      ElevatorBroken_72: -5089649982478503102
+      ElevatorBroken_73: 204232647013583391
+      ElevatorBroken_74: -177251935788060281
+      ElevatorBroken_75: 8990409199901023966
+      ElevatorBroken_76: 2313918605205110147
+      ElevatorBroken_77: 8110525250660794723
+      ElevatorBroken_78: 6809043061582391129
+      ElevatorBroken_79: -7797133044001230285
+      ElevatorBroken_8: -4023109263201474637
+      ElevatorBroken_80: 4198111120764594116
+      ElevatorBroken_81: 4933965707625758863
+      ElevatorBroken_82: 2138618682205129860
+      ElevatorBroken_83: 2144680801717662999
+      ElevatorBroken_84: 2848500275579480085
+      ElevatorBroken_85: -2151759079434520787
+      ElevatorBroken_86: 222422905265820374
+      ElevatorBroken_87: -905611205823226167
+      ElevatorBroken_88: -6575637454456070028
+      ElevatorBroken_89: 9062925796336995244
+      ElevatorBroken_9: -3941892559779736116
+      ElevatorBroken_90: -7886797073676868453
+      ElevatorBroken_91: -1510411987001901532
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
