@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour, ISavable
     }
     public static void StartDeath(GameObject deathRoot, float animationTimeInSeconds, bool skipFlash)
     {
-        FindFirstObjectByType<PlayerController>().StartDeath();
+        PC.StartDeath();
         UIController.UIControl.DeathEventScreen();
         GM.StartCoroutine(DeathAnim(deathRoot, animationTimeInSeconds, skipFlash));
     }
