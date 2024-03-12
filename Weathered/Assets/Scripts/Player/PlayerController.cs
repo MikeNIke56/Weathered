@@ -61,9 +61,13 @@ public class PlayerController : MonoBehaviour, ISavable
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        //if (Input.GetKeyDown(KeyCode.I))
+        //{
+        //    sg.LoadFinishedTask();
+        //}
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            sg.LoadFinishedTask();
+            UIController.UIControl.OpenPauseMenu();
         }
 
         if (state == GameState.Death)

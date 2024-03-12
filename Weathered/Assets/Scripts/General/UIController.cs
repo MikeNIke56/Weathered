@@ -163,7 +163,7 @@ public class UIController : MonoBehaviour
         saveScreen.SetActive(false);
     }
 
-    void OpenPauseMenu()
+    public void OpenPauseMenu()
     {
         if (player.isPaused == false)
         {
