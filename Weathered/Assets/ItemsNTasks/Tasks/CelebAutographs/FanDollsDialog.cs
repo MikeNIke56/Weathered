@@ -27,8 +27,8 @@ public class FanDollsDialog : Interaction
     {
         // Store the starting position & rotation of the object
         posOffset = transform.position;
-        autoGraphs = FindAnyObjectByType<CelebAutoGraphs>();
-        arvinLogic = FindAnyObjectByType<ArvinLogic>();
+        autoGraphs = FindFirstObjectByType<CelebAutoGraphs>();
+        arvinLogic = FindFirstObjectByType<ArvinLogic>();
     }
 
     // Update is called once per frame
@@ -50,6 +50,7 @@ public class FanDollsDialog : Interaction
     }
     IEnumerator TalkToDoll(int num)
     {
+        bool doCheckComplete = false;
         UIController.UIControl.OpenDialog();
         DialogManager.Instance.OpenDialog();
 
@@ -59,7 +60,7 @@ public class FanDollsDialog : Interaction
                 if(ItemController.itemInHand is ArvinAutograph)
                 {
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "thanks for autograph");
-                    Complete();
+                    doCheckComplete = true;
                 }
                 else
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Fandoll1 I want autograph");
@@ -68,7 +69,7 @@ public class FanDollsDialog : Interaction
                 if (ItemController.itemInHand is ArvinAutograph)
                 {
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "thanks for autograph");
-                    Complete();
+                    doCheckComplete = true;
                 }
                 else
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Fandoll2 I want autograph");
@@ -77,7 +78,7 @@ public class FanDollsDialog : Interaction
                 if (ItemController.itemInHand is ArvinAutograph)
                 {
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "thanks for autograph");
-                    Complete();
+                    doCheckComplete = true;
                 }
                 else
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Fandoll3 I want autograph");
@@ -89,6 +90,11 @@ public class FanDollsDialog : Interaction
 
         DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
+
+        if (doCheckComplete)
+        {
+            Complete();
+        }
     }
 
     public void Complete()

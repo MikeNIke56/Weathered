@@ -143,6 +143,7 @@ public class DVDRitual : Task
             case ThrillingDVD:
                 HandleTvStage(3);
                 tvStatic.Stop();
+                OnFailed();
                 break;
             case StrangeDVD:
                 DisableObjects();
@@ -195,7 +196,8 @@ public class DVDRitual : Task
     public override void OnFailed()
     {
         //trigger death condition
-        Debug.Log("player has died");
+        Debug.Log("player has died from poor taste in movies.");
+        GameManager.StartDeath(null, 0f, false);
     }
 
     void DisableObjects()
