@@ -16,6 +16,7 @@ public class CelebAutoGraphs : Task
     Plant plant;
     ArvinAutograph autograph;
 
+    [SerializeField] DoorScript auntsDoor;
     [SerializeField] GameObject falseWall;
 
     private void Start()
@@ -60,7 +61,7 @@ public class CelebAutoGraphs : Task
     {
         if (completedDolls >= 3)
         {
-            FindFirstObjectByType<AuntsDoor>().OpenDoor(false);
+            auntsDoor.OpenDoor(false);
             falseWall.SetActive(false);
             OnCompleted();
             Progression.Prog.CelebrityDolls();
@@ -105,8 +106,7 @@ public class CelebAutoGraphs : Task
     public override void OnFailed()
     {
         //trigger death condition
-        Debug.Log("player has died from fall damage again (not theirs (bonk))");
-        GameManager.StartDeath(null, 0f, false);
+        Debug.Log("player has died");
     }
 
     public override void LoadFinishedTask()
@@ -124,7 +124,7 @@ public class CelebAutoGraphs : Task
         arvinLogic.isSaved = true;
         statue.CompleteStatue();
         BloomRose(plant);
-        FindFirstObjectByType<AuntsDoor>().OpenDoor(false);
+        auntsDoor.OpenDoor(false);
         falseWall.SetActive(false);
 
         currentState = taskState.Completed;

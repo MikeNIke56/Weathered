@@ -19,9 +19,8 @@ public class CursedDoorKill : MonoBehaviour
 
             if(timer <= 0.0)
             {
+                Debug.Log("Player has died");
                 timer = maxTimer;
-                Debug.Log("Player has died from poor danger management.");
-                GameManager.StartDeath(null, 0f, false);
             }
         }
     }

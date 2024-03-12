@@ -7,7 +7,7 @@ public class MirrorSmudges : Interaction
     [SerializeField] CleanMirrors cleanMirrors;
     public int cleanCount;
     [SerializeField] AudioSource cleanSqueakSfx;
-    //public MirrorRange mirror;
+    public MirrorRange mirror;
 
     public override void onClick()
     {

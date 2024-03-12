@@ -14,9 +14,6 @@ public class Plant : MonoBehaviour
     [SerializeField] int numFlower;
     public GameObject rose;
 
-    [SerializeField] GameObject DryPlant;
-    [SerializeField] GameObject WetPlant;
-
     void Start()
     {
         curFillAmnt = 0;
@@ -35,8 +32,6 @@ public class Plant : MonoBehaviour
             if (curFillAmnt >= 1)
             {
                 //handle sprite change of flowers
-                WetPlant.SetActive(true);
-                DryPlant.SetActive(false);
                 Debug.Log("plant is done");
                 isDone = true;
                 autoGraphs.UpdatePlants(numFlower, this);

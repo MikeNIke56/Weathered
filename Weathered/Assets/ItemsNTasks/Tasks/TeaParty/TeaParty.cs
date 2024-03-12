@@ -34,7 +34,7 @@ public class TeaParty : Task
     }
     private void Update()
     {
-        if(deathTriggered==true && !isFailed)
+        if(deathTriggered==true)
             OnFailed();
     }
 
@@ -122,13 +122,11 @@ public class TeaParty : Task
 
     public override void OnFailed()
     {
-        isFailed = true;
         //trigger death condition
-        Debug.Log("player has died from fall damage (not theirs)");
-        GameManager.StartDeath(null, 0f, false);
+        Debug.Log("player has died");
 
-        GameManager.PC.moveBlockers["CutScene"] = true;
-        //ShortTextController.STControl.AddShortText("Oh no, it broke! Aunt will be mad…");
+        player.moveBlockers["CutScene"] = true;
+        ShortTextController.STControl.AddShortText("Oh no, it broke! Aunt will be mad…");
     }
 
     public override void LoadFinishedTask()

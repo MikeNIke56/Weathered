@@ -35,8 +35,8 @@ public class CleanMirrors : Task
         {
             if (ItemController.itemInHand == clothItem)
             {
-                //if(IsFacingMirror(interaction.gameObject.GetComponent<MirrorSmudges>().mirror)==true)
-                //    OnFailed();
+                if(IsFacingMirror(interaction.gameObject.GetComponent<MirrorSmudges>().mirror)==true)
+                    OnFailed();
 
                 if (interaction.gameObject.GetComponent<MirrorSmudges>().cleanCount > 0)
                 {
