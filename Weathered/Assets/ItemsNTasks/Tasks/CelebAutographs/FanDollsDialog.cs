@@ -98,10 +98,20 @@ public class FanDollsDialog : Interaction
         isCompleted = true;
         transform.position = sitPos.position;
         ItemController.itemInHand = null;
-        arvinLogic.autographsNotUsed--;
         gameObject.tag = "Untagged";
 
         foreach(Transform obj in parent.transform)
+            Destroy(obj.gameObject);
+    }
+    public void CompleteSave()
+    {
+        autoGraphs.completedDolls++;
+        isCompleted = true;
+        transform.position = sitPos.position;
+        ItemController.itemInHand = null;
+        gameObject.tag = "Untagged";
+
+        foreach (Transform obj in parent.transform)
             Destroy(obj.gameObject);
     }
 }

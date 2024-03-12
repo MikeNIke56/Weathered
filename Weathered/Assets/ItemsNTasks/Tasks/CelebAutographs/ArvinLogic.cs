@@ -6,8 +6,8 @@ public class ArvinLogic : Interaction
 {
     CelebAutoGraphs autoGraphs;
     public int stage = 1;
-    public int autographsNotUsed = 3;
     public bool isSaved = false;
+    public int autosOnGround = 0;
 
     [SerializeField] ArvinAutograph autograph;
 
@@ -30,6 +30,7 @@ public class ArvinLogic : Interaction
         switch (stage)
         {
             case 1:
+                autoGraphs.OnInProgress();
                 if (autoGraphs.requirementsMet[0] == false)
                 {
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "clean mirrors so i can stare at myself");

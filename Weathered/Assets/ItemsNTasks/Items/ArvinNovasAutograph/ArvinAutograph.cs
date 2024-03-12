@@ -9,30 +9,31 @@ public class ArvinAutograph : Item
 
     private void Start()
     {
-        arvinLogic =FindAnyObjectByType<ArvinLogic>();
+        arvinLogic = FindAnyObjectByType<ArvinLogic>();
     }
 
     public void ClickedAutographObject(ArvinAutographObj autoClicked)
     {
         ItemController.AddItemToHand(this);
+        arvinLogic.autosOnGround--;
 
-        if (arvinLogic.stage == 1)
+        if (arvinLogic.autosOnGround <= 0)
             arvinAutoObject.gameObject.SetActive(false);
-        else if (arvinLogic.stage >= 2)
-        {
-            if (arvinLogic.autographsNotUsed <= 0)
-                arvinAutoObject.gameObject.SetActive(false);
-        }       
+        else
+            arvinAutoObject.gameObject.SetActive(true);    
     }
     public void GiveAutographObject()
     {
+        Item prevItem = ItemController.itemInHand;
         ItemController.AddItemToHand(this);
-        if (arvinLogic.autographsNotUsed <= 0)
-            arvinAutoObject.gameObject.SetActive(false);
+
+        if (prevItem is ArvinAutograph)
+            OnDropped();
     }
 
     public override void OnDropped()
     {
+        arvinLogic.autosOnGround++;
         ClearItem();
     }
 
@@ -40,14 +41,9 @@ public class ArvinAutograph : Item
     {
         base.ClearItem();
 
-        if(arvinLogic.autographsNotUsed > 0 || arvinLogic.isSaved == true)
+        if(arvinLogic.autosOnGround > 0)
             arvinAutoObject.gameObject.SetActive(true);
         else
             arvinAutoObject.gameObject.SetActive(false);
-    }
-
-    public void SaveAutoGraph()
-    {
-        arvinAutoObject.gameObject.SetActive(true);
     }
 }

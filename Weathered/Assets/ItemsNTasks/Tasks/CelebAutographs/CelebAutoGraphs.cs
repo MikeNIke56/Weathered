@@ -30,9 +30,6 @@ public class CelebAutoGraphs : Task
     public override void InstanceTask()
     {
         base.InstanceTask();
-
-        if (currentState == taskState.Available)
-            currentState = taskState.InProgress;
     }
     
     public void ClickedStatueObject(Statue statue)
@@ -115,22 +112,19 @@ public class CelebAutoGraphs : Task
     public override void LoadFinishedTask()
     {
         for (int i = 0; i < dolls.Length; i++)
-        {
-            dolls[i].Complete();
-        }
+            dolls[i].CompleteSave();
+
+        for (int i = 0; i < requirementsMet.Length; i++)
+            requirementsMet[i] = true;
 
 
         DisableObjects();
-        requirementsMet[0] = true;
-        requirementsMet[1] = true;
-        requirementsMet[2] = true;
         arvinLogic.stage = 4;
-        arvinLogic.autographsNotUsed = 0;
+        arvinLogic.autosOnGround = 0;
         arvinLogic.isSaved = true;
         statue.CompleteStatue();
         BloomRose(plant);
-        autograph.SaveAutoGraph();
-        auntsDoor.OpenDoor(true);
+        auntsDoor.OpenDoor(false);
         falseWall.SetActive(false);
 
         currentState = taskState.Completed;
