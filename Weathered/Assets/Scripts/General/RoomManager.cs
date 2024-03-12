@@ -9,25 +9,15 @@ public class RoomManager : MonoBehaviour
     [SerializeField]
     float fadeSpeed = 1f;
     bool HasStartedFading = false;
-    [SerializeField] bool isTutorial = false;
-    [SerializeField] bool isSpiritWorld = false;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !HasStartedFading)
         {
-            StartFade();
-        }
-    }
-
-    public void StartFade()
-    {
-        HasStartedFading = true;
-        if (!isTutorial && !isSpiritWorld)
-        {
+            HasStartedFading = true;
             BGMManager.BGM.ProgressTrack();
+            StartCoroutine("FadeOut");
         }
-        StartCoroutine("FadeOut");
     }
 
     IEnumerator FadeOut()
