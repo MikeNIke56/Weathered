@@ -8,11 +8,14 @@ public class RoomManager : MonoBehaviour
     SpriteRenderer SR;
     [SerializeField]
     float fadeSpeed = 1f;
+    bool HasStartedFading = false;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !HasStartedFading)
         {
+            HasStartedFading = true;
+            BGMManager.BGM.ProgressTrack();
             StartCoroutine("FadeOut");
         }
     }

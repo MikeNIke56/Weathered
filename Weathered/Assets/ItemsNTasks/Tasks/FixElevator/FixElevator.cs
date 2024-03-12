@@ -16,6 +16,9 @@ public class FixElevator : Task
     [SerializeField] AudioSource fuseboxClose;
     [SerializeField] AudioSource fuseboxButton;
 
+    [SerializeField] AudioSource ElevatorMovingSFX;
+    [SerializeField] AudioSource TheElevatorJustHellaCrashedYo;
+
     private void Awake()
     {
         player = FindAnyObjectByType<PlayerController>();
@@ -63,8 +66,8 @@ public class FixElevator : Task
             {
                 fuseboxButton.Play();
                 Debug.Log("taking elevator up");
-                var playerPos = player.gameObject.transform.position.y;
-                playerPos += 20;
+                GameManager.PC.transform.position += new Vector3(0f, 20f, 0f);
+                TheElevatorJustHellaCrashedYo.PlayDelayed(1f);
             }
         } 
     }

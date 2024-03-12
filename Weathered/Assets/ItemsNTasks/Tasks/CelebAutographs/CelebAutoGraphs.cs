@@ -17,6 +17,7 @@ public class CelebAutoGraphs : Task
     ArvinAutograph autograph;
 
     [SerializeField] DoorScript auntsDoor;
+    [SerializeField] GameObject falseWall;
 
     private void Start()
     {
@@ -63,8 +64,10 @@ public class CelebAutoGraphs : Task
     {
         if (completedDolls >= 3)
         {
-            auntsDoor.OpenDoor(true);
+            auntsDoor.OpenDoor(false);
+            falseWall.SetActive(false);
             OnCompleted();
+            Progression.Prog.CelebrityDolls();
         }
     }
 
@@ -128,6 +131,7 @@ public class CelebAutoGraphs : Task
         BloomRose(plant);
         autograph.SaveAutoGraph();
         auntsDoor.OpenDoor(true);
+        falseWall.SetActive(false);
 
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();

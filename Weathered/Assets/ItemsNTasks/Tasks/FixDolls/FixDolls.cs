@@ -81,6 +81,7 @@ public class FixDolls : Task
         if (fixedDolls >= 5)
         {
             OnCompleted();
+            Progression.Prog.ToysDolls();
         }
         ItemController.ClearItemInHand();
     }

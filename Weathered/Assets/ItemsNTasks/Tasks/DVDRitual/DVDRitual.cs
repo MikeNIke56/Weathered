@@ -152,6 +152,7 @@ public class DVDRitual : Task
                 HandleTvStage(2);
                 HandleSpiritTvStage(1);
                 OnCompleted();
+                Progression.Prog.DVDDolls();
                 ItemController.ClearItemInHand();
                 tvStatic.Stop();
                 break;
@@ -165,7 +166,9 @@ public class DVDRitual : Task
     {
         UIController.UIControl.OpenDialog();
         DialogManager.Instance.OpenDialog();
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll1, "I am upset cuz you put in the wrong movie but i wont kill you :)");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll1, "This movie sucks!");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll2, "In a bad way!");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll3, "It's not all bad, I guess...");
         DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
     }

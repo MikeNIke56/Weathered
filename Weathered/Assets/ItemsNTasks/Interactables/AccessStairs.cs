@@ -6,11 +6,16 @@ public class AccessStairs : Interaction
 {
     public bool isPassable = false;
     bool isAboutToBreak = true;
-    bool isBroken = false;
 
     [SerializeField] Transform upStairsSpawnPos;
     [SerializeField] Transform downStairsSpawnPos;
     [SerializeField] Transform stairsFallSpotPos;
+
+    [SerializeField] AudioSource StairsSFX;
+    [SerializeField] AudioSource StairsBreakSFX;
+
+    [SerializeField] GameObject FixedStairs;
+    [SerializeField] GameObject BrokenStairs;
 
     PlayerController player;
 
@@ -21,23 +26,35 @@ public class AccessStairs : Interaction
 
     public override void onClick()
     {
-        if (isAboutToBreak && isPassable)
+        if (isPassable)
         {
-            player.transform.position = stairsFallSpotPos.position;
-        }
-        else if (isBroken)
-        {
-
-        }
-        else if (isPassable && !isBroken)
-        {
-            if(player.transform.position.y <= downStairsSpawnPos.position.y)
+            if (!Progression.HasFixedStairs && isAboutToBreak)
             {
-                player.transform.position = upStairsSpawnPos.position;
+                player.transform.position = stairsFallSpotPos.position;
+                isAboutToBreak = false;
+                StairsBreakSFX.Play();
+                FixedStairs.SetActive(false);
+                BrokenStairs.SetActive(true);
+            }
+            else if (!Progression.HasFixedStairs)
+            {
+                ShortTextController.STControl.AddShortText("The stairs are broken. I'd just fall again...", true);
             }
             else
             {
-                player.transform.position = downStairsSpawnPos.position;
+                FixedStairs.SetActive(true);
+                BrokenStairs.SetActive(false);
+
+                if (player.transform.position.y <= downStairsSpawnPos.position.y)
+                {
+                    player.transform.position = upStairsSpawnPos.position;
+                }
+                else
+                {
+                    player.transform.position = downStairsSpawnPos.position;
+                }
+
+                StairsSFX.Play();
             }
         }
     }

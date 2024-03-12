@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoorScript : Interaction
 {
     [SerializeField] bool isLocked = false;
+    [SerializeField] string LockedShortText = "It's locked.";
     [SerializeField] Item itemToOpen;
     [SerializeField] DoorScript altDoor;
     [SerializeField] PhoneControl.VoicemailID voicemailID = PhoneControl.VoicemailID.None;
@@ -20,7 +21,7 @@ public class DoorScript : Interaction
         if (isLocked)
         {
             lockedSFX.Play();
-            ShortTextController.STControl.AddShortText("It's locked.", true);
+            ShortTextController.STControl.AddShortText(LockedShortText, true);
         }
         else if (itemToOpen != null && ItemController.itemInHand == itemToOpen)
         {

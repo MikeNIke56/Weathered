@@ -107,7 +107,10 @@ public class TeaParty : Task
         }
 
         if(isDone == true)
+        {
             OnCompleted();
+            Progression.Prog.FineChinaDolls();
+        }
     }
 
     void CheckOffASpot(int spot)

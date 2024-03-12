@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour, ISavable
     static float deathShotFadeOut = 2f;
     [SerializeField] AudioSource deathImpactSFX;
     [SerializeField] Texture2D defaultCursor;
+    static public PlayerController PC;
 
     public bool tutorialPlayed = false;
 
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour, ISavable
         //Cursor.visible = false;
         GM = FindFirstObjectByType<GameManager>();
         flashPrefab = pointFlashPrefab;
+        PC = FindFirstObjectByType<PlayerController>();
     }
     public static void StartDeath(GameObject deathRoot, float animationTimeInSeconds, bool skipFlash)
     {

@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: -1222581643
   m_SortingLayer: -1
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 36a7e7ec8c199b64d8606c3c7dc3aee1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9dae1447e79da340a97712227205183, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 1294665595
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 193561340, guid: 9effc0efa9c255541a42b28fa53ce409, type: 3}
+  m_Sprite: {fileID: -771780642, guid: d743592dc8f73aa44bae2ac3cfd9b034, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -241,7 +241,7 @@ SpriteRenderer:
   m_SortingLayerID: 1294665595
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3218248262026354849, guid: 9effc0efa9c255541a42b28fa53ce409, type: 3}
+  m_Sprite: {fileID: -5356574185940491189, guid: d743592dc8f73aa44bae2ac3cfd9b034, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -325,7 +325,7 @@ SpriteRenderer:
   m_SortingLayerID: -1222581643
   m_SortingLayer: -1
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 7a73251d78545f04383c46e987eb7787, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5bc6133d5ffbd8c43b44b07fb69aaea5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -383,6 +383,10 @@ PrefabInstance:
     - target: {fileID: 3454934596188763975, guid: 3eacdd1cc1324564a9f24c379bd8abbd, type: 3}
       propertyPath: isLocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454934596188763975, guid: 3eacdd1cc1324564a9f24c379bd8abbd, type: 3}
+      propertyPath: LockedShortText
+      value: What are you doing here, Mazarine?
       objectReference: {fileID: 0}
     - target: {fileID: 7099865798916056007, guid: 3eacdd1cc1324564a9f24c379bd8abbd, type: 3}
       propertyPath: m_Name

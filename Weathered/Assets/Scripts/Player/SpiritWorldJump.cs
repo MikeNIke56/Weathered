@@ -26,6 +26,7 @@ public class SpiritWorldJump : MonoBehaviour
             playerControl = FindFirstObjectByType<PlayerController>();
         }
         jumpBlockers.Add("CassetteSpirit", false);
+        jumpBlockers.Add("NoJumpingZone", false);
 
     }
     static public void Jump()
@@ -34,6 +35,10 @@ public class SpiritWorldJump : MonoBehaviour
         if (SWJ.jumpBlockers["CassetteSpirit"])
         {
             FindFirstObjectByType<MusicBox>().JumpFailed();
+            blockJump = true;
+        }
+        if (SWJ.jumpBlockers["NoJumpingZone"])
+        {
             blockJump = true;
         }
 
