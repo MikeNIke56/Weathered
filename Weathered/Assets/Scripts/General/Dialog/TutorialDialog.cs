@@ -60,7 +60,7 @@ public class TutorialDialog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //StartCoroutine(HandleUpdate());
+        StartCoroutine(HandleUpdate());
     }
     public IEnumerator StartDialog()
     {
