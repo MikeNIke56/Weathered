@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ReflectiveWater 1
-  m_Shader: {fileID: -6465566751694194690, guid: 6f615d5ea28d64f41aee47072990d0ea, type: 3}
+  m_Name: ReflectiveWater
+  m_Shader: {fileID: -6465566751694194690, guid: 4f9275e135839014ab7a5cbe8641d5ac, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -84,7 +84,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RenderTexture:
-        m_Texture: {fileID: 8400000, guid: 2eb9285eec20d6248bc23ed1db52e164, type: 2}
+        m_Texture: {fileID: 8400000, guid: 032228dd28351ac4aa6f2a54450355a4, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
