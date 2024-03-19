@@ -43,10 +43,12 @@ public class MusicBox : Task
                 if (!boxClicked.isSpiritBox && validTapes.IndexOf(secondHand) == 2)
                 {
                     OnCompleted();
+                    Debug.Log(secondHand);
                 }
                 else if (!boxClicked.isSpiritBox)
                 {
                     OnFailed();
+                    Debug.Log(secondHand);
                     Debug.Log("Wrong cassette :sad face: you died.");
                 }
             }

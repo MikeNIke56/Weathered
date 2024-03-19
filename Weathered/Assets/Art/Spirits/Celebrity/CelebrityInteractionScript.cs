@@ -75,7 +75,7 @@ public class CelebrityInteractionScript : Interaction
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "So, will you show me another magic trick now?");
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Close your eyes.");
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Okay!");
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Now imagined yourself in other world...");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Now imagine yourself in other world...");
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "What's that meant to do?");
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "I-- don't know? Usually it just works.");
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "What does?");

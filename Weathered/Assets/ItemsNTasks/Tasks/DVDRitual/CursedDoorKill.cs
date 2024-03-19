@@ -6,6 +6,7 @@ public class CursedDoorKill : MonoBehaviour
 {
     float timer;
     public float maxTimer;
+    bool isDead = false;
 
     private void Start()
     {
@@ -17,11 +18,12 @@ public class CursedDoorKill : MonoBehaviour
         {
             timer -= Time.deltaTime;
 
-            if(timer <= 0.0)
+            if(timer <= 0.0 && isDead == false)
             {
                 timer = maxTimer;
                 Debug.Log("Player has died from poor danger management.");
                 GameManager.StartDeath(null, 0f, false);
+                isDead = true;
             }
         }
     }

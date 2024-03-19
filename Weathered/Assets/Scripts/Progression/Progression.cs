@@ -7,7 +7,7 @@ public class Progression : MonoBehaviour
     public static Progression Prog;
 
     public static bool ToysDoorSceneTriggered = false; //Celebrity introduced himself
-    public static bool HasCheckedOutDesk = false; //Player clicked on computer and phone after celbrity introduced himself
+    public static bool HasCheckedOutDesk = false; //Player clicked on computer and phone after celebrity introduced himself
     public static bool HasFinishedToysDolls = false; //Player finished Toys doll task
     public static bool HasFinishedFineChinaDolls = false; //Player finished Fine China doll task
     public static bool HasFinishedDVDDolls = false; //Player finished DVDs doll task
@@ -93,7 +93,7 @@ public class Progression : MonoBehaviour
             yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "She puts on her cozy, purple pajamas.");
             yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "She carefully undoes her pretty bows.");
             yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "She climbs into her soft bed and yawns another careless yawn.");
-            yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "She nods off to sleep, peacefully, thinking that she would love to do this alll again tomorrow.");
+            yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "She nods off to sleep, peacefully, thinking that she would love to do this all again tomorrow.");
             while (true)
             {
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "And the day after that.");

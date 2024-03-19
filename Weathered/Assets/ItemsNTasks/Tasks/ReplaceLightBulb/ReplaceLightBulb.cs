@@ -68,8 +68,8 @@ public class ReplaceLightBulb : Task
             if (ItemController.itemInHand is Lightbulb && stoolObj.onStool == true)
             {
                 OnCompleted();
-                ItemController.ClearItemInHand();
                 FindFirstObjectByType<ClosetInteract>().isLocked = false;
+                ItemController.ClearItemInHand();
             }
         }
     }

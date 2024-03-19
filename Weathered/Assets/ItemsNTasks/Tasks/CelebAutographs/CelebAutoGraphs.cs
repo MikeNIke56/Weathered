@@ -46,7 +46,8 @@ public class CelebAutoGraphs : Task
         }
         else
         {
-            ShortTextController.STControl.AddShortText("That’s really high!");
+            if(stuffedEagle.didDrop == false)
+                ShortTextController.STControl.AddShortText("That’s really high!");
         }
     }
 

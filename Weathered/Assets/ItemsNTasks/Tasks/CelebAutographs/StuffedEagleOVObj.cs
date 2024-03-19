@@ -7,6 +7,7 @@ public class StuffedEagleOVObj : Interaction
     CelebAutoGraphs autoGraphs;
     [SerializeField] StatueHeadObj headObj;
     [SerializeField] float waitTime;
+    public bool didDrop = false;
 
     public override void onClick()
     {
@@ -19,6 +20,7 @@ public class StuffedEagleOVObj : Interaction
 
     public IEnumerator DropHead()
     {
+        didDrop = true;
         gameObject.tag = "Untagged";
         GetComponent<BoxCollider2D>().enabled = false;
         headObj.gameObject.GetComponent<Rigidbody2D>().gravityScale = 2f;

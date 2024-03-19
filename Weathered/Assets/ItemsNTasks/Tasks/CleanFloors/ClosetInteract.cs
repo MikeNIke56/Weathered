@@ -21,13 +21,13 @@ public class ClosetInteract : Interaction
         }
         else
         {
+            ShortTextController.STControl.HideBubble();
             itemToGive.SetActive(true);
             itemToGive2.SetActive(true);
             gameObject.GetComponent<SpriteRenderer>().sprite = doorOpen;
             doorOpenSfx.Play();
             gameObject.GetComponent<Interactable>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            isLocked = false;
         }
     }
 
