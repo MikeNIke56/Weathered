@@ -46,8 +46,12 @@ public class PhoneControl : Interaction
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, ".......................................");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Narrator, "Mazarine writes the helpful information down in her journal~~");
                 break;
+            case VoicemailID.China:
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "You are in the china room section now");
+                break;
             default:
                 break;
+
         }
 
         DialogManager.Instance.CloseDialog();

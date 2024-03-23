@@ -7,7 +7,7 @@ public class FineChinaDoor : Interaction
     [SerializeField] string LockedShortText = "It's locked.";
     [SerializeField] Item itemToOpen;
     [SerializeField] DoorScript altDoor;
-    [SerializeField] PhoneControl.VoicemailID voicemailID = PhoneControl.VoicemailID.None;
+    [SerializeField] PhoneControl.VoicemailID voicemailID = PhoneControl.VoicemailID.China;
 
     [SerializeField] GameObject DoorLogic; //Collider to disable
     [SerializeField] AudioSource lockedSFX;

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[System.Serializable]
 public class Progression : MonoBehaviour
 {
     public static Progression Prog;
@@ -199,5 +201,19 @@ public class Progression : MonoBehaviour
 
         DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
+    }
+
+    [System.Serializable]
+    public class ProgressionSaveData
+    {
+        public static bool ToysDoorSceneTriggered = false; //Celebrity introduced himself
+        public static bool HasCheckedOutDesk = false; //Player clicked on computer and phone after celebrity introduced himself
+        public static bool HasFinishedToysDolls = false; //Player finished Toys doll task
+        public static bool HasFinishedFineChinaDolls = false; //Player finished Fine China doll task
+        public static bool HasFinishedDVDDolls = false; //Player finished DVDs doll task
+        public static bool HasFinishedCelebrityDolls = false; //Player finished Celebrity doll task
+        public static bool HasFixedStairs = false; //Player has entered Taxidermy room and stairs were fixed
+        public static bool HasEnteredAuntsRoom = false; //Player has entered the aunt's room
+        public static bool HasEnteredMazarinesRoom = false; //Player has entered Mazarine's room
     }
 }
