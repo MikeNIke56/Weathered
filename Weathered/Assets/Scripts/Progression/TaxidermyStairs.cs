@@ -6,11 +6,11 @@ public class TaxidermyStairs : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!Progression.HasFixedStairs)
+        if (!Progression.Prog.HasFixedStairs)
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                Progression.HasFixedStairs = true;
+                Progression.Prog.HasFixedStairs = true;
                 collision.gameObject.transform.position = new Vector3(2f, 13.8f, 0f);
                 StartCoroutine(FixedStairsDialog());
             }

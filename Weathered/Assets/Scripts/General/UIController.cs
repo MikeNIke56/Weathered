@@ -36,6 +36,16 @@ public class UIController : MonoBehaviour
         }
     }
 
+    public void OpenBaseUI()
+    {
+        baseGameUI.SetActive(true);
+    }
+
+    public void CloseBaseUI()
+    {
+        baseGameUI.SetActive(false);
+    }
+
     public void OpenInteractionMenu()
     {
         baseGameUI.SetActive(false);

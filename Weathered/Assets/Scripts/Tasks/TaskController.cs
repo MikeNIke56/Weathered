@@ -26,6 +26,11 @@ public class TaskController : MonoBehaviour, ISavable
 
     PlayerController player;
 
+    private void Awake()
+    {
+        taskControl = this;
+    }
+
     void Start()
     {
         player = FindFirstObjectByType<PlayerController>();

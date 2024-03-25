@@ -23,7 +23,7 @@ public class CelebrityInteractionScript : Interaction
         switch (CurrentPoint)
         {
             case CPoints.DeskIntro:
-                if (!Progression.HasCheckedOutDesk && talkedCount == 0)
+                if (!Progression.Prog.HasCheckedOutDesk && talkedCount == 0)
                 {
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "So? Amazed by me?");
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "That wasn't a very good trick...");
@@ -40,7 +40,7 @@ public class CelebrityInteractionScript : Interaction
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "...");
                     talkedCount = 1;
                 }
-                else if (!Progression.HasCheckedOutDesk && talkedCount == 1)
+                else if (!Progression.Prog.HasCheckedOutDesk && talkedCount == 1)
                 {
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Wanna see another trick?");
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Yes, please!");
@@ -58,7 +58,7 @@ public class CelebrityInteractionScript : Interaction
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "It helps me keep track of the entire store! Here, I'll show you.");
                     talkedCount = 2;
                 }
-                else if (!Progression.HasCheckedOutDesk && talkedCount == 2)
+                else if (!Progression.Prog.HasCheckedOutDesk && talkedCount == 2)
                 {
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "I didn't see it.");
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "What?");
@@ -69,7 +69,7 @@ public class CelebrityInteractionScript : Interaction
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "You could just login yourself and show me.");
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Oh, right...");
                 }
-                else if (Progression.HasCheckedOutDesk)
+                else if (Progression.Prog.HasCheckedOutDesk)
                 {
                     talkedCount = 0;
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "So, will you show me another magic trick now?");

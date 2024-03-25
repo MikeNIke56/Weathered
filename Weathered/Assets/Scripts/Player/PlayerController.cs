@@ -48,12 +48,28 @@ public class PlayerController : MonoBehaviour, ISavable
         withinRngIcon.SetActive(false);
         playerCamera.SetFollowPosLocal(playerCameraPos);
         state = GameState.FreeRoam;
-        moveBlockers.Add("StepStool", false);
-        moveBlockers.Add("TutorialDialog", false);
-        moveBlockers.Add("CharacterDialog", false);
-        moveBlockers.Add("SpiritWorldTransition", false);
-        moveBlockers.Add("CutScene", false);
-        moveBlockers.Add("Menu", false);
+
+        if(GameManager.GM.addedBlockers == false)
+        {
+            try
+            {
+                moveBlockers.Add("StepStool", false);
+                moveBlockers.Add("TutorialDialog", false);
+                moveBlockers.Add("CharacterDialog", false);
+                moveBlockers.Add("SpiritWorldTransition", false);
+                moveBlockers.Add("CutScene", false);
+                moveBlockers.Add("Menu", false);
+                GameManager.GM.addedBlockers = true;
+            }
+            catch (Exception e)
+            {
+                Debug.Log("already added");
+                Debug.Log(e);
+            }
+        }
+
+
+        ReloadScene.i.AttachPlayerToReload(this);
 
         sg = FindAnyObjectByType<CelebAutoGraphs>(FindObjectsInactive.Include);
     }

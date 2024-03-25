@@ -5,6 +5,7 @@ using System.IO;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SaveMenu : MonoBehaviour
 {
@@ -72,22 +73,21 @@ public class SaveMenu : MonoBehaviour
             switch (slot)
             {
                 case 1:
-                    if(slots[0].GetComponentInChildren<Text>().text != "Empty Slot")
-                        SavingSystem.i.Load("SaveSlot1");
+                    if (slots[0].GetComponentInChildren<Text>().text != "Empty Slot")
+                        ReloadScene.i.ReloadSelectedScene(slot);
                     break;
                 case 2:
-                    if(slots[1].GetComponentInChildren<Text>().text != "Empty Slot")
-                        SavingSystem.i.Load("SaveSlot2");
+                    if (slots[1].GetComponentInChildren<Text>().text != "Empty Slot")
+                        ReloadScene.i.ReloadSelectedScene(slot);
                     break;
                 case 3:
                     if (slots[2].GetComponentInChildren<Text>().text != "Empty Slot")
-                        SavingSystem.i.Load("SaveSlot3");
+                        ReloadScene.i.ReloadSelectedScene(slot);
                     break;
                 default:
                     Debug.Log("failed load");
                     break;
             }
         }
-        
     }
 }

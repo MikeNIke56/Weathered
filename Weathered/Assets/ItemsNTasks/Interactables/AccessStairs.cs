@@ -28,7 +28,7 @@ public class AccessStairs : Interaction
     {
         if (isPassable)
         {
-            if (!Progression.HasFixedStairs && isAboutToBreak)
+            if (!Progression.Prog.HasFixedStairs && isAboutToBreak)
             {
                 player.transform.position = stairsFallSpotPos.position;
                 isAboutToBreak = false;
@@ -36,7 +36,7 @@ public class AccessStairs : Interaction
                 FixedStairs.SetActive(false);
                 BrokenStairs.SetActive(true);
             }
-            else if (!Progression.HasFixedStairs)
+            else if (!Progression.Prog.HasFixedStairs)
             {
                 ShortTextController.STControl.AddShortText("The stairs are broken. I'd just fall again...", true);
             }

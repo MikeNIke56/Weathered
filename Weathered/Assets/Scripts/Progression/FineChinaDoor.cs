@@ -19,7 +19,7 @@ public class FineChinaDoor : Interaction
 
     public override void onClick()
     {
-        if (Progression.HasFinishedToysDolls)
+        if (Progression.Prog.HasFinishedToysDolls)
         {
             OpenDoor(false);
         }

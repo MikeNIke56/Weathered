@@ -43,9 +43,9 @@ public class MainMenuManager : MonoBehaviour
             yield return null;
         }
     }
-    public void LoadGame()
+    public IEnumerator LoadGame()
     {
-
+        yield return null;
     }
 
     public void OpenOptions()

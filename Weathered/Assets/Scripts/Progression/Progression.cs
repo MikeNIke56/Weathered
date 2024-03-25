@@ -1,22 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
 [System.Serializable]
-public class Progression : MonoBehaviour
+public class Progression : MonoBehaviour, ISavable
 {
     public static Progression Prog;
 
-    public static bool ToysDoorSceneTriggered = false; //Celebrity introduced himself
-    public static bool HasCheckedOutDesk = false; //Player clicked on computer and phone after celebrity introduced himself
-    public static bool HasFinishedToysDolls = false; //Player finished Toys doll task
-    public static bool HasFinishedFineChinaDolls = false; //Player finished Fine China doll task
-    public static bool HasFinishedDVDDolls = false; //Player finished DVDs doll task
-    public static bool HasFinishedCelebrityDolls = false; //Player finished Celebrity doll task
-    public static bool HasFixedStairs = false; //Player has entered Taxidermy room and stairs were fixed
-    public static bool HasEnteredAuntsRoom = false; //Player has entered the aunt's room
-    public static bool HasEnteredMazarinesRoom = false; //Player has entered Mazarine's room
+    public bool ToysDoorSceneTriggered = false; //Celebrity introduced himself
+    public bool HasCheckedOutDesk = false; //Player clicked on computer and phone after celebrity introduced himself
+    public bool HasFinishedToysDolls = false; //Player finished Toys doll task
+    public bool HasFinishedFineChinaDolls = false; //Player finished Fine China doll task
+    public bool HasFinishedDVDDolls = false; //Player finished DVDs doll task
+    public bool HasFinishedCelebrityDolls = false; //Player finished Celebrity doll task
+    public bool HasFixedStairs = false; //Player has entered Taxidermy room and stairs were fixed
+    public bool HasEnteredAuntsRoom = false; //Player has entered the aunt's room
+    public bool HasEnteredMazarinesRoom = false; //Player has entered Mazarine's room
 
     public enum StoryAreas { Default, AuntsBedroom, MazarinesBedroom};
 
@@ -25,9 +26,13 @@ public class Progression : MonoBehaviour
 
     bool IsLoading = true;
 
-    void Start()
+    private void Awake()
     {
         Prog = this;
+    }
+
+    void Start()
+    {
         StartCoroutine(WaitingForLoadTime());
     }
 
@@ -203,17 +208,59 @@ public class Progression : MonoBehaviour
         UIController.UIControl.CloseDialog();
     }
 
-    [System.Serializable]
-    public class ProgressionSaveData
+    public void SetProgression(ProgressionSaveData saveData)
     {
-        public static bool ToysDoorSceneTriggered = false; //Celebrity introduced himself
-        public static bool HasCheckedOutDesk = false; //Player clicked on computer and phone after celebrity introduced himself
-        public static bool HasFinishedToysDolls = false; //Player finished Toys doll task
-        public static bool HasFinishedFineChinaDolls = false; //Player finished Fine China doll task
-        public static bool HasFinishedDVDDolls = false; //Player finished DVDs doll task
-        public static bool HasFinishedCelebrityDolls = false; //Player finished Celebrity doll task
-        public static bool HasFixedStairs = false; //Player has entered Taxidermy room and stairs were fixed
-        public static bool HasEnteredAuntsRoom = false; //Player has entered the aunt's room
-        public static bool HasEnteredMazarinesRoom = false; //Player has entered Mazarine's room
+        this.ToysDoorSceneTriggered = saveData.ToysDoorSceneTriggered;
+        this.HasCheckedOutDesk = saveData.HasCheckedOutDesk;
+        this.HasFinishedToysDolls = saveData.HasFinishedToysDolls;
+        this.HasFinishedFineChinaDolls = saveData.HasFinishedFineChinaDolls;
+        this.HasFinishedDVDDolls = saveData.HasFinishedDVDDolls;
+        this.HasFinishedCelebrityDolls = saveData.HasFinishedCelebrityDolls;
+        this.HasFixedStairs = saveData.HasFixedStairs;
+        this.HasEnteredAuntsRoom = saveData.HasEnteredAuntsRoom;
+        this.HasEnteredMazarinesRoom = saveData.HasEnteredMazarinesRoom;
     }
+
+    public ProgressionSaveData GetProgSaveData()
+    {
+        var saveData = new ProgressionSaveData()
+        {
+            ToysDoorSceneTriggered = ToysDoorSceneTriggered,
+            HasCheckedOutDesk = HasCheckedOutDesk,
+            HasFinishedToysDolls = HasFinishedToysDolls,
+            HasFinishedFineChinaDolls = HasFinishedFineChinaDolls,
+            HasFinishedDVDDolls = HasFinishedDVDDolls,
+            HasFinishedCelebrityDolls = HasFinishedCelebrityDolls,
+            HasFixedStairs = HasFixedStairs,
+            HasEnteredAuntsRoom = HasEnteredAuntsRoom,
+            HasEnteredMazarinesRoom = HasEnteredMazarinesRoom
+        };
+        return saveData;
+    }
+
+    public object CaptureState()
+    {
+        return GetProgSaveData();
+    }
+
+    public void RestoreState(object state)
+    {
+        var saveData = state as ProgressionSaveData;
+        SetProgression(saveData);
+        
+    }
+}
+
+[System.Serializable]
+public class ProgressionSaveData
+{
+    public bool ToysDoorSceneTriggered = false; //Celebrity introduced himself
+    public bool HasCheckedOutDesk = false; //Player clicked on computer and phone after celebrity introduced himself
+    public bool HasFinishedToysDolls = false; //Player finished Toys doll task
+    public bool HasFinishedFineChinaDolls = false; //Player finished Fine China doll task
+    public bool HasFinishedDVDDolls = false; //Player finished DVDs doll task
+    public bool HasFinishedCelebrityDolls = false; //Player finished Celebrity doll task
+    public bool HasFixedStairs = false; //Player has entered Taxidermy room and stairs were fixed
+    public bool HasEnteredAuntsRoom = false; //Player has entered the aunt's room
+    public bool HasEnteredMazarinesRoom = false; //Player has entered Mazarine's room
 }

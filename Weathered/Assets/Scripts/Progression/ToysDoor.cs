@@ -47,7 +47,7 @@ public class ToysDoor : Interaction
 
     IEnumerator IntroduceCelebrity()
     {
-        Progression.ToysDoorSceneTriggered = true;
+        Progression.Prog.ToysDoorSceneTriggered = true;
         CelebrityIntroRoot.SetActive(true);
 
         UIController.UIControl.OpenDialog();

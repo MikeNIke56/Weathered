@@ -14,7 +14,7 @@ public class MazarinesDoor : Interaction
 
     public override void onClick()
     {
-        if (!Progression.HasEnteredAuntsRoom)
+        if (!Progression.Prog.HasEnteredAuntsRoom)
         {
             ShortTextController.STControl.AddShortText("I can't sleep yet, I still have tasks to do!", true);
             lockedSFX.Play();

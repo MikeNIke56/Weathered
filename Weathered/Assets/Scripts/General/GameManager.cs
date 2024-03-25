@@ -16,7 +16,14 @@ public class GameManager : MonoBehaviour, ISavable
     [SerializeField] Texture2D defaultCursor;
     static public PlayerController PC;
 
+    public bool addedBlockers = false;
     public bool tutorialPlayed = false;
+
+    private void Awake()
+    {
+        GM = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {
@@ -24,7 +31,7 @@ public class GameManager : MonoBehaviour, ISavable
         //Cursor.visible = false;
         GM = FindFirstObjectByType<GameManager>();
         flashPrefab = pointFlashPrefab;
-        PC = FindFirstObjectByType<PlayerController>();
+        PC = FindFirstObjectByType<PlayerController>();     
     }
     public static void StartDeath(GameObject deathRoot, float animationTimeInSeconds, bool skipFlash)
     {
