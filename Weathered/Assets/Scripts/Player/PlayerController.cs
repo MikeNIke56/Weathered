@@ -43,6 +43,11 @@ public class PlayerController : MonoBehaviour, ISavable
 
     CelebAutoGraphs sg;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     void Start()
     {
         withinRngIcon.SetActive(false);
@@ -67,20 +72,12 @@ public class PlayerController : MonoBehaviour, ISavable
                 Debug.Log(e);
             }
         }
-
-
-        ReloadScene.i.AttachPlayerToReload(this);
-
         sg = FindAnyObjectByType<CelebAutoGraphs>(FindObjectsInactive.Include);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.I))
-        //{
-        //    sg.LoadFinishedTask();
-        //}
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             UIController.UIControl.OpenPauseMenu();
@@ -114,9 +111,6 @@ public class PlayerController : MonoBehaviour, ISavable
         }
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        //temporary method of loading save file
-        //if (Input.GetKeyDown(KeyCode.Space)) { SavingSystem.i.Load("SaveSlot"); }
-
         CursorShow(isPaused);
 
         if (!lockMovement && Input.GetKeyDown(KeyCode.Space))
@@ -126,7 +120,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
         if (state == GameState.FreeRoam)
         {
-            //moveBlockers["Menu"] = false;
+            moveBlockers["Menu"] = false;
         }
         if (state == GameState.Menu)
         {

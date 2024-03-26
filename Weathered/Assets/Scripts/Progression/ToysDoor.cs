@@ -13,7 +13,7 @@ public class ToysDoor : Interaction
     [SerializeField] GameObject DoorOpenRoot;
     [SerializeField] GameObject DoorClosedRoot;
 
-    [SerializeField] GameObject CelebrityIntroRoot;
+    [SerializeField] public GameObject CelebrityIntroRoot;
 
     public override void onClick()
     {

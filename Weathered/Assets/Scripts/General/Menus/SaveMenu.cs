@@ -14,6 +14,7 @@ public class SaveMenu : MonoBehaviour
     bool isSave;
 
     public GameObject[] slots;
+    [SerializeField] MainMenuManager mainMenu;
 
 
     private void Start()
@@ -24,7 +25,6 @@ public class SaveMenu : MonoBehaviour
             slots[1].GetComponentInChildren<Text>().text = File.GetLastWriteTime(SavingSystem.i.GetPath("SaveSlot2")).ToString();
         if (SavingSystem.i.GetPath("SaveSlot3") != null)
             slots[2].GetComponentInChildren<Text>().text = File.GetLastWriteTime(SavingSystem.i.GetPath("SaveSlot3")).ToString();
-
     }
     private void Update()
     {
@@ -73,16 +73,16 @@ public class SaveMenu : MonoBehaviour
             switch (slot)
             {
                 case 1:
-                    if (slots[0].GetComponentInChildren<Text>().text != "Empty Slot")
-                        ReloadScene.i.ReloadSelectedScene(slot);
+                    ReloadScene.i.slot = slot;
+                    ReloadScene.i.LoadSelectedFile();
                     break;
                 case 2:
-                    if (slots[1].GetComponentInChildren<Text>().text != "Empty Slot")
-                        ReloadScene.i.ReloadSelectedScene(slot);
+                    ReloadScene.i.slot = slot;
+                    ReloadScene.i.LoadSelectedFile();
                     break;
                 case 3:
-                    if (slots[2].GetComponentInChildren<Text>().text != "Empty Slot")
-                        ReloadScene.i.ReloadSelectedScene(slot);
+                    ReloadScene.i.slot = slot;
+                    ReloadScene.i.LoadSelectedFile();
                     break;
                 default:
                     Debug.Log("failed load");

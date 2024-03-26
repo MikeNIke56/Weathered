@@ -7,12 +7,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SavingSystem : MonoBehaviour
-{
-   
+{ 
     public static SavingSystem i { get; private set; }
     private void Awake()
     {
         i = this;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     Dictionary<string, object> gameState = new Dictionary<string, object>();

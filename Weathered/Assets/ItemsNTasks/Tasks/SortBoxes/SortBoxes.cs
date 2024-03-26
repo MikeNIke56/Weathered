@@ -106,6 +106,7 @@ public class SortBoxes : Task
                     isDoneBox = true;
                     clickedBox.RemoveBox();
                     stairs.isPassable = true;
+                    Progression.Prog.TutorialCompleted = true;
                     OnCompleted();
                 }
             }

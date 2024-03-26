@@ -9,12 +9,13 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] GameObject loadScreen;
     [SerializeField] GameObject raccoon;
     bool activated = false;
+    public GameObject gameFileSelectUI;
     public void ContinueGame()
     {
         //will load saved data from the last time the player saved
     }
 
-    public IEnumerator NewGame()
+    public IEnumerator StartNewGame()
     {
         //opens the scene that will start a new game
 
@@ -38,11 +39,27 @@ public class MainMenuManager : MonoBehaviour
 
             //once loading of the main scene is done- loads it in
             if (operation.progress >= 0.9f)
+            {
                 operation.allowSceneActivation = true;
+            }
 
             yield return null;
         }
     }
+
+    public void NewGame()
+    {
+        StartCoroutine(StartNewGame());
+        //loadScreen.SetActive(true);
+        //raccoon.SetActive(true);
+        //SceneManager.LoadSceneAsync("TestPlayer");
+    }
+
+    public void BackToMenu()
+    {
+        gameFileSelectUI.SetActive(false);
+    }
+
     public IEnumerator LoadGame()
     {
         yield return null;

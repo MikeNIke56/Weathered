@@ -17,6 +17,10 @@ public class InputHandler : MonoBehaviour
         //_camera = Camera.main;
         player = FindAnyObjectByType<PlayerController>();
     }
+    private void Start()
+    {
+
+    }
 
     // Update is called once per frame
     public void OnClick(InputAction.CallbackContext context)
@@ -26,14 +30,10 @@ public class InputHandler : MonoBehaviour
         {
             _camera = GameObject.FindFirstObjectByType<Camera>();
         }
-        //var rayHit = Physics2D.GetRayIntersection(_camera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-        //if(!rayHit.collider) return;
 
         RaycastHit2D hit = Physics2D.Raycast(_camera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (!hit.collider) return;
         IsCloseEnough(hit);
-
-        //IsCloseEnough(rayHit);
     }
 
     void IsCloseEnough(RaycastHit2D obj)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,8 +19,16 @@ public class PhoneControl : Interaction
     {
         isAnswerable = true;
         CurrentVID = VID;
-        PC.ringingSFX.Play();
-        PC.GetComponent<Animator>().SetBool("isBeeping", true);
+        try
+        {
+            PC.ringingSFX.Play();
+            PC.GetComponent<Animator>().SetBool("isBeeping", true);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("no phone ring");
+            Debug.Log(e);
+        }
     }
     public override void onClick()
     {

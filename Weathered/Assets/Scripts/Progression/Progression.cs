@@ -9,6 +9,7 @@ public class Progression : MonoBehaviour, ISavable
 {
     public static Progression Prog;
 
+    public bool TutorialCompleted = false; //Player finished tutorial
     public bool ToysDoorSceneTriggered = false; //Celebrity introduced himself
     public bool HasCheckedOutDesk = false; //Player clicked on computer and phone after celebrity introduced himself
     public bool HasFinishedToysDolls = false; //Player finished Toys doll task
@@ -24,11 +25,15 @@ public class Progression : MonoBehaviour, ISavable
     [SerializeField] AudioSource MazarineScreamSFX;
     [SerializeField] Animator MazarineBlackout;
 
+    [SerializeField] GameObject tutorialBox;
+    [SerializeField] GameObject tutorialMan;
+
     bool IsLoading = true;
 
     private void Awake()
     {
         Prog = this;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
@@ -38,7 +43,7 @@ public class Progression : MonoBehaviour, ISavable
 
     IEnumerator WaitingForLoadTime()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         IsLoading = false;
     }
 
@@ -76,6 +81,7 @@ public class Progression : MonoBehaviour, ISavable
             MazarineScreamSFX.Play();
             yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "No.");
             HasEnteredAuntsRoom = true;
+            //SlotProgressionHandler.i.ProgressSlot(SlotProgressionHandler.i.chosenSlot, "HasEnteredAuntsRoom");
         }
         else
         {
@@ -95,6 +101,7 @@ public class Progression : MonoBehaviour, ISavable
         if (!HasEnteredMazarinesRoom)
         {
             HasEnteredMazarinesRoom = true;
+
             MazarineBlackout.SetTrigger("AddAlpha");
             yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Mazarine enters her room after a fulfilluing day at the shop.");
             yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "She puts on her cozy, purple pajamas.");
@@ -208,23 +215,63 @@ public class Progression : MonoBehaviour, ISavable
         UIController.UIControl.CloseDialog();
     }
 
-    public void SetProgression(ProgressionSaveData saveData)
+    public void HandleReloadedAssets()
     {
-        this.ToysDoorSceneTriggered = saveData.ToysDoorSceneTriggered;
-        this.HasCheckedOutDesk = saveData.HasCheckedOutDesk;
-        this.HasFinishedToysDolls = saveData.HasFinishedToysDolls;
-        this.HasFinishedFineChinaDolls = saveData.HasFinishedFineChinaDolls;
-        this.HasFinishedDVDDolls = saveData.HasFinishedDVDDolls;
-        this.HasFinishedCelebrityDolls = saveData.HasFinishedCelebrityDolls;
-        this.HasFixedStairs = saveData.HasFixedStairs;
-        this.HasEnteredAuntsRoom = saveData.HasEnteredAuntsRoom;
-        this.HasEnteredMazarinesRoom = saveData.HasEnteredMazarinesRoom;
+        if (TutorialCompleted == true)
+        {
+            tutorialBox.SetActive(false);
+            tutorialMan.SetActive(false);
+            TutorialCompleted = true;
+        }
+        if (ToysDoorSceneTriggered == true)
+        {
+            FindFirstObjectByType<ToysDoor>().CelebrityIntroRoot.SetActive(true);
+            FindFirstObjectByType<ToysDoor>().OpenDoor(false);
+            PhoneControl.NewVoicemail(PhoneControl.VoicemailID.Toys);
+            FindFirstObjectByType<CIntro>().MoveCeleb();
+            ToysDoorSceneTriggered = true;
+        }
+        if (HasCheckedOutDesk == true)
+        {
+            HasCheckedOutDesk = true;
+        }
+        if (HasFinishedToysDolls == true)
+        {
+            FindFirstObjectByType<FineChinaDoor>().OpenDoor(false);
+            HasFinishedToysDolls = true;
+        }
+        if (HasFinishedFineChinaDolls == true)
+        {
+            HasFinishedFineChinaDolls = true;
+        }
+        if (HasFinishedDVDDolls == true)
+        {
+            HasFinishedDVDDolls = true;
+        }
+        if (HasFinishedCelebrityDolls == true)
+        {
+            HasFinishedCelebrityDolls = true;
+        }
+        if (HasFixedStairs == true)
+        {
+            HasFixedStairs = true;
+        }
+        if (HasEnteredAuntsRoom == true)
+        {
+            HasEnteredAuntsRoom = true;
+
+        }
+        if (HasEnteredMazarinesRoom == true)
+        {
+            HasEnteredMazarinesRoom = true;
+        }
     }
 
-    public ProgressionSaveData GetProgSaveData()
+    public GameSaveData GetGameSaveData()
     {
-        var saveData = new ProgressionSaveData()
+        var saveData = new GameSaveData()
         {
+            TutorialCompleted = TutorialCompleted,
             ToysDoorSceneTriggered = ToysDoorSceneTriggered,
             HasCheckedOutDesk = HasCheckedOutDesk,
             HasFinishedToysDolls = HasFinishedToysDolls,
@@ -238,29 +285,43 @@ public class Progression : MonoBehaviour, ISavable
         return saveData;
     }
 
+    void SetProgression(GameSaveData saveData)
+    {
+        TutorialCompleted = saveData.TutorialCompleted;
+        ToysDoorSceneTriggered = saveData.ToysDoorSceneTriggered;
+        HasCheckedOutDesk = saveData.HasCheckedOutDesk;
+        HasFinishedToysDolls = saveData.HasFinishedToysDolls;
+        HasFinishedFineChinaDolls = saveData.HasFinishedFineChinaDolls;
+        HasFinishedDVDDolls = saveData.HasFinishedDVDDolls;
+        HasFinishedCelebrityDolls = saveData.HasFinishedCelebrityDolls;
+        HasFixedStairs = saveData.HasFixedStairs;
+        HasEnteredAuntsRoom = saveData.HasEnteredAuntsRoom;
+        HasEnteredMazarinesRoom = saveData.HasEnteredMazarinesRoom;
+    }
+
     public object CaptureState()
     {
-        return GetProgSaveData();
+        return GetGameSaveData();
     }
 
     public void RestoreState(object state)
     {
-        var saveData = state as ProgressionSaveData;
+        var saveData = state as GameSaveData;
         SetProgression(saveData);
-        
     }
 }
 
 [System.Serializable]
-public class ProgressionSaveData
+public class GameSaveData
 {
-    public bool ToysDoorSceneTriggered = false; //Celebrity introduced himself
-    public bool HasCheckedOutDesk = false; //Player clicked on computer and phone after celebrity introduced himself
-    public bool HasFinishedToysDolls = false; //Player finished Toys doll task
-    public bool HasFinishedFineChinaDolls = false; //Player finished Fine China doll task
-    public bool HasFinishedDVDDolls = false; //Player finished DVDs doll task
-    public bool HasFinishedCelebrityDolls = false; //Player finished Celebrity doll task
-    public bool HasFixedStairs = false; //Player has entered Taxidermy room and stairs were fixed
-    public bool HasEnteredAuntsRoom = false; //Player has entered the aunt's room
-    public bool HasEnteredMazarinesRoom = false; //Player has entered Mazarine's room
+    public bool TutorialCompleted = false;
+    public bool ToysDoorSceneTriggered = false;
+    public bool HasCheckedOutDesk = false;
+    public bool HasFinishedToysDolls = false;
+    public bool HasFinishedFineChinaDolls = false;
+    public bool HasFinishedDVDDolls = false;
+    public bool HasFinishedCelebrityDolls = false;
+    public bool HasFixedStairs = false;
+    public bool HasEnteredAuntsRoom = false;
+    public bool HasEnteredMazarinesRoom = false;
 }

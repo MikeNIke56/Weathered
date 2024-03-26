@@ -31,6 +31,6 @@ public class MMNewGame : MonoBehaviour
     void OnMouseUpAsButton()
     {
         SR.color = HoverColor;
-        StartCoroutine(MMM.NewGame());
+        MMM.gameFileSelectUI.SetActive(true);
     }
 }
