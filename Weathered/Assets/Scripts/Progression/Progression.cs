@@ -81,7 +81,6 @@ public class Progression : MonoBehaviour, ISavable
             MazarineScreamSFX.Play();
             yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "No.");
             HasEnteredAuntsRoom = true;
-            //SlotProgressionHandler.i.ProgressSlot(SlotProgressionHandler.i.chosenSlot, "HasEnteredAuntsRoom");
         }
         else
         {
@@ -222,6 +221,10 @@ public class Progression : MonoBehaviour, ISavable
             tutorialBox.SetActive(false);
             tutorialMan.SetActive(false);
             TutorialCompleted = true;
+
+            //in case the tasks doesn't load properly
+            FindAnyObjectByType<DustCobwebs>().LoadFinishedTask();
+            FindAnyObjectByType<SortBoxes>().LoadFinishedTask();
         }
         if (ToysDoorSceneTriggered == true)
         {
@@ -242,6 +245,9 @@ public class Progression : MonoBehaviour, ISavable
         }
         if (HasFinishedFineChinaDolls == true)
         {
+            if(FindAnyObjectByType<FixElevator>().currentState != Task.taskState.Completed)
+                ItemController.AddItemToHand(FindFirstObjectByType<Fuse>());
+
             HasFinishedFineChinaDolls = true;
         }
         if (HasFinishedDVDDolls == true)
@@ -252,10 +258,9 @@ public class Progression : MonoBehaviour, ISavable
         {
             HasFinishedCelebrityDolls = true;
         }
-        if (HasFixedStairs == true)
-        {
-            HasFixedStairs = true;
-        }
+
+        FindAnyObjectByType<AccessStairs>().HandleStairsLoad(HasFixedStairs);
+
         if (HasEnteredAuntsRoom == true)
         {
             HasEnteredAuntsRoom = true;

@@ -24,6 +24,24 @@ public class AccessStairs : Interaction
         player = FindAnyObjectByType<PlayerController>();
     }
 
+    public void HandleStairsLoad(bool areStairsBroken)
+    {
+        if (isPassable)
+        {
+            if (areStairsBroken == false)
+            {
+                isAboutToBreak = false;
+                FixedStairs.SetActive(false);
+                BrokenStairs.SetActive(true);
+            }
+            else
+            {
+                FixedStairs.SetActive(true);
+                BrokenStairs.SetActive(false);
+            }
+        }
+    }
+
     public override void onClick()
     {
         if (isPassable)
@@ -58,4 +76,6 @@ public class AccessStairs : Interaction
             }
         }
     }
+
+    public bool IsAboutToBreak => isAboutToBreak;
 }

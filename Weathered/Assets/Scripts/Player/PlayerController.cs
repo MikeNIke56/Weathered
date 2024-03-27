@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour, ISavable
 {
@@ -42,10 +43,11 @@ public class PlayerController : MonoBehaviour, ISavable
     public Dictionary<string, bool> moveBlockers = new Dictionary<string, bool>();
 
     CelebAutoGraphs sg;
+    bool isInMaingame = false;
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+
     }
 
     void Start()
@@ -78,6 +80,11 @@ public class PlayerController : MonoBehaviour, ISavable
     // Update is called once per frame
     void Update()
     {
+        if(SceneManager.GetActiveScene().name == "TestPlayer" && isInMaingame == false)
+        {
+            gameObject.SetActive(true);
+            isInMaingame = true;
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             UIController.UIControl.OpenPauseMenu();

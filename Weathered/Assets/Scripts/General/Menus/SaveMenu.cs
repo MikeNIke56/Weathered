@@ -19,12 +19,15 @@ public class SaveMenu : MonoBehaviour
 
     private void Start()
     {
-        if (SavingSystem.i.GetPath("SaveSlot1") != null)
-            slots[0].GetComponentInChildren<Text>().text = File.GetLastWriteTime(SavingSystem.i.GetPath("SaveSlot1")).ToString();
-        if (SavingSystem.i.GetPath("SaveSlot2") != null)
-            slots[1].GetComponentInChildren<Text>().text = File.GetLastWriteTime(SavingSystem.i.GetPath("SaveSlot2")).ToString();
-        if (SavingSystem.i.GetPath("SaveSlot3") != null)
-            slots[2].GetComponentInChildren<Text>().text = File.GetLastWriteTime(SavingSystem.i.GetPath("SaveSlot3")).ToString();
+        for (int i = 0; i < slots.Length; i++)
+        {
+            var file = i + 1;
+            if (SavingSystem.i.GetPath("SaveSlot" + file.ToString()) != null)
+                slots[i].GetComponentInChildren<Text>().text = File.GetLastWriteTime(SavingSystem.i.GetPath("SaveSlot" + file.ToString())).ToString();
+            else
+                slots[i].GetComponentInChildren<Text>().text = "Empty...";
+        }
+
     }
     private void Update()
     {
