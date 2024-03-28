@@ -106,6 +106,7 @@ public class ReplaceLightBulb : Task
     {
         normalLight.enabled = true;
         spiritLight.gameObject.SetActive(false);
+        FindFirstObjectByType<ClosetInteract>().isLocked = false;
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
     }

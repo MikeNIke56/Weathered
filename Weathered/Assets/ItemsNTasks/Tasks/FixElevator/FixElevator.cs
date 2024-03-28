@@ -82,10 +82,13 @@ public class FixElevator : Task
     public override void LoadFinishedTask()
     {
         state = FuseBoxState.Fixed;
+
+        fuseBox = FindAnyObjectByType<FuseBox>();
         fuseBox.fuseBoxObjs[0].SetActive(false);
         fuseBox.fuseBoxObjs[1].SetActive(false);
         fuseBox.fuseBoxObjs[2].SetActive(true);
 
+        fuse = FindAnyObjectByType<Fuse>();
         fuse.fuseObject.gameObject.SetActive(false);
 
         currentState = taskState.Completed;

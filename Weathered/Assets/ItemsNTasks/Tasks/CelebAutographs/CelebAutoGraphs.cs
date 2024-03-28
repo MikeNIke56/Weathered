@@ -112,6 +112,8 @@ public class CelebAutoGraphs : Task
 
     public override void LoadFinishedTask()
     {
+        arvinLogic = FindFirstObjectByType<ArvinLogic>();
+
         for (int i = 0; i < dolls.Length; i++)
             dolls[i].CompleteSave();
 

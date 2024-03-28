@@ -6,10 +6,11 @@ public class MainGameSceneHandle : MonoBehaviour
 {
     private void Awake()
     {
-        AfterLoad(ReloadScene.i.slot);
+        //AfterLoad(ReloadScene.i.slot);
     }
     void Start()
     {
+        AfterLoad(ReloadScene.i.slot);
         Progression.Prog.HandleReloadedAssets();
         Time.timeScale = 1;
     }

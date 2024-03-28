@@ -138,9 +138,16 @@ public class TeaParty : Task
         TeaLayer.SetActive(true);
         CookiesLayer.SetActive(true);
 
+        teaCabinet = FindAnyObjectByType<TeaCabinet>();
         teaCabinet.LoadCabinet();
+
+        pantry = FindAnyObjectByType<Pantry>();
         pantry.canStillInteract = false;
+
+        teabagsCabinet = FindAnyObjectByType<TeabagsCabinet>();
         teabagsCabinet.canStillInteract = false;
+
+        kettle = FindAnyObjectByType<Kettle>();
         kettle.kettleObject.GetComponent<BoxCollider2D>().enabled = false;
 
         currentState = taskState.Completed;

@@ -216,7 +216,10 @@ public class DVDRitual : Task
         DisableObjects();
         tvSpiritLight.intensity = 1.5f;
         tvSpiritLight.pointLightOuterRadius = 15;
+
+        summoningCircle = FindAnyObjectByType<SummoningCircleObj>();
         summoningCircle.gameObject.GetComponent<Interactable>().enabled = false;
+
         HandleTvStage(2);
         HandleSpiritTvStage(1);
         tvStatic.Stop();

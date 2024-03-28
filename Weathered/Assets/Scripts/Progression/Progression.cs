@@ -221,10 +221,12 @@ public class Progression : MonoBehaviour, ISavable
             tutorialBox.SetActive(false);
             tutorialMan.SetActive(false);
             TutorialCompleted = true;
+            FindFirstObjectByType<PlayerController>().moveBlockers["TutorialDialog"] = false;
 
             //in case the tasks doesn't load properly
             FindAnyObjectByType<DustCobwebs>().LoadFinishedTask();
             FindAnyObjectByType<SortBoxes>().LoadFinishedTask();
+            FindAnyObjectByType<KeyEntranceObject>().gameObject.SetActive(false);
         }
         if (ToysDoorSceneTriggered == true)
         {

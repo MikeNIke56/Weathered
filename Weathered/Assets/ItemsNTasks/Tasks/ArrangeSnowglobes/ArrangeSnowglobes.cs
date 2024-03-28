@@ -143,9 +143,14 @@ public class ArrangeSnowglobes : Task
     {
         for (int i = 0; i < snowGlobes.Count; i++)
         {
+            //if (shelfObj.activeInHierarchy == false)
+               // shelfObj.SetActive(true);
+                
+
             snowGlobes[i].isShowing = true;
             snowGlobes[i].included = true;
             shelfSnowGlobes[i].GetComponentInChildren<SnowglobeObj>().sgItem = snowGlobes[i];
+
             slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem = snowGlobes[i];
 
             shelfSnowGlobes[i].GetComponentInChildren<SpriteRenderer>().sprite = snowGlobes[i].sgImg.sprite;
@@ -156,6 +161,7 @@ public class ArrangeSnowglobes : Task
             snowGlobes[0].sgButtons.DisableButton();
         }
 
+        //shelfObj.SetActive(false);
 
         foreach (SnowglobeObj sg in snowGlobeObjsNotShelf)
         {

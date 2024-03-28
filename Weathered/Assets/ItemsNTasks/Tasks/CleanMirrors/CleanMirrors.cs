@@ -86,6 +86,8 @@ public class CleanMirrors : Task
             smudge.gameObject.SetActive(false);
         }
 
+        autoGraphs = FindAnyObjectByType<CelebAutoGraphs>();
+
         autoGraphs.requirementsMet[0] = true;
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();

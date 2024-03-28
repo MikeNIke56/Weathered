@@ -93,6 +93,8 @@ public class CleanFloor : Task
         {
             glass.gameObject.SetActive(false);
         }
+
+        closet = FindAnyObjectByType<ClosetInteract>();
         closet.OnCompletedLoad();
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();

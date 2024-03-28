@@ -6,6 +6,7 @@ using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Diagnostics;
 
 public class SaveMenu : MonoBehaviour
 {
@@ -21,9 +22,14 @@ public class SaveMenu : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            var file = i + 1;
-            if (SavingSystem.i.GetPath("SaveSlot" + file.ToString()) != null)
-                slots[i].GetComponentInChildren<Text>().text = File.GetLastWriteTime(SavingSystem.i.GetPath("SaveSlot" + file.ToString())).ToString();
+            var fileNum = i + 1;
+            var saveFileLoc = Path.Combine(Application.persistentDataPath, "SaveSlot" + fileNum.ToString());
+
+            if (File.Exists(saveFileLoc))
+            {
+                var saveFile = SavingSystem.i.GetPath("SaveSlot" + fileNum.ToString());
+                slots[i].GetComponentInChildren<Text>().text = File.GetLastWriteTime(saveFile).ToString();
+            }
             else
                 slots[i].GetComponentInChildren<Text>().text = "Empty...";
         }
@@ -88,7 +94,7 @@ public class SaveMenu : MonoBehaviour
                     ReloadScene.i.LoadSelectedFile();
                     break;
                 default:
-                    Debug.Log("failed load");
+                    UnityEngine.Debug.Log("failed load");
                     break;
             }
         }

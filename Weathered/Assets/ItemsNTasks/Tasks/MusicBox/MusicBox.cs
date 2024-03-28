@@ -73,6 +73,9 @@ public class MusicBox : Task
 
     public override void LoadFinishedTask()
     {
+        musicBoxNormal = FindAnyObjectByType<MusicBoxBox>();
+        musicBoxSpirit = FindAnyObjectByType<MusicBoxBox>();
+
         musicBoxNormal.RetreiveTape();
         musicBoxNormal.InsertTape(validTapes[2]);
         musicBoxSpirit.RetreiveTape();

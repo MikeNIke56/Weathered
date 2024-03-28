@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour, ISavable
     bool lockMovement = false;
     public Dictionary<string, bool> moveBlockers = new Dictionary<string, bool>();
 
-    CelebAutoGraphs sg;
+    ArrangeSnowglobes sg;
     bool isInMaingame = false;
 
     private void Awake()
@@ -74,13 +74,18 @@ public class PlayerController : MonoBehaviour, ISavable
                 Debug.Log(e);
             }
         }
-        sg = FindAnyObjectByType<CelebAutoGraphs>(FindObjectsInactive.Include);
+        sg = FindAnyObjectByType<ArrangeSnowglobes>(FindObjectsInactive.Include);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(SceneManager.GetActiveScene().name == "TestPlayer" && isInMaingame == false)
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            sg.LoadFinishedTask();
+        }
+
+        if (SceneManager.GetActiveScene().name == "TestPlayer" && isInMaingame == false)
         {
             gameObject.SetActive(true);
             isInMaingame = true;

@@ -88,7 +88,7 @@ public class FixDolls : Task
 
     public override void LoadFinishedTask()
     {
-        foreach (var doll in arrangeDolls.allPlaces)
+        foreach (var doll in FindAnyObjectByType<ArrangeDolls>().allPlaces)
         {
             AttachPart(doll);
         }
