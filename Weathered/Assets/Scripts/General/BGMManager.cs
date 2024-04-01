@@ -15,6 +15,7 @@ public class BGMManager : MonoBehaviour
     bool isPlaying = true;
     Vector3 voidDifference;
     int currentBGMTrack = 0;
+    [SerializeField] AudioSource DollsSongSource; //TEMP DIALOG CODE
     
     void Start()
     {
@@ -116,6 +117,18 @@ public class BGMManager : MonoBehaviour
             }
             isPlaying = tempIsPlaying;
             yield return new WaitForSeconds(1f);
+        }
+    }
+
+    public void FadeDollsSong(float FadeSpeedPos, bool TrueMeansRegularMusic) //TEMP DOLLS DIALOG CODE
+    {
+        if (TrueMeansRegularMusic)
+        {
+            FindFirstObjectByType<TestAudioOptions>().StartFade(FadeSpeedPos, 0f, -80f);
+        }
+        else
+        {
+            FindFirstObjectByType<TestAudioOptions>().StartFade(FadeSpeedPos, -80f, 0f);
         }
     }
 }

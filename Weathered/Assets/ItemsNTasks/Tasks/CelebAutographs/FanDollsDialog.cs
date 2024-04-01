@@ -59,29 +59,29 @@ public class FanDollsDialog : Interaction
             case 0:
                 if(ItemController.itemInHand is ArvinAutograph)
                 {
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "thanks for autograph");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Oh! So cool! Thank you!");
                     doCheckComplete = true;
                 }
                 else
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Fandoll1 I want autograph");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "A sacrifice...");
                 break;
             case 1:
                 if (ItemController.itemInHand is ArvinAutograph)
                 {
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "thanks for autograph");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "It's perfect!");
                     doCheckComplete = true;
                 }
                 else
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Fandoll2 I want autograph");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Something we want...");
                 break;
             case 2:
                 if (ItemController.itemInHand is ArvinAutograph)
                 {
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "thanks for autograph");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Yes. That is the name.");
                     doCheckComplete = true;
                 }
                 else
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Fandoll3 I want autograph");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "A name...");
                 break;
             default:
                 UnityEngine.Debug.Log("fail");

@@ -136,15 +136,30 @@ public class Progression : MonoBehaviour, ISavable
 
     IEnumerator ToysDollsDialog()
     {
+        GameManager.PC.moveBlockers["Cutscene"] = true;
         UIController.UIControl.OpenDialog();
         DialogManager.Instance.OpenDialog();
 
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "The dolls sing their tune~");
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "That was a nice enough tune I could unblock the other door!");
+        //Fadeinsong
+        BGMManager.BGM.FadeDollsSong(15f, false);
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Hmmm? Now that sounds nice~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Where's that music coming from?");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Shhh! You'll talk over it.");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "...?");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Young Mazarine, loving and bright. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Her parents were proud ‘til that night. ~ ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Alone she’d be saved. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ by aunt who had prayed. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ A ‘daughter’ she took with delight. ~");
+        //Fadeoutsong
+        BGMManager.BGM.FadeDollsSong(15f, true);
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "...");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "That was a nice enough tune- I could unblock the other door!");
         FindFirstObjectByType<FineChinaDoor>().OpenDoor(false);
 
         DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
+        GameManager.PC.moveBlockers["Cutscene"] = false;
     }
     public void FineChinaDolls()
     {
@@ -157,16 +172,37 @@ public class Progression : MonoBehaviour, ISavable
 
     IEnumerator FineChinaDollsDialog()
     {
+        GameManager.PC.moveBlockers["Cutscene"] = true;
         UIController.UIControl.OpenDialog();
         DialogManager.Instance.OpenDialog();
 
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "The dolls sing their tune~");
+        //Fadeinsong
+        BGMManager.BGM.FadeDollsSong(15f, false);
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Again?");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "I tend to like this kind of thing.");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Young Mazarine, learning to jest. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "It's me again!");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Shh!");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Along with her aunt, a long test. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ A store almost bare, ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ and things that need care. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ It’s Mazarine doing her best. ~");
+        //Fadeoutsong
+        BGMManager.BGM.FadeDollsSong(15f, true);
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Hm, hm, hmmm~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "I don't like it.");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Unsettling songs about you?");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "No!");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "You're almost famous.~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "I'm not...");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "...");
         ItemController.AddItemToHand(FindFirstObjectByType<Fuse>());
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Oh, I found this while they were singing");
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Thank you...");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "...Thank you.");
 
         DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
+        GameManager.PC.moveBlockers["Cutscene"] = false;
     }
     public void DVDDolls()
     {
@@ -179,14 +215,30 @@ public class Progression : MonoBehaviour, ISavable
 
     IEnumerator DVDDollsDialog()
     {
+        GameManager.PC.moveBlockers["Cutscene"] = true;
         UIController.UIControl.OpenDialog();
         DialogManager.Instance.OpenDialog();
 
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "The dolls sing their tune~");
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "I think something changed...");
+        //Fadeinsong
+        BGMManager.BGM.FadeDollsSong(15f, false);
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "I don't want to hear this!");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "C'mon~ have an open mind! They're singing for you!");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "It isn't like that...");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Young Mazarine, taken by chores. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Away from an aunt she adores. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ A list no small fete, ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ each task she’d complete. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Herself, whom she chose to ignore. ~");
+        //Fadeoutsong
+        BGMManager.BGM.FadeDollsSong(15f, true);
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Ooo, harsh.");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Can we go?");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Just roll with it, Mazarine.~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "...");
 
         DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
+        GameManager.PC.moveBlockers["Cutscene"] = false;
     }
     public void CelebrityDolls()
     {
@@ -199,19 +251,29 @@ public class Progression : MonoBehaviour, ISavable
 
     IEnumerator CelebrityDollsDialog()
     {
+        GameManager.PC.moveBlockers["Cutscene"] = true;
         UIController.UIControl.OpenDialog();
         DialogManager.Instance.OpenDialog();
 
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "The dolls sing their tune~");
+        //Fadeinsong
+        BGMManager.BGM.FadeDollsSong(15f, false);
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Another wonderful performance!");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "...");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Mazarine?");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Young Mazarine, working along. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Her actions worth singing a song. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ She dusts and then sweeps. ~");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ A question then creeps. ~");
+        //Fadeoutson
+        BGMManager.BGM.FadeDollsSong(40f, true);
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Theres Mazarine, knowing what’s right. ~");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Mazarine...");
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Yes?");
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "I feel that I should warn you about going into the next room...");
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "What does that mean?");
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Just... Be careful.");
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Okay...");
+        FindFirstObjectByType<AuntsDoor>().OpenDoor(false);
+        FindFirstObjectByType<CelebAutoGraphs>().falseWall.SetActive(false);
 
         DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
+        GameManager.PC.moveBlockers["Cutscene"] = false;
     }
 
     public void HandleReloadedAssets()

@@ -16,7 +16,7 @@ public class CelebAutoGraphs : Task
     Plant plant;
     ArvinAutograph autograph;
 
-    [SerializeField] GameObject falseWall;
+    public GameObject falseWall;
 
     private void Start()
     {
@@ -61,8 +61,6 @@ public class CelebAutoGraphs : Task
     {
         if (completedDolls >= 3)
         {
-            FindFirstObjectByType<AuntsDoor>().OpenDoor(false);
-            falseWall.SetActive(false);
             OnCompleted();
             Progression.Prog.CelebrityDolls();
         }
