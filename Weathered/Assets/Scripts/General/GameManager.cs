@@ -60,11 +60,11 @@ public class GameManager : MonoBehaviour, ISavable
         {
             Image deathShotImage = deathRoot.GetComponentInChildren<Image>();
             float deathStep = deathShotFadeOut / 50;
-            while (deathShotImage.color.a > 0)
+            /*while (deathShotImage.color.a > 0)
             {
                 deathShotImage.color -= new Color(0f, 0f, 0f, 0.02f);
                 yield return new WaitForSeconds(deathStep);
-            }
+            }*/
         }
     }
 

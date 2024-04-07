@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static PlayerController;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
@@ -120,7 +121,8 @@ public class UIController : MonoBehaviour
     }
     public void ShowDeathScreen()
     {
-        deathScreen.SetActive(true);
+        //deathScreen.SetActive(true);
+        SceneManager.LoadScene(0);
     }
 
     public void ToggleInputHandler(bool isOn)
