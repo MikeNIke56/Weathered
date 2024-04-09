@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class MainGameSceneHandle : MonoBehaviour
 {
+    public static MainGameSceneHandle i { get; private set; }
+
     private void Awake()
     {
-        //AfterLoad(ReloadScene.i.slot);
+        i = this;
     }
     void Start()
     {
@@ -15,7 +17,7 @@ public class MainGameSceneHandle : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    void AfterLoad(int slot)
+    public void AfterLoad(int slot)
     {
         switch (slot)
         {

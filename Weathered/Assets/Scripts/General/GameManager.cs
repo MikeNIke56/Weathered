@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour, ISavable
     [SerializeField] AudioSource deathImpactSFX;
     [SerializeField] Texture2D defaultCursor;
     static public PlayerController PC;
+    [SerializeField] GameObject deathScreen;
 
     public bool addedBlockers = false;
     public bool tutorialPlayed = false;
@@ -60,19 +61,19 @@ public class GameManager : MonoBehaviour, ISavable
         {
             Image deathShotImage = deathRoot.GetComponentInChildren<Image>();
             float deathStep = deathShotFadeOut / 50;
-            /*while (deathShotImage.color.a > 0)
+            while (deathShotImage.color.a > 0)
             {
                 deathShotImage.color -= new Color(0f, 0f, 0f, 0.02f);
                 yield return new WaitForSeconds(deathStep);
-            }*/
+            }
         }
     }
 
-    static public void RestartGame()
+    public void RestartGame()
     {
-        SceneManager.LoadScene("TestPlayer");
+        SceneManager.LoadScene(0);
+        deathScreen.SetActive(false);
     }
-
     public object CaptureState()
     {
         var saveData = new GameManagerSaveData()
