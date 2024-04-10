@@ -27,6 +27,7 @@ public class Progression : MonoBehaviour, ISavable
 
     [SerializeField] GameObject tutorialBox;
     [SerializeField] GameObject tutorialMan;
+    [SerializeField] GameObject toysRoomKey;
 
     bool IsLoading = true;
 
@@ -297,6 +298,7 @@ public class Progression : MonoBehaviour, ISavable
             PhoneControl.NewVoicemail(PhoneControl.VoicemailID.Toys);
             FindFirstObjectByType<CIntro>().MoveCeleb();
             ToysDoorSceneTriggered = true;
+            toysRoomKey.SetActive(false);
         }
         if (HasCheckedOutDesk == true)
         {

@@ -120,6 +120,7 @@ public class TutorialDialog : MonoBehaviour
             {
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterBoxSecond);
                 UIController.UIControl.ToggleInputHandler(false);
+                EndTutorial();
             }        
         }
 
@@ -167,9 +168,16 @@ public class TutorialDialog : MonoBehaviour
             {
                 yield return TutorialManager.Instance.ShowDialog(dialogAfterCobwebsSecond);
                 UIController.UIControl.ToggleInputHandler(false);
+                EndTutorial();
             }
         }
 
         yield return null;
+    }
+
+    void EndTutorial()
+    {
+        boxesArrow.SetActive(false);
+        cobwebsArrow.SetActive(false);
     }
 }

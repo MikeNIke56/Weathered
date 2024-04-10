@@ -121,8 +121,7 @@ public class UIController : MonoBehaviour
     }
     public void ShowDeathScreen()
     {
-        //deathScreen.SetActive(true);
-        SceneManager.LoadScene(0);
+        deathScreen.SetActive(true);
     }
 
     public void ToggleInputHandler(bool isOn)

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,7 @@ public class ReloadScene : MonoBehaviour
     [SerializeField] InputHandler inputHandler;
     [SerializeField] MainMenuManager mainMenu;
     public int slot;
+
     public static ReloadScene i { get; private set; }
     private void Awake()
     {
