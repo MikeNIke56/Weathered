@@ -10,6 +10,7 @@ public class ArvinLogic : Interaction
     public int autosOnGround = 0;
     bool JustGaveRose = false;
     bool HeardRoseTalk = false;
+    bool IsTalking = false;
 
     [SerializeField] ArvinAutograph autograph;
 
@@ -19,13 +20,16 @@ public class ArvinLogic : Interaction
     }
     public override void onClick()
     {
-        if(ItemController.itemInHand is BloodyRose && !autoGraphs.requirementsMet[1])
+        if (!IsTalking)
         {
-            JustGaveRose = true;
-            autoGraphs.requirementsMet[1] = true;
+            IsTalking = true;
+            if (ItemController.itemInHand is BloodyRose && !autoGraphs.requirementsMet[1])
+            {
+                JustGaveRose = true;
+                autoGraphs.requirementsMet[1] = true;
+            }
+            StartCoroutine(TalkToArvin(stage));
         }
-
-        StartCoroutine(TalkToArvin(stage));
     }
     IEnumerator TalkToArvin(int stage)
     {
@@ -164,5 +168,6 @@ public class ArvinLogic : Interaction
         DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
         GameManager.PC.moveBlockers["Cutscene"] = false;
+        IsTalking = false;
     }
 }
