@@ -22,12 +22,9 @@ public class DialogManager : MonoBehaviour
     public event Action OnCloseDialog;
     public bool IsShowing { get; private set; }
 
-    public Sprite mazarineImg;
-    public Sprite celebrityImg;
-    public Sprite placeholderImg;
+    public GameObject[] dialogImgs = new GameObject[7];
 
-    public enum DialogTriggers { Mazarine, Celebrity, DollSong, Doll, Worker, Narrator, Aunt, Chair, MazarineTestCutScene, 
-        TvDoll1, TvDoll2, TvDoll3, FanDoll1, FanDoll2, FanDoll3 }; //all talkable characters
+    public enum DialogTriggers { Mazarine, Celebrity, DollSong, Doll, Worker, Narrator, Aunt }; //all talkable characters
     public DialogTriggers trigger;
 
     public static DialogManager Instance { get; private set; }
@@ -89,31 +86,28 @@ public class DialogManager : MonoBehaviour
         switch (character)
         {
             case DialogTriggers.Mazarine:
-                characterImg.sprite = mazarineImg;
+                ToggleCharacterBox(0);
                 break;
             case DialogTriggers.Celebrity:
-                characterImg.sprite = celebrityImg;
+                ToggleCharacterBox(1);
                 break;
-            case DialogTriggers.TvDoll1:
-                characterImg.sprite = placeholderImg;
+            case DialogTriggers.DollSong:
+                ToggleCharacterBox(2);
                 break;
-            case DialogTriggers.TvDoll2:
-                characterImg.sprite = placeholderImg;
+            case DialogTriggers.Doll:
+                ToggleCharacterBox(3);
                 break;
-            case DialogTriggers.TvDoll3:
-                characterImg.sprite = placeholderImg;
+            case DialogTriggers.Aunt:
+                ToggleCharacterBox(6);
                 break;
-            case DialogTriggers.FanDoll1:
-                characterImg.sprite = placeholderImg;
+            case DialogTriggers.Narrator:
+                ToggleCharacterBox(5);
                 break;
-            case DialogTriggers.FanDoll2:
-                characterImg.sprite = placeholderImg;
-                break;
-            case DialogTriggers.FanDoll3:
-                characterImg.sprite = placeholderImg;
+            case DialogTriggers.Worker:
+                ToggleCharacterBox(4);
                 break;
             default:
-                characterImg.sprite = null;
+                ToggleCharacterBox(0);
                 break;
         }
 
@@ -123,6 +117,17 @@ public class DialogManager : MonoBehaviour
         skipped = false;
 
         OnCloseDialog?.Invoke();
+    }
+
+    void ToggleCharacterBox(int num)
+    {
+        for (int i = 0; i < dialogImgs.Length; i++)
+        {
+            if(i == num)
+                dialogImgs[i].SetActive(true);
+            else
+                dialogImgs[i].SetActive(false);
+        }
     }
 
 

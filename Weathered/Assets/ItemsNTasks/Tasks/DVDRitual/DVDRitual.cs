@@ -167,9 +167,9 @@ public class DVDRitual : Task
     {
         UIController.UIControl.OpenDialog();
         DialogManager.Instance.OpenDialog();
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll1, "This movie sucks!");
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll2, "In a bad way!");
-        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll3, "It's not all bad, I guess...");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "This movie sucks!");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "In a bad way!");
+        yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "It's not all bad, I guess...");
         DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
     }

@@ -12,7 +12,7 @@ public class DialogTriggerBox : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        switch (collision.name)
+        /*switch (collision.name)
         {
             case "Player":
                 StartCoroutine(TalkableCharacter.i.TriggerCutsceneDialog(DialogManager.DialogTriggers.MazarineTestCutScene, this.gameObject));
@@ -20,6 +20,6 @@ public class DialogTriggerBox : MonoBehaviour
             default:
                 StartCoroutine(DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Chair, "fail"));
                 break;
-        }
+        }*/
     }
 }

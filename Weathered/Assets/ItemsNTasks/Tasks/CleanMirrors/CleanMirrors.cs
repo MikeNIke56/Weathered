@@ -60,8 +60,8 @@ public class CleanMirrors : Task
 
         if (clearedAllMirrors == true)
         {
-            OnCompleted();
             autoGraphs.requirementsMet[0] = true;
+            OnCompleted();
         }
 
     }

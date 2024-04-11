@@ -72,8 +72,15 @@ public class GameManager : MonoBehaviour, ISavable
     public void RestartGame()
     {
         SceneManager.LoadScene(0);
+        StartCoroutine(HideDeathScreen());
+    }
+
+    IEnumerator HideDeathScreen()
+    {
+        yield return new WaitForSeconds(2.5f);
         deathScreen.SetActive(false);
     }
+
     public object CaptureState()
     {
         var saveData = new GameManagerSaveData()

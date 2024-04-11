@@ -19,16 +19,16 @@ public class TvDollsDialog : Interaction
         switch (dollnum)
         {
             case 0:
-                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll1, "HeHeHe~");
-                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll1, "Tennesee!");
-                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll1, "I want a movie I can laugh at! But I don't want it to be funny.");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "HeHeHe~");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "Tennesee!");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "I want a movie I can laugh at! But I don't want it to be funny.");
                 break;
             case 1:
-                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll2, "I need something to wake me up~");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "I need something to wake me up~");
                 break;
             case 2:
-                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll3, "Oh... I don't know...");
-                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.TvDoll3, "I might like it if it has a cool movie star...");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "Oh... I don't know...");
+                yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "I might like it if it has a cool movie star...");
                 break;
             default:
                 Debug.Log("fail");

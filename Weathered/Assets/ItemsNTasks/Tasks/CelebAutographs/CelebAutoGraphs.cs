@@ -121,7 +121,6 @@ public class CelebAutoGraphs : Task
 
         DisableObjects();
         arvinLogic.stage = 4;
-        arvinLogic.autosOnGround = 0;
         arvinLogic.isSaved = true;
         statue.CompleteStatue();
         BloomRose(plant);

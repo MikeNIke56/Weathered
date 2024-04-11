@@ -21,10 +21,10 @@ public class ItemController : MonoBehaviour
     }
     public static bool AddItemToHand(Item itemToAdd)
     {
-        if (itemInHand == itemToAdd)
+        /*if (itemInHand == itemToAdd)
         {
             return false;
-        }
+        }*/
 
         try
         {

@@ -48,6 +48,7 @@ public class Item : Interaction
             Vector3 droppedPos = FindFirstObjectByType<PlayerController>().transform.position;
             currentDroppedObject = Instantiate(droppedObjectPrefab);
             currentDroppedObject.transform.position = droppedPos;
+            currentDroppedObject.SetActive(true);
         }
     }
     public virtual void OnHitFloor() { }

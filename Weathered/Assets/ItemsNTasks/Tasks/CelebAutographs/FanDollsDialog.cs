@@ -59,29 +59,29 @@ public class FanDollsDialog : Interaction
             case 0:
                 if(ItemController.itemInHand is ArvinAutograph)
                 {
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Oh! So cool! Thank you!");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "Oh! So cool! Thank you!");
                     doCheckComplete = true;
                 }
                 else
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "A sacrifice...");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "A sacrifice...");
                 break;
             case 1:
                 if (ItemController.itemInHand is ArvinAutograph)
                 {
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "It's perfect!");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "It's perfect!");
                     doCheckComplete = true;
                 }
                 else
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Something we want...");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "Something we want...");
                 break;
             case 2:
                 if (ItemController.itemInHand is ArvinAutograph)
                 {
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "Yes. That is the name.");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "Yes. That is the name.");
                     doCheckComplete = true;
                 }
                 else
-                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.FanDoll1, "A name...");
+                    yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "A name...");
                 break;
             default:
                 UnityEngine.Debug.Log("fail");

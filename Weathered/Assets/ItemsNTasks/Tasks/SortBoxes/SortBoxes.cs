@@ -56,13 +56,6 @@ public class SortBoxes : Task
                 if (!clickedBox.isOpened)
                 {
                     startBox = true;
-
-                    TutorialDialog.i.cobwebsArrow.SetActive(false);
-                    TutorialDialog.i.boxesArrow.SetActive(false);
-
-                    if (TutorialDialog.i.cobWebsFirst == false)
-                        TutorialDialog.i.boxesFirst = true;
-
                     clickedBox.OpenBox();
                 }
                 else if (box1ItemList.Count > 0)

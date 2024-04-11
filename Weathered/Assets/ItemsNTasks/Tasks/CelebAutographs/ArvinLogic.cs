@@ -7,7 +7,6 @@ public class ArvinLogic : Interaction
     CelebAutoGraphs autoGraphs;
     public int stage = 0;
     public bool isSaved = false;
-    public int autosOnGround = 0;
     bool JustGaveRose = false;
     bool HeardRoseTalk = false;
     bool IsTalking = false;
