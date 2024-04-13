@@ -66,6 +66,7 @@ public class TutorialDialog : MonoBehaviour
         //unfreezes player
         player.moveBlockers["TutorialDialog"] = false;
         UIController.UIControl.ToggleInputHandler(false);
+        UIController.UIControl.isCamFree = true;
     }
 
     public IEnumerator HandleUpdate()

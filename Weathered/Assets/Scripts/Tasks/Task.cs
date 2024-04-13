@@ -13,6 +13,7 @@ public class Task : Interaction
     public string shortDescription;
     public string voicemailDescription;
     public string voicemailShortQuote;
+    public string hintText;
     public enum taskState { None, Available, InProgress, Completed }
     public taskState currentState;
     public bool isFailed = false;
@@ -22,6 +23,9 @@ public class Task : Interaction
     public GameObject taskInProgressIconPrefab; // In progress icon
     public GameObject taskCompletedIconPrefab; // Completed icon
     public int timesFailed = 0;
+    public bool hintGiven = false;
+    public bool hasBeenDisc = false;
+    public int noteBookPage;
 
     public enum taskRoom { Entrance, ChildrensToy, DVDNBook, ChinaNFurniture, CollectiblesNMemoirs, Taxidermy, CelebrityMerch, Mazarine, Aunt }
     public taskRoom room;
@@ -35,6 +39,9 @@ public class Task : Interaction
         this.isAlwaysChosen = saveData.isAlwaysChosen;
         this.isFailed = saveData.isFailed;
         this.timesFailed = saveData.timesFailed;
+        this.hintGiven = saveData.hintGiven;
+        this.noteBookPage = saveData.noteBookPage;
+        this.hasBeenDisc = saveData.hasBeenDisc;
         this.room = (taskRoom)saveData.room;
         this.currentState = (taskState)saveData.currentState;
     }
@@ -82,8 +89,12 @@ public class Task : Interaction
     public virtual void AddToList()
     {
         Instantiate(TaskController.taskControl.taskObj, TaskController.taskControl.taskScreenList.transform);
-        TaskController.taskControl.taskObj.GetComponentInChildren<Text>().text = taskName + ": " + description;
+        TaskController.taskControl.taskObj.GetComponentInChildren<Text>().text = taskName + ": \n" + description + "\n\n";
+
+        if(hintGiven == true)
+            TaskController.taskControl.taskObj.GetComponentInChildren<Text>().text += hintText;
     }
+
 
     public TaskSaveData GetSaveData()
     {
@@ -96,6 +107,9 @@ public class Task : Interaction
             isAlwaysChosen = isAlwaysChosen,
             isFailed = isFailed,
             timesFailed = timesFailed,
+            hintGiven = hintGiven,
+            noteBookPage = noteBookPage,
+            hasBeenDisc = hasBeenDisc,
             room = (TaskSaveData.taskRoom)room,
             currentState = (TaskSaveData.taskState)currentState
         };
@@ -115,6 +129,9 @@ public class TaskSaveData
     public bool isFailed = false;
     public bool isAlwaysChosen = false;
     public int timesFailed = 0;
+    public bool hintGiven = false;
+    public bool hasBeenDisc = false;
+    public int noteBookPage;
 
     public enum taskRoom { Entrance, ChildrensToy, DVDNBook, ChinaNFurniture, Doll, CollectiblesNMemoirs, Taxidermy, CelebrityMerch, Clock }
     public taskRoom room;

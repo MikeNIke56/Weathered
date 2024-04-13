@@ -142,6 +142,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
     void FixedUpdate()
     {
+
         if (movement.x > 0 && currentMovement.x != 1f)
         {
             currentMovement.x = 1f;

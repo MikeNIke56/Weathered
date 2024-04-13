@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class FixElevator : Task
 {
-    PlayerController player;
     Fuse fuse;
     [SerializeField] FuseBox fuseBox;
 
@@ -21,7 +20,6 @@ public class FixElevator : Task
 
     private void Awake()
     {
-        player = FindAnyObjectByType<PlayerController>();
         fuse = FindAnyObjectByType<Fuse>();
     }
 
@@ -62,14 +60,18 @@ public class FixElevator : Task
 
                 OnCompleted();
             }
-            else if (state == FuseBoxState.Fixed)
-            {
-                fuseboxButton.Play();
-                Debug.Log("taking elevator up");
-                GameManager.PC.transform.position += new Vector3(0f, 20f, 0f);
-                TheElevatorJustHellaCrashedYo.PlayDelayed(1f);
-            }
         } 
+    }
+
+    public void ClickedButton()
+    {
+        if (state == FuseBoxState.Fixed)
+        {
+            fuseboxButton.Play();
+            Debug.Log("taking elevator up");
+            GameManager.PC.transform.position += new Vector3(0f, 20f, 0f);
+            TheElevatorJustHellaCrashedYo.PlayDelayed(1f);
+        }
     }
 
 

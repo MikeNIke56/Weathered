@@ -25,6 +25,8 @@ public class UIController : MonoBehaviour
     [SerializeField] AudioSource openNotes;
     [SerializeField] public AudioSource closeNotes;
 
+    public bool isCamFree = false;
+
     public bool isTasksMenuOpen = false;
     void Start()
     {
@@ -49,6 +51,7 @@ public class UIController : MonoBehaviour
 
     public void OpenInteractionMenu()
     {
+        isCamFree = false;
         baseGameUI.SetActive(false);
         tasksMenu.SetActive(false);
         inputHandler.SetActive(false);
@@ -58,6 +61,7 @@ public class UIController : MonoBehaviour
     }
     public void CloseInteractionMenu()
     {
+        isCamFree = true;
         investigateMenu.SetActive(false);
         snowglobesUI.SetActive(false);
         shelf.Deactivate();
@@ -72,6 +76,7 @@ public class UIController : MonoBehaviour
     }
     public void OpenTasksMenu()
     {
+        isCamFree = false;
         isTasksMenuOpen = true;
         tasksMenu.SetActive(true);
         inputHandler.SetActive(false);
@@ -82,6 +87,7 @@ public class UIController : MonoBehaviour
     }
     public void CloseTasksMenu()
     {
+        isCamFree = true;
         isTasksMenuOpen = false;
         tasksMenu.SetActive(false);
         inputHandler.SetActive(true);
@@ -90,6 +96,7 @@ public class UIController : MonoBehaviour
     }
     public void OpenSaveUI()
     {
+        isCamFree = false;
         saveScreen.SetActive(true);
         tasksMenu.SetActive(false);
         inputHandler.SetActive(false);
@@ -99,6 +106,7 @@ public class UIController : MonoBehaviour
     }
     public void CloseSaveUI()
     {
+        isCamFree = true;
         saveScreen.SetActive(false);
         saveScreen.GetComponent<SaveMenu>().buttonsUI.SetActive(true);
         saveScreen.GetComponent<SaveMenu>().slotsUI.SetActive(false);
@@ -110,6 +118,7 @@ public class UIController : MonoBehaviour
     }
     public void DeathEventScreen()
     {
+        isCamFree = false;
         isTasksMenuOpen = false;
         tasksMenu.SetActive(false);
         inputHandler.SetActive(false);
@@ -178,6 +187,7 @@ public class UIController : MonoBehaviour
     {
         if (player.isPaused == false)
         {
+            isCamFree = false;
             pauseScreen.SetActive(true);
             Time.timeScale = 0f;
             player.isPaused = true;
@@ -187,6 +197,7 @@ public class UIController : MonoBehaviour
     {
         if (player.isPaused == true)
         {
+            isCamFree = true;
             pauseScreen.SetActive(false);
             Time.timeScale = 1f;
             player.isPaused = false;
@@ -194,6 +205,7 @@ public class UIController : MonoBehaviour
     }
     public void Back()
     {
+        isCamFree = true;
         CloseInteractionMenu();
         CloseTasksMenu();
         CloseSaveUI();

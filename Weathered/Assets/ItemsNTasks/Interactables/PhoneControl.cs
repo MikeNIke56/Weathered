@@ -54,6 +54,9 @@ public class PhoneControl : Interaction
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "I have so much to tell you!");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, ".......................................");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Narrator, "Mazarine writes the helpful information down in her journal~~");
+
+                TaskBatch1();
+
                 break;
             case VoicemailID.China:
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "You are in the china room section now");
@@ -65,5 +68,24 @@ public class PhoneControl : Interaction
 
         DialogManager.Instance.CloseDialog();
         UIController.UIControl.CloseDialog();
+    }
+
+    void TaskBatch1()
+    {
+        FindAnyObjectByType<ArrangeDolls>().hintGiven = true;
+        FindAnyObjectByType<ReplaceLightBulb>().hintGiven = true;
+        FindAnyObjectByType<FixDolls>().hintGiven = true;
+        FindAnyObjectByType<MusicBox>().hintGiven = true;
+        FindAnyObjectByType<CleanFloor>().hintGiven = true;
+        FindAnyObjectByType<ArrangeSnowglobes>().hintGiven = true;
+        FindAnyObjectByType<SortToys>().hintGiven = true;
+        FindAnyObjectByType<ArrangeDolls>().hasBeenDisc = true;
+        FindAnyObjectByType<ReplaceLightBulb>().hasBeenDisc = true;
+        FindAnyObjectByType<FixDolls>().hasBeenDisc = true;
+        FindAnyObjectByType<MusicBox>().hasBeenDisc = true;
+        FindAnyObjectByType<CleanFloor>().hasBeenDisc = true;
+        FindAnyObjectByType<ArrangeSnowglobes>().hasBeenDisc = true;
+        FindAnyObjectByType<SortToys>().hasBeenDisc = true;
+        TaskController.taskControl.SetPage(0);
     }
 }

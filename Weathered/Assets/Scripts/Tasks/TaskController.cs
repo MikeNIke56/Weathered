@@ -18,13 +18,14 @@ public class TaskController : MonoBehaviour, ISavable
 
     public string[] roomnames = new string[]{ "Entrance", "ChildrensToy", "DVDNBook", "ChinaNFurniture", "CollectiblesNMemoirs", "Taxidermy", "CelebrityMerch", "Mazarine", "Aunt" };
     int selectedPage = 0;
-    float selectionTimer = 0.2f;
     int times = 0;
+    int avialableTasks = 0;
 
     [SerializeField] GameObject keyDVDReward;
     [SerializeField] Transform keyDVDLocation;
 
     PlayerController player;
+    [SerializeField] GameObject[] arrows;
 
     private void Awake()
     {
@@ -54,7 +55,7 @@ public class TaskController : MonoBehaviour, ISavable
         HandleUpdate();
     }
 
-    void UpdateList()
+    public void UpdateList()
     {
         //clear existing task in list
         foreach (Transform slot in taskScreenList.transform)
@@ -63,36 +64,48 @@ public class TaskController : MonoBehaviour, ISavable
         //create new task slot
         foreach (var task in taskList)
         {
-            if (task.room.ToString() == roomnames[selectedPage])
+            if (task.noteBookPage == selectedPage && task.hasBeenDisc == true)
                 task.AddToList();
+        }
+    }
+
+    public void HandleUpdate()
+    {
+        if(selectedPage == 0)
+        {
+            arrows[0].gameObject.SetActive(false);
+            arrows[1].gameObject.SetActive(true);
+        }
+        else if(selectedPage == avialableTasks-1)
+        {
+            arrows[0].gameObject.SetActive(true);
+            arrows[1].gameObject.SetActive(false);
+        }
+        else
+        {
+            arrows[0].gameObject.SetActive(true);
+            arrows[1].gameObject.SetActive(true);
         }
 
     }
-    public void HandleUpdate()
+
+    public void IncrementPage()
     {
-        if(player.state == PlayerController.GameState.Menu)
+        if (player.state == PlayerController.GameState.Menu)
         {
             int prevPage = selectedPage;
 
-            if (Input.GetKeyDown(KeyCode.D) && selectionTimer == 0)
-            {
-                ++selectedPage;
-                selectionTimer = 0.2f;
-            }                
-            else if (Input.GetKeyDown(KeyCode.A) && selectionTimer == 0)
-            {
-                --selectedPage;
-                selectionTimer = 0.2f;
-            }
+            ++selectedPage;
 
-            try
+
+            avialableTasks = 0;
+            foreach (var task in taskList)
             {
-                selectedPage = Mathf.Clamp(selectedPage, 0, roomnames.Length - 1);
+                if (task.hasBeenDisc == true)
+                    avialableTasks++;
             }
-            catch (Exception e)
-            {
-                Debug.Log(e);
-            }
+            selectedPage = Mathf.Clamp(selectedPage, 0, avialableTasks - 1);
+
 
             if (prevPage != selectedPage && selectedPage >= 0)
             {
@@ -104,19 +117,43 @@ public class TaskController : MonoBehaviour, ISavable
                 times = 0;
                 pageFlip.Play();
             }
-
-            UpdateTimer();
         }
     }
-
-    void UpdateTimer()
+    public void DecrementPage()
     {
-        if (selectionTimer > 0)
+        if (player.state == PlayerController.GameState.Menu)
         {
-            selectionTimer = Mathf.Clamp(selectionTimer - Time.deltaTime, 0, selectionTimer);
+            int prevPage = selectedPage;
+
+            --selectedPage;
+
+            avialableTasks = 0;
+            foreach (var task in taskList)
+            {
+                if (task.hasBeenDisc == true)
+                    avialableTasks++;
+            }
+            selectedPage = Mathf.Clamp(selectedPage, 0, avialableTasks - 1);
+
+
+            if (prevPage != selectedPage && selectedPage >= 0)
+            {
+                while (times < 2)
+                {
+                    UpdateList();
+                    times++;
+                }
+                times = 0;
+                pageFlip.Play();
+            }
         }
     }
 
+    public void SetPage(int page)
+    {
+        selectedPage = page;
+        UpdateList();
+    }
     public void CheckCompleteTasks()
     {
         bool isAllComplete = true;
