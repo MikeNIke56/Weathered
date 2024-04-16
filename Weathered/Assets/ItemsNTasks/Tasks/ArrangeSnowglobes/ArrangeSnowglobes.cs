@@ -32,6 +32,16 @@ public class ArrangeSnowglobes : Task
 
     PlayerController player;
 
+    private void Start()
+    {
+        StartCoroutine(SetSnowglobes());
+    }
+
+    IEnumerator SetSnowglobes()
+    {
+        yield return new WaitForSeconds(1f);
+    }
+
     public override void InstanceTask()
     {
         base.InstanceTask();

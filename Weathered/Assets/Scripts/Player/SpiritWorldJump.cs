@@ -28,6 +28,31 @@ public class SpiritWorldJump : MonoBehaviour
         jumpBlockers.Add("CassetteSpirit", false);
         jumpBlockers.Add("NoJumpingZone", false);
 
+        StartCoroutine(SetImages());
+    }
+
+    IEnumerator SetImages()
+    {
+        yield return new WaitForSeconds(1f);
+
+        var images = FindObjectsByType<Image>(FindObjectsSortMode.None);
+        for (int i = 0; i < images.Length; i++)
+        {
+            switch (images[i].tag)
+            {
+                case ("vignette"):
+                    vignetteImage = images[i];
+                    break;
+                case ("blackout"):
+                    blackoutImage = images[i];
+                    break;
+                case ("fadeeffect"):
+                    deathEffectImage = images[i];
+                    break;
+                default:
+                    break;
+            }
+        }
     }
     static public void Jump()
     {

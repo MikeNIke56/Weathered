@@ -14,6 +14,25 @@ public class FixDolls : Task
     private void Start()
     {
         arrangeDolls = FindAnyObjectByType<ArrangeDolls>(FindObjectsInactive.Include);
+        StartCoroutine(InsertDolls());
+    }
+
+    IEnumerator InsertDolls()
+    {
+        yield return new WaitForSeconds(1);
+        validDolls.Clear();
+        validDolls.Add(FindAnyObjectByType<Benni>());
+        validDolls.Add(FindAnyObjectByType<Clemmy>());
+        validDolls.Add(FindAnyObjectByType<MrBear>());
+        validDolls.Add(FindAnyObjectByType<SallyMae>());
+        validDolls.Add(FindAnyObjectByType<SaintBearnard>());
+
+        validParts.Clear();
+        validParts.Add(FindAnyObjectByType<BenniWing>());
+        validParts.Add(FindAnyObjectByType<ClemmyShoe>());
+        validParts.Add(FindAnyObjectByType<MrBearArm>());
+        validParts.Add(FindAnyObjectByType<SallyEye>());
+        validParts.Add(FindAnyObjectByType<SaintHat>());
     }
 
     public void ClickedPart(FixDollsPart partClicked)

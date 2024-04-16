@@ -20,6 +20,7 @@ public class Item : Interaction
     GameObject currentUIObject;
     GameObject currentPlayerObject;
     public GameObject currentDroppedObject;
+
     public virtual bool CheckIfHoldable()
     {
         return true;

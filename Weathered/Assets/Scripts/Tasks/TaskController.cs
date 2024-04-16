@@ -154,6 +154,14 @@ public class TaskController : MonoBehaviour, ISavable
         selectedPage = page;
         UpdateList();
     }
+
+    public void FindTasks()
+    {
+        taskList.Clear();
+        foreach (var task in FindObjectsByType<Task>(FindObjectsSortMode.None))
+            taskList.Add(task);
+    }
+
     public void CheckCompleteTasks()
     {
         bool isAllComplete = true;
@@ -180,6 +188,7 @@ public class TaskController : MonoBehaviour, ISavable
 
     public void RestoreState(object state)
     {
+        FindTasks();
         var saveData = state as List<TaskSaveData>;
         if(saveData != null)
         {
@@ -190,6 +199,7 @@ public class TaskController : MonoBehaviour, ISavable
                     if (taskList[i].taskName == task.taskName)
                     {
                         taskList[i].SetTask(task);
+                        taskList[i].timesFailed = 0;
 
                         if(taskList[i].currentState == Task.taskState.Completed)
                             taskList[i].LoadFinishedTask();

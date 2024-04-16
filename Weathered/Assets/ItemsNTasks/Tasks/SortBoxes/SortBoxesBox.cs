@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,7 +29,15 @@ public class SortBoxesBox : Interaction
     public void RemoveBox()
     {
         isDone = true;
-        boxSound.Play();
-        gameObject.SetActive(false);
+        try
+        {
+            boxSound.Play();
+            gameObject.SetActive(false);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("no box available");
+            Debug.Log(e);
+        }
     }
 }

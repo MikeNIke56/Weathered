@@ -82,7 +82,8 @@ public class PlayerController : MonoBehaviour, ISavable
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            sg.LoadFinishedTask();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SavingSystem.i.Load($"SaveSlot1");
         }
 
         if (SceneManager.GetActiveScene().name == "TestPlayer" && isInMaingame == false)
@@ -271,7 +272,12 @@ public class PlayerController : MonoBehaviour, ISavable
     public void StartDeath()
     {
         state = GameState.Death;
-        MazarineSpriteObject.SetActive(false);
+
+        foreach (var obj in FindObjectsByType<Animator>(FindObjectsSortMode.None))
+        {
+            if(obj.gameObject.tag == "playerAnim")
+                obj.gameObject.SetActive(false);
+        }
     }
 
     public object CaptureState()

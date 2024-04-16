@@ -30,6 +30,7 @@ public class ReplaceLightBulb : Task
     {
         SetTime();
         OnInProgress();
+        stepStool = FindFirstObjectByType<StepStool>();
     }
 
     // Update is called once per frame

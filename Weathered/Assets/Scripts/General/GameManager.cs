@@ -19,18 +19,24 @@ public class GameManager : MonoBehaviour, ISavable
 
     public bool addedBlockers = false;
     public bool tutorialPlayed = false;
+    static bool isDeathDone = false;
 
     private void Awake()
     {
-        GM = this;
-        DontDestroyOnLoad(gameObject);
+        if (GM != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            GM = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     void Start()
     {
         Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
-        //Cursor.visible = false;
-        GM = FindFirstObjectByType<GameManager>();
         flashPrefab = pointFlashPrefab;
         PC = FindFirstObjectByType<PlayerController>();     
     }
@@ -43,6 +49,7 @@ public class GameManager : MonoBehaviour, ISavable
 
     static IEnumerator DeathAnim(GameObject deathRoot, float animTime, bool skipFlash)
     {
+        isDeathDone = false;
         if (deathRoot != null)
         {
             FindFirstObjectByType<Camera>().enabled = false;
@@ -67,19 +74,28 @@ public class GameManager : MonoBehaviour, ISavable
                 yield return new WaitForSeconds(deathStep);
             }
         }
+        isDeathDone = true;
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(0);
-        StartCoroutine(HideDeathScreen());
+        StartCoroutine(HandleDeathLoad());
     }
 
-    IEnumerator HideDeathScreen()
+    public IEnumerator HideDeathScreen()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1f);
         deathScreen.SetActive(false);
     }
+    public IEnumerator HandleDeathLoad()
+    {
+        yield return new WaitUntil(() => isDeathDone == true);
+        SavingSystem.i.Save($"SaveSlot" + ReloadScene.i.slot.ToString());
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        yield return HideDeathScreen();
+        UIController.UIControl.OpenBaseUI();
+    }
+
 
     public object CaptureState()
     {

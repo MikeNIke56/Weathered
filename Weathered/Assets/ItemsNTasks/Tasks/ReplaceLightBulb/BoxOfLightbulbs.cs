@@ -14,9 +14,10 @@ public class BoxOfLightbulbs : Interaction
     public override void onClick()
     {
         if (lightbulbTask == null)
-        {
             lightbulbTask = FindFirstObjectByType<ReplaceLightBulb>();
-        }
+
+        if (lightbulb == null)
+            lightbulb = FindFirstObjectByType<Lightbulb>();
 
         lightbulb.ClickedLightbulbObject(lightbulb);
     } 

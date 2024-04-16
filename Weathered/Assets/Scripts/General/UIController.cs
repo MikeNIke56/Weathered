@@ -25,7 +25,7 @@ public class UIController : MonoBehaviour
     [SerializeField] AudioSource openNotes;
     [SerializeField] public AudioSource closeNotes;
 
-    public bool isCamFree = false;
+    public bool isCamFree = true;
 
     public bool isTasksMenuOpen = false;
     void Start()

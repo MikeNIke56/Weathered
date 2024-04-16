@@ -57,46 +57,13 @@ public class SaveMenu : MonoBehaviour
     {
         if (isSave==true)
         {
-            switch (slot)
-            {
-                case 1:
-                    SavingSystem.i.Save("SaveSlot1");
-                    slots[0].GetComponentInChildren<Text>().text = DateTime.Now.ToString();
-                    break;
-                case 2:
-                    SavingSystem.i.Save("SaveSlot2");
-                    slots[1].GetComponentInChildren<Text>().text = DateTime.Now.ToString();
-                    break;
-                case 3:
-                    SavingSystem.i.Save("SaveSlot3");
-                    slots[2].GetComponentInChildren<Text>().text = DateTime.Now.ToString();
-                    break;
-                default:
-                    SavingSystem.i.Save("SaveSlot1");
-                    slots[0].GetComponentInChildren<Text>().text = DateTime.Now.ToString();
-                    break;
-            }
+            SavingSystem.i.Save($"SaveSlot" + slot.ToString());
+            slots[slot-1].GetComponentInChildren<Text>().text = DateTime.Now.ToString();
         }
         else
         {
-            switch (slot)
-            {
-                case 1:
-                    ReloadScene.i.slot = slot;
-                    ReloadScene.i.LoadSelectedFile();
-                    break;
-                case 2:
-                    ReloadScene.i.slot = slot;
-                    ReloadScene.i.LoadSelectedFile();
-                    break;
-                case 3:
-                    ReloadScene.i.slot = slot;
-                    ReloadScene.i.LoadSelectedFile();
-                    break;
-                default:
-                    UnityEngine.Debug.Log("failed load");
-                    break;
-            }
+            ReloadScene.i.slot = slot;
+            ReloadScene.i.LoadSelectedFile();
         }
     }
 }

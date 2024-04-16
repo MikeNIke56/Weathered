@@ -34,7 +34,6 @@ public class Progression : MonoBehaviour, ISavable
     private void Awake()
     {
         Prog = this;
-        DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
@@ -279,15 +278,17 @@ public class Progression : MonoBehaviour, ISavable
 
     public void HandleReloadedAssets()
     {
+        TaskController.taskControl.FindTasks();
+
         if (TutorialCompleted == true)
         {
             tutorialBox.SetActive(false);
             tutorialMan.SetActive(false);
             TutorialCompleted = true;
             FindFirstObjectByType<PlayerController>().moveBlockers["TutorialDialog"] = false;
+            UIController.UIControl.isCamFree = true;
 
             //in case the tasks doesn't load properly
-            FindAnyObjectByType<DustCobwebs>().LoadFinishedTask();
             FindAnyObjectByType<SortBoxes>().LoadFinishedTask();
             FindAnyObjectByType<KeyEntranceObject>().gameObject.SetActive(false);
         }
@@ -297,45 +298,45 @@ public class Progression : MonoBehaviour, ISavable
             FindFirstObjectByType<ToysDoor>().OpenDoor(false);
             PhoneControl.NewVoicemail(PhoneControl.VoicemailID.Toys);
             FindFirstObjectByType<CIntro>().MoveCeleb();
-            ToysDoorSceneTriggered = true;
             toysRoomKey.SetActive(false);
         }
         if (HasCheckedOutDesk == true)
         {
-            HasCheckedOutDesk = true;
+
         }
         if (HasFinishedToysDolls == true)
         {
             FindFirstObjectByType<FineChinaDoor>().OpenDoor(false);
-            HasFinishedToysDolls = true;
+
         }
         if (HasFinishedFineChinaDolls == true)
         {
             if(FindAnyObjectByType<FixElevator>().currentState != Task.taskState.Completed)
                 ItemController.AddItemToHand(FindFirstObjectByType<Fuse>());
 
-            HasFinishedFineChinaDolls = true;
         }
         if (HasFinishedDVDDolls == true)
         {
-            HasFinishedDVDDolls = true;
+
         }
         if (HasFinishedCelebrityDolls == true)
         {
-            HasFinishedCelebrityDolls = true;
+
         }
 
         FindAnyObjectByType<AccessStairs>().HandleStairsLoad(HasFixedStairs);
 
         if (HasEnteredAuntsRoom == true)
         {
-            HasEnteredAuntsRoom = true;
 
         }
         if (HasEnteredMazarinesRoom == true)
         {
-            HasEnteredMazarinesRoom = true;
+
         }
+
+        UIController.UIControl.ToggleInputHandler(false);
+        StartCoroutine(GameManager.GM.HideDeathScreen());
     }
 
     public GameSaveData GetGameSaveData()
@@ -367,7 +368,7 @@ public class Progression : MonoBehaviour, ISavable
         HasFinishedCelebrityDolls = saveData.HasFinishedCelebrityDolls;
         HasFixedStairs = saveData.HasFixedStairs;
         HasEnteredAuntsRoom = saveData.HasEnteredAuntsRoom;
-        HasEnteredMazarinesRoom = saveData.HasEnteredMazarinesRoom;
+        HasEnteredMazarinesRoom = saveData.HasEnteredMazarinesRoom;      
     }
 
     public object CaptureState()

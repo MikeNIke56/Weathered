@@ -73,6 +73,6 @@ public class RoomManager : MonoBehaviour
             SR.color -= new Color(0f, 0f, 0f, 0.01f * fadeSpeed);
             yield return new WaitForSeconds(0.02f);
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

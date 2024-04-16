@@ -50,9 +50,6 @@ public class MainMenuManager : MonoBehaviour
     public void NewGame()
     {
         StartCoroutine(StartNewGame());
-        //loadScreen.SetActive(true);
-        //raccoon.SetActive(true);
-        //SceneManager.LoadSceneAsync("TestPlayer");
     }
 
     public void BackToMenu()

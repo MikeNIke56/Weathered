@@ -49,8 +49,11 @@ public class TutorialDialog : MonoBehaviour
     }
     public IEnumerator StartDialog()
     {
-        //entrance animation 
+        UIController.UIControl.isCamFree = false;
         player.moveBlockers["TutorialDialog"] = true;
+        yield return GameManager.GM.HideDeathScreen();
+
+        //entrance animation 
         yield return new WaitForSeconds(.5f);
         dialogBox.SetActive(true);
 

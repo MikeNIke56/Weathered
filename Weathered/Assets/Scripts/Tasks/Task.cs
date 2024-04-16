@@ -64,9 +64,9 @@ public class Task : Interaction
     }
     public virtual void OnCompleted()
     {
-        currentState = taskState.Completed;
-        TaskController.taskControl.taskCompleteAudio.Play();
-        TaskController.taskControl.CheckCompleteTasks();
+        this.currentState = taskState.Completed;
+        FindAnyObjectByType<TaskController>().taskCompleteAudio.Play();
+        FindAnyObjectByType<TaskController>().CheckCompleteTasks();
     }
     public virtual void LoadFinishedTask()
     {
@@ -79,7 +79,8 @@ public class Task : Interaction
         {
             OnFailed();
         }
-        TaskController.taskControl.taskBadActionAudio.Play();
+
+        FindAnyObjectByType<TaskController>().taskBadActionAudio.Play();
     }
     public virtual void OnFailed()
     {

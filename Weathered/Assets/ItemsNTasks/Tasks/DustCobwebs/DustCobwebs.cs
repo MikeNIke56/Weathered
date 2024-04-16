@@ -10,6 +10,11 @@ public class DustCobwebs : Task
     public bool clearedCobweb = false;
     public bool cobwebsDone = false;
 
+    private void Start()
+    {
+        dusterItem = FindFirstObjectByType<Duster>();
+    }
+
     public override void InstanceTask()
     {
         base.InstanceTask();

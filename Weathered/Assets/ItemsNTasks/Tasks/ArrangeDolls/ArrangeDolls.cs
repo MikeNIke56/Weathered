@@ -16,6 +16,22 @@ public class ArrangeDolls : Task
 
     [SerializeField] GameObject[] dollsToDisable;
 
+    private void Start()
+    {
+        StartCoroutine(InsertDolls());
+    }
+
+    IEnumerator InsertDolls()
+    {
+        yield return new WaitForSeconds(1);
+        validDolls.Clear();
+        validDolls.Add(FindAnyObjectByType<Benni>());
+        validDolls.Add(FindAnyObjectByType<Clemmy>());
+        validDolls.Add(FindAnyObjectByType<MrBear>());
+        validDolls.Add(FindAnyObjectByType<SaintBearnard>());
+        validDolls.Add(FindAnyObjectByType<SallyMae>());
+    }
+
     public void DollClicked(ArrangeDollsDoll dollClicked)
     {
         if (currentState == taskState.Available)

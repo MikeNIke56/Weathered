@@ -11,6 +11,10 @@ TagManager:
   - UP
   - DOWN
   - Obstructor
+  - playerAnim
+  - blackout
+  - vignette
+  - fadeeffect
   layers:
   - Default
   - TransparentFX

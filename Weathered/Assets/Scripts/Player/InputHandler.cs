@@ -28,7 +28,12 @@ public class InputHandler : MonoBehaviour
         if (!context.started) return;
         if (_camera == null || !_camera.isActiveAndEnabled)
         {
-            _camera = GameObject.FindFirstObjectByType<Camera>();
+            var cameras = FindObjectsByType<Camera>(FindObjectsSortMode.None);
+            foreach(var cam in cameras)
+            {
+                if(cam.name == "PlayerCamera")
+                    _camera = cam;
+            }
         }
 
         RaycastHit2D hit = Physics2D.Raycast(_camera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -39,6 +44,9 @@ public class InputHandler : MonoBehaviour
     void IsCloseEnough(RaycastHit2D obj)
     {
         GameObject collidedObject = obj.collider.gameObject;
+
+        if(player == null)
+            player = FindAnyObjectByType<PlayerController>();
 
         float xVal = collidedObject.transform.position.x - player.transform.position.x;
         float yVal = collidedObject.transform.position.y - player.transform.position.y;
