@@ -8,7 +8,6 @@ using static Task;
 public class ArrangeSnowglobes : Task
 {
     public List<Snowglobe> snowGlobes = new List<Snowglobe>();
-    [SerializeField] List<SnowglobeObj> snowGlobeObjs = new List<SnowglobeObj>();
     public List<GameObject> shelfSnowGlobes = new List<GameObject>();
     [SerializeField] List<SnowglobeObj> snowGlobeObjsNotShelf = new List<SnowglobeObj>();
     public Snowglobe placeHolderSG;
@@ -32,14 +31,38 @@ public class ArrangeSnowglobes : Task
 
     PlayerController player;
 
+    int shelf, notShelf;
+
     private void Start()
     {
         StartCoroutine(SetSnowglobes());
+
+        shelf = LayerMask.NameToLayer("ShelfSG");
+        notShelf = LayerMask.NameToLayer("NotShelfSG");
     }
 
     IEnumerator SetSnowglobes()
     {
         yield return new WaitForSeconds(1f);
+
+        snowGlobes.Clear();
+        snowGlobeObjsNotShelf.Clear();
+        shelfSnowGlobes.Clear();
+
+        foreach (var sg in FindObjectsByType<Snowglobe>(FindObjectsSortMode.None))
+        {
+            if (sg.gameObject.tag == "ShelfSG")
+                snowGlobes.Add(sg);
+        }
+        foreach (var sg in FindObjectsByType<SnowglobeObj>(FindObjectsSortMode.None))
+        {
+            if(sg.gameObject.tag == "Untagged")
+                snowGlobeObjsNotShelf.Add(sg);
+        }
+        foreach (var sg in FindObjectsByType<ShelfGlobes>(FindObjectsSortMode.None))
+        {
+            shelfSnowGlobes.Add(sg.gameObject);
+        }
     }
 
     public override void InstanceTask()
@@ -73,7 +96,7 @@ public class ArrangeSnowglobes : Task
 
     void RandomizePositions()
     {
-        for (int i = 0; i < snowGlobeObjs.Count; i++)
+        for (int i = 0; i < snowGlobes.Count; i++)
         {
             var slotObj = Instantiate(slotOriginal, slotParent.transform);
             var objImg = slotObj.gameObject.GetComponent<Image>();
@@ -135,7 +158,7 @@ public class ArrangeSnowglobes : Task
     public void CheckForFinished()
     {
         bool inOrder = true;
-        for(int i = 0; i < slotParent.GetComponentsInChildren<SnowglobeObj>().Length;  i++)
+        for(int i = 0; i < slotParent.GetComponentsInChildren<SnowglobeObj>().Length; i++)
         {
             if (slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem != snowGlobes[i])
                 inOrder = false;

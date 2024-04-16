@@ -6318,8 +6318,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.11170006, y: -0.032949924, z: 0}
-    m_Extent: {x: 10.3828, y: 8.37995, z: 0}
+    m_Center: {x: 0.110049725, y: -0.029000282, z: 0}
+    m_Extent: {x: 10.380051, y: 8.368, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7945,7 +7945,7 @@ GameObject:
   - component: {fileID: 206286500}
   m_Layer: 0
   m_Name: sg (6)
-  m_TagString: Untagged
+  m_TagString: ShelfSG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8579,7 +8579,7 @@ GameObject:
   - component: {fileID: 234456461}
   m_Layer: 0
   m_Name: sg (3)
-  m_TagString: Untagged
+  m_TagString: ShelfSG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10098,6 +10098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SGOverWorldObj
       objectReference: {fileID: 0}
+    - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3081609758748315109, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10181,7 +10185,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1367540582}
   m_SourcePrefab: {fileID: 100100000, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
 --- !u!4 &299329741 stripped
 Transform:
@@ -11376,8 +11383,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.2047, y: -0.4932499, z: 0}
-    m_Extent: {x: 22.6782, y: 8.17295, z: 0}
+    m_Center: {x: 7.2085996, y: -0.48469996, z: 0}
+    m_Extent: {x: 22.6728, y: 8.1671, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12354,8 +12361,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.5421, y: -0.52170014, z: 0}
-    m_Extent: {x: 20.049099, y: 8.1703005, z: 0}
+    m_Center: {x: 4.5484505, y: -0.52895, z: 0}
+    m_Extent: {x: 20.04545, y: 8.16975, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -13278,8 +13285,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 2.6636498, y: -0.08460009, z: 0}
-    m_Extent: {x: 3.32005, y: 3.6444001, z: 0}
+    m_Center: {x: 2.66395, y: -0.08039999, z: 0}
+    m_Extent: {x: 3.3271499, y: 3.6396, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -13368,8 +13375,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.47095, y: -0.15364993, z: 0}
-    m_Extent: {x: 2.47645, y: 2.8341498, z: 0}
+    m_Center: {x: 0.47835004, y: -0.14765, z: 0}
+    m_Extent: {x: 2.48345, y: 2.82535, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14047,6 +14054,10 @@ PrefabInstance:
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_Name
       value: SGOverWorldObj (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_TagString
@@ -14887,8 +14898,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.5491996, y: -0.5279999, z: 0}
-    m_Extent: {x: 20.0425, y: 8.1656, z: 0}
+    m_Center: {x: 4.5492997, y: -0.5204501, z: 0}
+    m_Extent: {x: 20.0447, y: 8.1706505, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -15357,15 +15368,6 @@ MonoBehaviour:
   - {fileID: 206286499}
   - {fileID: 982237325}
   - {fileID: 820772367}
-  snowGlobeObjs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   shelfSnowGlobes:
   - {fileID: 1514977796}
   - {fileID: 1463818357}
@@ -16704,8 +16706,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.5456996, y: -0.5272, z: 0}
-    m_Extent: {x: 20.0453, y: 8.1652, z: 0}
+    m_Center: {x: 4.5489, y: -0.5253, z: 0}
+    m_Extent: {x: 20.0493, y: 8.1629, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -24320,7 +24322,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 42738099675054206, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
   m_PrefabInstance: {fileID: 299329740}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1367540579}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae28deae58891d34eac9d8b929a6823d, type: 3}
@@ -25015,8 +25017,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.1593494, y: -0.51349974, z: 0}
-    m_Extent: {x: 22.64905, y: 8.205999, z: 0}
+    m_Center: {x: 7.1471996, y: -0.50625014, z: 0}
+    m_Extent: {x: 22.6556, y: 8.21035, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25487,8 +25489,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.54595, y: -0.52475, z: 0}
-    m_Extent: {x: 20.03455, y: 8.17335, z: 0}
+    m_Center: {x: 4.5441, y: -0.5248499, z: 0}
+    m_Extent: {x: 20.046, y: 8.16595, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25623,8 +25625,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.5417004, y: -0.52755, z: 0}
-    m_Extent: {x: 20.0415, y: 8.17255, z: 0}
+    m_Center: {x: 4.5481, y: -0.52175, z: 0}
+    m_Extent: {x: 20.0447, y: 8.16975, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -27824,7 +27826,7 @@ GameObject:
   - component: {fileID: 820772368}
   m_Layer: 0
   m_Name: sg (5)
-  m_TagString: Untagged
+  m_TagString: ShelfSG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28493,8 +28495,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.93665, y: -0.5273001, z: 0}
-    m_Extent: {x: 22.43555, y: 8.1729, z: 0}
+    m_Center: {x: 6.9253507, y: -0.52785015, z: 0}
+    m_Extent: {x: 22.43485, y: 8.16615, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -29045,7 +29047,7 @@ GameObject:
   - component: {fileID: 870484526}
   m_Layer: 0
   m_Name: sg (1)
-  m_TagString: Untagged
+  m_TagString: ShelfSG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29345,8 +29347,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10715008, y: -0.032099724, z: 0}
-    m_Extent: {x: 10.37625, y: 8.3708, z: 0}
+    m_Center: {x: 0.096950054, y: -0.030100346, z: 0}
+    m_Extent: {x: 10.37845, y: 8.376699, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -30915,7 +30917,7 @@ GameObject:
   - component: {fileID: 982237326}
   m_Layer: 0
   m_Name: sg (4)
-  m_TagString: Untagged
+  m_TagString: ShelfSG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31488,8 +31490,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.93395, y: -0.52135015, z: 0}
-    m_Extent: {x: 22.43075, y: 8.1657505, z: 0}
+    m_Center: {x: 6.9294, y: -0.5195501, z: 0}
+    m_Extent: {x: 22.4332, y: 8.17665, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -32726,6 +32728,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SGOverWorldObj (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3081609758748315109, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -32793,7 +32799,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1393341547}
   m_SourcePrefab: {fileID: 100100000, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
 --- !u!4 &1079991444 stripped
 Transform:
@@ -32805,7 +32814,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 42738099675054206, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
   m_PrefabInstance: {fileID: 1079991443}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1393341544}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae28deae58891d34eac9d8b929a6823d, type: 3}
@@ -32887,6 +32896,10 @@ PrefabInstance:
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_Name
       value: SGOverWorldObj (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_TagString
@@ -38341,6 +38354,10 @@ PrefabInstance:
       value: SGOverWorldObj (9)
       objectReference: {fileID: 0}
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -41745,8 +41762,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.22319984, y: 0.0031499863, z: 0}
-    m_Extent: {x: 10.3883, y: 8.25885, z: 0}
+    m_Center: {x: 0.21680021, y: 0.004500389, z: 0}
+    m_Extent: {x: 10.3843, y: 8.257, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -42833,6 +42850,10 @@ PrefabInstance:
       value: SGOverWorldObj (7)
       objectReference: {fileID: 0}
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -43430,6 +43451,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64d2656831111be41b2d50236096362b, type: 3}
+--- !u!1 &1367540579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+  m_PrefabInstance: {fileID: 299329740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1367540582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367540579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6b19ede74d28545ac1aa58d1686bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1368007448
 GameObject:
   m_ObjectHideFlags: 0
@@ -43865,6 +43903,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 258041637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1393341544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+  m_PrefabInstance: {fileID: 1079991443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1393341547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393341544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6b19ede74d28545ac1aa58d1686bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1404331970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4951662314818986514, guid: 9b43ec8f4b80e9b42b22f39165628e10, type: 3}
@@ -43979,8 +44034,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.5409493, y: -0.5200002, z: 0}
-    m_Extent: {x: 20.04265, y: 8.174, z: 0}
+    m_Center: {x: 4.5474005, y: -0.5286503, z: 0}
+    m_Extent: {x: 20.0402, y: 8.16965, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -45283,7 +45338,7 @@ GameObject:
   - component: {fileID: 1468635975}
   m_Layer: 0
   m_Name: sg
-  m_TagString: Untagged
+  m_TagString: ShelfSG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51871,7 +51926,7 @@ GameObject:
   - component: {fileID: 1544952885}
   m_Layer: 0
   m_Name: sg (2)
-  m_TagString: Untagged
+  m_TagString: ShelfSG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52141,8 +52196,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.7823496, y: -0.34220028, z: 0}
-    m_Extent: {x: 22.80605, y: 8.3525, z: 0}
+    m_Center: {x: 1.78545, y: -0.3352003, z: 0}
+    m_Extent: {x: 22.80345, y: 8.3567, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -52737,6 +52792,10 @@ PrefabInstance:
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_Name
       value: SGOverWorldObj (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_TagString
@@ -59292,6 +59351,10 @@ PrefabInstance:
       value: SGOverWorldObj (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -61113,7 +61176,7 @@ GameObject:
   - component: {fileID: 1790685130}
   m_Layer: 0
   m_Name: sg (7)
-  m_TagString: Untagged
+  m_TagString: ShelfSG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64092,8 +64155,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.16925001, y: 0.019199967, z: 0}
-    m_Extent: {x: 1.60655, y: 2.9441, z: 0}
+    m_Center: {x: 0.16214997, y: 0.009199977, z: 0}
+    m_Extent: {x: 1.5968499, y: 2.9394999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -64586,8 +64649,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 3.54185, y: -0.32520008, z: 0}
-    m_Extent: {x: 4.24005, y: 3.395, z: 0}
+    m_Center: {x: 3.53895, y: -0.33305, z: 0}
+    m_Extent: {x: 4.24695, y: 3.39925, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -65886,6 +65949,10 @@ PrefabInstance:
       value: SGOverWorldObj (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -66425,6 +66492,10 @@ PrefabInstance:
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_Name
       value: SGOverWorldObj (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1060104193434341897, guid: 505997fdcfdfaba4f8b4cc0aec4596c2, type: 3}
       propertyPath: m_TagString
@@ -67875,8 +67946,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.5497003, y: -0.52429986, z: 0}
-    m_Extent: {x: 20.0389, y: 8.1644, z: 0}
+    m_Center: {x: 4.5395503, y: -0.5175998, z: 0}
+    m_Extent: {x: 20.04555, y: 8.1712, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
