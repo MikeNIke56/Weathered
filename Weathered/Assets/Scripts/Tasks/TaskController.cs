@@ -36,9 +36,6 @@ public class TaskController : MonoBehaviour, ISavable
     {
         player = FindFirstObjectByType<PlayerController>();
 
-        if (taskControl == null)
-            taskControl = FindFirstObjectByType<TaskController>();
-
         foreach (Task singleTask in taskList)
             singleTask.InstanceTask();
 

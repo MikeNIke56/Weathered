@@ -17,6 +17,9 @@ TagManager:
   - fadeeffect
   - NotShelfSG
   - ShelfSG
+  - placeholder
+  - snowparent
+  - snowbutton
   layers:
   - Default
   - TransparentFX
@@ -29,8 +32,8 @@ TagManager:
   - PostProcessing
   - ShelfSG
   - NotShelfSG
-  - 
-  - 
+  - sg6
+  - sg7
   - 
   - 
   - 

@@ -13,7 +13,7 @@ public class ItemController : MonoBehaviour
 
     void Start()
     {
-        itemControl = FindFirstObjectByType<ItemController>();
+        itemControl = this;
     }
     private void Update()
     {

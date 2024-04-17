@@ -73,27 +73,27 @@ public class GameManager : MonoBehaviour, ISavable
                 deathShotImage.color -= new Color(0f, 0f, 0f, 0.02f);
                 yield return new WaitForSeconds(deathStep);
             }
+            isDeathDone = true;
         }
-        isDeathDone = true;
     }
 
     public void RestartGame()
     {
-        StartCoroutine(HandleDeathLoad());
+        HandleDeathLoad();
     }
 
-    public IEnumerator HideDeathScreen()
+    public void HideDeathScreen()
     {
-        yield return new WaitForSeconds(1f);
         deathScreen.SetActive(false);
     }
-    public IEnumerator HandleDeathLoad()
+    public void HandleDeathLoad()
     {
-        yield return new WaitUntil(() => isDeathDone == true);
-        SavingSystem.i.Save($"SaveSlot" + ReloadScene.i.slot.ToString());
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        yield return HideDeathScreen();
-        UIController.UIControl.OpenBaseUI();
+        if(isDeathDone == true)
+        {
+            SavingSystem.i.Save($"SaveSlot" + ReloadScene.i.slot.ToString());
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            UIController.UIControl.OpenBaseUI();
+        }
     }
 
 

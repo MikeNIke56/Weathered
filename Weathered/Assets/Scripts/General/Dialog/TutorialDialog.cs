@@ -51,7 +51,7 @@ public class TutorialDialog : MonoBehaviour
     {
         UIController.UIControl.isCamFree = false;
         player.moveBlockers["TutorialDialog"] = true;
-        yield return GameManager.GM.HideDeathScreen();
+        GameManager.GM.HideDeathScreen();
 
         //entrance animation 
         yield return new WaitForSeconds(.5f);

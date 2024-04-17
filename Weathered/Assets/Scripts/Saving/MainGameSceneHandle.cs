@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class MainGameSceneHandle : MonoBehaviour
 {
     public static MainGameSceneHandle i { get; private set; }
+    public bool sceneLoaded = false;
 
     private void Awake()
     {

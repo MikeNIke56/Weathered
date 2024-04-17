@@ -336,7 +336,7 @@ public class Progression : MonoBehaviour, ISavable
         }
 
         UIController.UIControl.ToggleInputHandler(false);
-        StartCoroutine(GameManager.GM.HideDeathScreen());
+        GameManager.GM.HideDeathScreen();
     }
 
     public GameSaveData GetGameSaveData()
