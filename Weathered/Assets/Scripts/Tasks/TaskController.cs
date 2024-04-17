@@ -36,15 +36,7 @@ public class TaskController : MonoBehaviour, ISavable
     {
         player = FindFirstObjectByType<PlayerController>();
 
-        foreach (Task singleTask in taskList)
-            singleTask.InstanceTask();
-
-        while(times < 2)
-        {
-            UpdateList();
-            times++;
-        }    
-        times = 0;
+        //InstanceTasks();
     }
 
     void Update()
@@ -52,6 +44,20 @@ public class TaskController : MonoBehaviour, ISavable
         HandleUpdate();
     }
 
+    public void InstanceTasks()
+    {
+        foreach (Task singleTask in taskList)
+        {
+            singleTask.InstanceTask();
+        }
+
+        while (times < 2)
+        {
+            UpdateList();
+            times++;
+        }
+        times = 0;
+    }
     public void UpdateList()
     {
         //clear existing task in list

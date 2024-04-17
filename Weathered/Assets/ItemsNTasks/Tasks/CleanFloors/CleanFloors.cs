@@ -7,8 +7,8 @@ public class CleanFloor : Task
     [SerializeField] List<BrokenGlass> brokenGlass = new List<BrokenGlass>();
     [SerializeField] List<BloodSplatter> bloodSplatters = new List<BloodSplatter>();
 
-    [SerializeField] GlassDuster dusterItem;
-    [SerializeField] Mop mopItem;
+    public GlassDuster dusterItem;
+    public Mop mopItem;
 
     bool clearedGlass = false;
     bool clearedSplatters = false;
@@ -28,6 +28,10 @@ public class CleanFloor : Task
         {
             splatters.gameObject.SetActive(true);
         }
+
+        mopItem = FindAnyObjectByType<Mop>();
+        dusterItem = FindAnyObjectByType<GlassDuster>();
+        closet = FindAnyObjectByType<ClosetInteract>();
     }
     public void ClickedSpot(Interaction interaction)
     {

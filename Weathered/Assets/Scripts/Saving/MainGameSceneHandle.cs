@@ -15,6 +15,7 @@ public class MainGameSceneHandle : MonoBehaviour
     void Start()
     {
         AfterLoad(FindAnyObjectByType<ReloadScene>().slot);
+        TaskController.taskControl.InstanceTasks();
         Progression.Prog.HandleReloadedAssets();
         Time.timeScale = 1;
     }

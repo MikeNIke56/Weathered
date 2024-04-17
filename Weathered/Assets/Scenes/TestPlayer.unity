@@ -6393,8 +6393,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.105100155, y: -0.031999588, z: 0}
-    m_Extent: {x: 10.3787, y: 8.3701, z: 0}
+    m_Center: {x: 0.106949806, y: -0.030550003, z: 0}
+    m_Extent: {x: 10.37675, y: 8.37305, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7192,7 +7192,7 @@ GameObject:
   - component: {fileID: 151212935}
   m_Layer: 0
   m_Name: sg (8)
-  m_TagString: Untagged
+  m_TagString: placeholder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11920,8 +11920,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.1993504, y: -0.48259997, z: 0}
-    m_Extent: {x: 22.68095, y: 8.1775, z: 0}
+    m_Center: {x: 7.20795, y: -0.47775006, z: 0}
+    m_Extent: {x: 22.68075, y: 8.17125, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12847,6 +12847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 379421163}
   - component: {fileID: 379421164}
+  - component: {fileID: 379421165}
   m_Layer: 0
   m_Name: Snowglobes
   m_TagString: Untagged
@@ -12892,6 +12893,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sg6SG: {fileID: 206286499}
   sg7SG: {fileID: 1790685129}
+--- !u!114 &379421165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379421162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61d423d546d4d1b4087a39bd5c3c15e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &385787970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4951662314818986514, guid: 10bbaeb1fc2a9d3409c7a809d223cd4d, type: 3}
@@ -13103,8 +13116,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.54915, y: -0.5224998, z: 0}
-    m_Extent: {x: 20.04975, y: 8.1718, z: 0}
+    m_Center: {x: 4.54485, y: -0.5174501, z: 0}
+    m_Extent: {x: 20.04175, y: 8.16935, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14063,8 +14076,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 2.6592999, y: -0.088100076, z: 0}
-    m_Extent: {x: 3.3262, y: 3.6283998, z: 0}
+    m_Center: {x: 2.66355, y: -0.087499976, z: 0}
+    m_Extent: {x: 3.3120499, y: 3.6367998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14153,8 +14166,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.47124994, y: -0.14680004, z: 0}
-    m_Extent: {x: 2.4867501, y: 2.8273, z: 0}
+    m_Center: {x: 0.46300006, y: -0.15884995, z: 0}
+    m_Extent: {x: 2.4835, y: 2.82935, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -15750,8 +15763,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.5393996, y: -0.5258002, z: 0}
-    m_Extent: {x: 20.0467, y: 8.170401, z: 0}
+    m_Center: {x: 4.55315, y: -0.52725005, z: 0}
+    m_Extent: {x: 20.04425, y: 8.17595, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -16211,15 +16224,7 @@ MonoBehaviour:
   hasBeenDisc: 0
   noteBookPage: 7
   room: 1
-  snowGlobes:
-  - {fileID: 1468635974}
-  - {fileID: 1790685129}
-  - {fileID: 1544952884}
-  - {fileID: 870484525}
-  - {fileID: 234456460}
-  - {fileID: 206286499}
-  - {fileID: 982237325}
-  - {fileID: 820772367}
+  snowGlobes: []
   notShelfSnowGlobes: []
   shelfSnowGlobeObjs: []
   placeHolderSG: {fileID: 151212937}
@@ -17543,8 +17548,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.54175, y: -0.5223501, z: 0}
-    m_Extent: {x: 20.04825, y: 8.17245, z: 0}
+    m_Center: {x: 4.5375504, y: -0.5328498, z: 0}
+    m_Extent: {x: 20.04425, y: 8.1706505, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19120,7 +19125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639653726}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25867,8 +25872,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.16025, y: -0.52030015, z: 0}
-    m_Extent: {x: 22.654251, y: 8.2054, z: 0}
+    m_Center: {x: 7.1552, y: -0.51839995, z: 0}
+    m_Extent: {x: 22.6599, y: 8.2057, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26339,8 +26344,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.54965, y: -0.52909994, z: 0}
-    m_Extent: {x: 20.04075, y: 8.169001, z: 0}
+    m_Center: {x: 4.5454497, y: -0.53240013, z: 0}
+    m_Extent: {x: 20.036749, y: 8.1713, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26475,8 +26480,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.54815, y: -0.52435017, z: 0}
-    m_Extent: {x: 20.039951, y: 8.17885, z: 0}
+    m_Center: {x: 4.5440993, y: -0.5295, z: 0}
+    m_Extent: {x: 20.0416, y: 8.1707, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -29696,8 +29701,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.9320006, y: -0.53030014, z: 0}
-    m_Extent: {x: 22.4352, y: 8.1713, z: 0}
+    m_Center: {x: 6.9316998, y: -0.5230999, z: 0}
+    m_Extent: {x: 22.4303, y: 8.1706, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -30584,8 +30589,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10629988, y: -0.03455019, z: 0}
-    m_Extent: {x: 10.385401, y: 8.373051, z: 0}
+    m_Center: {x: 0.10820007, y: -0.021600246, z: 0}
+    m_Extent: {x: 10.3776, y: 8.3755, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -32763,8 +32768,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 6.93805, y: -0.52495, z: 0}
-    m_Extent: {x: 22.43605, y: 8.16595, z: 0}
+    m_Center: {x: 6.9342003, y: -0.5243497, z: 0}
+    m_Extent: {x: 22.4351, y: 8.169149, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -41552,7 +41557,7 @@ GameObject:
   - component: {fileID: 1174782437}
   m_Layer: 0
   m_Name: UpPage
-  m_TagString: Untagged
+  m_TagString: rightpg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43223,8 +43228,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.22540045, y: -0.0012497902, z: 0}
-    m_Extent: {x: 10.3873005, y: 8.26955, z: 0}
+    m_Center: {x: 0.2270999, y: 0.008550167, z: 0}
+    m_Extent: {x: 10.3773, y: 8.26635, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -45494,8 +45499,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.5385003, y: -0.52040005, z: 0}
-    m_Extent: {x: 20.0435, y: 8.1658, z: 0}
+    m_Center: {x: 4.5484, y: -0.52264977, z: 0}
+    m_Extent: {x: 20.0498, y: 8.17015, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -53721,8 +53726,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.7853003, y: -0.34275007, z: 0}
-    m_Extent: {x: 22.8079, y: 8.35935, z: 0}
+    m_Center: {x: 1.7797499, y: -0.3380499, z: 0}
+    m_Extent: {x: 22.80555, y: 8.35065, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -66068,8 +66073,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.16585004, y: 0.012950063, z: 0}
-    m_Extent: {x: 1.59725, y: 2.94215, z: 0}
+    m_Center: {x: 0.16329998, y: 0.016499996, z: 0}
+    m_Extent: {x: 1.6015999, y: 2.9432, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -66562,8 +66567,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 3.5475001, y: -0.32545006, z: 0}
-    m_Extent: {x: 4.2377, y: 3.3986502, z: 0}
+    m_Center: {x: 3.54815, y: -0.3291, z: 0}
+    m_Extent: {x: 4.24295, y: 3.3898, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67399,7 +67404,7 @@ GameObject:
   - component: {fileID: 1955625694}
   m_Layer: 0
   m_Name: DownPage
-  m_TagString: Untagged
+  m_TagString: leftpg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69941,8 +69946,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.55095, y: -0.5185497, z: 0}
-    m_Extent: {x: 20.040249, y: 8.16725, z: 0}
+    m_Center: {x: 4.5453506, y: -0.5224502, z: 0}
+    m_Extent: {x: 20.05085, y: 8.17235, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -71550,7 +71555,7 @@ PrefabInstance:
       objectReference: {fileID: 626644044}
     - target: {fileID: 4806094309516806123, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.4
+      value: -29.13
       objectReference: {fileID: 0}
     - target: {fileID: 4806094309516806123, guid: 7909fe1eca7120648814590718c27c71, type: 3}
       propertyPath: m_LocalPosition.y
@@ -82301,6 +82306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3777893170299022192}
+  - component: {fileID: 7336324366477779025}
   m_Layer: 0
   m_Name: Task
   m_TagString: Untagged
@@ -82308,6 +82314,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7336324366477779025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336324366477779024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5a2b6b9e9bead409a75c6cbc271123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7410990877537083634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5131964574970863288, guid: 075926c72286437479263a1c5fd723a2, type: 3}

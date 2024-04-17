@@ -8,6 +8,9 @@ public class Mop : Item
     public AudioSource mopSfx;
     public void ClickedMopObject(MopObject  mopClicked)
     {
+        if (originalMopObject == null)
+            originalMopObject = FindAnyObjectByType<MopObject>();
+
         ItemController.AddItemToHand(this);
         mopClicked.gameObject.SetActive(false);
     }

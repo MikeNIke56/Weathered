@@ -8,6 +8,9 @@ public class GlassDuster : Item
     public AudioSource sweepSfx;
     public void ClickedDusterObject(GlassDusterObject dusterClicked)
     {
+        if (originalDusterObject == null)
+            originalDusterObject = FindAnyObjectByType<GlassDusterObject>();
+
         ItemController.AddItemToHand(this);
         dusterClicked.gameObject.SetActive(false);
     }
