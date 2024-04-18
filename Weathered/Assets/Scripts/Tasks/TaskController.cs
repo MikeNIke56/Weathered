@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TaskController : MonoBehaviour, ISavable
 {
@@ -16,7 +13,7 @@ public class TaskController : MonoBehaviour, ISavable
     public GameObject taskScreenList;
     public GameObject taskObj;
 
-    public string[] roomnames = new string[]{ "Entrance", "ChildrensToy", "DVDNBook", "ChinaNFurniture", "CollectiblesNMemoirs", "Taxidermy", "CelebrityMerch", "Mazarine", "Aunt" };
+    public string[] roomnames = new string[] { "Entrance", "ChildrensToy", "DVDNBook", "ChinaNFurniture", "CollectiblesNMemoirs", "Taxidermy", "CelebrityMerch", "Mazarine", "Aunt" };
     int selectedPage = 0;
     int times = 0;
     int avialableTasks = 0;
@@ -74,12 +71,12 @@ public class TaskController : MonoBehaviour, ISavable
 
     public void HandleUpdate()
     {
-        if(selectedPage == 0)
+        if (selectedPage == 0)
         {
             arrows[0].gameObject.SetActive(false);
             arrows[1].gameObject.SetActive(true);
         }
-        else if(selectedPage == avialableTasks-1)
+        else if (selectedPage == avialableTasks - 1)
         {
             arrows[0].gameObject.SetActive(true);
             arrows[1].gameObject.SetActive(false);
@@ -193,18 +190,18 @@ public class TaskController : MonoBehaviour, ISavable
     {
         FindTasks();
         var saveData = state as List<TaskSaveData>;
-        if(saveData != null)
+        if (saveData != null)
         {
             foreach (TaskSaveData task in saveData)
             {
-                for(int i = 0; i < taskList.Count; i++)
+                for (int i = 0; i < taskList.Count; i++)
                 {
                     if (taskList[i].taskName == task.taskName)
                     {
                         taskList[i].SetTask(task);
                         taskList[i].timesFailed = 0;
 
-                        if(taskList[i].currentState == Task.taskState.Completed)
+                        if (taskList[i].currentState == Task.taskState.Completed)
                             taskList[i].LoadFinishedTask();
                     }
                 }

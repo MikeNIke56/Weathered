@@ -16,7 +16,7 @@ public class BGMManager : MonoBehaviour
     Vector3 voidDifference;
     int currentBGMTrack = 0;
     [SerializeField] AudioSource DollsSongSource; //TEMP DIALOG CODE
-    
+
     void Start()
     {
         BGM = this;
@@ -110,7 +110,7 @@ public class BGMManager : MonoBehaviour
                         tempIsPlaying = false;
                     }
                 }
-                catch 
+                catch
                 {
                     Debug.Log("The Void has taken us. (BGM error)");
                 }

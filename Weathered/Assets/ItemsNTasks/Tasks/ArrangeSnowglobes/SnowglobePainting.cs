@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,9 +15,9 @@ public class SnowglobePainting : Interaction
         ObservationMenu.observeMenu.nameText.text = paintingName;
         spawnObj.GetComponent<Image>().sprite = inspectImg;
 
-        if(paintingName == "Till Death Do Part" || paintingName == "There is no Peace Like Death")
+        if (paintingName == "Till Death Do Part" || paintingName == "There is no Peace Like Death")
             bookOpen.Play();
 
-        UIController.UIControl.OpenInteractionMenu();   
+        UIController.UIControl.OpenInteractionMenu();
     }
 }

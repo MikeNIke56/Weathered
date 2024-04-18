@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CIntro : MonoBehaviour
@@ -14,7 +12,7 @@ public class CIntro : MonoBehaviour
         {
             GetComponentInChildren<CelebritySpriteScript>().GhostBall(false);
         }
-        
+
     }
 
     public void MoveCeleb()

@@ -29,6 +29,7 @@ public class Snowglobe : Item
     {
         sgButtons = FindAnyObjectByType<SnowglobesButtons>(FindObjectsInactive.Include);
         shelfScrolling = FindAnyObjectByType<ShelfScrolling>(FindObjectsInactive.Include);
+        snowglobes = FindAnyObjectByType<ArrangeSnowglobes>(FindObjectsInactive.Include);
     }
 
     public void OnClickedSGObject(SnowglobeObj clickedSG)

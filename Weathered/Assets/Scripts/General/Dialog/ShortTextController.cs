@@ -24,7 +24,7 @@ public class ShortTextController : MonoBehaviour
     {
         STControl = FindFirstObjectByType<ShortTextController>();
         backImage = shortTextContainer.GetComponent<Image>();
-        backImage.color -= new Color(0,0,0,1);
+        backImage.color -= new Color(0, 0, 0, 1);
         shortTextText.text = "";
         if (!isTextProgressiveRunning)
         {
@@ -131,7 +131,7 @@ public class ShortTextController : MonoBehaviour
         isShowing = false;
         if (skipFade)
         {
-            backImage.color += new Color(0,0,0,1);
+            backImage.color += new Color(0, 0, 0, 1);
         }
         else
         {

@@ -1,8 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
-using static CelebrityInteractionScript;
 
 public class FanDollsDialog : Interaction
 {
@@ -34,7 +31,7 @@ public class FanDollsDialog : Interaction
     // Update is called once per frame
     void Update()
     {
-        if(isCompleted == false)
+        if (isCompleted == false)
         {
             // Float up/down with a Sin()
             tempPos = posOffset;
@@ -57,7 +54,7 @@ public class FanDollsDialog : Interaction
         switch (num)
         {
             case 0:
-                if(ItemController.itemInHand is ArvinAutograph)
+                if (ItemController.itemInHand is ArvinAutograph)
                 {
                     yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Doll, "Oh! So cool! Thank you!");
                     doCheckComplete = true;
@@ -106,7 +103,7 @@ public class FanDollsDialog : Interaction
         ItemController.itemInHand = null;
         gameObject.tag = "Untagged";
 
-        foreach(Transform obj in parent.transform)
+        foreach (Transform obj in parent.transform)
             Destroy(obj.gameObject);
     }
     public void CompleteSave()

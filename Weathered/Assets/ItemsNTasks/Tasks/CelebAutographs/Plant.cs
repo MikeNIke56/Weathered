@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,7 +23,7 @@ public class Plant : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if(ItemController.itemInHand is WateringCan && isDone == false)
+        if (ItemController.itemInHand is WateringCan && isDone == false)
         {
             waterBar.gameObject.SetActive(true);
             curFillAmnt += fillByAmnt;
@@ -42,7 +40,7 @@ public class Plant : MonoBehaviour
                 autoGraphs.UpdatePlants(numFlower, this);
             }
         }
-        
+
     }
     private void OnMouseUp()
     {

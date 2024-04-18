@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : Interaction
@@ -10,7 +8,7 @@ public class Item : Interaction
     public string shortDescription;
     public enum itemState { None, Held, Dropped, OnFloor }
     public itemState currentState;
-       // Prefabs for specific item conditions. Seperated as gameobjects to allow scripting and animation.
+    // Prefabs for specific item conditions. Seperated as gameobjects to allow scripting and animation.
     public GameObject defaultObjectPrefab; // Default fallback. Always fill. 
     public GameObject itemUIObjectPrefab; // UI 'image' on screen while held.
     public GameObject playerObjectPrefab; // Mazarine holds this on her player model.
@@ -27,7 +25,7 @@ public class Item : Interaction
     }
     public virtual void OnHeld()
     {
-        
+
         if (itemUIObjectPrefab == null)
         {
             itemUIObjectPrefab = defaultObjectPrefab;
@@ -40,7 +38,7 @@ public class Item : Interaction
     {
         OnDropped();
     }
-    public virtual void OnDropped() 
+    public virtual void OnDropped()
     {
         Destroy(currentUIObject);
         currentState = itemState.Dropped;

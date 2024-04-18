@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class CleanMirrors : Task
 {
@@ -41,7 +39,7 @@ public class CleanMirrors : Task
                 if (interaction.gameObject.GetComponent<MirrorSmudges>().cleanCount > 0)
                 {
                     interaction.gameObject.GetComponent<MirrorSmudges>().cleanCount--;
-                    if(interaction.gameObject.GetComponent<MirrorSmudges>().cleanCount <= 0)
+                    if (interaction.gameObject.GetComponent<MirrorSmudges>().cleanCount <= 0)
                         interaction.gameObject.SetActive(false);
                 }
                 else
@@ -68,7 +66,7 @@ public class CleanMirrors : Task
 
     bool IsFacingMirror(MirrorRange mirror)
     {
-        if (mirror.isFacingMirror==true)
+        if (mirror.isFacingMirror == true)
             return true;
         else return false;
     }

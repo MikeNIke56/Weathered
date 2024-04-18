@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FixDollsPart : Interaction
 {
     [SerializeField] FixDolls fixTask;
-    enum PartItems { ClemmyShoe, SaintHat, SallyEye, BenniWing, MrBearArm}
+    enum PartItems { ClemmyShoe, SaintHat, SallyEye, BenniWing, MrBearArm }
     [SerializeField] PartItems partItem;
     [SerializeField] Item armRemoverItem;
     [SerializeField] GameObject raccoonObject;

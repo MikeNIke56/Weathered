@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Mop : Item
 {
     [SerializeField] MopObject originalMopObject;
     public AudioSource mopSfx;
-    public void ClickedMopObject(MopObject  mopClicked)
+    public void ClickedMopObject(MopObject mopClicked)
     {
         if (originalMopObject == null)
             originalMopObject = FindAnyObjectByType<MopObject>();

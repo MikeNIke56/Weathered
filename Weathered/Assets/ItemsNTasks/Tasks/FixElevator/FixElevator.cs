@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FixElevator : Task
@@ -34,7 +31,7 @@ public class FixElevator : Task
             OnInProgress();
         }
 
-        if(state == FuseBoxState.Closed)
+        if (state == FuseBoxState.Closed)
         {
             state = FuseBoxState.Open;
             interaction.gameObject.GetComponent<FuseBox>().fuseBoxObjs[0].SetActive(false);
@@ -47,7 +44,7 @@ public class FixElevator : Task
         }
         else if (ItemController.itemInHand is Fuse)
         {
-            if(state == FuseBoxState.Open)
+            if (state == FuseBoxState.Open)
             {
                 state = FuseBoxState.Fixed;
                 interaction.gameObject.GetComponent<FuseBox>().fuseBoxObjs[0].SetActive(false);
@@ -60,7 +57,7 @@ public class FixElevator : Task
 
                 OnCompleted();
             }
-        } 
+        }
     }
 
     public void ClickedButton()

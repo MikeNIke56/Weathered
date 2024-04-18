@@ -20,7 +20,7 @@ public class MusicBoxBox : Interaction
         if (currentCassette != null)
         {
             InsertTape(currentCassette);
-        }      
+        }
     }
     public override void onClick()
     {

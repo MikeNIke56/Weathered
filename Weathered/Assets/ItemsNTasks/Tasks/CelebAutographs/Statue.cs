@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Statue : Interaction
@@ -28,5 +26,5 @@ public class Statue : Interaction
         this.gameObject.SetActive(false);
         ItemController.ClearItemInHand();
         head.SetActive(false);
-    } 
+    }
 }

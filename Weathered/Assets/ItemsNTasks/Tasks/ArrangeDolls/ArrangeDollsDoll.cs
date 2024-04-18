@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ArrangeDollsDoll : Interaction
 {
     [SerializeField] ArrangeDolls ADTask;
-    enum DollItems { Clemmy, SallyMae, MrBear, SaintBearnard, Benni}
+    enum DollItems { Clemmy, SallyMae, MrBear, SaintBearnard, Benni }
     [SerializeField] DollItems dollItem;
     public override void onClick()
     {

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,7 +41,7 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    public IEnumerator ShowDialogText(string text, bool waitForInput=true, bool autoClose=true, List<string> choices = null, Action<int> onSelected = null)
+    public IEnumerator ShowDialogText(string text, bool waitForInput = true, bool autoClose = true, List<string> choices = null, Action<int> onSelected = null)
     {
         IsShowing = true;
 
@@ -51,9 +50,9 @@ public class DialogManager : MonoBehaviour
 
         yield return TypeDialogue(text);
 
-        if(waitForInput)
+        if (waitForInput)
         {
-           yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
         }
 
         if (autoClose)
@@ -123,7 +122,7 @@ public class DialogManager : MonoBehaviour
     {
         for (int i = 0; i < dialogImgs.Length; i++)
         {
-            if(i == num)
+            if (i == num)
                 dialogImgs[i].SetActive(true);
             else
                 dialogImgs[i].SetActive(false);
@@ -149,7 +148,7 @@ public class DialogManager : MonoBehaviour
             skipped = false;
         }
 
-        
+
 
         dialogBox.SetActive(false);
         IsShowing = false;

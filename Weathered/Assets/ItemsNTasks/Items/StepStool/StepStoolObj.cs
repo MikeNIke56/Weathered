@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StepStoolObj : Interaction
@@ -20,14 +18,14 @@ public class StepStoolObj : Interaction
     }
     public override void onClick()
     {
-        if(ItemController.itemInHand != stepStool && replaceLightTask.stoolPlaced == false)
+        if (ItemController.itemInHand != stepStool && replaceLightTask.stoolPlaced == false)
         {
             ItemController.AddItemToHand(stepStool);
             gameObject.SetActive(false);
         }
         else if (replaceLightTask.stoolPlaced == true)
         {
-            if(onStool == false)
+            if (onStool == false)
             {
                 stepDownPos.position = player.transform.position;
                 player.transform.position = stepUpPos.position;
@@ -39,7 +37,7 @@ public class StepStoolObj : Interaction
                 player.transform.position = stepDownPos.position;
                 onStool = false;
                 player.moveBlockers["StepStool"] = false;
-            }               
+            }
         }
     }
 }

@@ -9,12 +9,12 @@ public class ArrangeSnowglobes : Task
 {
     public List<Snowglobe> snowGlobes;
     public List<GameObject> notShelfSnowGlobes;
-    [SerializeField] List<GameObject> shelfSnowGlobeObjs;
+    public List<GameObject> shelfSnowGlobeObjs;
     public Snowglobe placeHolderSG;
 
-    [SerializeField] GameObject shelfObj;
-    [SerializeField] GameObject snowglobesUI;
-    [SerializeField] GameObject snowglobesUnder;
+    public GameObject shelfObj;
+    public GameObject snowglobesUI;
+    public GameObject snowglobesUnder;
     public GameObject quitButton;
 
     public SnowglobeObj slotOriginal;
@@ -25,6 +25,7 @@ public class ArrangeSnowglobes : Task
     public SGState currentSGState;
 
     public bool isSwitching = false;
+    bool updated = false;
 
     public Snowglobe tempSG;
     public Image tempImg;
@@ -32,10 +33,13 @@ public class ArrangeSnowglobes : Task
     PlayerController player;
     int sg6, sg7;
 
+    UIController uiController;
+
     public override void InstanceTask()
     {
         base.InstanceTask();
         player = FindAnyObjectByType<PlayerController>();
+        uiController = FindAnyObjectByType<UIController>(FindObjectsInactive.Include);
         currentSGState = SGState.OutOfShelf;
 
         SetSnowglobes();
@@ -43,6 +47,9 @@ public class ArrangeSnowglobes : Task
 
     void SetSnowglobes()
     {
+        foreach (Transform obj in slotParent.transform)
+            Destroy(obj.gameObject);
+
         sg6 = LayerMask.NameToLayer("sg6");
         sg7 = LayerMask.NameToLayer("sg7");
 
@@ -64,12 +71,6 @@ public class ArrangeSnowglobes : Task
         {
             if (snowGlobesObjAry[i].gameObject.tag == "Untagged")
                 tempObjsNames.Add(snowGlobesObjAry[i].name);
-
-            for (int j = 0; j < snowGlobes.Count; j++)
-            {
-                if (snowGlobes[j].currentSGType == Snowglobe.sgType.Glory)
-                    snowGlobesObjAry[i].gameObject.GetComponent<SnowglobeObj>().sgItem = snowGlobes[j];
-            }
         }
         tempObjsNames.Sort();
         foreach (var name in tempObjsNames)
@@ -80,6 +81,7 @@ public class ArrangeSnowglobes : Task
                     shelfSnowGlobeObjs.Add(obj.gameObject);
             }
         }
+
         foreach (var sg in FindObjectsByType<NotShelfGlobes>(FindObjectsSortMode.None))
         {
             notShelfSnowGlobes.Add(sg.gameObject);
@@ -90,23 +92,47 @@ public class ArrangeSnowglobes : Task
                 sg.gameObject.GetComponent<SnowglobeObj>().sgItem = FindFirstObjectByType<NSGHolder>().sg7SG;
         }
 
-        shelfObj = FindAnyObjectByType<SnowParent>(FindObjectsInactive.Include).gameObject;
-        slotParent = FindAnyObjectByType<SlotParent>(FindObjectsInactive.Include).gameObject;
-        snowglobesUI = FindAnyObjectByType<SlotParent>(FindObjectsInactive.Include).gameObject;
-        snowglobesUnder = FindAnyObjectByType<SnowglobesButtons>(FindObjectsInactive.Include).gameObject;
-        snowGlobesObjUnder = FindAnyObjectByType<SnowglobesButtons>(FindObjectsInactive.Include).gameObject;
-        quitButton = FindAnyObjectByType<QuitButton>(FindObjectsInactive.Include).gameObject;
+        updated = false;
+        if (GameManager.GM.hasReloaded == false)
+        {
+            GameManager.GM.SetGlobeData(placeHolderSG, shelfObj, snowglobesUI, snowglobesUnder,
+                quitButton, slotOriginal, slotParent, snowGlobesObjUnder, snowGlobes);
 
+            GameManager.GM.ClearGlobeItem();
+            for (int i = 0; i < snowGlobesObjAry.Length; i++)
+                GameManager.GM.AddItem(snowGlobesObjAry[i].sgItem);
+        }
+        else
+        {
+            placeHolderSG = GameManager.GM.GetPlaceholder();
+            shelfObj = GameManager.GM.GetShelfObj();
+            slotParent = GameManager.GM.GetSlotParent();
+            slotOriginal = GameManager.GM.GetSlotOriginal();
+            snowglobesUnder = GameManager.GM.GetSGUnder();
+            snowGlobesObjUnder = GameManager.GM.GetSGObjUnder();
+            quitButton = GameManager.GM.GetQuitButton();
+            snowglobesUI = GameManager.GM.GetSGUI();
+            snowGlobes = GameManager.GM.GetSnowglobes();
+
+            for (int i = 0; i < snowGlobesObjAry.Length; i++)
+            {
+                snowGlobesObjAry[i].sgItem = GameManager.GM.GetItems()[i];
+            }
+        }
+
+        updated = true;
         RandomizePositions();
     }
+
+
 
     public void ShelfClicked()
     {
         shelfObj.SetActive(true);
         snowglobesUI.SetActive(true);
         snowglobesUnder.SetActive(false);
-        UIController.UIControl.inputHandler.SetActive(false);
-        UIController.UIControl.CloseBaseUI();
+        uiController.ToggleInputHandler(true);
+        uiController.CloseBaseUI();
         currentSGState = SGState.InShelf;
         player.moveBlockers["Menu"] = true;
 
@@ -121,74 +147,98 @@ public class ArrangeSnowglobes : Task
     }
 
     void RandomizePositions()
-    {      
-        for (int i = 0; i < snowGlobes.Count; i++)
+    {
+        if (GameManager.GM.hasReloaded == true)
+            snowGlobes = GameManager.GM.GetSnowglobes();
+
+        if (updated == true)
         {
-            var slotObj = Instantiate(slotOriginal, slotParent.transform);
-            var objImg = slotObj.gameObject.GetComponent<Image>();
-
-            //List<int> numsLeft = new List<int>(8) { 0, 1, 2, 3, 4, 5, 6, 7 };
-            //var chosenNum = Random.Range(0, numsLeft.Count);
-            var chosenNum = Random.Range(0, snowGlobes.Count);
-
-            if (snowGlobes[chosenNum].chosen == false)
+            for (int i = 0; i < snowGlobes.Count; i++)
             {
-                if (snowGlobes[chosenNum].currentSGType != Snowglobe.sgType.Dehydration && snowGlobes[chosenNum].currentSGType != Snowglobe.sgType.Glory)
-                    slotObj.sgItem = snowGlobes[chosenNum];
-            }
-            else
-            {
-                for (int j = 0; j < 8; j++)
+                var slotObj = Instantiate(slotOriginal, slotParent.transform);
+                var objImg = slotObj.gameObject.GetComponent<Image>();
+
+                var chosenNum = Random.Range(0, snowGlobes.Count);
+
+                if (snowGlobes[chosenNum].chosen == false)
                 {
-                    if (snowGlobes[j].chosen == false)
-                    {
-                        chosenNum = j;
+                    if (snowGlobes[chosenNum].currentSGType != Snowglobe.sgType.Dehydration && snowGlobes[chosenNum].currentSGType != Snowglobe.sgType.Glory)
+                        slotObj.sgItem = snowGlobes[chosenNum];
 
-                        if (snowGlobes[chosenNum].currentSGType != Snowglobe.sgType.Dehydration && snowGlobes[chosenNum].currentSGType != Snowglobe.sgType.Glory)
+                }
+                else
+                {
+                    for (int j = 0; j < 8; j++)
+                    {
+                        if (snowGlobes[j].chosen == false)
                         {
-                            slotObj.sgItem = snowGlobes[chosenNum];
-                            break;
+                            chosenNum = j;
+
+                            if (snowGlobes[chosenNum].currentSGType != Snowglobe.sgType.Dehydration && snowGlobes[chosenNum].currentSGType != Snowglobe.sgType.Glory)
+                            {
+                                slotObj.sgItem = snowGlobes[chosenNum];
+                                break;
+                            }
                         }
                     }
                 }
-            }
 
-            snowGlobes[chosenNum].chosen = true;
-            //numsLeft.RemoveAt(chosenNum);
+                snowGlobes[chosenNum].chosen = true;
 
-            if (slotObj.sgItem != null)
-            {
-                objImg.sprite = slotObj.sgItem.sgImg.sprite;
-                slotObj.sgItem.included = true;
+                if (slotObj.sgItem != null)
+                {
+                    objImg.sprite = slotObj.sgItem.sgImg.sprite;
+                    slotObj.sgItem.included = true;
+                }
+                else
+                {
+                    slotObj.sgItem = placeHolderSG;
+                    objImg.sprite = placeHolderSG.sgImg.sprite;
+                    slotObj.GetComponent<Image>().color = Color.black;
+                }
             }
-            else
-            {
-                slotObj.sgItem = placeHolderSG;
-                objImg.sprite = placeHolderSG.sgImg.sprite;
-                slotObj.GetComponent<Image>().color = Color.black;
-            }
+            Debug.Log("waited");
+            UpdateShelf();
+        } 
+        else
+        {
+            Debug.Log("did not wait");
         }
-        UpdateShelf();
     }
 
 
 
     public void UpdateShelf()
     {
+        if (GameManager.GM.hasReloaded == true)
+            snowGlobes = GameManager.GM.GetSnowglobes();
+
+        List<SnowglobeObj> slots = new List<SnowglobeObj>();
+
         for (int i = 0; i < slotParent.GetComponentsInChildren<SnowglobeObj>().Length; i++)
         {
-            if (slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem.currentSGType != Snowglobe.sgType.Placeholder)
+            if (slotParent.GetComponentsInChildren<SnowglobeObj>()[i] != null && i < 8)
+                slots.Add(slotParent.GetComponentsInChildren<SnowglobeObj>()[i]);
+            else if (i >= 8)
+                Destroy(slotParent.GetComponentsInChildren<SnowglobeObj>()[i].gameObject);
+        }
+
+        for (int i = 0; i < slots.Count; i++)
+        {
+            if (slots[i].sgItem.currentSGType != Snowglobe.sgType.Placeholder)
             {
-                shelfSnowGlobeObjs[i].GetComponentInChildren<SpriteRenderer>().sprite = slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem.sgImg.sprite;
+                shelfSnowGlobeObjs[i].GetComponentInChildren<SpriteRenderer>().sprite = slots[i].sgItem.sgImg.sprite;
             }
             else
             {
-                if (slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem.chosen != true)
+                if (slots[i].sgItem.chosen != true)
                     shelfSnowGlobeObjs[i].GetComponentInChildren<SpriteRenderer>().sprite = null;
                 else
-                    shelfSnowGlobeObjs[i].GetComponentInChildren<SpriteRenderer>().sprite = slotParent.GetComponentsInChildren<SnowglobeObj>()[i].sgItem.sgImg.sprite;
+                    shelfSnowGlobeObjs[i].GetComponentInChildren<SpriteRenderer>().sprite = slots[i].sgItem.sgImg.sprite;
             }
         }
+
+
     }
 
 

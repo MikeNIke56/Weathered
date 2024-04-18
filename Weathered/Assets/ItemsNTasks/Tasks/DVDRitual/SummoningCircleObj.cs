@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 
 public class SummoningCircleObj : Interaction
 {
@@ -24,7 +21,7 @@ public class SummoningCircleObj : Interaction
 
         foreach (var candle in candles)
         {
-            if(candle.activeSelf == false && didLight == false)
+            if (candle.activeSelf == false && didLight == false)
             {
                 candle.SetActive(true);
                 didLight = true;
@@ -34,7 +31,7 @@ public class SummoningCircleObj : Interaction
 
         for (int i = 0; i < circleStage.Length; i++)
         {
-            if(i != candleLitCount)
+            if (i != candleLitCount)
                 circleStage[i].SetActive(false);
         }
     }
@@ -46,7 +43,7 @@ public class SummoningCircleObj : Interaction
 
         for (int i = 0; i < circleStage.Length; i++)
         {
-            if (i != circleStage.Length-1)
+            if (i != circleStage.Length - 1)
                 circleStage[i].SetActive(false);
             else
                 circleStage[i].SetActive(true);

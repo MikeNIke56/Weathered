@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CelebAutoGraphs : Task
@@ -30,10 +27,10 @@ public class CelebAutoGraphs : Task
     {
         base.InstanceTask();
     }
-    
+
     public void ClickedStatueObject(Statue statue)
     {
-        if(ItemController.itemInHand is StatueHead)
+        if (ItemController.itemInHand is StatueHead)
         {
             statue.CompleteStatue();
         }
@@ -46,7 +43,7 @@ public class CelebAutoGraphs : Task
         }
         else
         {
-            if(stuffedEagle.didDrop == false)
+            if (stuffedEagle.didDrop == false)
                 ShortTextController.STControl.AddShortText("That’s really high!");
         }
     }
@@ -71,15 +68,15 @@ public class CelebAutoGraphs : Task
         bool isDone = true;
         for (int i = 0; i < requirementsMet.Length; i++)
         {
-            if(i == num)
+            if (i == num)
                 requirementsMetFlowers[i] = true;
             else
             {
-                if(requirementsMetFlowers[i] == false)
+                if (requirementsMetFlowers[i] == false)
                     isDone = false;
             }
         }
- 
+
         if (isDone)
         {
             if (num < 0 || num > 2)

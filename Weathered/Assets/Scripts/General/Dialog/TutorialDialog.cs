@@ -1,9 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Device;
-using UnityEngine.TextCore.Text;
-using UnityEngine.UI;
 
 public class TutorialDialog : MonoBehaviour
 {
@@ -97,7 +93,7 @@ public class TutorialDialog : MonoBehaviour
 
             yield return TutorialManager.Instance.ShowDialog(dialogAfterBoxSecond);
             UIController.UIControl.ToggleInputHandler(false);
-            EndTutorial();      
+            EndTutorial();
         }
 
 

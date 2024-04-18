@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +19,7 @@ public class SortToys : Task
     }
     public void ClickBin(SortToyBin clickedBin)
     {
-        
+
         if (currentState == taskState.Completed)
         {
 
@@ -37,11 +36,11 @@ public class SortToys : Task
                 {
                     OnInProgress();
                 }
-                
+
                 if (clickedBin.CheckToy(ItemController.itemInHand))
                 {
                     ItemController.ClearItemInHand();
-                    if (Random.Range(0,2) >= 1)
+                    if (Random.Range(0, 2) >= 1)
                     {
                         binPlaceHeavy.Play();
                     }
@@ -75,7 +74,7 @@ public class SortToys : Task
 
     public override void LoadFinishedTask()
     {
-        foreach(SortToyToy toy in toysList)
+        foreach (SortToyToy toy in toysList)
         {
             toy.gameObject.SetActive(false);
         }

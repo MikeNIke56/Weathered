@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TeaCabinet : Interaction
@@ -16,12 +14,12 @@ public class TeaCabinet : Interaction
             teaSet = FindFirstObjectByType<TeaSet>();
         }
 
-        if(hasGiven==false)
+        if (hasGiven == false)
         {
             teaSet.ClickedTeaSetObject(teaSet.teaSetObject);
             ShortTextController.STControl.AddShortText("This looks valuable, better be careful...");
             LoadCabinet();
-        }     
+        }
     }
 
     public void LoadCabinet()

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -11,7 +10,7 @@ public class DVDRitual : Task
     FunDVD funDVD;
     ThrillingDVD thrillingDVD;
 
-    bool[] requirementsMet = {false, false, false};
+    bool[] requirementsMet = { false, false, false };
     [SerializeField] GameObject[] objects2Dis;
     [SerializeField] Light2D tvSpiritLight;
 
@@ -86,10 +85,10 @@ public class DVDRitual : Task
                 break;
         }
 
-        if(summoningCircle.candleLitCount == 3)
+        if (summoningCircle.candleLitCount == 3)
         {
             StartCoroutine(GiveDvd(summoningCircle));
-        }  
+        }
     }
 
     IEnumerator GiveDvd(SummoningCircleObj summoningCircle)
@@ -131,7 +130,7 @@ public class DVDRitual : Task
         }
 
         itemInHand = ItemController.itemInHand;
-        switch(itemInHand)
+        switch (itemInHand)
         {
             case FunDVD:
                 //Handle upset dialog here
@@ -175,9 +174,9 @@ public class DVDRitual : Task
     }
     void HandleTvStage(int num)
     {
-        for(int i = 0; i < tvStages.Length; i++)
+        for (int i = 0; i < tvStages.Length; i++)
         {
-            if(i != num)
+            if (i != num)
                 tvStages[i].SetActive(false);
             else
                 tvStages[i].SetActive(true);
@@ -206,7 +205,7 @@ public class DVDRitual : Task
         {
             if (objects2Dis[i].tag == "Untagged")
                 objects2Dis[i].SetActive(false);
-            else if(objects2Dis[i].tag == "Interactable")
+            else if (objects2Dis[i].tag == "Interactable")
                 objects2Dis[i].tag = "Untagged";
         }
     }

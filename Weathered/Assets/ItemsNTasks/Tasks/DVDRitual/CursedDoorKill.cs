@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CursedDoorKill : MonoBehaviour
@@ -18,7 +16,7 @@ public class CursedDoorKill : MonoBehaviour
         {
             timer -= Time.deltaTime;
 
-            if(timer <= 0.0 && isDead == false)
+            if (timer <= 0.0 && isDead == false)
             {
                 timer = maxTimer;
                 Debug.Log("Player has died from poor danger management.");

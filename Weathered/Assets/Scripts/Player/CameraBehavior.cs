@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraBehavior : MonoBehaviour
@@ -26,7 +24,7 @@ public class CameraBehavior : MonoBehaviour
 
     void Update()
     {
-        if(UIController.UIControl.isCamFree == true)
+        if (UIController.UIControl.isCamFree == true)
         {
             //Look right
             if (Input.GetKey(KeyCode.D))
@@ -109,7 +107,7 @@ public class CameraBehavior : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, cameraDefaultPos, speed * Time.deltaTime);
             }
         }
-        
+
 
     }
 }

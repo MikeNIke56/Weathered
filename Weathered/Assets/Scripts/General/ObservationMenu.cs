@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,7 +37,7 @@ public class ObservationMenu : MonoBehaviour
 
     public void ClearVisualRoot()
     {
-        foreach (Transform childTransform in  visualRoot.transform)
+        foreach (Transform childTransform in visualRoot.transform)
         {
             Destroy(childTransform.gameObject);
         }

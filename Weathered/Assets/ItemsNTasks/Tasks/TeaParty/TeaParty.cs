@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TeaParty : Task
@@ -24,7 +21,7 @@ public class TeaParty : Task
     TeaCabinet teaCabinet;
     TeabagsCabinet teabagsCabinet;
 
-    bool[] itemsPlaced = {false, false, false, false};
+    bool[] itemsPlaced = { false, false, false, false };
 
     private void Awake()
     {
@@ -34,7 +31,7 @@ public class TeaParty : Task
     }
     private void Update()
     {
-        if(deathTriggered==true && !isFailed)
+        if (deathTriggered == true && !isFailed)
             OnFailed();
     }
 
@@ -59,7 +56,7 @@ public class TeaParty : Task
         }
         else
         {
-            if(isTeaPlaced == false && ItemController.itemInHand != null)
+            if (isTeaPlaced == false && ItemController.itemInHand != null)
             {
                 ShortTextController.STControl.AddShortText("I need plates and cups first.", true);
             }
@@ -100,13 +97,13 @@ public class TeaParty : Task
     {
         bool isDone = true;
 
-        foreach(var val in itemsPlaced)
+        foreach (var val in itemsPlaced)
         {
-            if(val == false)
+            if (val == false)
                 isDone = false;
         }
 
-        if(isDone == true)
+        if (isDone == true)
         {
             OnCompleted();
             Progression.Prog.FineChinaDolls();

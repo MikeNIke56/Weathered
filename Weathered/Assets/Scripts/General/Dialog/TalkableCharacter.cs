@@ -1,9 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.TextCore.Text;
-using static DialogManager;
-
 public class TalkableCharacter : Interaction
 {
     PlayerController player;
@@ -11,7 +5,7 @@ public class TalkableCharacter : Interaction
 
     public override void onClick()
     {
-        
+
     }
 
     public static TalkableCharacter i { get; private set; }

@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using static PlayerController;
-using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
@@ -135,7 +132,7 @@ public class UIController : MonoBehaviour
 
     public void ToggleInputHandler(bool isOn)
     {
-        if(isOn == true)
+        if (isOn == true)
             inputHandler.SetActive(false);
         else
             inputHandler.SetActive(true);

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MirrorRange : MonoBehaviour
@@ -18,7 +16,7 @@ public class MirrorRange : MonoBehaviour
     {
         distanceBetweenObjects = transform.position.x - player.transform.position.x;
 
-        if(Mathf.Abs(distanceBetweenObjects) <= minDist)
+        if (Mathf.Abs(distanceBetweenObjects) <= minDist)
             isFacingMirror = true;
         else
             isFacingMirror = false;

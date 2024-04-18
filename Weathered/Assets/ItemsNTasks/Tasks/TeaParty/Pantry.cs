@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Pantry : Interaction
@@ -14,7 +12,7 @@ public class Pantry : Interaction
             cookies = FindFirstObjectByType<Cookies>();
         }
 
-        if(canStillInteract==true)
+        if (canStillInteract == true)
             cookies.ClickedCookiesObject(cookies.cookiesObject);
         else
             ShortTextController.STControl.AddShortText("I don’t need more cookies…");

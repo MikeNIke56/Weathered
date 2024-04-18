@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BoxOfLightbulbs : Interaction
@@ -20,5 +18,5 @@ public class BoxOfLightbulbs : Interaction
             lightbulb = FindFirstObjectByType<Lightbulb>();
 
         lightbulb.ClickedLightbulbObject(lightbulb);
-    } 
+    }
 }

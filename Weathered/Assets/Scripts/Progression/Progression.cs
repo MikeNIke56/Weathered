@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -20,7 +18,7 @@ public class Progression : MonoBehaviour, ISavable
     public bool HasEnteredAuntsRoom = false; //Player has entered the aunt's room
     public bool HasEnteredMazarinesRoom = false; //Player has entered Mazarine's room
 
-    public enum StoryAreas { Default, AuntsBedroom, MazarinesBedroom};
+    public enum StoryAreas { Default, AuntsBedroom, MazarinesBedroom };
 
     [SerializeField] AudioSource MazarineScreamSFX;
     [SerializeField] Animator MazarineBlackout;
@@ -47,7 +45,7 @@ public class Progression : MonoBehaviour, ISavable
         IsLoading = false;
     }
 
-//---- Various Story Dialog ----
+    //---- Various Story Dialog ----
     public void StoryAreaEnter(Progression.StoryAreas InArea)
     {
         switch (InArea)
@@ -124,7 +122,7 @@ public class Progression : MonoBehaviour, ISavable
         GameManager.PC.moveBlockers["Cutscene"] = false;
     }
 
-//---- Dolls Story Dialog / Songs ----
+    //---- Dolls Story Dialog / Songs ----
     public void ToysDolls()
     {
         HasFinishedToysDolls = true;
@@ -311,7 +309,7 @@ public class Progression : MonoBehaviour, ISavable
         }
         if (HasFinishedFineChinaDolls == true)
         {
-            if(FindAnyObjectByType<FixElevator>().currentState != Task.taskState.Completed)
+            if (FindAnyObjectByType<FixElevator>().currentState != Task.taskState.Completed)
                 ItemController.AddItemToHand(FindFirstObjectByType<Fuse>());
 
         }
@@ -368,7 +366,7 @@ public class Progression : MonoBehaviour, ISavable
         HasFinishedCelebrityDolls = saveData.HasFinishedCelebrityDolls;
         HasFixedStairs = saveData.HasFixedStairs;
         HasEnteredAuntsRoom = saveData.HasEnteredAuntsRoom;
-        HasEnteredMazarinesRoom = saveData.HasEnteredMazarinesRoom;      
+        HasEnteredMazarinesRoom = saveData.HasEnteredMazarinesRoom;
     }
 
     public object CaptureState()

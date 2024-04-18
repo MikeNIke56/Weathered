@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TeabagsCabinet : Interaction
@@ -14,7 +12,7 @@ public class TeabagsCabinet : Interaction
             teaBags = FindFirstObjectByType<Teabags>();
         }
 
-        if(canStillInteract==true)
+        if (canStillInteract == true)
             teaBags.ClickedTeaBagObject(teaBags.teaBagsObject);
         else
             ShortTextController.STControl.AddShortText("I don’t need more tea...");

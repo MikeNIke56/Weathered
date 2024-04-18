@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicBoxTape : Interaction
 {
     [SerializeField] MusicBox musicTask;
-    enum Tapes { TapeOne, TapeTwo, TapeThree, TapeSpirits};
+    enum Tapes { TapeOne, TapeTwo, TapeThree, TapeSpirits };
     [SerializeField] Tapes cassetteTape;
     public override void onClick()
     {

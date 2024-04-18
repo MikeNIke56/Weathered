@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
 public class ShelfScrolling : MonoBehaviour
 {
@@ -35,7 +31,7 @@ public class ShelfScrolling : MonoBehaviour
 
     public void ScrollUp()
     {
-        if(!isUp)
+        if (!isUp)
         {
             isUp = true;
             sgUI.transform.localPosition = upPos.localPosition;
@@ -43,7 +39,7 @@ public class ShelfScrolling : MonoBehaviour
     }
     public void ScrollDown()
     {
-        if(isUp)
+        if (isUp)
         {
             isUp = false;
             sgUI.transform.localPosition = downPos.localPosition;

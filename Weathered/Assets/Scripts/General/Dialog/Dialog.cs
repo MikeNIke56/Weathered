@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Dialog 
+public class Dialog
 {
     [SerializeField] List<string> lines;
 
@@ -11,6 +10,6 @@ public class Dialog
     {
         get { return lines; }
     }
-   
+
 
 }

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -92,7 +89,7 @@ public class Task : Interaction
         Instantiate(TaskController.taskControl.taskObj, TaskController.taskControl.taskScreenList.transform);
         TaskController.taskControl.taskObj.GetComponentInChildren<Text>().text = taskName + ": \n" + description + "\n\n";
 
-        if(hintGiven == true)
+        if (hintGiven == true)
             TaskController.taskControl.taskObj.GetComponentInChildren<Text>().text += hintText;
     }
 

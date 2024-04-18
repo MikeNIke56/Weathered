@@ -21,6 +21,18 @@ public class GameManager : MonoBehaviour, ISavable
     public bool tutorialPlayed = false;
     static bool isDeathDone = false;
 
+    public bool hasReloaded = false;
+    Snowglobe placeHolderSG;
+    GameObject shelfObj;
+    GameObject snowglobesUI;
+    GameObject snowglobesUnder;
+    GameObject quitButton;
+    SnowglobeObj slotOriginal;
+    GameObject slotParent;
+    GameObject snowGlobesObjUnder;
+    List<Snowglobe> snowglobes;
+    List<Snowglobe> snowglobeItems = new List<Snowglobe>();
+
     private void Awake()
     {
         if (GM != null)
@@ -79,6 +91,7 @@ public class GameManager : MonoBehaviour, ISavable
 
     public void RestartGame()
     {
+        hasReloaded = true;
         HandleDeathLoad();
     }
 
@@ -96,6 +109,72 @@ public class GameManager : MonoBehaviour, ISavable
         }
     }
 
+    public void SetGlobeData(Snowglobe placeHolderSG, GameObject shelfObj, GameObject snowglobesUI, GameObject snowglobesUnder,
+            GameObject quitButton, SnowglobeObj slotOriginal, GameObject slotParent, GameObject snowGlobesObjUnder, List<Snowglobe> snowglobes)
+    {
+        if(hasReloaded == false)
+        {
+            this.placeHolderSG = placeHolderSG;
+            this.shelfObj = shelfObj;
+            this.slotParent = slotParent;
+            this.snowglobesUI = snowglobesUI;
+            this.snowglobesUnder = snowglobesUnder;
+            this.snowGlobesObjUnder = snowGlobesObjUnder;
+            this.quitButton = quitButton;
+            this.slotOriginal = slotOriginal;
+            this.snowglobes = snowglobes; 
+        }
+    }
+
+
+    public void AddItem(Snowglobe item)
+    {
+        snowglobeItems.Add(item);
+    }
+    public void ClearGlobeItem()
+    {
+        snowglobeItems.Clear();
+    }
+    public List<Snowglobe> GetItems()
+    {
+        return snowglobeItems;
+    }
+    public Snowglobe GetPlaceholder()
+    {
+        return this.placeHolderSG;
+    }
+    public GameObject GetShelfObj()
+    {
+        return this.shelfObj;
+    }
+    public GameObject GetSGUI()
+    {
+        return this.snowglobesUI;
+    }
+    public GameObject GetSGUnder()
+    {
+        return this.snowglobesUnder;
+    }
+    public GameObject GetSGObjUnder()
+    {
+        return this.snowGlobesObjUnder;
+    }
+    public GameObject GetQuitButton()
+    {
+        return this.quitButton;
+    }
+    public GameObject GetSlotParent()
+    {
+        return this.slotParent;
+    }
+    public SnowglobeObj GetSlotOriginal()
+    {
+        return this.slotOriginal;
+    }
+    public List<Snowglobe> GetSnowglobes()
+    {
+        return this.snowglobes;
+    }
 
     public object CaptureState()
     {
@@ -118,4 +197,5 @@ public class GameManager : MonoBehaviour, ISavable
     {
         public bool tutorialPlayed = false;
     }
+
 }

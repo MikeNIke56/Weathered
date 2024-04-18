@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpiritLightHB : MonoBehaviour
@@ -10,7 +8,7 @@ public class SpiritLightHB : MonoBehaviour
 
     private void Update()
     {
-        if(isRefreshed == false)
+        if (isRefreshed == false)
         {
             count -= Time.deltaTime;
 
@@ -24,7 +22,7 @@ public class SpiritLightHB : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             /*count += Time.deltaTime;
 
@@ -33,7 +31,7 @@ public class SpiritLightHB : MonoBehaviour
                 Debug.Log("Player has died");
             }*/
 
-            if(isRefreshed == true)
+            if (isRefreshed == true)
             {
                 ShortTextController.STControl.AddShortText("Something is keeping me from opening this door...");
                 isRefreshed = false;

@@ -1,10 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class CelebrityInteractionScript : Interaction
 {
-    public enum CPoints {Default, DeskIntro, ChinaDoorHint};
+    public enum CPoints { Default, DeskIntro, ChinaDoorHint };
     public CPoints CurrentPoint = CPoints.Default;
     int talkedCount = 0;
 

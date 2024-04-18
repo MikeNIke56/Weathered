@@ -147,7 +147,7 @@ public class ArrangeDolls : Task
     {
         base.OnFailed();
         Debug.Log("Mazarine lost her head trying to put the dolls in their rightful places.");
-        GameManager.StartDeath(headPopDeath,5f,true);
+        GameManager.StartDeath(headPopDeath, 5f, true);
         foreach (ArrangeDollPlaces place in allPlaces)
         {
             if (place.satDoll != null && place.satDoll.hasEvil)
@@ -166,7 +166,7 @@ public class ArrangeDolls : Task
     {
         for (int i = 0; i < allPlaces.Count; i++)
         {
-            for(int j = 0; j < allPlaces[i].dollSitPosition.GetComponentsInChildren<SittingDoll>().Length; j++)
+            for (int j = 0; j < allPlaces[i].dollSitPosition.GetComponentsInChildren<SittingDoll>().Length; j++)
             {
                 Destroy(allPlaces[i].dollSitPosition.GetComponentsInChildren<SittingDoll>()[j].gameObject);
             }

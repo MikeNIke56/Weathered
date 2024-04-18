@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -23,7 +21,7 @@ public class ReplaceLightBulb : Task
 
     public override void InstanceTask()
     {
-        base.InstanceTask();     
+        base.InstanceTask();
     }
 
     void Start()
@@ -36,7 +34,7 @@ public class ReplaceLightBulb : Task
     // Update is called once per frame
     void Update()
     {
-        if(currentState != taskState.Completed)
+        if (currentState != taskState.Completed)
         {
             time -= Time.deltaTime;
             if (time <= 0)
@@ -49,7 +47,7 @@ public class ReplaceLightBulb : Task
             normalLight.enabled = true;
             spiritLight.gameObject.SetActive(false);
         }
-        
+
     }
 
     public void LightClicked()
@@ -80,18 +78,18 @@ public class ReplaceLightBulb : Task
     {
         num = Random.Range(0, 100);
 
-        if(num <= 15)
+        if (num <= 15)
         {
             spiritLight.gameObject.SetActive(true);
             normalLight.enabled = false;
-        }         
-        else if(num <= 40)
+        }
+        else if (num <= 40)
         {
             normalLight.enabled = false;
             spiritLight.gameObject.SetActive(false);
         }
         else
-        {           
+        {
             normalLight.enabled = true;
             spiritLight.gameObject.SetActive(false);
         }

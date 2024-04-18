@@ -113,7 +113,7 @@ public class SpiritWorldJump : MonoBehaviour
         isInSpiritWorld = true;
         BGMManager.BGM.SwitchWorldBGM(true);
         //EnableVignette
-        vignetteImage.color = new Color(0,0,0,1);
+        vignetteImage.color = new Color(0, 0, 0, 1);
         yield return new WaitForSeconds(1f);
         //FadeOutBlackout
         while (blackoutImage.color.a > 0)

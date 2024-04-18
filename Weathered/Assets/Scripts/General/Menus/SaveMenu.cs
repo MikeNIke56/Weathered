@@ -1,12 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using System.Diagnostics;
 
 public class SaveMenu : MonoBehaviour
 {
@@ -55,10 +50,10 @@ public class SaveMenu : MonoBehaviour
 
     public void ChooseSlot(int slot)
     {
-        if (isSave==true)
+        if (isSave == true)
         {
             SavingSystem.i.Save($"SaveSlot" + slot.ToString());
-            slots[slot-1].GetComponentInChildren<Text>().text = DateTime.Now.ToString();
+            slots[slot - 1].GetComponentInChildren<Text>().text = DateTime.Now.ToString();
         }
         else
         {

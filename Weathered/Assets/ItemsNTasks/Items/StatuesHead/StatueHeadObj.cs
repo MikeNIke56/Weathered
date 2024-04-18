@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StatueHeadObj : Interaction
@@ -27,7 +25,7 @@ public class StatueHeadObj : Interaction
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(isKillable == true)
+        if (isKillable == true)
             if (collision.gameObject.tag == "Player")
             {
                 bonkSfx.Play();

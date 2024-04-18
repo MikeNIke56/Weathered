@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -60,7 +59,7 @@ public class SortBoxes : Task
                 }
                 else if (box1ItemList.Count > 0)
                 {
-                    if(tookToy == false)
+                    if (tookToy == false)
                         tookToy = true;
                     ItemController.AddItemToHand(box1ItemList[Random.Range(0, box1ItemList.Count)]);
                 }
@@ -165,11 +164,11 @@ public class SortBoxes : Task
         if (timesFailed == 1)
         {
             ShortTextController.STControl.AddShortText("No. That wasn't right...");
-        } 
+        }
         else if (timesFailed == 2)
         {
             ShortTextController.STControl.AddShortText("I made another mistake...");
-        } 
+        }
         else if (timesFailed >= 3)
         {
             ShortTextController.STControl.AddShortText("STOP. That's the wrong sorting box.", true);

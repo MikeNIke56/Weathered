@@ -1,11 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DeathFlash : MonoBehaviour
 {
-    [SerializeField] Image BlackFade; 
+    [SerializeField] Image BlackFade;
     [SerializeField] Image RedFade;
     [SerializeField] float fadeIn;
     [SerializeField] float fadeFlash;

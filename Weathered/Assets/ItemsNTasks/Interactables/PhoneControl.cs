@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PhoneControl : Interaction
@@ -8,7 +7,7 @@ public class PhoneControl : Interaction
     [SerializeField] AudioSource ringingSFX;
     static bool isAnswerable = false;
     static PhoneControl PC;
-    public enum VoicemailID {None, Toys, China, DVDs, Taxidermy, Celebrity, Aunts, Mazarines};
+    public enum VoicemailID { None, Toys, China, DVDs, Taxidermy, Celebrity, Aunts, Mazarines };
     static VoicemailID CurrentVID = VoicemailID.Toys;
     private void Start()
     {
