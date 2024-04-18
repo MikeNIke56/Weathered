@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour, ISavable
     List<Snowglobe> snowglobes;
     List<Snowglobe> snowglobeItems = new List<Snowglobe>();
 
+    List<Item> toysItems = new List<Item>();
+
     private void Awake()
     {
         if (GM != null)
@@ -125,8 +127,6 @@ public class GameManager : MonoBehaviour, ISavable
             this.snowglobes = snowglobes; 
         }
     }
-
-
     public void AddItem(Snowglobe item)
     {
         snowglobeItems.Add(item);
@@ -176,6 +176,18 @@ public class GameManager : MonoBehaviour, ISavable
         return this.snowglobes;
     }
 
+    public void SetToyItems(List<Item> items)
+    {
+        this.toysItems.Clear();
+
+        foreach (var item in items)
+            this.toysItems.Add(item);
+    }
+    public List<Item> GetToyItems()
+    {
+        return this.toysItems;
+    }
+
     public object CaptureState()
     {
         var saveData = new GameManagerSaveData()
@@ -185,7 +197,6 @@ public class GameManager : MonoBehaviour, ISavable
 
         return saveData;
     }
-
     public void RestoreState(object state)
     {
         var saveData = (GameManagerSaveData)state;

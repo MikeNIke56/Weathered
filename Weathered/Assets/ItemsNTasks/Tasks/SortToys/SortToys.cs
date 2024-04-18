@@ -3,11 +3,18 @@ using UnityEngine;
 
 public class SortToys : Task
 {
-    [SerializeField] List<Item> validToys;
+    public List<Item> validToys;
     [SerializeField] List<SortToyToy> toysList;
     int correctToys = 0;
     [SerializeField] AudioSource binPlaceLight;
     [SerializeField] AudioSource binPlaceHeavy;
+
+
+    public override void InstanceTask()
+    {
+        base.InstanceTask();
+        SetToys();
+    }
 
     public void ClickToy(SortToyToy clickedToy)
     {
@@ -80,5 +87,17 @@ public class SortToys : Task
         }
         currentState = taskState.Completed;
         TaskController.taskControl.CheckCompleteTasks();
+    }
+
+    void SetToys()
+    {
+        if(GameManager.GM.hasReloaded == false)
+            GameManager.GM.SetToyItems(validToys);
+        else
+        {
+            validToys.Clear();
+            foreach (var toy in GameManager.GM.GetToyItems())
+                validToys.Add(toy);
+        }
     }
 }

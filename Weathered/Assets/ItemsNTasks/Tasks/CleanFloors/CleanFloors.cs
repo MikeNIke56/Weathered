@@ -8,12 +8,12 @@ public class CleanFloor : Task
     [SerializeField] List<BloodSplatter> bloodSplatters = new List<BloodSplatter>();
 
     public GlassDuster dusterItem;
-    public Mop mopItem;
+    Mop mopItem;
 
     bool clearedGlass = false;
     bool clearedSplatters = false;
 
-    [SerializeField] ClosetInteract closet;
+    ClosetInteract closet;
 
 
     public override void InstanceTask()
@@ -29,6 +29,11 @@ public class CleanFloor : Task
             splatters.gameObject.SetActive(true);
         }
 
+        SetCleanFloorsObjs();
+    }
+
+    void SetCleanFloorsObjs()
+    {
         mopItem = FindAnyObjectByType<Mop>();
         dusterItem = FindAnyObjectByType<GlassDuster>();
         closet = FindAnyObjectByType<ClosetInteract>();

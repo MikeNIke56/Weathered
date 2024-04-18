@@ -25,7 +25,8 @@ public class Snowglobe : Item
 
     public AudioSource pickup;
 
-    private void Start()
+
+    public void SetGlobes()
     {
         sgButtons = FindAnyObjectByType<SnowglobesButtons>(FindObjectsInactive.Include);
         shelfScrolling = FindAnyObjectByType<ShelfScrolling>(FindObjectsInactive.Include);

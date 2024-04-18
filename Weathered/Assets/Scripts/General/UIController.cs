@@ -30,10 +30,14 @@ public class UIController : MonoBehaviour
         if (UIControl == null)
         {
             UIControl = FindFirstObjectByType<UIController>();
-            snowglobes = FindAnyObjectByType<ArrangeSnowglobes>();
-            player = FindFirstObjectByType<PlayerController>();
-            shelf = FindFirstObjectByType<ShelfScrolling>(FindObjectsInactive.Include);
         }
+    }
+
+    public void SetValues()
+    {
+        snowglobes = FindAnyObjectByType<ArrangeSnowglobes>();
+        player = FindFirstObjectByType<PlayerController>();
+        shelf = FindFirstObjectByType<ShelfScrolling>(FindObjectsInactive.Include);
     }
 
     public void OpenBaseUI()
@@ -209,6 +213,7 @@ public class UIController : MonoBehaviour
         CloseAuntVoicemail();
         ClosePauseMenu();
         player.state = GameState.FreeRoam;
+        snowglobes.currentSGState = ArrangeSnowglobes.SGState.OutOfShelf;
         player.moveBlockers["Menu"] = false;
     }
 }

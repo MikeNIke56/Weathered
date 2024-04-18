@@ -38,8 +38,9 @@ public class ArrangeSnowglobes : Task
     public override void InstanceTask()
     {
         base.InstanceTask();
+
         player = FindAnyObjectByType<PlayerController>();
-        uiController = FindAnyObjectByType<UIController>(FindObjectsInactive.Include);
+        uiController = UIController.UIControl;
         currentSGState = SGState.OutOfShelf;
 
         SetSnowglobes();
@@ -57,12 +58,16 @@ public class ArrangeSnowglobes : Task
         var snowGlobesObjAry = FindObjectsByType<SnowglobeObj>(FindObjectsSortMode.None);
         List<string> tempObjsNames = new List<string>();
 
+        for (int i = 0; i < FindObjectsByType<Snowglobe>(FindObjectsSortMode.None).Length; i++)
+            FindObjectsByType<Snowglobe>(FindObjectsSortMode.None)[i].SetGlobes();
+
         for (int i = 0; i < snowGlobesAry.Length; i++)
         {
             if (snowGlobesAry[i].gameObject.tag == "ShelfSG")
             {
                 snowGlobes.Add(snowGlobesAry[i]);
                 snowGlobesAry[i].snowglobes = this;
+                snowGlobesAry[i].SetGlobes();
             }
             else if (snowGlobesAry[i].gameObject.tag == "placeholder")
                 placeHolderSG = snowGlobesAry[i];
@@ -123,8 +128,6 @@ public class ArrangeSnowglobes : Task
         updated = true;
         RandomizePositions();
     }
-
-
 
     public void ShelfClicked()
     {
@@ -206,8 +209,6 @@ public class ArrangeSnowglobes : Task
         }
     }
 
-
-
     public void UpdateShelf()
     {
         if (GameManager.GM.hasReloaded == true)
@@ -240,7 +241,6 @@ public class ArrangeSnowglobes : Task
 
 
     }
-
 
     public void CheckForFinished()
     {
