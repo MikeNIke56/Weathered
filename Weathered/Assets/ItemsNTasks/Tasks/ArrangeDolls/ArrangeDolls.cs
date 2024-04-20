@@ -16,8 +16,9 @@ public class ArrangeDolls : Task
 
     [SerializeField] GameObject[] dollsToDisable;
 
-    private void Start()
+    public override void InstanceTask()
     {
+        base.InstanceTask();
         StartCoroutine(InsertDolls());
     }
 

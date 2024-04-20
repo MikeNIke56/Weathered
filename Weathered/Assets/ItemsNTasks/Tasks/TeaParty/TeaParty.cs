@@ -5,7 +5,7 @@ public class TeaParty : Task
     public bool deathTriggered = false;
     bool isTeaPlaced = false;
 
-    [SerializeField] PlayerController player;
+    //[SerializeField] PlayerController player;
 
     [SerializeField] Cookies cookies;
     [SerializeField] TeaSet teaSet;
@@ -25,9 +25,7 @@ public class TeaParty : Task
 
     private void Awake()
     {
-        pantry = FindAnyObjectByType<Pantry>();
-        teaCabinet = FindAnyObjectByType<TeaCabinet>();
-        teabagsCabinet = FindAnyObjectByType<TeabagsCabinet>();
+
     }
     private void Update()
     {
@@ -38,8 +36,26 @@ public class TeaParty : Task
     public override void InstanceTask()
     {
         base.InstanceTask();
-
+        SetTeaparty();
     }
+
+    void SetTeaparty()
+    {
+        pantry = FindAnyObjectByType<Pantry>();
+        teaCabinet = FindAnyObjectByType<TeaCabinet>();
+        teabagsCabinet = FindAnyObjectByType<TeabagsCabinet>();
+
+        if (GameManager.GM.hasReloaded == false)
+            GameManager.GM.SetTPItems(kettle, cookies, teabags, teaSet);
+        else
+        {
+            kettle = (Kettle)GameManager.GM.GetTPItems()[0];
+            cookies = (Cookies)GameManager.GM.GetTPItems()[1];
+            teabags = (Teabags)GameManager.GM.GetTPItems()[2];
+            teaSet = (TeaSet)GameManager.GM.GetTPItems()[3];
+        }
+    }
+
     public void ClickedTable(Interaction interaction)
     {
         if (currentState == taskState.Available)

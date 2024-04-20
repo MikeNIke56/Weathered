@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+using static UnityEditor.Progress;
 
 public class GameManager : MonoBehaviour, ISavable
 {
@@ -34,6 +35,8 @@ public class GameManager : MonoBehaviour, ISavable
     List<Snowglobe> snowglobeItems = new List<Snowglobe>();
 
     List<Item> toysItems = new List<Item>();
+    List<Item> tapeItems = new List<Item>();
+    List<Item> tpItems = new List<Item>();
 
     private void Awake()
     {
@@ -186,6 +189,31 @@ public class GameManager : MonoBehaviour, ISavable
     public List<Item> GetToyItems()
     {
         return this.toysItems;
+    }
+
+    public void SetTapeItems(List<Item> items)
+    {
+        this.tapeItems.Clear();
+
+        foreach (var item in items)
+            this.tapeItems.Add(item);
+    }
+    public List<Item> GetTapeItems()
+    {
+        return this.tapeItems;
+    }
+    public void SetTPItems(Kettle kettle, Cookies cookies, Teabags teabags, TeaSet teaset)
+    {
+        this.tpItems.Clear();
+
+        this.tpItems.Add(kettle);
+        this.tpItems.Add(cookies);
+        this.tpItems.Add(teabags);
+        this.tpItems.Add(teaset);
+    }
+    public List<Item> GetTPItems()
+    {
+        return this.tpItems;
     }
 
     public object CaptureState()

@@ -8,7 +8,7 @@ public class CleanMirrors : Task
 
     bool clearedAllMirrors = false;
 
-    [SerializeField] PlayerController player;
+    //[SerializeField] PlayerController player;
     CelebAutoGraphs autoGraphs;
 
 
@@ -16,6 +16,7 @@ public class CleanMirrors : Task
     {
         base.InstanceTask();
         autoGraphs = FindAnyObjectByType<CelebAutoGraphs>();
+        clothItem = FindFirstObjectByType<MirrorCloth>();
 
         foreach (MirrorSmudges smudge in smudges)
         {

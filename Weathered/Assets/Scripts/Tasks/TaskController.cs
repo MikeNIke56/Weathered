@@ -159,7 +159,8 @@ public class TaskController : MonoBehaviour, ISavable
     {
         taskList.Clear();
         foreach (var task in FindObjectsByType<Task>(FindObjectsSortMode.None))
-            taskList.Add(task);
+            if(task.name != "SortToys")
+                taskList.Add(task);
     }
 
     public void CheckCompleteTasks()

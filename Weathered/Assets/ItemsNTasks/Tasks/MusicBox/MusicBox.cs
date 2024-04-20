@@ -8,6 +8,23 @@ public class MusicBox : Task
     [SerializeField] MusicBoxBox musicBoxSpirit;
     [SerializeField] GameObject[] itemsToHide;
 
+    public override void InstanceTask()
+    {
+        base.InstanceTask();
+        SetTapes();
+    }
+
+    void SetTapes()
+    {
+        if (GameManager.GM.hasReloaded == false)
+            GameManager.GM.SetTapeItems(validTapes);
+        else
+        {
+            validTapes.Clear();
+            foreach (var toy in GameManager.GM.GetTapeItems())
+                validTapes.Add(toy);
+        }
+    }
 
     public void ClickedTape(MusicBoxTape tapeClicked)
     {

@@ -99,5 +99,8 @@ public class SortToys : Task
             foreach (var toy in GameManager.GM.GetToyItems())
                 validToys.Add(toy);
         }
+
+        foreach (var bin in FindObjectsByType<SortToyBin>(FindObjectsSortMode.None))
+            bin.SearchToys();
     }
 }
