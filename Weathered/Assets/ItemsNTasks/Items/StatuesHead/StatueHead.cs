@@ -1,8 +1,10 @@
 public class StatueHead : Item
 {
     public StatueHeadObj statueObject;
+
     public void ClickedStatueObject(StatueHeadObj headClicked)
     {
+        statueObject = FindFirstObjectByType<StatueHeadObj>();
         ItemController.AddItemToHand(this);
         headClicked.gameObject.SetActive(false);
     }

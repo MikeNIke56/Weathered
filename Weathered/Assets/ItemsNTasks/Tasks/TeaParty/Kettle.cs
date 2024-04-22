@@ -4,6 +4,7 @@ public class Kettle : Item
 
     public void ClickedKettleObject(KettleObj kettleClicked)
     {
+        kettleObject = FindFirstObjectByType<KettleObj>();
         ItemController.AddItemToHand(this);
         kettleClicked.gameObject.SetActive(false);
         kettleObject.kettleWhistle.Stop();

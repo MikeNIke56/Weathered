@@ -4,8 +4,10 @@ public class ActionDVD : Item
 {
     [SerializeField] ActionDVDObj originalActionDVDObject;
 
+
     public void ClickedDVDObject(ActionDVDObj dvdClicked)
     {
+        FindItem();
         ItemController.AddItemToHand(this);
         dvdClicked.gameObject.SetActive(false);
     }
@@ -19,5 +21,10 @@ public class ActionDVD : Item
     {
         base.ClearItem();
         originalActionDVDObject.gameObject.SetActive(true);
+    }
+
+    public void FindItem()
+    {
+        originalActionDVDObject = FindFirstObjectByType<ActionDVDObj>();
     }
 }

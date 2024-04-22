@@ -3,8 +3,11 @@ using UnityEngine;
 public class ArvensHits : Item
 {
     [SerializeField] ArvensHitsObj ogArvenObj;
+
+
     public void ClickedDVDObject(ArvensHitsObj dvdClicked)
     {
+        FindItem();
         ItemController.AddItemToHand(this);
         dvdClicked.gameObject.SetActive(false);
     }
@@ -18,5 +21,9 @@ public class ArvensHits : Item
     {
         base.ClearItem();
         ogArvenObj.gameObject.SetActive(true);
+    }
+    public void FindItem()
+    {
+        ogArvenObj = FindFirstObjectByType<ArvensHitsObj>();
     }
 }

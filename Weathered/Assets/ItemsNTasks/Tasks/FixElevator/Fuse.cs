@@ -1,8 +1,10 @@
 public class Fuse : Item
 {
     public FuseObj fuseObject;
+
     public void ClickedFuseObject(FuseObj fuseClicked)
     {
+        fuseObject = FindFirstObjectByType<FuseObj>();
         ItemController.AddItemToHand(this);
         fuseClicked.gameObject.SetActive(false);
     }

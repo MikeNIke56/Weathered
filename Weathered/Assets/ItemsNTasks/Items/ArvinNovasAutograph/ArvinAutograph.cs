@@ -2,8 +2,10 @@ public class ArvinAutograph : Item
 {
     public ArvinAutographObj arvinAutoObject;
 
+
     public void ClickedAutographObject(ArvinAutographObj autoClicked)
     {
+        arvinAutoObject = FindFirstObjectByType<ArvinAutographObj>();
         ItemController.AddItemToHand(this);
         autoClicked.gameObject.SetActive(false);
     }

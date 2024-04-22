@@ -15,6 +15,7 @@ public class ArvinLogic : Interaction
     private void Start()
     {
         autoGraphs = FindAnyObjectByType<CelebAutoGraphs>();
+        autograph = FindAnyObjectByType<ArvinAutograph>();
     }
     public override void onClick()
     {

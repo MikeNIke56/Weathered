@@ -3,12 +3,10 @@ public class BloodyRose : Item
     public BloodyRoseObj bloodyRoseObject;
     CelebAutoGraphs autoGraphs;
 
-    private void Start()
-    {
-        autoGraphs = FindAnyObjectByType<CelebAutoGraphs>();
-    }
     public void ClickedRoseObject(BloodyRoseObj roseClicked)
     {
+        autoGraphs = FindAnyObjectByType<CelebAutoGraphs>();
+        bloodyRoseObject = FindAnyObjectByType<BloodyRoseObj>();
         ItemController.AddItemToHand(this);
         //roseClicked.gameObject.SetActive(false);
     }

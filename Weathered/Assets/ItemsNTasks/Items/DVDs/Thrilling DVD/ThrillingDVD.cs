@@ -4,8 +4,10 @@ public class ThrillingDVD : Item
 {
     [SerializeField] ThrillingDVDObj ogThrillingDVDObj;
 
+
     public void ClickedDVDObject(ThrillingDVDObj dvdClicked)
     {
+        FindItem();
         ItemController.AddItemToHand(this);
         dvdClicked.gameObject.SetActive(false);
     }
@@ -19,5 +21,9 @@ public class ThrillingDVD : Item
     {
         base.ClearItem();
         ogThrillingDVDObj.gameObject.SetActive(true);
+    }
+    public void FindItem()
+    {
+        ogThrillingDVDObj = FindFirstObjectByType<ThrillingDVDObj>();
     }
 }

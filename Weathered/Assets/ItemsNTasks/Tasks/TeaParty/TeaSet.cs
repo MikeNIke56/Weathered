@@ -10,14 +10,12 @@ public class TeaSet : Item
 
     PlayerController player;
 
-    private void Awake()
-    {
-        teaParty = FindAnyObjectByType<TeaParty>();
-        player = FindAnyObjectByType<PlayerController>();
-    }
 
     public void ClickedTeaSetObject(TeaSetObj teaSetClicked)
     {
+        teaParty = FindAnyObjectByType<TeaParty>();
+        player = FindAnyObjectByType<PlayerController>();
+        teaSetObject = FindAnyObjectByType<TeaSetObj>();
         ItemController.AddItemToHand(this);
         teaSetClicked.gameObject.SetActive(false);
     }

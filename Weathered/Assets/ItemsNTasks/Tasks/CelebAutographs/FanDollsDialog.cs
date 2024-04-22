@@ -17,7 +17,7 @@ public class FanDollsDialog : Interaction
     [SerializeField] Transform sitPos;
     bool isCompleted = false;
 
-    [SerializeField] GameObject parent;
+    HandIconRoot parent;
 
     // Use this for initialization
     void Start()
@@ -26,6 +26,7 @@ public class FanDollsDialog : Interaction
         posOffset = transform.position;
         autoGraphs = FindFirstObjectByType<CelebAutoGraphs>();
         arvinLogic = FindFirstObjectByType<ArvinLogic>();
+        parent = FindFirstObjectByType<HandIconRoot>();
     }
 
     // Update is called once per frame
@@ -103,7 +104,7 @@ public class FanDollsDialog : Interaction
         ItemController.itemInHand = null;
         gameObject.tag = "Untagged";
 
-        foreach (Transform obj in parent.transform)
+        foreach (Transform obj in parent.gameObject.transform)
             Destroy(obj.gameObject);
     }
     public void CompleteSave()
@@ -114,7 +115,7 @@ public class FanDollsDialog : Interaction
         ItemController.itemInHand = null;
         gameObject.tag = "Untagged";
 
-        foreach (Transform obj in parent.transform)
+        foreach (Transform obj in parent.gameObject.transform)
             Destroy(obj.gameObject);
     }
 }

@@ -1,8 +1,10 @@
 public class FakeRock : Item
 {
     public FakeRockObj fakeRockObject;
+
     public void ClickedRockObject(FakeRockObj rockClicked)
     {
+        fakeRockObject = FindFirstObjectByType<FakeRockObj>();
         ItemController.AddItemToHand(this);
         rockClicked.gameObject.SetActive(false);
     }

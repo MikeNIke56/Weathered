@@ -3,8 +3,11 @@ using UnityEngine;
 public class FunDVD : Item
 {
     [SerializeField] FunDVDObj ogFunDVDObj;
+
+
     public void ClickedDVDObject(FunDVDObj dvdClicked)
     {
+        FindItem();
         ItemController.AddItemToHand(this);
         dvdClicked.gameObject.SetActive(false);
     }
@@ -18,5 +21,9 @@ public class FunDVD : Item
     {
         base.ClearItem();
         ogFunDVDObj.gameObject.SetActive(true);
+    }
+    public void FindItem()
+    {
+        ogFunDVDObj = FindFirstObjectByType<FunDVDObj>();
     }
 }

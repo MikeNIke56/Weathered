@@ -3,8 +3,10 @@ using UnityEngine;
 public class StrangeDVD : Item
 {
     [SerializeField] StrangeDVDObj ogStrangeDVDObj;
+
     public void ClickedDVDObject(StrangeDVDObj dvdClicked)
     {
+        FindItem();
         ItemController.AddItemToHand(this);
         dvdClicked.gameObject.SetActive(false);
     }
@@ -18,5 +20,9 @@ public class StrangeDVD : Item
     {
         base.ClearItem();
         ogStrangeDVDObj.gameObject.SetActive(true);
+    }
+    public void FindItem()
+    {
+        ogStrangeDVDObj = FindFirstObjectByType<StrangeDVDObj>();
     }
 }

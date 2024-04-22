@@ -1,8 +1,10 @@
 public class Cookies : Item
 {
     public CookiesObj cookiesObject;
+
     public void ClickedCookiesObject(CookiesObj cookiesClicked)
     {
+        cookiesObject = FindFirstObjectByType<CookiesObj>();
         ItemController.AddItemToHand(this);
         cookiesClicked.gameObject.SetActive(false);
     }
