@@ -139,7 +139,7 @@ public class Progression : MonoBehaviour, ISavable
         DialogManager.Instance.OpenDialog();
 
         //Fadeinsong
-        BGMManager.BGM.FadeDollsSong(15f, false);
+        BGMManager.BGM.FadeDollsSong(0.05f, false);
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Hmmm? Now that sounds nice~");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Where's that music coming from?");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Shhh! You'll talk over it.");
@@ -150,7 +150,7 @@ public class Progression : MonoBehaviour, ISavable
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ by aunt who had prayed. ~");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ A ‘daughter’ she took with delight. ~");
         //Fadeoutsong
-        BGMManager.BGM.FadeDollsSong(15f, true);
+        BGMManager.BGM.FadeDollsSong(0.05f, true);
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "...");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "That was a nice enough tune- I could unblock the other door!");
         FindFirstObjectByType<FineChinaDoor>().OpenDoor(false);
@@ -175,7 +175,7 @@ public class Progression : MonoBehaviour, ISavable
         DialogManager.Instance.OpenDialog();
 
         //Fadeinsong
-        BGMManager.BGM.FadeDollsSong(15f, false);
+        BGMManager.BGM.FadeDollsSong(0.05f, false);
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Again?");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "I tend to like this kind of thing.");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Young Mazarine, learning to jest. ~");
@@ -186,7 +186,7 @@ public class Progression : MonoBehaviour, ISavable
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ and things that need care. ~");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ It’s Mazarine doing her best. ~");
         //Fadeoutsong
-        BGMManager.BGM.FadeDollsSong(15f, true);
+        BGMManager.BGM.FadeDollsSong(0.05f, true);
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Hm, hm, hmmm~");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "I don't like it.");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Unsettling songs about you?");
@@ -218,7 +218,7 @@ public class Progression : MonoBehaviour, ISavable
         DialogManager.Instance.OpenDialog();
 
         //Fadeinsong
-        BGMManager.BGM.FadeDollsSong(15f, false);
+        BGMManager.BGM.FadeDollsSong(0.05f, false);
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "I don't want to hear this!");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "C'mon~ have an open mind! They're singing for you!");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "It isn't like that...");
@@ -228,7 +228,7 @@ public class Progression : MonoBehaviour, ISavable
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ each task she’d complete. ~");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Herself, whom she chose to ignore. ~");
         //Fadeoutsong
-        BGMManager.BGM.FadeDollsSong(15f, true);
+        BGMManager.BGM.FadeDollsSong(0.05f, true);
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Ooo, harsh.");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "Can we go?");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Just roll with it, Mazarine.~");
@@ -254,7 +254,7 @@ public class Progression : MonoBehaviour, ISavable
         DialogManager.Instance.OpenDialog();
 
         //Fadeinsong
-        BGMManager.BGM.FadeDollsSong(15f, false);
+        BGMManager.BGM.FadeDollsSong(0.05f, false);
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Another wonderful performance!");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Mazarine, "...");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Mazarine?");
@@ -263,7 +263,7 @@ public class Progression : MonoBehaviour, ISavable
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ She dusts and then sweeps. ~");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ A question then creeps. ~");
         //Fadeoutson
-        BGMManager.BGM.FadeDollsSong(40f, true);
+        BGMManager.BGM.FadeDollsSong(0.2f, true);
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.DollSong, "~ Theres Mazarine, knowing what’s right. ~");
         yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Celebrity, "Mazarine...");
         FindFirstObjectByType<AuntsDoor>().OpenDoor(false);

@@ -5,22 +5,29 @@ using UnityEngine;
 public class BGMManager : MonoBehaviour
 {
     static public BGMManager BGM;
-    AudioSource bgmSource;
     public float maxVolume = 1f;
     [SerializeField] float fadeStep = 0.05f;
-    [SerializeField] List<AudioClip> normalBGMs;
-    [SerializeField] List<AudioClip> spiritBGMs;
+    [SerializeField] List<AudioSource> normalBGMs;
+    [SerializeField] List<AudioSource> spiritBGMs;
+    [SerializeField] AudioSource DollsSongSource;
+    [SerializeField] AudioSource ElevatorSource;
+    [SerializeField] AudioSource CelebSource;
+    [SerializeField] AudioSource CreepySource;
     public List<Vector3> voidPosition;
     public List<Vector2> voidArea;
     bool isPlaying = true;
     Vector3 voidDifference;
     int currentBGMTrack = 0;
-    [SerializeField] AudioSource DollsSongSource; //TEMP DIALOG CODE
+    public AudioSource currentSource;
+    bool isFading = false;
+    bool isInterupted = false;
+    AudioSource interuptSource;
+    float interuptFadeSpeed;
 
     void Start()
     {
+        currentSource.volume = 1;
         BGM = this;
-        bgmSource = GetComponent<AudioSource>();
         StartCoroutine(CheckVoid());
         StartCoroutine(FadingVolume());
     }
@@ -36,17 +43,16 @@ public class BGMManager : MonoBehaviour
     }
     public void SwitchWorldBGM(bool toSpiritWorld)
     {
-        float currentTime = bgmSource.time;
+        float currentTime = currentSource.time;
         if (toSpiritWorld)
         {
-            bgmSource.clip = spiritBGMs[currentBGMTrack];
+            FadeToMusic(spiritBGMs[currentBGMTrack]);
         }
         else
         {
-            bgmSource.clip = normalBGMs[currentBGMTrack];
+            FadeToMusic(normalBGMs[currentBGMTrack]);
         }
-        bgmSource.time = currentTime;
-        bgmSource.Play();
+        currentSource.time = currentTime;
     }
     public void AddVoid(Vector3 voidPos, Vector2 voidSize)
     {
@@ -84,10 +90,21 @@ public class BGMManager : MonoBehaviour
             tempIsPlaying = isPlaying;
             do
             {
-                bgmSource.volume += isPlaying ? fadeStep : -fadeStep;
+                if (currentSource == DollsSongSource || isFading)
+                {
+                    break;
+                }
+                currentSource.volume += isPlaying ? fadeStep : -fadeStep;
                 yield return new WaitForSeconds(0.05f);
-            } while (bgmSource.volume > 0f && bgmSource.volume < maxVolume);
-            bgmSource.volume = isPlaying ? maxVolume : 0f;
+            } while (currentSource.volume > 0f && currentSource.volume < maxVolume);
+            if (currentSource == DollsSongSource || isFading)
+            {
+                
+            }
+            else
+            {
+                currentSource.volume = isPlaying ? maxVolume : 0f;
+            }
         }
     }
     IEnumerator CheckVoid()
@@ -115,20 +132,92 @@ public class BGMManager : MonoBehaviour
                     Debug.Log("The Void has taken us. (BGM error)");
                 }
             }
-            isPlaying = tempIsPlaying;
+            if (currentSource == DollsSongSource || isFading)
+            {
+                isPlaying = true;
+            }
+            else
+            {
+                isPlaying = tempIsPlaying;
+            }
             yield return new WaitForSeconds(1f);
         }
     }
 
-    public void FadeDollsSong(float FadeSpeedPos, bool TrueMeansRegularMusic) //TEMP DOLLS DIALOG CODE
+    public void FadeToMusic(AudioSource newSource)
     {
-        if (TrueMeansRegularMusic)
+        FadeToMusic(newSource, fadeStep);
+    }
+    public void FadeToMusic(AudioSource newSource, float fadeSpeed)
+    {
+        if (isFading)
         {
-            FindFirstObjectByType<TestAudioOptions>().StartFade(FadeSpeedPos, 0f, -80f);
+            Debug.Log("Musical grace has been ruined! (Fading was interupted)");
+            interuptSource = newSource;
+            interuptFadeSpeed = fadeSpeed;
+            isInterupted = true;
+            isFading = false;
+            return;
+        }
+        if (fadeSpeed == 0f)
+        {
+            currentSource.volume = 0f;
+            currentSource = newSource;
+            if (currentSource == DollsSongSource)
+            {
+                currentSource.volume = 0.5f;
+            }
+            else
+            {
+                currentSource.volume = 1f;
+            }
         }
         else
         {
-            FindFirstObjectByType<TestAudioOptions>().StartFade(FadeSpeedPos, -80f, 0f);
+            StartCoroutine(FadingMusicCo(newSource, fadeSpeed));
+        }
+    }
+
+    IEnumerator FadingMusicCo(AudioSource newSource, float fadeSpeed)
+    {
+        isFading = true;
+        float maxDestVol = 1f;
+        if (newSource == DollsSongSource)
+        {
+            maxDestVol = 0.5f;
+        }
+        while (isFading)
+        {
+            currentSource.volume = Mathf.Clamp(currentSource.volume - fadeSpeed, 0f, 1f);
+            newSource.volume = Mathf.Clamp(newSource.volume + fadeSpeed, 0f, maxDestVol);
+
+            if (currentSource.volume <= 0f && newSource.volume >= maxDestVol)
+            {
+                isFading = false;
+            }
+            else
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+        currentSource.volume = 0f;
+        currentSource = newSource;
+        currentSource.volume = maxDestVol;
+        if (isInterupted)
+        {
+            isInterupted = false;
+            FadeToMusic(interuptSource, interuptFadeSpeed);
+        }
+    }
+    public void FadeDollsSong(float FadeSpeedPos, bool TrueMeansRegularMusic)
+    {
+        if (TrueMeansRegularMusic)
+        {
+            FadeToMusic(normalBGMs[currentBGMTrack], FadeSpeedPos);
+        }
+        else
+        {
+            FadeToMusic(DollsSongSource, FadeSpeedPos);
         }
     }
 }

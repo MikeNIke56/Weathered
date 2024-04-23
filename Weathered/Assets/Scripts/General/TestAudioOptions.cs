@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class TestAudioOptions : MonoBehaviour
+public class TestAudioOptions : MonoBehaviour //THIS SCRIPT NO LONGER HAS ANY FUNCTION BESIDES BEING AN EXAMPLE
 {
     [SerializeField] AudioMixer masterMixer;
     [SerializeField] float newVolume = 0f;
