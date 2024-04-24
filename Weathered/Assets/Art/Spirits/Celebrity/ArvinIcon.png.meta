@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ArvinIcon_0: -6823933282944924896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
