@@ -7,6 +7,7 @@ public class MMNewGame : MonoBehaviour
     [SerializeField] Color32 DefaultColor;
     [SerializeField] Color32 HoverColor;
     [SerializeField] Color32 ClickedColor;
+    [SerializeField] GameObject creditsButton;
 
     void Awake()
     {
@@ -30,5 +31,6 @@ public class MMNewGame : MonoBehaviour
     {
         SR.color = HoverColor;
         MMM.gameFileSelectUI.SetActive(true);
+        creditsButton.SetActive(false);
     }
 }

@@ -230,10 +230,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2024967250}
   - {fileID: 814569515}
   - {fileID: 955014006}
   - {fileID: 888852389}
-  - {fileID: 2024967250}
   m_Father: {fileID: 8860392374413996327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2567,6 +2567,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5242428775474693956, guid: 805838acbfc34544bb436c161652407a, type: 3}
+      propertyPath: creditsButton
+      value: 
+      objectReference: {fileID: 2024967249}
     - target: {fileID: 5640537992974624700, guid: 805838acbfc34544bb436c161652407a, type: 3}
       propertyPath: m_IsActive
       value: 0
