@@ -45,7 +45,7 @@ public class TutorialDialog : MonoBehaviour
     }
     public IEnumerator StartDialog()
     {
-        UIController.UIControl.isCamFree = false;
+        UIController.UIControl.isCamFree = true;
         player.moveBlockers["TutorialDialog"] = true;
         GameManager.GM.HideDeathScreen();
 
@@ -65,7 +65,6 @@ public class TutorialDialog : MonoBehaviour
         //unfreezes player
         player.moveBlockers["TutorialDialog"] = false;
         UIController.UIControl.ToggleInputHandler(false);
-        UIController.UIControl.isCamFree = true;
     }
 
     public IEnumerator HandleUpdate()

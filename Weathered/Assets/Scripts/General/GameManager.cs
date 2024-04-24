@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 using static UnityEditor.Progress;
+using UnityEngine.Audio;
+using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour, ISavable
 {
@@ -37,6 +39,16 @@ public class GameManager : MonoBehaviour, ISavable
     List<Item> toysItems = new List<Item>();
     List<Item> tapeItems = new List<Item>();
     List<Item> tpItems = new List<Item>();
+
+    public AudioController[] audioCont;
+    private string volumeGroupMusic;
+    private float volumeMusic;
+
+    private string volumeGroupMaster;
+    private float volumeMaster;
+
+    private string volumeGroupSFX;
+    private float volumeSFX;
 
     private void Awake()
     {
@@ -221,6 +233,12 @@ public class GameManager : MonoBehaviour, ISavable
         var saveData = new GameManagerSaveData()
         {
             tutorialPlayed = tutorialPlayed,
+            volumeGroupMusic = volumeGroupMusic,
+            volumeMusic = volumeMusic,
+            volumeGroupMaster = volumeGroupMaster,
+            volumeMaster = volumeMaster,
+            volumeSFX = volumeSFX,
+            volumeGroupSFX = volumeGroupSFX
         };
 
         return saveData;
@@ -230,11 +248,20 @@ public class GameManager : MonoBehaviour, ISavable
         var saveData = (GameManagerSaveData)state;
         var tutPlayed = saveData.tutorialPlayed;
         this.tutorialPlayed = tutPlayed;
+
+        for (int i = 0; i < audioCont.Length; i++)
+            audioCont[i].SetLoadSound(state, i);
     }
     [Serializable]
     public class GameManagerSaveData
     {
         public bool tutorialPlayed = false;
+        public string volumeGroupMusic;
+        public float volumeMusic;
+        public string volumeGroupMaster;
+        public float volumeMaster;
+        public string volumeGroupSFX;
+        public float volumeSFX;
     }
 
 }
