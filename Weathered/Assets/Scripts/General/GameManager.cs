@@ -249,8 +249,8 @@ public class GameManager : MonoBehaviour, ISavable
         var tutPlayed = saveData.tutorialPlayed;
         this.tutorialPlayed = tutPlayed;
 
-        for (int i = 0; i < audioCont.Length; i++)
-            audioCont[i].SetLoadSound(state, i);
+        //for (int i = 0; i < audioCont.Length; i++)
+            //audioCont[i].SetLoadSound(state, i);
     }
     [Serializable]
     public class GameManagerSaveData

@@ -80,18 +80,12 @@ public class PlayerController : MonoBehaviour, ISavable
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            SavingSystem.i.Load($"SaveSlot1");
-        }
-
         if (SceneManager.GetActiveScene().name == "TestPlayer" && isInMaingame == false)
         {
             gameObject.SetActive(true);
             isInMaingame = true;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && lockMovement == false)
         {
             UIController.UIControl.OpenPauseMenu();
         }
