@@ -56,7 +56,6 @@ public class PhoneControl : Interaction
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Narrator, "Mazarine writes the helpful information down in her journal~~");
 
                 TaskBatch1();
-
                 break;
             case VoicemailID.China:
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "My sweet Mazarine...");
@@ -65,6 +64,8 @@ public class PhoneControl : Interaction
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "I have so much to tell you!");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, ".......................................");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Narrator, "Mazarine writes the helpful information down in her journal~~");
+
+                TaskBatch2();
                 break;
             case VoicemailID.DVDs:
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "My industrious Mazarine...");
@@ -73,6 +74,8 @@ public class PhoneControl : Interaction
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "I have so much to tell you!");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, ".......................................");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Narrator, "Mazarine writes the helpful information down in her journal~~");
+
+                FindAnyObjectByType<DVDRitual>().hasBeenDisc = true;
                 break;
             case VoicemailID.Taxidermy:
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "My delicate Mazarine...");
@@ -81,6 +84,8 @@ public class PhoneControl : Interaction
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "I have so much to tell you!");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, ".......................................");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Narrator, "Mazarine writes the helpful information down in her journal~~");
+
+                FindAnyObjectByType<ArrangeSnowglobes>().hasBeenDisc = true;
                 break;
             case VoicemailID.Celebrity:
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "Ohhhh...");
@@ -89,6 +94,8 @@ public class PhoneControl : Interaction
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "I have so much to tell you!");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, ".......................................");
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Narrator, "Mazarine writes the helpful information down in her journal~~");
+
+                FindAnyObjectByType<CelebAutoGraphs>().hasBeenDisc = true;
                 break;
             case VoicemailID.Aunts:
                 yield return DialogManager.Instance.ShowDialog(DialogManager.DialogTriggers.Aunt, "MY VILE MAZARINE!");
@@ -136,6 +143,13 @@ public class PhoneControl : Interaction
         FindAnyObjectByType<MusicBox>().hasBeenDisc = true;
         FindAnyObjectByType<CleanFloor>().hasBeenDisc = true;
         FindAnyObjectByType<ArrangeSnowglobes>().hasBeenDisc = true;
+        TaskController.taskControl.SetPage(0);
+    }
+    void TaskBatch2()
+    {
+        FindAnyObjectByType<CleanMirrors>().hintGiven = true;
+        FindAnyObjectByType<TeaParty>().hintGiven = true;
+        FindAnyObjectByType<FixElevator>().hintGiven = true;
         TaskController.taskControl.SetPage(0);
     }
 }
