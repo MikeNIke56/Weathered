@@ -130,14 +130,12 @@ public class PhoneControl : Interaction
         FindAnyObjectByType<MusicBox>().hintGiven = true;
         FindAnyObjectByType<CleanFloor>().hintGiven = true;
         FindAnyObjectByType<ArrangeSnowglobes>().hintGiven = true;
-        FindAnyObjectByType<SortToys>().hintGiven = true;
         FindAnyObjectByType<ArrangeDolls>().hasBeenDisc = true;
         FindAnyObjectByType<ReplaceLightBulb>().hasBeenDisc = true;
         FindAnyObjectByType<FixDolls>().hasBeenDisc = true;
         FindAnyObjectByType<MusicBox>().hasBeenDisc = true;
         FindAnyObjectByType<CleanFloor>().hasBeenDisc = true;
         FindAnyObjectByType<ArrangeSnowglobes>().hasBeenDisc = true;
-        FindAnyObjectByType<SortToys>().hasBeenDisc = true;
         TaskController.taskControl.SetPage(0);
     }
 }

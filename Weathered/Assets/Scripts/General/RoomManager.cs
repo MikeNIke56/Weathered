@@ -33,7 +33,6 @@ public class RoomManager : MonoBehaviour
                 FindAnyObjectByType<MusicBox>().hasBeenDisc = true;
                 FindAnyObjectByType<CleanFloor>().hasBeenDisc = true;
                 FindAnyObjectByType<ArrangeSnowglobes>().hasBeenDisc = true;
-                FindAnyObjectByType<SortToys>().hasBeenDisc = true;
                 break;
             case 1:
                 FindAnyObjectByType<CleanMirrors>().hasBeenDisc = true;
