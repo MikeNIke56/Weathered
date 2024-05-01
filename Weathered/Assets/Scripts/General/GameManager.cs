@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
-using static UnityEditor.Progress;
+//using static UnityEditor.Progress;
 using UnityEngine.Audio;
 using UnityEngine.Rendering;
 
